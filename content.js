@@ -1,0 +1,1 @@
+console.log('Chrome Bible Speak content script loaded.');

@@ -26,8 +26,12 @@ This Chrome extension looks for a list of names (keys from a JSON file) on webpa
 
 ## Project Plan
 
-1. **Setup File Structure for Chrome Extension**
-    - Create necessary files and folders for a Chrome extension (manifest.json, background.js, content.js, popup.html, etc.).
+### Completed Steps
+
+1. Setup File Structure for Chrome Extension
+
+### Future Steps
+
 2. **Develop Python Script for JSON Update**
     - Write a Python script to scrape names and pronunciations from BibleSpeak.org and update the JSON file.
 3. **Integrate JSON with Chrome Extension**
