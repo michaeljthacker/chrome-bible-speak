@@ -24,16 +24,21 @@ This Chrome extension looks for a list of names (keys from a JSON file) on webpa
 2. **Scrape Pronunciations**: For each name, scrape the phonetic pronunciation from `https://biblespeak.org/{name}-pronunciation/`.
 3. **Update JSON**: Save the names, phonetic pronunciations, and links to the JSON file.
 
+To **refresh the JSON pronunciation file**, run the following command in the terminal:
+
+```sh
+python updateWordListJSON.py
+```
+
 ## Project Plan
 
 ### Completed Steps
 
 1. Setup File Structure for Chrome Extension
+2. Develop Python Script for JSON Update
 
 ### Future Steps
 
-2. **Develop Python Script for JSON Update**
-    - Write a Python script to scrape names and pronunciations from BibleSpeak.org and update the JSON file.
 3. **Integrate JSON with Chrome Extension**
     - Use the JSON file in the Chrome extension to detect names on webpages and display the toggle/menu with options.
 4. **Implement Toggle/Menu Functionality**
