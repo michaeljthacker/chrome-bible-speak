@@ -39,10 +39,9 @@ python updateWordListJSON.py
 3. Integrate JSON with Chrome Extension
 4. Implement Toggle/Menu Functionality
 5. Add Phonetic Pronunciations and Hyperlinks
+6. Testing and Debugging
 
 ### Future Steps
 
-6. **Testing and Debugging**
-    - Test the extension thoroughly and fix any bugs or issues.
 7. **Deployment**
     - Prepare the extension for deployment to the Chrome Web Store.
