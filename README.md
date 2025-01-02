@@ -43,5 +43,9 @@ python updateWordListJSON.py
 
 ### Future Steps
 
-7. **Deployment**
+7. **Personal Use**
+    - Package the extension as a `.zip` file.
+    - Load the extension in Chrome as an unpacked extension for personal use.
+
+8. **Optional:** Deployment
     - Prepare the extension for deployment to the Chrome Web Store.
