@@ -36,16 +36,12 @@ python updateWordListJSON.py
 
 1. Setup File Structure for Chrome Extension
 2. Develop Python Script for JSON Update
+3. Integrate JSON with Chrome Extension
+4. Implement Toggle/Menu Functionality
+5. Add Phonetic Pronunciations and Hyperlinks
+6. Testing and Debugging
 
 ### Future Steps
 
-3. **Integrate JSON with Chrome Extension**
-    - Use the JSON file in the Chrome extension to detect names on webpages and display the toggle/menu with options.
-4. **Implement Toggle/Menu Functionality**
-    - Add functionality to enable, disable, or hide the tool based on user selection.
-5. **Add Phonetic Pronunciations and Hyperlinks**
-    - Implement the feature to add parentheticals with phonetic pronunciations and hyperlinks to BibleSpeak.org for detected names.
-6. **Testing and Debugging**
-    - Test the extension thoroughly and fix any bugs or issues.
 7. **Deployment**
     - Prepare the extension for deployment to the Chrome Web Store.
