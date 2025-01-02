@@ -30,6 +30,21 @@ To **refresh the JSON pronunciation file**, run the following command in the ter
 python updateWordListJSON.py
 ```
 
+## How to Install Locally
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/michaeljthacker/chrome-bible-speak.git
+    ```
+
+2. Open Chrome and go to `chrome://extensions/`.
+
+3. Enable "Developer mode" by toggling the switch in the top right corner.
+
+4. Click on the "Load unpacked" button.
+
+5. Select the directory where you cloned the repository.
+
 ## Project Plan
 
 ### Completed Steps
