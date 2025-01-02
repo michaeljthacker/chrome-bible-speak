@@ -1,10 +1,13 @@
 // content.js
 console.log('Chrome Bible Speak content script loaded.');
 
+let jsonData = null;
+
 fetch(chrome.runtime.getURL('names_pronunciations.json'))
   .then(response => response.json())
   .then(data => {
     console.log('JSON data loaded:', data); // Debugging log
+    jsonData = data;
     const names = Object.keys(data);
     const bodyText = document.body.innerText;
 
@@ -37,7 +40,7 @@ fetch(chrome.runtime.getURL('names_pronunciations.json'))
           // Add event listeners for the buttons
           document.getElementById('enable').addEventListener('click', () => {
             console.log('Enable button clicked'); // Debugging log
-            enableTool(data);
+            enableTool(jsonData);
             hideMenu(); // Hide the menu after enabling the tool
           });
           document.getElementById('hide').addEventListener('click', () => {
@@ -51,6 +54,14 @@ fetch(chrome.runtime.getURL('names_pronunciations.json'))
     });
   })
   .catch(error => console.error('Error loading JSON:', error));
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === 'enable') {
+    enableTool(jsonData);
+  } else if (request.action === 'hide') {
+    hideMenu();
+  }
+});
 
 function enableTool(data) {
   console.log('Enabling tool with data:', data); // Debugging log
