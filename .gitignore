@@ -4,3 +4,7 @@ __pycache__/
 
 # Ignore virtual environment directories
 venv/
+
+# Ignore build output
+dist/
+bible-name-aid-dist.zip

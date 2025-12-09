@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Chrome Bible Speak",
+  "name": "Bible Name Aid",
   "version": "1.0.0",
-  "description": "Chrome extension that scans webpages with pronunciations on BibleSpeak.org and adds the phonetic pronunciation guide to the webpage.",
+  "description": "Adds phonetic pronunciations and clickable links for Biblical names found on webpages, sourced from BibleSpeak.org.",
   "permissions": [
     "activeTab",
     "storage"

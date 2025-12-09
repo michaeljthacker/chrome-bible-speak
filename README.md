@@ -78,21 +78,25 @@ This script:
 - **Chrome Storage API** for persistent preferences
 - **Custom CSS** with aggressive specificity to work on any website
 
-## Project Credits & Legal
+## Attribution & Legal
 
-### Data Attribution
+### BibleSpeak.org Content
 
-This extension uses publicly available pronunciation information from [BibleSpeak.org](https://biblespeak.org) to display helpful Bible name pronunciations while you browse. BibleSpeak.org is the source of the pronunciation data and remains the owner of its content.
+This extension uses publicly available pronunciation data and links from **[BibleSpeak.org](https://biblespeak.org)**. 
 
-This project is not affiliated with, endorsed by, or sponsored by BibleSpeak.org. It simply links back to the original BibleSpeak.org pages for users who want to view the source material.
+**Important notes:**
+- BibleSpeak.org is a separate website **not affiliated with or endorsed by** Bible Name Aid.
+- All pronunciation data and content from BibleSpeak.org is owned by BibleSpeak.org and their respective copyright holders.
+- This extension is a convenience tool that links to their publicly accessible content - we do not claim ownership of their data.
+- When you click pronunciation links in this extension, you are visiting BibleSpeak.org directly.
 
 ### Trademarks
 
-All trademarks and brand names mentioned are the property of their respective owners. They are used here solely for identification and descriptive purposes.
+All trademarks and brand names mentioned (including "BibleSpeak") are the property of their respective owners. They are used here solely for identification and descriptive purposes.
 
 ### Privacy
 
-This extension does not collect, store, or transmit any personal data. All processing occurs locally in your browser.
+This extension does not collect, store, or transmit any personal data. All processing occurs locally in your browser. See our full [Privacy Policy](PRIVACY_POLICY.md) for details.
 
 ## License
 
