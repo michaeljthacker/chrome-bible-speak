@@ -284,14 +284,125 @@ function hideSelectionMenu() {
 function enableTool(data, namesToEnable) {
   console.log('Enabling tool for names:', namesToEnable);
 
+  // Create a map for quick lookup
+  const nameMap = {};
   namesToEnable.forEach(name => {
-    const pronunciation = data[name].pronunciation;
-    const link = data[name].link;
-    const regex = new RegExp(`\\b${name}\\b`, 'g');
-    if (document.body.innerHTML.includes(name)) {
-      console.log(`Replacing ${name} with ${name} (<a href="${link}" target="_blank">${pronunciation}</a>)`);
-      document.body.innerHTML = document.body.innerHTML.replace(regex, `${name} (<a href="${link}" target="_blank" style="color: #4285f4; text-decoration: none; font-style: italic; font-size: inherit; font-family: inherit; font-weight: inherit;">${pronunciation}</a>)`);
+    nameMap[name] = {
+      pronunciation: data[name].pronunciation,
+      link: data[name].link
+    };
+  });
+
+  // Function to process text nodes
+  function processTextNode(node) {
+    let text = node.textContent;
+    let modified = false;
+    
+    namesToEnable.forEach(name => {
+      const regex = new RegExp(`\\b${name}\\b`, 'g');
+      if (regex.test(text)) {
+        const info = nameMap[name];
+        const replacement = `${name} (${info.pronunciation})`;
+        text = text.replace(regex, replacement);
+        modified = true;
+      }
+    });
+    
+    if (modified) {
+      // Create a temporary container to parse the new content
+      const span = document.createElement('span');
+      span.innerHTML = text;
+      
+      // Replace text node with new content
+      const parent = node.parentNode;
+      while (span.firstChild) {
+        parent.insertBefore(span.firstChild, node);
+      }
+      parent.removeChild(node);
     }
+  }
+
+  // Function to traverse DOM and process text nodes
+  function traverseDOM(node) {
+    // Skip our own extension elements
+    if (node.id === 'chrome-bible-speak-toast' || 
+        node.id === 'chrome-bible-speak-selection') {
+      return;
+    }
+    
+    if (node.nodeType === Node.TEXT_NODE) {
+      processTextNode(node);
+    } else if (node.nodeType === Node.ELEMENT_NODE) {
+      // Don't traverse script or style tags
+      if (node.tagName !== 'SCRIPT' && node.tagName !== 'STYLE') {
+        const children = Array.from(node.childNodes);
+        children.forEach(child => traverseDOM(child));
+      }
+    }
+  }
+
+  // Start traversal from body
+  traverseDOM(document.body);
+  
+  // Now add the links in a second pass
+  namesToEnable.forEach(name => {
+    const info = nameMap[name];
+    const regex = new RegExp(`\\b${name} \\(${info.pronunciation.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\)`, 'g');
+    
+    // Find all text nodes containing the pattern
+    const walker = document.createTreeWalker(
+      document.body,
+      NodeFilter.SHOW_TEXT,
+      {
+        acceptNode: function(node) {
+          // Skip our extension elements
+          if (node.parentElement && 
+              (node.parentElement.closest('#chrome-bible-speak-toast') ||
+               node.parentElement.closest('#chrome-bible-speak-selection'))) {
+            return NodeFilter.FILTER_REJECT;
+          }
+          return regex.test(node.textContent) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+        }
+      }
+    );
+    
+    const nodesToReplace = [];
+    let currentNode;
+    while (currentNode = walker.nextNode()) {
+      nodesToReplace.push(currentNode);
+    }
+    
+    nodesToReplace.forEach(node => {
+      const text = node.textContent;
+      const parts = text.split(regex);
+      const matches = text.match(regex) || [];
+      
+      if (matches.length > 0) {
+        const fragment = document.createDocumentFragment();
+        
+        parts.forEach((part, index) => {
+          if (part) {
+            fragment.appendChild(document.createTextNode(part));
+          }
+          if (index < matches.length) {
+            const link = document.createElement('a');
+            link.href = info.link;
+            link.target = '_blank';
+            link.style.cssText = 'color: #4285f4 !important; text-decoration: none !important; font-style: italic !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important;';
+            link.textContent = info.pronunciation;
+            
+            const wrapper = document.createDocumentFragment();
+            wrapper.appendChild(document.createTextNode(`${name} (`));
+            wrapper.appendChild(link);
+            wrapper.appendChild(document.createTextNode(')'));
+            
+            fragment.appendChild(wrapper);
+          }
+        });
+        
+        node.parentNode.replaceChild(fragment, node);
+      }
+    });
   });
 }
 
