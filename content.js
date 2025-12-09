@@ -86,7 +86,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     hideToast();
     hideSelectionMenu();
   }
-  return true;
+  return true; // Keep message channel open for async responses
 });
 
 function showToast() {
@@ -120,7 +120,7 @@ function showToast() {
   
   toast.innerHTML = `
     <div style="display: flex !important; flex-direction: column !important; gap: 12px !important; font-family: inherit !important;">
-      <div class="cbs-toast-title" style="font-size: 16px; font-weight: 600; color: #1a1a1a; margin: 0; line-height: 1.4;">BibleSpeak Pronunciations Available</div>
+      <div class="cbs-toast-title" style="font-size: 16px; font-weight: 600; color: #1a1a1a; margin: 0; line-height: 1.4;">Bible Name Aid</div>
       <div class="cbs-toast-message" style="font-size: 14px; color: #666; margin: 0; line-height: 1.4;">${foundNames.length} name${foundNames.length > 1 ? 's' : ''} found on this page</div>
       <div class="cbs-toast-buttons" style="display: flex; gap: 8px; margin-top: 8px;">
         <button id="cbs-pronounce-all" style="padding: 10px 20px; border: none; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; font-family: inherit; white-space: nowrap; background: #4285f4; color: white;">Pronounce All</button>
@@ -238,13 +238,13 @@ function showSelectionMenu() {
   menu.innerHTML = `
     <div style="display: flex !important; flex-direction: column !important; height: 100% !important; overflow: hidden !important;">
       <div style="padding: 16px 20px !important; border-bottom: 1px solid #e5e5e5 !important; background: #f8f9fa !important; flex-shrink: 0 !important;">
-        <h1 style="margin: 0 0 12px 0 !important; font-size: 18px !important; font-weight: 600 !important; color: #1a1a1a !important; font-family: inherit !important; line-height: 1.4 !important;">BibleSpeak Pronunciations</h1>
+        <h1 style="margin: 0 0 10px 0 !important; font-size: 18px !important; font-weight: 600 !important; color: #1a1a1a !important; font-family: inherit !important; line-height: 1.4 !important;">Bible Name Aid</h1>
         <div style="display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 12px !important; font-family: inherit !important;">
-          <span style="font-size: 13px !important; color: #5f6368 !important; font-weight: 500 !important; font-family: inherit !important;">Extension Enabled</span>
-          <label style="position: relative !important; display: inline-block !important; width: 44px !important; height: 24px !important; margin: 0 !important; cursor: pointer !important;">
+          <span style="font-size: 12px !important; color: #5f6368 !important; font-weight: 500 !important; font-family: inherit !important;">Extension Enabled</span>
+          <label style="position: relative !important; display: inline-block !important; width: 36px !important; height: 20px !important; margin: 0 !important; cursor: pointer !important;">
             <input type="checkbox" id="cbs-menu-global-toggle" checked style="opacity: 0 !important; width: 0 !important; height: 0 !important;">
-            <span class="cbs-menu-toggle-slider" style="position: absolute !important; cursor: pointer !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background-color: #4285f4 !important; transition: 0.3s !important; border-radius: 24px !important;"></span>
-            <span class="cbs-menu-toggle-knob" style="position: absolute !important; content: '' !important; height: 18px !important; width: 18px !important; left: 3px !important; bottom: 3px !important; background-color: white !important; transition: 0.3s !important; border-radius: 50% !important; transform: translateX(20px) !important;"></span>
+            <span class="cbs-menu-toggle-slider" style="position: absolute !important; cursor: pointer !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background-color: #4285f4 !important; transition: 0.3s !important; border-radius: 20px !important;"></span>
+            <span class="cbs-menu-toggle-knob" style="position: absolute !important; content: '' !important; height: 14px !important; width: 14px !important; left: 3px !important; bottom: 3px !important; background-color: white !important; transition: 0.3s !important; border-radius: 50% !important; transform: translateX(16px) !important;"></span>
           </label>
         </div>
       </div>
