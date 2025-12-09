@@ -3,6 +3,7 @@ console.log('Chrome Bible Speak content script loaded.');
 
 let jsonData = null;
 let foundNames = [];
+let enabledNames = []; // Track which names currently have pronunciations shown
 let autoDismissTimer = null;
 
 fetch(chrome.runtime.getURL('names_pronunciations.json'))
@@ -35,11 +36,24 @@ fetch(chrome.runtime.getURL('names_pronunciations.json'))
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === 'getFoundNames') {
-    sendResponse({ names: foundNames, data: jsonData });
+    sendResponse({ names: foundNames, enabledNames: enabledNames, data: jsonData });
   } else if (request.action === 'enableAll') {
-    enableTool(jsonData, Object.keys(jsonData));
+    enableTool(jsonData, foundNames);
   } else if (request.action === 'enableSelected') {
     enableTool(jsonData, request.selectedNames);
+  } else if (request.action === 'updateSelected') {
+    // Disable names that were unchecked
+    const namesToDisable = enabledNames.filter(name => !request.selectedNames.includes(name));
+    if (namesToDisable.length > 0) {
+      disableTool(namesToDisable);
+    }
+    // Enable newly checked names
+    const namesToEnable = request.selectedNames.filter(name => !enabledNames.includes(name));
+    if (namesToEnable.length > 0) {
+      enableTool(jsonData, namesToEnable);
+    }
+  } else if (request.action === 'disableAll') {
+    disableTool();
   } else if (request.action === 'dismiss') {
     hideToast();
     hideSelectionMenu();
@@ -83,7 +97,7 @@ function showToast() {
       <div class="cbs-toast-buttons" style="display: flex; gap: 8px; margin-top: 8px;">
         <button id="cbs-pronounce-all" style="padding: 10px 20px; border: none; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; font-family: inherit; white-space: nowrap; background: #4285f4; color: white;">Pronounce All</button>
         <button id="cbs-choose" style="padding: 10px 20px; border: none; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; font-family: inherit; white-space: nowrap; background: #f1f3f4; color: #5f6368;">Choose</button>
-        <button id="cbs-dismiss" style="padding: 10px 12px; border: none; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; font-family: inherit; white-space: nowrap; background: none; color: #5f6368;">Dismiss</button>
+        <button id="cbs-disable-all" style="padding: 10px 12px; border: none; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; font-family: inherit; white-space: nowrap; background: none; color: #5f6368;">Disable All</button>
       </div>
     </div>
   `;
@@ -106,8 +120,9 @@ function showToast() {
     showSelectionMenu();
   });
 
-  document.getElementById('cbs-dismiss').addEventListener('click', () => {
+  document.getElementById('cbs-disable-all').addEventListener('click', () => {
     clearTimeout(autoDismissTimer);
+    disableTool();
     hideToast();
   });
 
@@ -173,17 +188,24 @@ function showSelectionMenu() {
     flex-direction: column !important;
   `;
   
-  const checkboxesHtml = foundNames.map(name => `
+  const checkboxesHtml = foundNames.map(name => {
+    const isEnabled = enabledNames.includes(name);
+    const checkboxBg = isEnabled ? '#4285f4' : 'white';
+    const checkboxBorder = isEnabled ? '#4285f4' : '#999';
+    const checkmarkDisplay = isEnabled ? 'block' : 'none';
+    const dataChecked = isEnabled ? 'true' : 'false';
+    
+    return `
     <label class="cbs-checkbox-label-custom" data-name="${name}" style="display: flex !important; align-items: center !important; padding: 12px !important; border-radius: 8px !important; cursor: pointer !important; transition: background 0.2s !important; gap: 12px !important; margin: 0 !important; font-family: inherit !important; background: transparent !important;">
-      <div class="cbs-custom-checkbox" data-checkbox="${name}" style="width: 18px !important; height: 18px !important; min-width: 18px !important; min-height: 18px !important; border: 2px solid #999 !important; border-radius: 3px !important; background: white !important; cursor: pointer !important; flex-shrink: 0 !important; margin: 0 !important; padding: 0 !important; position: relative !important; display: flex !important; align-items: center !important; justify-content: center !important;">
-        <svg style="width: 12px !important; height: 12px !important; display: none !important; color: white !important; stroke: white !important;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+      <div class="cbs-custom-checkbox" data-checkbox="${name}" data-checked="${dataChecked}" style="width: 18px !important; height: 18px !important; min-width: 18px !important; min-height: 18px !important; border: 2px solid ${checkboxBorder} !important; border-radius: 3px !important; background: ${checkboxBg} !important; cursor: pointer !important; flex-shrink: 0 !important; margin: 0 !important; padding: 0 !important; position: relative !important; display: flex !important; align-items: center !important; justify-content: center !important;">
+        <svg style="width: 12px !important; height: 12px !important; display: ${checkmarkDisplay} !important; color: white !important; stroke: white !important;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
           <polyline points="20 6 9 17 4 12"></polyline>
         </svg>
       </div>
       <span style="font-weight: 500 !important; color: #1a1a1a !important; min-width: 100px !important; font-size: 14px !important; font-family: inherit !important; margin: 0 !important;">${name}</span>
       <span style="color: #666 !important; font-size: 14px !important; font-style: italic !important; font-family: inherit !important; margin: 0 !important;">${jsonData[name].pronunciation}</span>
     </label>
-  `).join('');
+  `}).join('');
 
   menu.innerHTML = `
     <div style="display: flex !important; flex-direction: column !important; height: 100% !important; overflow: hidden !important;">
@@ -192,7 +214,7 @@ function showSelectionMenu() {
       </div>
       <div style="padding: 16px 20px !important; display: flex !important; flex-direction: column !important; gap: 8px !important; flex-shrink: 0 !important;">
         <button id="cbs-enable-all-btn" style="padding: 14px 24px !important; border: none !important; border-radius: 8px !important; font-size: 15px !important; font-weight: 500 !important; cursor: pointer !important; transition: all 0.2s !important; font-family: inherit !important; white-space: nowrap !important; background: #4285f4 !important; color: white !important; width: 100% !important; margin: 0 !important; line-height: 1.4 !important;">Enable All Pronunciations</button>
-        <button id="cbs-dismiss-btn" style="padding: 14px 24px !important; border: none !important; border-radius: 8px !important; font-size: 15px !important; font-weight: 500 !important; cursor: pointer !important; transition: all 0.2s !important; font-family: inherit !important; white-space: nowrap !important; background: #f1f3f4 !important; color: #5f6368 !important; width: 100% !important; margin: 0 !important; line-height: 1.4 !important;">Dismiss</button>
+        <button id="cbs-disable-all-btn" style="padding: 14px 24px !important; border: none !important; border-radius: 8px !important; font-size: 15px !important; font-weight: 500 !important; cursor: pointer !important; transition: all 0.2s !important; font-family: inherit !important; white-space: nowrap !important; background: #f1f3f4 !important; color: #5f6368 !important; width: 100% !important; margin: 0 !important; line-height: 1.4 !important;">Disable All</button>
       </div>
       <div style="text-align: center !important; padding: 10px 20px !important; color: #999 !important; font-size: 12px !important; position: relative !important; flex-shrink: 0 !important;">
         <span style="background: white !important; padding: 0 12px !important; position: relative !important; z-index: 1 !important; font-family: inherit !important; margin: 0 !important;">or choose specific names</span>
@@ -250,17 +272,28 @@ function showSelectionMenu() {
     hideSelectionMenu();
   });
 
-  document.getElementById('cbs-dismiss-btn').addEventListener('click', () => {
+  document.getElementById('cbs-disable-all-btn').addEventListener('click', () => {
+    disableTool();
     hideSelectionMenu();
   });
 
   document.getElementById('cbs-enable-selected').addEventListener('click', () => {
     const checkedBoxes = menu.querySelectorAll('.cbs-custom-checkbox[data-checked="true"]');
     const selectedNames = Array.from(checkedBoxes).map(cb => cb.getAttribute('data-checkbox'));
-    if (selectedNames.length > 0) {
-      enableTool(jsonData, selectedNames);
-      hideSelectionMenu();
+    
+    // Disable unchecked names that are currently enabled
+    const namesToDisable = enabledNames.filter(name => !selectedNames.includes(name));
+    if (namesToDisable.length > 0) {
+      disableTool(namesToDisable);
     }
+    
+    // Enable newly checked names
+    const namesToEnable = selectedNames.filter(name => !enabledNames.includes(name));
+    if (namesToEnable.length > 0) {
+      enableTool(jsonData, namesToEnable);
+    }
+    
+    hideSelectionMenu();
   });
 
   // Trigger animation
@@ -281,12 +314,94 @@ function hideSelectionMenu() {
   }
 }
 
+function disableTool(namesToDisable = null) {
+  // If no specific names provided, disable all
+  const targetNames = namesToDisable || enabledNames;
+  
+  if (targetNames.length === 0) return;
+  
+  console.log('Disabling pronunciations for:', targetNames);
+  
+  targetNames.forEach(name => {
+    const info = jsonData[name];
+    if (!info) return;
+    
+    const pronunciation = info.pronunciation;
+    const escapedPronunciation = pronunciation.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    
+    // Find all links with this pronunciation and replace the whole pattern
+    const walker = document.createTreeWalker(
+      document.body,
+      NodeFilter.SHOW_ELEMENT,
+      {
+        acceptNode: function(node) {
+          // Skip our extension elements
+          if (node.closest('#chrome-bible-speak-toast') ||
+              node.closest('#chrome-bible-speak-selection')) {
+            return NodeFilter.FILTER_REJECT;
+          }
+          // Look for our pronunciation links
+          if (node.tagName === 'A' && 
+              node.textContent === pronunciation &&
+              node.href === info.link) {
+            return NodeFilter.FILTER_ACCEPT;
+          }
+          return NodeFilter.FILTER_SKIP;
+        }
+      }
+    );
+    
+    const linksToRemove = [];
+    let currentNode;
+    while (currentNode = walker.nextNode()) {
+      linksToRemove.push(currentNode);
+    }
+    
+    linksToRemove.forEach(link => {
+      const parent = link.parentNode;
+      // Check if preceded by "Name (" and followed by ")"
+      const prevSibling = link.previousSibling;
+      const nextSibling = link.nextSibling;
+      
+      if (prevSibling && prevSibling.nodeType === Node.TEXT_NODE &&
+          nextSibling && nextSibling.nodeType === Node.TEXT_NODE) {
+        const prevText = prevSibling.textContent;
+        const nextText = nextSibling.textContent;
+        
+        if (prevText.endsWith(`${name} (`) && nextText.startsWith(')')) {
+          // Remove the pattern
+          prevSibling.textContent = prevText.slice(0, -2); // Remove " ("
+          nextSibling.textContent = nextText.slice(1); // Remove ")"
+          link.remove();
+        }
+      }
+    });
+  });
+  
+  // Update global tracker
+  if (namesToDisable) {
+    enabledNames = enabledNames.filter(n => !namesToDisable.includes(n));
+  } else {
+    enabledNames = [];
+  }
+}
+
 function enableTool(data, namesToEnable) {
   console.log('Enabling tool for names:', namesToEnable);
+  
+  // Filter out names that are already enabled to prevent duplicates
+  const newNames = namesToEnable.filter(name => !enabledNames.includes(name));
+  
+  if (newNames.length === 0) {
+    console.log('All selected names already enabled');
+    return;
+  }
+  
+  console.log('New names to enable:', newNames);
 
   // Create a map for quick lookup
   const nameMap = {};
-  namesToEnable.forEach(name => {
+  newNames.forEach(name => {
     nameMap[name] = {
       pronunciation: data[name].pronunciation,
       link: data[name].link
@@ -298,7 +413,7 @@ function enableTool(data, namesToEnable) {
     let text = node.textContent;
     let modified = false;
     
-    namesToEnable.forEach(name => {
+    newNames.forEach(name => {
       const regex = new RegExp(`\\b${name}\\b`, 'g');
       if (regex.test(text)) {
         const info = nameMap[name];
@@ -345,7 +460,7 @@ function enableTool(data, namesToEnable) {
   traverseDOM(document.body);
   
   // Now add the links in a second pass
-  namesToEnable.forEach(name => {
+  newNames.forEach(name => {
     const info = nameMap[name];
     const regex = new RegExp(`\\b${name} \\(${info.pronunciation.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\)`, 'g');
     
@@ -404,6 +519,10 @@ function enableTool(data, namesToEnable) {
       }
     });
   });
+  
+  // Update global tracker with newly enabled names
+  enabledNames = [...enabledNames, ...newNames];
+  console.log('Updated enabledNames:', enabledNames);
 }
 
 function getBrandingFooter() {

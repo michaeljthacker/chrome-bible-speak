@@ -1,5 +1,6 @@
 let foundNames = [];
 let jsonData = null;
+let enabledNames = [];
 
 // Query the active tab for found names
 chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -13,6 +14,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     if (response && response.names && response.names.length > 0) {
       foundNames = response.names;
       jsonData = response.data;
+      enabledNames = response.enabledNames || [];
       showContent();
       renderNamesList();
     } else {
@@ -33,17 +35,25 @@ function showNoNames() {
 
 function renderNamesList() {
   const container = document.getElementById('cbs-popup-names');
-  container.innerHTML = foundNames.map(name => `
+  container.innerHTML = foundNames.map(name => {
+    const isEnabled = enabledNames.includes(name);
+    const checkboxBg = isEnabled ? '#4285f4' : 'white';
+    const checkboxBorder = isEnabled ? '#4285f4' : '#999';
+    const checkmarkDisplay = isEnabled ? 'block' : 'none';
+    const dataChecked = isEnabled ? 'true' : 'false';
+    
+    return `
     <label class="cbs-checkbox-label cbs-checkbox-label-custom" data-name="${name}">
-      <div class="cbs-custom-checkbox" data-checkbox="${name}">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="display: none;">
+      <div class="cbs-custom-checkbox" data-checkbox="${name}" data-checked="${dataChecked}" style="background: ${checkboxBg}; border-color: ${checkboxBorder};">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" style="display: ${checkmarkDisplay};">
           <polyline points="20 6 9 17 4 12"></polyline>
         </svg>
       </div>
       <span class="cbs-name">${name}</span>
       <span class="cbs-pronunciation">${jsonData[name].pronunciation}</span>
     </label>
-  `).join('');
+    `;
+  }).join('');
   
   // Add custom checkbox functionality
   const customCheckboxLabels = container.querySelectorAll('.cbs-checkbox-label-custom');
@@ -78,10 +88,10 @@ document.getElementById('cbs-popup-enable-all').addEventListener('click', () => 
   });
 });
 
-// Dismiss button
+// Disable All button
 document.getElementById('cbs-popup-dismiss').addEventListener('click', () => {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.sendMessage(tabs[0].id, { action: 'dismiss' });
+    chrome.tabs.sendMessage(tabs[0].id, { action: 'disableAll' });
     window.close();
   });
 });
@@ -91,13 +101,11 @@ document.getElementById('cbs-popup-enable-selected').addEventListener('click', (
   const checkedBoxes = document.querySelectorAll('.cbs-custom-checkbox[data-checked="true"]');
   const selectedNames = Array.from(checkedBoxes).map(cb => cb.getAttribute('data-checkbox'));
   
-  if (selectedNames.length > 0) {
-    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      chrome.tabs.sendMessage(tabs[0].id, { 
-        action: 'enableSelected',
-        selectedNames: selectedNames
-      });
-      window.close();
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    chrome.tabs.sendMessage(tabs[0].id, { 
+      action: 'updateSelected',
+      selectedNames: selectedNames
     });
-  }
+    window.close();
+  });
 });
