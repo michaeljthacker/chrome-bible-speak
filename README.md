@@ -6,7 +6,7 @@ A Chrome extension that helps you pronounce biblical names correctly while brows
 
 Bible Name Aid automatically scans webpages for biblical names and displays an unobtrusive notification when names are found. You can choose to enable pronunciation aids for all names, select specific ones, or disable the feature entirely. The extension remembers your preferences across browsing sessions.
 
-When enabled, the tool adds pronunciation guides directly in the text—each biblical name gets a clickable phonetic pronunciation that links to the full pronunciation guide on BibleSpeak.org.
+When enabled, the tool adds pronunciation guides directly in the text; each biblical name gets a clickable phonetic pronunciation that links to the full pronunciation guide on BibleSpeak.org.
 
 ## Features
 

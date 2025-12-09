@@ -1,59 +1,67 @@
 {
-  "Aramean": {
-    "pronunciation": "ehr-uh-MEE-uhn",
-    "link": "https://biblespeak.org/Aramean-pronunciation/"
+  "Abimelech": {
+    "pronunciation": "uh-BIHM-uh-lehk",
+    "link": "https://biblespeak.org/Abimelech-pronunciation/"
+  },
+  "Amminadab": {
+    "pronunciation": "ah-MIHN-uh-dab",
+    "link": "https://biblespeak.org/Amminadab-pronunciation/"
+  },
+  "Achaia": {
+    "pronunciation": "uh-KAY-yuh",
+    "link": "https://biblespeak.org/Achaia-pronunciation/"
+  },
+  "Ansgar": {
+    "pronunciation": "ANS-gahr",
+    "link": "https://biblespeak.org/Ansgar-pronunciation/"
+  },
+  "Aram": {
+    "pronunciation": "AY-ram",
+    "link": "https://biblespeak.org/Aram-pronunciation/"
+  },
+  "Azor": {
+    "pronunciation": "AY-sawr",
+    "link": "https://biblespeak.org/Azor-pronunciation/"
   },
   "Ahikam": {
     "pronunciation": "uh-HAI-kam",
     "link": "https://biblespeak.org/Ahikam-pronunciation/"
   },
+  "Arabah": {
+    "pronunciation": "EHR-uh-buh",
+    "link": "https://biblespeak.org/Arabah-pronunciation/"
+  },
+  "Aquila": {
+    "pronunciation": "uh-KWIHL-uh",
+    "link": "https://biblespeak.org/Aquila-pronunciation/"
+  },
+  "Ampliatus": {
+    "pronunciation": "am-plee-AY-tuhs",
+    "link": "https://biblespeak.org/Ampliatus-pronunciation/"
+  },
+  "Apostasy": {
+    "pronunciation": "uh-PAHS-tuh-see",
+    "link": "https://biblespeak.org/Apostasy-pronunciation/"
+  },
+  "Abiathar": {
+    "pronunciation": "uh-BAI-uh-ther",
+    "link": "https://biblespeak.org/Abiathar-pronunciation/"
+  },
+  "Avila": {
+    "pronunciation": "AH-vih-luh",
+    "link": "https://biblespeak.org/Avila-pronunciation/"
+  },
+  "Aroer": {
+    "pronunciation": "uh-RO-er",
+    "link": "https://biblespeak.org/Aroer-pronunciation/"
+  },
+  "Abyss": {
+    "pronunciation": "uh-BIHS",
+    "link": "https://biblespeak.org/Abyss-pronunciation/"
+  },
   "Asaph": {
     "pronunciation": "AY-saf",
     "link": "https://biblespeak.org/Asaph-pronunciation/"
-  },
-  "Agabus": {
-    "pronunciation": "AG-uh-buhs",
-    "link": "https://biblespeak.org/Agabus-pronunciation/"
-  },
-  "Augustine": {
-    "pronunciation": "uh-GUHS-tihn",
-    "link": "https://biblespeak.org/Augustine-pronunciation/"
-  },
-  "Ai": {
-    "pronunciation": "AY-ee",
-    "link": "https://biblespeak.org/Ai-pronunciation/"
-  },
-  "Asa": {
-    "pronunciation": "AY-suh",
-    "link": "https://biblespeak.org/Asa-pronunciation/"
-  },
-  "Asher": {
-    "pronunciation": "ASH-er",
-    "link": "https://biblespeak.org/Asher-pronunciation/"
-  },
-  "Amaziah": {
-    "pronunciation": "am-uh-ZAI-uh",
-    "link": "https://biblespeak.org/Amaziah-pronunciation/"
-  },
-  "Achim": {
-    "pronunciation": "AY-kihm",
-    "link": "https://biblespeak.org/Achim-pronunciation/"
-  },
-  "Astarte": {
-    "pronunciation": "as-TAHR-tee",
-    "link": "https://biblespeak.org/Astarte-pronunciation/"
-  },
-  "Aeneas": {
-    "pronunciation": "uh-NEE-uhs",
-    "link": "https://biblespeak.org/Aeneas-pronunciation/"
-  },
-  "Aaron": {
-    "pronunciation": "EHR-uhn",
-    "link": "https://biblespeak.org/Aaron-pronunciation/"
-  },
-  "Azotus": {
-    "pronunciation": "uh-ZO-tus",
-    "link": "https://biblespeak.org/Azotus-pronunciation/"
   },
   "Ananias": {
     "pronunciation": "an-uh-NAI-uhs",
@@ -63,409 +71,421 @@
     "pronunciation": "AB-uh-nuh",
     "link": "https://biblespeak.org/Abana-pronunciation/"
   },
-  "Aven": {
-    "pronunciation": "AY-vn",
-    "link": "https://biblespeak.org/Aven-pronunciation/"
-  },
-  "Aquila": {
-    "pronunciation": "uh-KWIHL-uh",
-    "link": "https://biblespeak.org/Aquila-pronunciation/"
-  },
-  "Asser": {
-    "pronunciation": "AS-er",
-    "link": "https://biblespeak.org/Asser-pronunciation/"
-  },
-  "Apollos": {
-    "pronunciation": "uh-PAH-luhs",
-    "link": "https://biblespeak.org/Apollos-pronunciation/"
-  },
-  "Aram": {
-    "pronunciation": "AY-ram",
-    "link": "https://biblespeak.org/Aram-pronunciation/"
-  },
-  "Amittai": {
-    "pronunciation": "uh-MIH-tai",
-    "link": "https://biblespeak.org/Amittai-pronunciation/"
-  },
-  "Agrippa": {
-    "pronunciation": "uh-GRIH-puh",
-    "link": "https://biblespeak.org/Agrippa-pronunciation/"
-  },
-  "Abraham": {
-    "pronunciation": "AY-bruh-ham",
-    "link": "https://biblespeak.org/Abraham-pronunciation/"
-  },
-  "Abijah": {
-    "pronunciation": "uh-BAI-dzhuh",
-    "link": "https://biblespeak.org/Abijah-pronunciation/"
-  },
-  "Andronicus": {
-    "pronunciation": "an-draw-NAI-kuhs",
-    "link": "https://biblespeak.org/Andronicus-pronunciation/"
-  },
-  "Asahel": {
-    "pronunciation": "A-suh-hehl",
-    "link": "https://biblespeak.org/Asahel-pronunciation/"
-  },
-  "Acacia": {
-    "pronunciation": "uh-KAY-shuh",
-    "link": "https://biblespeak.org/Acacia-pronunciation/"
-  },
-  "Antichrist": {
-    "pronunciation": "AN-tih-kraist",
-    "link": "https://biblespeak.org/Antichrist-pronunciation/"
-  },
-  "Aquinas": {
-    "pronunciation": "uh-KWAI-nuhs",
-    "link": "https://biblespeak.org/Aquinas-pronunciation/"
-  },
-  "Antioch": {
-    "pronunciation": "AN-tih-ahk",
-    "link": "https://biblespeak.org/Antioch-pronunciation/"
-  },
-  "Athalia": {
-    "pronunciation": "ath-uh-LAI-uh",
-    "link": "https://biblespeak.org/Athalia-pronunciation/"
-  },
-  "Aroer": {
-    "pronunciation": "uh-RO-er",
-    "link": "https://biblespeak.org/Aroer-pronunciation/"
-  },
-  "Appius": {
-    "pronunciation": "AP-ee-uhs",
-    "link": "https://biblespeak.org/Appius-pronunciation/"
-  },
-  "Areopagus": {
-    "pronunciation": "ehr-ee-AH-puh-guhs",
-    "link": "https://biblespeak.org/Areopagus-pronunciation/"
-  },
-  "Abiel": {
-    "pronunciation": "AY-bee-ehl",
-    "link": "https://biblespeak.org/Abiel-pronunciation/"
-  },
-  "Araunah": {
-    "pronunciation": "uh-RAW-nuh",
-    "link": "https://biblespeak.org/Araunah-pronunciation/"
-  },
-  "Aloes": {
-    "pronunciation": "AL-oz",
-    "link": "https://biblespeak.org/Aloes-pronunciation/"
-  },
-  "Azzur": {
-    "pronunciation": "AZ-er",
-    "link": "https://biblespeak.org/Azzur-pronunciation/"
-  },
-  "Ansgar": {
-    "pronunciation": "ANS-gahr",
-    "link": "https://biblespeak.org/Ansgar-pronunciation/"
-  },
-  "Amoz": {
-    "pronunciation": "AY-muhz",
-    "link": "https://biblespeak.org/Amoz-pronunciation/"
-  },
-  "Avila": {
-    "pronunciation": "AH-vih-luh",
-    "link": "https://biblespeak.org/Avila-pronunciation/"
-  },
-  "Abram": {
-    "pronunciation": "AY-br'm",
-    "link": "https://biblespeak.org/Abram-pronunciation/"
-  },
-  "Ahasuerus": {
-    "pronunciation": "ay-HAS-eeoo-EHR-uhs",
-    "link": "https://biblespeak.org/Ahasuerus-pronunciation/"
-  },
-  "Amalek": {
-    "pronunciation": "AM-uh-lehk",
-    "link": "https://biblespeak.org/Amalek-pronunciation/"
-  },
-  "Amminadab": {
-    "pronunciation": "ah-MIHN-uh-dab",
-    "link": "https://biblespeak.org/Amminadab-pronunciation/"
-  },
-  "Alphaeus": {
-    "pronunciation": "AL-fee-uhs",
-    "link": "https://biblespeak.org/Alphaeus-pronunciation/"
-  },
-  "Abyss": {
-    "pronunciation": "uh-BIHS",
-    "link": "https://biblespeak.org/Abyss-pronunciation/"
-  },
-  "Athanasius": {
-    "pronunciation": "ath-uh-NAY-shuhs",
-    "link": "https://biblespeak.org/Athanasius-pronunciation/"
-  },
-  "Azor": {
-    "pronunciation": "AY-sawr",
-    "link": "https://biblespeak.org/Azor-pronunciation/"
-  },
-  "Arab": {
-    "pronunciation": "EHR-uhb",
-    "link": "https://biblespeak.org/Arab-pronunciation/"
-  },
-  "Apostasy": {
-    "pronunciation": "uh-PAHS-tuh-see",
-    "link": "https://biblespeak.org/Apostasy-pronunciation/"
-  },
-  "Alexandria": {
-    "pronunciation": "al-ehg-ZAN-dree-uh",
-    "link": "https://biblespeak.org/Alexandria-pronunciation/"
-  },
-  "Abba": {
-    "pronunciation": "AB-uh",
-    "link": "https://biblespeak.org/Abba-pronunciation/"
-  },
-  "Anathoth": {
-    "pronunciation": "AN-uh-thahth",
-    "link": "https://biblespeak.org/Anathoth-pronunciation/"
-  },
-  "Ahaz": {
-    "pronunciation": "AY-haz",
-    "link": "https://biblespeak.org/Ahaz-pronunciation/"
-  },
-  "Abiezrite": {
-    "pronunciation": "ay-bai-EHZ-rait",
-    "link": "https://biblespeak.org/Abiezrite-pronunciation/"
-  },
-  "Abiathar": {
-    "pronunciation": "uh-BAI-uh-ther",
-    "link": "https://biblespeak.org/Abiathar-pronunciation/"
-  },
-  "Apocrypha": {
-    "pronunciation": "uh-PAH-krih-fuh",
-    "link": "https://biblespeak.org/Apocrypha-pronunciation/"
-  },
-  "Aristarchus": {
-    "pronunciation": "ehr-ihs-TAHR-kuhs",
-    "link": "https://biblespeak.org/Aristarchus-pronunciation/"
-  },
-  "Abinadab": {
-    "pronunciation": "uh-BIHN-uh-dab",
-    "link": "https://biblespeak.org/Abinadab-pronunciation/"
-  },
-  "Abishai": {
-    "pronunciation": "uh-BIHSH-ay-ai",
-    "link": "https://biblespeak.org/Abishai-pronunciation/"
-  },
-  "Assyria": {
-    "pronunciation": "a-SIHR-ee-uh",
-    "link": "https://biblespeak.org/Assyria-pronunciation/"
-  },
-  "Achbor": {
-    "pronunciation": "AK-bawr",
-    "link": "https://biblespeak.org/Achbor-pronunciation/"
-  },
-  "Abel-Meholah": {
-    "pronunciation": "AY-b'l-mee-HO-lah",
-    "link": "https://biblespeak.org/Abel-Meholah-pronunciation/"
-  },
-  "Amen": {
-    "pronunciation": "ah-MEHN",
-    "link": "https://biblespeak.org/Amen-pronunciation/"
-  },
-  "Arimathea": {
-    "pronunciation": "ehr-uh-muh-THEE-uh",
-    "link": "https://biblespeak.org/Arimathea-pronunciation/"
-  },
-  "Attalia": {
-    "pronunciation": "at-TAH-lee-uh",
-    "link": "https://biblespeak.org/Attalia-pronunciation/"
-  },
-  "Antiochus": {
-    "pronunciation": "an-TAI-uh-kuhs",
-    "link": "https://biblespeak.org/Antiochus-pronunciation/"
-  },
-  "Aspens": {
-    "pronunciation": "AS-pehnz",
-    "link": "https://biblespeak.org/Aspens-pronunciation/"
-  },
-  "Annas": {
-    "pronunciation": "AN-uhs",
-    "link": "https://biblespeak.org/Annas-pronunciation/"
-  },
-  "Abilene": {
-    "pronunciation": "ab-uh-LEE-neh",
-    "link": "https://biblespeak.org/Abilene-pronunciation/"
-  },
-  "Ampliatus": {
-    "pronunciation": "am-plee-AY-tuhs",
-    "link": "https://biblespeak.org/Ampliatus-pronunciation/"
-  },
-  "Ashtaroth": {
-    "pronunciation": "ASH-tahr-awth",
-    "link": "https://biblespeak.org/Ashtaroth-pronunciation/"
-  },
-  "Anakim": {
-    "pronunciation": "AN-uh-kihm",
-    "link": "https://biblespeak.org/Anakim-pronunciation/"
-  },
-  "Achaia": {
-    "pronunciation": "uh-KAY-yuh",
-    "link": "https://biblespeak.org/Achaia-pronunciation/"
-  },
-  "Abednego": {
-    "pronunciation": "uh-BEHD-nee-go",
-    "link": "https://biblespeak.org/Abednego-pronunciation/"
-  },
-  "Ammonite": {
-    "pronunciation": "AM-uh-nait",
-    "link": "https://biblespeak.org/Ammonite-pronunciation/"
-  },
-  "Ahaziah": {
-    "pronunciation": "ay-haz-AI-uh",
-    "link": "https://biblespeak.org/Ahaziah-pronunciation/"
-  },
-  "Azariah": {
-    "pronunciation": "az-uh-RAI-uh",
-    "link": "https://biblespeak.org/Azariah-pronunciation/"
-  },
-  "Amos": {
-    "pronunciation": "AY-muhs",
-    "link": "https://biblespeak.org/Amos-pronunciation/"
-  },
-  "Assisi": {
-    "pronunciation": "uh-SEE-zee",
-    "link": "https://biblespeak.org/Assisi-pronunciation/"
-  },
-  "Aphiah": {
-    "pronunciation": "uh-FAI-uh",
-    "link": "https://biblespeak.org/Aphiah-pronunciation/"
-  },
-  "Arabah": {
-    "pronunciation": "EHR-uh-buh",
-    "link": "https://biblespeak.org/Arabah-pronunciation/"
-  },
-  "Absalom": {
-    "pronunciation": "AB-suh-luhm",
-    "link": "https://biblespeak.org/Absalom-pronunciation/"
-  },
-  "Alleluia": {
-    "pronunciation": "ah-lay-LOO-yuh",
-    "link": "https://biblespeak.org/Alleluia-pronunciation/"
-  },
-  "Aphek": {
-    "pronunciation": "AY-phek",
-    "link": "https://biblespeak.org/Aphek-pronunciation/"
-  },
-  "Abimelech": {
-    "pronunciation": "uh-BIHM-uh-lehk",
-    "link": "https://biblespeak.org/Abimelech-pronunciation/"
-  },
-  "Asmodeus": {
-    "pronunciation": "az-mo-DEE-uhs",
-    "link": "https://biblespeak.org/Asmodeus-pronunciation/"
-  },
-  "Artaxerxes": {
-    "pronunciation": "agr-tak-SERK-seez",
-    "link": "https://biblespeak.org/Artaxerxes-pronunciation/"
-  },
-  "Alpha": {
-    "pronunciation": "AHL-fuh",
-    "link": "https://biblespeak.org/Alpha-pronunciation/"
-  },
   "Ahab": {
     "pronunciation": "AY-hab",
     "link": "https://biblespeak.org/Ahab-pronunciation/"
-  },
-  "Agag": {
-    "pronunciation": "AY-gag",
-    "link": "https://biblespeak.org/Agag-pronunciation/"
-  },
-  "Archippus": {
-    "pronunciation": "ahr-KIHP-uhs",
-    "link": "https://biblespeak.org/Archippus-pronunciation/"
-  },
-  "Abiud": {
-    "pronunciation": "uh-BAI-uhd",
-    "link": "https://biblespeak.org/Abiud-pronunciation/"
-  },
-  "Ashpenaz": {
-    "pronunciation": "ASH-pee-naz",
-    "link": "https://biblespeak.org/Ashpenaz-pronunciation/"
   },
   "Amorite": {
     "pronunciation": "AM-uh-rait",
     "link": "https://biblespeak.org/Amorite-pronunciation/"
   },
-  "Anselm": {
-    "pronunciation": "AN-sehlm",
-    "link": "https://biblespeak.org/Anselm-pronunciation/"
+  "Aphek": {
+    "pronunciation": "AY-phek",
+    "link": "https://biblespeak.org/Aphek-pronunciation/"
   },
-  "Apphia": {
-    "pronunciation": "AF-ee-uh",
-    "link": "https://biblespeak.org/Apphia-pronunciation/"
+  "Abba": {
+    "pronunciation": "AB-uh",
+    "link": "https://biblespeak.org/Abba-pronunciation/"
+  },
+  "Asahel": {
+    "pronunciation": "A-suh-hehl",
+    "link": "https://biblespeak.org/Asahel-pronunciation/"
+  },
+  "Aspens": {
+    "pronunciation": "AS-pehnz",
+    "link": "https://biblespeak.org/Aspens-pronunciation/"
+  },
+  "Asher": {
+    "pronunciation": "ASH-er",
+    "link": "https://biblespeak.org/Asher-pronunciation/"
+  },
+  "Amittai": {
+    "pronunciation": "uh-MIH-tai",
+    "link": "https://biblespeak.org/Amittai-pronunciation/"
+  },
+  "Arab": {
+    "pronunciation": "EHR-uhb",
+    "link": "https://biblespeak.org/Arab-pronunciation/"
+  },
+  "Azzur": {
+    "pronunciation": "AZ-er",
+    "link": "https://biblespeak.org/Azzur-pronunciation/"
+  },
+  "Agag": {
+    "pronunciation": "AY-gag",
+    "link": "https://biblespeak.org/Agag-pronunciation/"
+  },
+  "Azotus": {
+    "pronunciation": "uh-ZO-tus",
+    "link": "https://biblespeak.org/Azotus-pronunciation/"
+  },
+  "Achbor": {
+    "pronunciation": "AK-bawr",
+    "link": "https://biblespeak.org/Achbor-pronunciation/"
+  },
+  "Assyria": {
+    "pronunciation": "a-SIHR-ee-uh",
+    "link": "https://biblespeak.org/Assyria-pronunciation/"
+  },
+  "Abiel": {
+    "pronunciation": "AY-bee-ehl",
+    "link": "https://biblespeak.org/Abiel-pronunciation/"
+  },
+  "Asmodeus": {
+    "pronunciation": "az-mo-DEE-uhs",
+    "link": "https://biblespeak.org/Asmodeus-pronunciation/"
+  },
+  "Alpha": {
+    "pronunciation": "AHL-fuh",
+    "link": "https://biblespeak.org/Alpha-pronunciation/"
+  },
+  "Amoz": {
+    "pronunciation": "AY-muhz",
+    "link": "https://biblespeak.org/Amoz-pronunciation/"
+  },
+  "Arimathea": {
+    "pronunciation": "ehr-uh-muh-THEE-uh",
+    "link": "https://biblespeak.org/Arimathea-pronunciation/"
+  },
+  "Ahasuerus": {
+    "pronunciation": "ay-HAS-eeoo-EHR-uhs",
+    "link": "https://biblespeak.org/Ahasuerus-pronunciation/"
+  },
+  "Alphaeus": {
+    "pronunciation": "AL-fee-uhs",
+    "link": "https://biblespeak.org/Alphaeus-pronunciation/"
+  },
+  "Alexandria": {
+    "pronunciation": "al-ehg-ZAN-dree-uh",
+    "link": "https://biblespeak.org/Alexandria-pronunciation/"
+  },
+  "Ashtaroth": {
+    "pronunciation": "ASH-tahr-awth",
+    "link": "https://biblespeak.org/Ashtaroth-pronunciation/"
+  },
+  "Aaron": {
+    "pronunciation": "EHR-uhn",
+    "link": "https://biblespeak.org/Aaron-pronunciation/"
+  },
+  "Acacia": {
+    "pronunciation": "uh-KAY-shuh",
+    "link": "https://biblespeak.org/Acacia-pronunciation/"
+  },
+  "Amen": {
+    "pronunciation": "ah-MEHN",
+    "link": "https://biblespeak.org/Amen-pronunciation/"
+  },
+  "Ahaz": {
+    "pronunciation": "AY-haz",
+    "link": "https://biblespeak.org/Ahaz-pronunciation/"
+  },
+  "Araunah": {
+    "pronunciation": "uh-RAW-nuh",
+    "link": "https://biblespeak.org/Araunah-pronunciation/"
+  },
+  "Athanasius": {
+    "pronunciation": "ath-uh-NAY-shuhs",
+    "link": "https://biblespeak.org/Athanasius-pronunciation/"
+  },
+  "Areopagus": {
+    "pronunciation": "ehr-ee-AH-puh-guhs",
+    "link": "https://biblespeak.org/Areopagus-pronunciation/"
+  },
+  "Abednego": {
+    "pronunciation": "uh-BEHD-nee-go",
+    "link": "https://biblespeak.org/Abednego-pronunciation/"
+  },
+  "Ahaziah": {
+    "pronunciation": "ay-haz-AI-uh",
+    "link": "https://biblespeak.org/Ahaziah-pronunciation/"
+  },
+  "Ammonite": {
+    "pronunciation": "AM-uh-nait",
+    "link": "https://biblespeak.org/Ammonite-pronunciation/"
+  },
+  "Amos": {
+    "pronunciation": "AY-muhs",
+    "link": "https://biblespeak.org/Amos-pronunciation/"
+  },
+  "Appius": {
+    "pronunciation": "AP-ee-uhs",
+    "link": "https://biblespeak.org/Appius-pronunciation/"
+  },
+  "Aphiah": {
+    "pronunciation": "uh-FAI-uh",
+    "link": "https://biblespeak.org/Aphiah-pronunciation/"
+  },
+  "Abiezrite": {
+    "pronunciation": "ay-bai-EHZ-rait",
+    "link": "https://biblespeak.org/Abiezrite-pronunciation/"
+  },
+  "Abishai": {
+    "pronunciation": "uh-BIHSH-ay-ai",
+    "link": "https://biblespeak.org/Abishai-pronunciation/"
+  },
+  "Amalek": {
+    "pronunciation": "AM-uh-lehk",
+    "link": "https://biblespeak.org/Amalek-pronunciation/"
+  },
+  "Anathoth": {
+    "pronunciation": "AN-uh-thahth",
+    "link": "https://biblespeak.org/Anathoth-pronunciation/"
   },
   "Archelaus": {
     "pronunciation": "ahr-kee-LAY-uhs",
     "link": "https://biblespeak.org/Archelaus-pronunciation/"
   },
+  "Astarte": {
+    "pronunciation": "as-TAHR-tee",
+    "link": "https://biblespeak.org/Astarte-pronunciation/"
+  },
+  "Abinadab": {
+    "pronunciation": "uh-BIHN-uh-dab",
+    "link": "https://biblespeak.org/Abinadab-pronunciation/"
+  },
+  "Aristarchus": {
+    "pronunciation": "ehr-ihs-TAHR-kuhs",
+    "link": "https://biblespeak.org/Aristarchus-pronunciation/"
+  },
+  "Apocrypha": {
+    "pronunciation": "uh-PAH-krih-fuh",
+    "link": "https://biblespeak.org/Apocrypha-pronunciation/"
+  },
+  "Artaxerxes": {
+    "pronunciation": "agr-tak-SERK-seez",
+    "link": "https://biblespeak.org/Artaxerxes-pronunciation/"
+  },
+  "Antiochus": {
+    "pronunciation": "an-TAI-uh-kuhs",
+    "link": "https://biblespeak.org/Antiochus-pronunciation/"
+  },
+  "Alleluia": {
+    "pronunciation": "ah-lay-LOO-yuh",
+    "link": "https://biblespeak.org/Alleluia-pronunciation/"
+  },
+  "Athalia": {
+    "pronunciation": "ath-uh-LAI-uh",
+    "link": "https://biblespeak.org/Athalia-pronunciation/"
+  },
+  "Abraham": {
+    "pronunciation": "AY-bruh-ham",
+    "link": "https://biblespeak.org/Abraham-pronunciation/"
+  },
+  "Abram": {
+    "pronunciation": "AY-br'm",
+    "link": "https://biblespeak.org/Abram-pronunciation/"
+  },
+  "Ai": {
+    "pronunciation": "AY-ee",
+    "link": "https://biblespeak.org/Ai-pronunciation/"
+  },
+  "Anselm": {
+    "pronunciation": "AN-sehlm",
+    "link": "https://biblespeak.org/Anselm-pronunciation/"
+  },
+  "Abiud": {
+    "pronunciation": "uh-BAI-uhd",
+    "link": "https://biblespeak.org/Abiud-pronunciation/"
+  },
+  "Anakim": {
+    "pronunciation": "AN-uh-kihm",
+    "link": "https://biblespeak.org/Anakim-pronunciation/"
+  },
+  "Amaziah": {
+    "pronunciation": "am-uh-ZAI-uh",
+    "link": "https://biblespeak.org/Amaziah-pronunciation/"
+  },
+  "Assisi": {
+    "pronunciation": "uh-SEE-zee",
+    "link": "https://biblespeak.org/Assisi-pronunciation/"
+  },
+  "Antioch": {
+    "pronunciation": "AN-tih-ahk",
+    "link": "https://biblespeak.org/Antioch-pronunciation/"
+  },
+  "Azariah": {
+    "pronunciation": "az-uh-RAI-uh",
+    "link": "https://biblespeak.org/Azariah-pronunciation/"
+  },
   "Abel-Keramin": {
     "pronunciation": "AY-b'l-KEHR-uh-mihn",
     "link": "https://biblespeak.org/Abel-Keramin-pronunciation/"
   },
-  "Brigand": {
-    "pronunciation": "BRIH-gnd",
-    "link": "https://biblespeak.org/Brigand-pronunciation/"
+  "Abijah": {
+    "pronunciation": "uh-BAI-dzhuh",
+    "link": "https://biblespeak.org/Abijah-pronunciation/"
+  },
+  "Abilene": {
+    "pronunciation": "ab-uh-LEE-neh",
+    "link": "https://biblespeak.org/Abilene-pronunciation/"
+  },
+  "Aramean": {
+    "pronunciation": "ehr-uh-MEE-uhn",
+    "link": "https://biblespeak.org/Aramean-pronunciation/"
+  },
+  "Andronicus": {
+    "pronunciation": "an-draw-NAI-kuhs",
+    "link": "https://biblespeak.org/Andronicus-pronunciation/"
+  },
+  "Antichrist": {
+    "pronunciation": "AN-tih-kraist",
+    "link": "https://biblespeak.org/Antichrist-pronunciation/"
+  },
+  "Apollos": {
+    "pronunciation": "uh-PAH-luhs",
+    "link": "https://biblespeak.org/Apollos-pronunciation/"
+  },
+  "Ashpenaz": {
+    "pronunciation": "ASH-pee-naz",
+    "link": "https://biblespeak.org/Ashpenaz-pronunciation/"
+  },
+  "Attalia": {
+    "pronunciation": "at-TAH-lee-uh",
+    "link": "https://biblespeak.org/Attalia-pronunciation/"
+  },
+  "Agrippa": {
+    "pronunciation": "uh-GRIH-puh",
+    "link": "https://biblespeak.org/Agrippa-pronunciation/"
+  },
+  "Agabus": {
+    "pronunciation": "AG-uh-buhs",
+    "link": "https://biblespeak.org/Agabus-pronunciation/"
+  },
+  "Archippus": {
+    "pronunciation": "ahr-KIHP-uhs",
+    "link": "https://biblespeak.org/Archippus-pronunciation/"
+  },
+  "Aloes": {
+    "pronunciation": "AL-oz",
+    "link": "https://biblespeak.org/Aloes-pronunciation/"
+  },
+  "Achim": {
+    "pronunciation": "AY-kihm",
+    "link": "https://biblespeak.org/Achim-pronunciation/"
+  },
+  "Aven": {
+    "pronunciation": "AY-vn",
+    "link": "https://biblespeak.org/Aven-pronunciation/"
+  },
+  "Asa": {
+    "pronunciation": "AY-suh",
+    "link": "https://biblespeak.org/Asa-pronunciation/"
+  },
+  "Asser": {
+    "pronunciation": "AS-er",
+    "link": "https://biblespeak.org/Asser-pronunciation/"
+  },
+  "Annas": {
+    "pronunciation": "AN-uhs",
+    "link": "https://biblespeak.org/Annas-pronunciation/"
+  },
+  "Apphia": {
+    "pronunciation": "AF-ee-uh",
+    "link": "https://biblespeak.org/Apphia-pronunciation/"
+  },
+  "Abel-Meholah": {
+    "pronunciation": "AY-b'l-mee-HO-lah",
+    "link": "https://biblespeak.org/Abel-Meholah-pronunciation/"
+  },
+  "Aeneas": {
+    "pronunciation": "uh-NEE-uhs",
+    "link": "https://biblespeak.org/Aeneas-pronunciation/"
+  },
+  "Augustine": {
+    "pronunciation": "uh-GUHS-tihn",
+    "link": "https://biblespeak.org/Augustine-pronunciation/"
+  },
+  "Absalom": {
+    "pronunciation": "AB-suh-luhm",
+    "link": "https://biblespeak.org/Absalom-pronunciation/"
+  },
+  "Aquinas": {
+    "pronunciation": "uh-KWAI-nuhs",
+    "link": "https://biblespeak.org/Aquinas-pronunciation/"
   },
   "Beelzebul": {
     "pronunciation": "bee-EHL-zee-buhl",
     "link": "https://biblespeak.org/Beelzebul-pronunciation/"
   },
-  "Bashan": {
-    "pronunciation": "BAY-shan",
-    "link": "https://biblespeak.org/Bashan-pronunciation/"
+  "Bosco": {
+    "pronunciation": "BAHS-ko",
+    "link": "https://biblespeak.org/Bosco-pronunciation/"
   },
-  "Beth-Zur": {
-    "pronunciation": "behth-ZER",
-    "link": "https://biblespeak.org/Beth-Zur-pronunciation/"
-  },
-  "Bildad": {
-    "pronunciation": "BIHL-dad",
-    "link": "https://biblespeak.org/Bildad-pronunciation/"
-  },
-  "Barak": {
-    "pronunciation": "BEHR-ak",
-    "link": "https://biblespeak.org/Barak-pronunciation/"
-  },
-  "Bitumen": {
-    "pronunciation": "bih-TYOO-mn",
-    "link": "https://biblespeak.org/Bitumen-pronunciation/"
+  "Barsabbas": {
+    "pronunciation": "BAHR-suh-buhs",
+    "link": "https://biblespeak.org/Barsabbas-pronunciation/"
   },
   "Bathsheba": {
     "pronunciation": "bath-SHEE-buh",
     "link": "https://biblespeak.org/Bathsheba-pronunciation/"
   },
-  "Boaz": {
-    "pronunciation": "BO-az",
-    "link": "https://biblespeak.org/Boaz-pronunciation/"
+  "Bethulia": {
+    "pronunciation": "bee-THOO-lee-uh",
+    "link": "https://biblespeak.org/Bethulia-pronunciation/"
   },
-  "Babylonian": {
-    "pronunciation": "bab-ih-LO-nih-uhn",
-    "link": "https://biblespeak.org/Babylonian-pronunciation/"
+  "Bridget": {
+    "pronunciation": "BRIH-dzhet",
+    "link": "https://biblespeak.org/Bridget-pronunciation/"
   },
-  "Beor": {
-    "pronunciation": "BEE-awr",
-    "link": "https://biblespeak.org/Beor-pronunciation/"
+  "Baal-Zephon": {
+    "pronunciation": "BAY-uhl-ZEE-fuhn",
+    "link": "https://biblespeak.org/Baal-Zephon-pronunciation/"
   },
-  "Baruch": {
-    "pronunciation": "BEHR-ook",
-    "link": "https://biblespeak.org/Baruch-pronunciation/"
+  "Beer-Sheba": {
+    "pronunciation": "BEE-er-SHEE-buh",
+    "link": "https://biblespeak.org/Beer-Sheba-pronunciation/"
   },
-  "Benjaminite": {
-    "pronunciation": "BEHN-dzhuh-mihn-ait",
-    "link": "https://biblespeak.org/Benjaminite-pronunciation/"
-  },
-  "Balamon": {
-    "pronunciation": "BAL-uh-muhn",
-    "link": "https://biblespeak.org/Balamon-pronunciation/"
+  "Balaam": {
+    "pronunciation": "BAY-lm",
+    "link": "https://biblespeak.org/Balaam-pronunciation/"
   },
   "Bahurim": {
     "pronunciation": "bah-HOOR-ihm",
     "link": "https://biblespeak.org/Bahurim-pronunciation/"
   },
-  "Barnabas": {
-    "pronunciation": "BAHR-nuh-buhs",
-    "link": "https://biblespeak.org/Barnabas-pronunciation/"
+  "Beer-Lahairoi": {
+    "pronunciation": "BEE-er-luh-HAI-roi",
+    "link": "https://biblespeak.org/Beer-Lahairoi-pronunciation/"
+  },
+  "Balamon": {
+    "pronunciation": "BAL-uh-muhn",
+    "link": "https://biblespeak.org/Balamon-pronunciation/"
+  },
+  "Baal": {
+    "pronunciation": "BAY-uhl",
+    "link": "https://biblespeak.org/Baal-pronunciation/"
+  },
+  "Bonaventure": {
+    "pronunciation": "bah-nuh-VEHN-tsher",
+    "link": "https://biblespeak.org/Bonaventure-pronunciation/"
+  },
+  "Bethlehem": {
+    "pronunciation": "BEHTH-leh-hehm",
+    "link": "https://biblespeak.org/Bethlehem-pronunciation/"
+  },
+  "Brindisi": {
+    "pronunciation": "brihn-DEE-zee",
+    "link": "https://biblespeak.org/Brindisi-pronunciation/"
+  },
+  "Booths": {
+    "pronunciation": "bouths",
+    "link": "https://biblespeak.org/Booths-pronunciation/"
+  },
+  "Blase": {
+    "pronunciation": "blayz",
+    "link": "https://biblespeak.org/Blase-pronunciation/"
+  },
+  "Babylonian": {
+    "pronunciation": "bab-ih-LO-nih-uhn",
+    "link": "https://biblespeak.org/Babylonian-pronunciation/"
+  },
+  "Bashan": {
+    "pronunciation": "BAY-shan",
+    "link": "https://biblespeak.org/Bashan-pronunciation/"
+  },
+  "Belshazzar": {
+    "pronunciation": "behl-SHAZ-er",
+    "link": "https://biblespeak.org/Belshazzar-pronunciation/"
   },
   "Babel": {
     "pronunciation": "BAY-bl",
@@ -475,493 +495,469 @@
     "pronunciation": "behth-SAY-ih-duh",
     "link": "https://biblespeak.org/Bethsaida-pronunciation/"
   },
-  "Bithynia": {
-    "pronunciation": "bih-THIHN-ih-uh",
-    "link": "https://biblespeak.org/Bithynia-pronunciation/"
-  },
-  "Benedict": {
-    "pronunciation": "BEHN-eh-dihkt",
-    "link": "https://biblespeak.org/Benedict-pronunciation/"
-  },
-  "Barabbas": {
-    "pronunciation": "beh-REH-buhs",
-    "link": "https://biblespeak.org/Barabbas-pronunciation/"
-  },
-  "Bethphage": {
-    "pronunciation": "BEHTH-fuh-dzhee",
-    "link": "https://biblespeak.org/Bethphage-pronunciation/"
-  },
-  "Bethany": {
-    "pronunciation": "BEHTH-uh-nee",
-    "link": "https://biblespeak.org/Bethany-pronunciation/"
-  },
-  "Borromeo": {
-    "pronunciation": "baw-ro-MAY-o",
-    "link": "https://biblespeak.org/Borromeo-pronunciation/"
-  },
-  "Beer-Lahairoi": {
-    "pronunciation": "BEE-er-luh-HAI-roi",
-    "link": "https://biblespeak.org/Beer-Lahairoi-pronunciation/"
-  },
-  "Bethrothed": {
-    "pronunciation": "bee-trothd",
-    "link": "https://biblespeak.org/Bethrothed-pronunciation/"
-  },
-  "Brazier": {
-    "pronunciation": "BRAY-zher",
-    "link": "https://biblespeak.org/Brazier-pronunciation/"
-  },
-  "Bethlehem": {
-    "pronunciation": "BEHTH-leh-hehm",
-    "link": "https://biblespeak.org/Bethlehem-pronunciation/"
-  },
-  "Barsabbas": {
-    "pronunciation": "BAHR-suh-buhs",
-    "link": "https://biblespeak.org/Barsabbas-pronunciation/"
-  },
-  "Bartholomew": {
-    "pronunciation": "bar-THAHL-uh-myoo",
-    "link": "https://biblespeak.org/Bartholomew-pronunciation/"
-  },
-  "Berechiah": {
-    "pronunciation": "behr-ehk-AI-uh",
-    "link": "https://biblespeak.org/Berechiah-pronunciation/"
-  },
-  "Bethesda": {
-    "pronunciation": "beh-THEHZ-duh",
-    "link": "https://biblespeak.org/Bethesda-pronunciation/"
-  },
-  "Baptize": {
-    "pronunciation": "bap-TAIZ",
-    "link": "https://biblespeak.org/Baptize-pronunciation/"
-  },
-  "Booths": {
-    "pronunciation": "bouths",
-    "link": "https://biblespeak.org/Booths-pronunciation/"
-  },
-  "Babylon": {
-    "pronunciation": "BAB-ih-luhn",
-    "link": "https://biblespeak.org/Babylon-pronunciation/"
-  },
-  "Bullock": {
-    "pronunciation": "BUL-uhk",
-    "link": "https://biblespeak.org/Bullock-pronunciation/"
-  },
-  "Beth-Millo": {
-    "pronunciation": "BEHTH-mihl-o",
-    "link": "https://biblespeak.org/Beth-Millo-pronunciation/"
-  },
-  "Bellarmine": {
-    "pronunciation": "BEHL-er-mihn",
-    "link": "https://biblespeak.org/Bellarmine-pronunciation/"
-  },
-  "Bridget": {
-    "pronunciation": "BRIH-dzhet",
-    "link": "https://biblespeak.org/Bridget-pronunciation/"
-  },
-  "Becorath": {
-    "pronunciation": "bee-KO-rath",
-    "link": "https://biblespeak.org/Becorath-pronunciation/"
-  },
-  "Baal": {
-    "pronunciation": "BAY-uhl",
-    "link": "https://biblespeak.org/Baal-pronunciation/"
-  },
-  "Baal-Shalishah": {
-    "pronunciation": "BAY-uhl-shuh-LAI-shuh",
-    "link": "https://biblespeak.org/Baal-Shalishah-pronunciation/"
-  },
-  "Brindisi": {
-    "pronunciation": "brihn-DEE-zee",
-    "link": "https://biblespeak.org/Brindisi-pronunciation/"
-  },
-  "Belshazzar": {
-    "pronunciation": "behl-SHAZ-er",
-    "link": "https://biblespeak.org/Belshazzar-pronunciation/"
-  },
-  "Bonaventure": {
-    "pronunciation": "bah-nuh-VEHN-tsher",
-    "link": "https://biblespeak.org/Bonaventure-pronunciation/"
-  },
-  "Bethel": {
-    "pronunciation": "BETH-el",
-    "link": "https://biblespeak.org/Bethel-pronunciation/"
-  },
-  "Bartimaeus": {
-    "pronunciation": "bar-tih-MEE-uhs",
-    "link": "https://biblespeak.org/Bartimaeus-pronunciation/"
-  },
-  "Bethulia": {
-    "pronunciation": "bee-THOO-lee-uh",
-    "link": "https://biblespeak.org/Bethulia-pronunciation/"
-  },
-  "Beer-Sheba": {
-    "pronunciation": "BEE-er-SHEE-buh",
-    "link": "https://biblespeak.org/Beer-Sheba-pronunciation/"
-  },
-  "Baasha": {
-    "pronunciation": "BAY-uh-shuh",
-    "link": "https://biblespeak.org/Baasha-pronunciation/"
-  },
-  "Boanerges": {
-    "pronunciation": "bo-uh-NER-dzheez",
-    "link": "https://biblespeak.org/Boanerges-pronunciation/"
-  },
-  "Balaam": {
-    "pronunciation": "BAY-lm",
-    "link": "https://biblespeak.org/Balaam-pronunciation/"
-  },
-  "Baal-Zephon": {
-    "pronunciation": "BAY-uhl-ZEE-fuhn",
-    "link": "https://biblespeak.org/Baal-Zephon-pronunciation/"
-  },
-  "Bosco": {
-    "pronunciation": "BAHS-ko",
-    "link": "https://biblespeak.org/Bosco-pronunciation/"
-  },
-  "Bdellium": {
-    "pronunciation": "DEHL-yoom",
-    "link": "https://biblespeak.org/Bdellium-pronunciation/"
-  },
   "Balak": {
     "pronunciation": "BAY-lak",
     "link": "https://biblespeak.org/Balak-pronunciation/"
-  },
-  "Becket": {
-    "pronunciation": "BEHK-eht",
-    "link": "https://biblespeak.org/Becket-pronunciation/"
-  },
-  "Bede": {
-    "pronunciation": "beed",
-    "link": "https://biblespeak.org/Bede-pronunciation/"
-  },
-  "Blase": {
-    "pronunciation": "blayz",
-    "link": "https://biblespeak.org/Blase-pronunciation/"
   },
   "Beth-Peor": {
     "pronunciation": "behth-PEE-awr",
     "link": "https://biblespeak.org/Beth-Peor-pronunciation/"
   },
-  "Cyrus": {
-    "pronunciation": "SAI-ruhs",
-    "link": "https://biblespeak.org/Cyrus-pronunciation/"
+  "Bullock": {
+    "pronunciation": "BUL-uhk",
+    "link": "https://biblespeak.org/Bullock-pronunciation/"
   },
-  "Cajetan": {
-    "pronunciation": "KADZH-uh-tuhn",
-    "link": "https://biblespeak.org/Cajetan-pronunciation/"
+  "Baal-Shalishah": {
+    "pronunciation": "BAY-uhl-shuh-LAI-shuh",
+    "link": "https://biblespeak.org/Baal-Shalishah-pronunciation/"
   },
-  "Counselor": {
-    "pronunciation": "KAUN-seh-ler",
-    "link": "https://biblespeak.org/Counselor-pronunciation/"
+  "Borromeo": {
+    "pronunciation": "baw-ro-MAY-o",
+    "link": "https://biblespeak.org/Borromeo-pronunciation/"
   },
-  "Cenchreae": {
-    "pronunciation": "SEHN-kree-ay",
-    "link": "https://biblespeak.org/Cenchreae-pronunciation/"
+  "Baptize": {
+    "pronunciation": "bap-TAIZ",
+    "link": "https://biblespeak.org/Baptize-pronunciation/"
   },
-  "Cherubim": {
-    "pronunciation": "TSHEHR-oo-bihm",
-    "link": "https://biblespeak.org/Cherubim-pronunciation/"
+  "Boanerges": {
+    "pronunciation": "bo-uh-NER-dzheez",
+    "link": "https://biblespeak.org/Boanerges-pronunciation/"
   },
-  "Chrism": {
-    "pronunciation": "KRIH-sm",
-    "link": "https://biblespeak.org/Chrism-pronunciation/"
+  "Benjaminite": {
+    "pronunciation": "BEHN-dzhuh-mihn-ait",
+    "link": "https://biblespeak.org/Benjaminite-pronunciation/"
   },
-  "Colossians": {
-    "pronunciation": "kuh-LAH-shihnz",
-    "link": "https://biblespeak.org/Colossians-pronunciation/"
+  "Bildad": {
+    "pronunciation": "BIHL-dad",
+    "link": "https://biblespeak.org/Bildad-pronunciation/"
   },
-  "Chuza": {
-    "pronunciation": "KOO-zuh",
-    "link": "https://biblespeak.org/Chuza-pronunciation/"
+  "Bede": {
+    "pronunciation": "beed",
+    "link": "https://biblespeak.org/Bede-pronunciation/"
   },
-  "Cyrenean": {
-    "pronunciation": "sai-REE-nih-uhn",
-    "link": "https://biblespeak.org/Cyrenean-pronunciation/"
+  "Beth-Millo": {
+    "pronunciation": "BEHTH-mihl-o",
+    "link": "https://biblespeak.org/Beth-Millo-pronunciation/"
   },
-  "Cushite": {
-    "pronunciation": "CUHSH-ait",
-    "link": "https://biblespeak.org/Cushite-pronunciation/"
+  "Bethrothed": {
+    "pronunciation": "bee-trothd",
+    "link": "https://biblespeak.org/Bethrothed-pronunciation/"
   },
-  "Cyrenian": {
-    "pronunciation": "sai-REE-nih-uhn",
-    "link": "https://biblespeak.org/Cyrenian-pronunciation/"
+  "Beth-Zur": {
+    "pronunciation": "behth-ZER",
+    "link": "https://biblespeak.org/Beth-Zur-pronunciation/"
   },
-  "Canaan": {
-    "pronunciation": "KAY-nuhn",
-    "link": "https://biblespeak.org/Canaan-pronunciation/"
+  "Bethesda": {
+    "pronunciation": "beh-THEHZ-duh",
+    "link": "https://biblespeak.org/Bethesda-pronunciation/"
   },
-  "Crete": {
-    "pronunciation": "kreet",
-    "link": "https://biblespeak.org/Crete-pronunciation/"
+  "Barak": {
+    "pronunciation": "BEHR-ak",
+    "link": "https://biblespeak.org/Barak-pronunciation/"
   },
-  "Cyrene": {
-    "pronunciation": "sai-REE-neh",
-    "link": "https://biblespeak.org/Cyrene-pronunciation/"
+  "Baruch": {
+    "pronunciation": "BEHR-ook",
+    "link": "https://biblespeak.org/Baruch-pronunciation/"
   },
-  "Chebar": {
-    "pronunciation": "KEE-bahr",
-    "link": "https://biblespeak.org/Chebar-pronunciation/"
+  "Bdellium": {
+    "pronunciation": "DEHL-yoom",
+    "link": "https://biblespeak.org/Bdellium-pronunciation/"
   },
-  "Chilion": {
-    "pronunciation": "KIHL-ee-ahn",
-    "link": "https://biblespeak.org/Chilion-pronunciation/"
+  "Brazier": {
+    "pronunciation": "BRAY-zher",
+    "link": "https://biblespeak.org/Brazier-pronunciation/"
   },
-  "Capernaum": {
-    "pronunciation": "kuh-PERR-nay-uhm",
-    "link": "https://biblespeak.org/Capernaum-pronunciation/"
+  "Bethphage": {
+    "pronunciation": "BEHTH-fuh-dzhee",
+    "link": "https://biblespeak.org/Bethphage-pronunciation/"
   },
-  "Cain": {
-    "pronunciation": "kayn",
-    "link": "https://biblespeak.org/Cain-pronunciation/"
+  "Bartimaeus": {
+    "pronunciation": "bar-tih-MEE-uhs",
+    "link": "https://biblespeak.org/Bartimaeus-pronunciation/"
   },
-  "Caiaphas": {
-    "pronunciation": "KAY-uh-fuhs",
-    "link": "https://biblespeak.org/Caiaphas-pronunciation/"
+  "Benedict": {
+    "pronunciation": "BEHN-eh-dihkt",
+    "link": "https://biblespeak.org/Benedict-pronunciation/"
   },
-  "Candace": {
-    "pronunciation": "kan-DAY-see",
-    "link": "https://biblespeak.org/Candace-pronunciation/"
+  "Boaz": {
+    "pronunciation": "BO-az",
+    "link": "https://biblespeak.org/Boaz-pronunciation/"
   },
-  "Cilicia": {
-    "pronunciation": "sih-LIHSH-ee-uh",
-    "link": "https://biblespeak.org/Cilicia-pronunciation/"
+  "Bitumen": {
+    "pronunciation": "bih-TYOO-mn",
+    "link": "https://biblespeak.org/Bitumen-pronunciation/"
   },
-  "Callistus": {
-    "pronunciation": "cuh-LIHS-tuhs",
-    "link": "https://biblespeak.org/Callistus-pronunciation/"
+  "Bethany": {
+    "pronunciation": "BEHTH-uh-nee",
+    "link": "https://biblespeak.org/Bethany-pronunciation/"
   },
-  "Columban": {
-    "pronunciation": "kuh-LUHM-bun",
-    "link": "https://biblespeak.org/Columban-pronunciation/"
+  "Beor": {
+    "pronunciation": "BEE-awr",
+    "link": "https://biblespeak.org/Beor-pronunciation/"
   },
-  "Corinthian": {
-    "pronunciation": "kawr-IHN-thee-uhn",
-    "link": "https://biblespeak.org/Corinthian-pronunciation/"
+  "Bethel": {
+    "pronunciation": "BETH-el",
+    "link": "https://biblespeak.org/Bethel-pronunciation/"
   },
-  "Coriander": {
-    "pronunciation": "kawr-ee-AN-der",
-    "link": "https://biblespeak.org/Coriander-pronunciation/"
+  "Berechiah": {
+    "pronunciation": "behr-ehk-AI-uh",
+    "link": "https://biblespeak.org/Berechiah-pronunciation/"
   },
-  "Crescens": {
-    "pronunciation": "KREH-sihns",
-    "link": "https://biblespeak.org/Crescens-pronunciation/"
+  "Brigand": {
+    "pronunciation": "BRIH-gnd",
+    "link": "https://biblespeak.org/Brigand-pronunciation/"
   },
-  "Chorazin": {
-    "pronunciation": "kor-AY-sihn",
-    "link": "https://biblespeak.org/Chorazin-pronunciation/"
+  "Barabbas": {
+    "pronunciation": "beh-REH-buhs",
+    "link": "https://biblespeak.org/Barabbas-pronunciation/"
   },
-  "Chislev": {
-    "pronunciation": "KIHS-lehv",
-    "link": "https://biblespeak.org/Chislev-pronunciation/"
+  "Baasha": {
+    "pronunciation": "BAY-uh-shuh",
+    "link": "https://biblespeak.org/Baasha-pronunciation/"
   },
-  "Chaldeans": {
-    "pronunciation": "kal-DEE-uhnz",
-    "link": "https://biblespeak.org/Chaldeans-pronunciation/"
+  "Bellarmine": {
+    "pronunciation": "BEHL-er-mihn",
+    "link": "https://biblespeak.org/Bellarmine-pronunciation/"
   },
-  "Claret": {
-    "pronunciation": "KLEHR-eht",
-    "link": "https://biblespeak.org/Claret-pronunciation/"
+  "Bartholomew": {
+    "pronunciation": "bar-THAHL-uh-myoo",
+    "link": "https://biblespeak.org/Bartholomew-pronunciation/"
   },
-  "Cana": {
-    "pronunciation": "KAY-nuh",
-    "link": "https://biblespeak.org/Cana-pronunciation/"
+  "Barnabas": {
+    "pronunciation": "BAHR-nuh-buhs",
+    "link": "https://biblespeak.org/Barnabas-pronunciation/"
   },
-  "Cecilia": {
-    "pronunciation": "suh-SEEL-yuh",
-    "link": "https://biblespeak.org/Cecilia-pronunciation/"
+  "Becket": {
+    "pronunciation": "BEHK-eht",
+    "link": "https://biblespeak.org/Becket-pronunciation/"
   },
-  "Canisius": {
-    "pronunciation": "kuh-NEE-shuhs",
-    "link": "https://biblespeak.org/Canisius-pronunciation/"
+  "Bithynia": {
+    "pronunciation": "bih-THIHN-ih-uh",
+    "link": "https://biblespeak.org/Bithynia-pronunciation/"
   },
-  "Cornelius": {
-    "pronunciation": "kawr-NEE-lee-uhs",
-    "link": "https://biblespeak.org/Cornelius-pronunciation/"
+  "Babylon": {
+    "pronunciation": "BAB-ih-luhn",
+    "link": "https://biblespeak.org/Babylon-pronunciation/"
   },
-  "Canaanites": {
-    "pronunciation": "KAY-nuh-naits",
-    "link": "https://biblespeak.org/Canaanites-pronunciation/"
+  "Becorath": {
+    "pronunciation": "bee-KO-rath",
+    "link": "https://biblespeak.org/Becorath-pronunciation/"
   },
   "Cyprus": {
     "pronunciation": "SAI-pruhs",
     "link": "https://biblespeak.org/Cyprus-pronunciation/"
   },
-  "Claudius": {
-    "pronunciation": "KLAW-dee-oos",
-    "link": "https://biblespeak.org/Claudius-pronunciation/"
+  "Cajetan": {
+    "pronunciation": "KADZH-uh-tuhn",
+    "link": "https://biblespeak.org/Cajetan-pronunciation/"
   },
-  "Clopas": {
-    "pronunciation": "KLO-pas",
-    "link": "https://biblespeak.org/Clopas-pronunciation/"
-  },
-  "Cyprian": {
-    "pronunciation": "SIH-pree-un",
-    "link": "https://biblespeak.org/Cyprian-pronunciation/"
-  },
-  "Cosmas": {
-    "pronunciation": "KAHZ-muhs",
-    "link": "https://biblespeak.org/Cosmas-pronunciation/"
-  },
-  "Cleopas": {
-    "pronunciation": "KLEE-o-pas",
-    "link": "https://biblespeak.org/Cleopas-pronunciation/"
-  },
-  "Chronicles": {
-    "pronunciation": "KRAH-nih-kulz",
-    "link": "https://biblespeak.org/Chronicles-pronunciation/"
-  },
-  "Carmel": {
-    "pronunciation": "KAHR-muhl",
-    "link": "https://biblespeak.org/Carmel-pronunciation/"
-  },
-  "Colossae": {
-    "pronunciation": "ko-LAH-see or koh-LOSS-ee",
-    "link": "https://biblespeak.org/Colossae-pronunciation/"
-  },
-  "Corinth": {
-    "pronunciation": "KAWR-ihnth",
-    "link": "https://biblespeak.org/Corinth-pronunciation/"
+  "Chaldeans": {
+    "pronunciation": "kal-DEE-uhnz",
+    "link": "https://biblespeak.org/Chaldeans-pronunciation/"
   },
   "Chloe": {
     "pronunciation": "KLO-ee",
     "link": "https://biblespeak.org/Chloe-pronunciation/"
   },
-  "Carnelian": {
-    "pronunciation": "kahr-NEEL-yuhn",
-    "link": "https://biblespeak.org/Carnelian-pronunciation/"
+  "Cyrus": {
+    "pronunciation": "SAI-ruhs",
+    "link": "https://biblespeak.org/Cyrus-pronunciation/"
   },
-  "Carians": {
-    "pronunciation": "KAY-rih-uhnz",
-    "link": "https://biblespeak.org/Carians-pronunciation/"
-  },
-  "Carpus": {
-    "pronunciation": "KAHR-puhs",
-    "link": "https://biblespeak.org/Carpus-pronunciation/"
-  },
-  "Cappadocia": {
-    "pronunciation": "kap-ih-DO-shee-uh",
-    "link": "https://biblespeak.org/Cappadocia-pronunciation/"
-  },
-  "Calneh": {
-    "pronunciation": "KAHL-nuh",
-    "link": "https://biblespeak.org/Calneh-pronunciation/"
-  },
-  "Census": {
-    "pronunciation": "SEHN-suhs",
-    "link": "https://biblespeak.org/Census-pronunciation/"
-  },
-  "Cephas": {
-    "pronunciation": "SEE-fuhs",
-    "link": "https://biblespeak.org/Cephas-pronunciation/"
-  },
-  "Cretans": {
-    "pronunciation": "KREE-tihnz",
-    "link": "https://biblespeak.org/Cretans-pronunciation/"
-  },
-  "Capistrano": {
-    "pronunciation": "kah-pih-STRAHNO",
-    "link": "https://biblespeak.org/Capistrano-pronunciation/"
-  },
-  "Cenacle": {
-    "pronunciation": "SEHN-uh-kl",
-    "link": "https://biblespeak.org/Cenacle-pronunciation/"
+  "Capernaum": {
+    "pronunciation": "kuh-PERR-nay-uhm",
+    "link": "https://biblespeak.org/Capernaum-pronunciation/"
   },
   "Chrysologus": {
     "pronunciation": "kirh-SAHL-uh-guhs",
     "link": "https://biblespeak.org/Chrysologus-pronunciation/"
   },
+  "Cain": {
+    "pronunciation": "kayn",
+    "link": "https://biblespeak.org/Cain-pronunciation/"
+  },
+  "Chilion": {
+    "pronunciation": "KIHL-ee-ahn",
+    "link": "https://biblespeak.org/Chilion-pronunciation/"
+  },
+  "Counselor": {
+    "pronunciation": "KAUN-seh-ler",
+    "link": "https://biblespeak.org/Counselor-pronunciation/"
+  },
   "Calasanz": {
     "pronunciation": "KAL-uh-sahnz",
     "link": "https://biblespeak.org/Calasanz-pronunciation/"
   },
-  "Caleb": {
-    "pronunciation": "KAY-lehb",
-    "link": "https://biblespeak.org/Caleb-pronunciation/"
+  "Cephas": {
+    "pronunciation": "SEE-fuhs",
+    "link": "https://biblespeak.org/Cephas-pronunciation/"
   },
-  "Chemosh": {
-    "pronunciation": "KEE-mahsh",
-    "link": "https://biblespeak.org/Chemosh-pronunciation/"
+  "Cosmas": {
+    "pronunciation": "KAHZ-muhs",
+    "link": "https://biblespeak.org/Cosmas-pronunciation/"
+  },
+  "Chorazin": {
+    "pronunciation": "kor-AY-sihn",
+    "link": "https://biblespeak.org/Chorazin-pronunciation/"
+  },
+  "Capistrano": {
+    "pronunciation": "kah-pih-STRAHNO",
+    "link": "https://biblespeak.org/Capistrano-pronunciation/"
+  },
+  "Cherubim": {
+    "pronunciation": "TSHEHR-oo-bihm",
+    "link": "https://biblespeak.org/Cherubim-pronunciation/"
+  },
+  "Cornelius": {
+    "pronunciation": "kawr-NEE-lee-uhs",
+    "link": "https://biblespeak.org/Cornelius-pronunciation/"
   },
   "Casimir": {
     "pronunciation": "KAZ-ih-mer",
     "link": "https://biblespeak.org/Casimir-pronunciation/"
   },
-  "Crispus": {
-    "pronunciation": "KRIHS-puhs",
-    "link": "https://biblespeak.org/Crispus-pronunciation/"
+  "Colossae": {
+    "pronunciation": "ko-LAH-see or koh-LOSS-ee",
+    "link": "https://biblespeak.org/Colossae-pronunciation/"
+  },
+  "Cretans": {
+    "pronunciation": "KREE-tihnz",
+    "link": "https://biblespeak.org/Cretans-pronunciation/"
+  },
+  "Canaanites": {
+    "pronunciation": "KAY-nuh-naits",
+    "link": "https://biblespeak.org/Canaanites-pronunciation/"
+  },
+  "Caiaphas": {
+    "pronunciation": "KAY-uh-fuhs",
+    "link": "https://biblespeak.org/Caiaphas-pronunciation/"
+  },
+  "Cappadocia": {
+    "pronunciation": "kap-ih-DO-shee-uh",
+    "link": "https://biblespeak.org/Cappadocia-pronunciation/"
   },
   "Chrysostom": {
     "pronunciation": "KRIHS-uhs-tuhm",
     "link": "https://biblespeak.org/Chrysostom-pronunciation/"
   },
+  "Chrism": {
+    "pronunciation": "KRIH-sm",
+    "link": "https://biblespeak.org/Chrism-pronunciation/"
+  },
+  "Canaan": {
+    "pronunciation": "KAY-nuhn",
+    "link": "https://biblespeak.org/Canaan-pronunciation/"
+  },
+  "Calneh": {
+    "pronunciation": "KAHL-nuh",
+    "link": "https://biblespeak.org/Calneh-pronunciation/"
+  },
+  "Corinth": {
+    "pronunciation": "KAWR-ihnth",
+    "link": "https://biblespeak.org/Corinth-pronunciation/"
+  },
+  "Cushite": {
+    "pronunciation": "CUHSH-ait",
+    "link": "https://biblespeak.org/Cushite-pronunciation/"
+  },
+  "Census": {
+    "pronunciation": "SEHN-suhs",
+    "link": "https://biblespeak.org/Census-pronunciation/"
+  },
+  "Chemosh": {
+    "pronunciation": "KEE-mahsh",
+    "link": "https://biblespeak.org/Chemosh-pronunciation/"
+  },
+  "Claudius": {
+    "pronunciation": "KLAW-dee-oos",
+    "link": "https://biblespeak.org/Claudius-pronunciation/"
+  },
+  "Coriander": {
+    "pronunciation": "kawr-ee-AN-der",
+    "link": "https://biblespeak.org/Coriander-pronunciation/"
+  },
+  "Cyrene": {
+    "pronunciation": "sai-REE-neh",
+    "link": "https://biblespeak.org/Cyrene-pronunciation/"
+  },
+  "Carians": {
+    "pronunciation": "KAY-rih-uhnz",
+    "link": "https://biblespeak.org/Carians-pronunciation/"
+  },
+  "Cana": {
+    "pronunciation": "KAY-nuh",
+    "link": "https://biblespeak.org/Cana-pronunciation/"
+  },
+  "Chuza": {
+    "pronunciation": "KOO-zuh",
+    "link": "https://biblespeak.org/Chuza-pronunciation/"
+  },
+  "Callistus": {
+    "pronunciation": "cuh-LIHS-tuhs",
+    "link": "https://biblespeak.org/Callistus-pronunciation/"
+  },
+  "Chebar": {
+    "pronunciation": "KEE-bahr",
+    "link": "https://biblespeak.org/Chebar-pronunciation/"
+  },
+  "Clopas": {
+    "pronunciation": "KLO-pas",
+    "link": "https://biblespeak.org/Clopas-pronunciation/"
+  },
+  "Corinthian": {
+    "pronunciation": "kawr-IHN-thee-uhn",
+    "link": "https://biblespeak.org/Corinthian-pronunciation/"
+  },
+  "Cecilia": {
+    "pronunciation": "suh-SEEL-yuh",
+    "link": "https://biblespeak.org/Cecilia-pronunciation/"
+  },
+  "Crescens": {
+    "pronunciation": "KREH-sihns",
+    "link": "https://biblespeak.org/Crescens-pronunciation/"
+  },
+  "Crete": {
+    "pronunciation": "kreet",
+    "link": "https://biblespeak.org/Crete-pronunciation/"
+  },
+  "Cyprian": {
+    "pronunciation": "SIH-pree-un",
+    "link": "https://biblespeak.org/Cyprian-pronunciation/"
+  },
   "Covenant": {
     "pronunciation": "KUH-vah-nunt",
     "link": "https://biblespeak.org/Covenant-pronunciation/"
+  },
+  "Cleopas": {
+    "pronunciation": "KLEE-o-pas",
+    "link": "https://biblespeak.org/Cleopas-pronunciation/"
+  },
+  "Crispus": {
+    "pronunciation": "KRIHS-puhs",
+    "link": "https://biblespeak.org/Crispus-pronunciation/"
+  },
+  "Carmel": {
+    "pronunciation": "KAHR-muhl",
+    "link": "https://biblespeak.org/Carmel-pronunciation/"
+  },
+  "Cenchreae": {
+    "pronunciation": "SEHN-kree-ay",
+    "link": "https://biblespeak.org/Cenchreae-pronunciation/"
+  },
+  "Columban": {
+    "pronunciation": "kuh-LUHM-bun",
+    "link": "https://biblespeak.org/Columban-pronunciation/"
+  },
+  "Claret": {
+    "pronunciation": "KLEHR-eht",
+    "link": "https://biblespeak.org/Claret-pronunciation/"
+  },
+  "Cilicia": {
+    "pronunciation": "sih-LIHSH-ee-uh",
+    "link": "https://biblespeak.org/Cilicia-pronunciation/"
+  },
+  "Chislev": {
+    "pronunciation": "KIHS-lehv",
+    "link": "https://biblespeak.org/Chislev-pronunciation/"
+  },
+  "Carpus": {
+    "pronunciation": "KAHR-puhs",
+    "link": "https://biblespeak.org/Carpus-pronunciation/"
+  },
+  "Colossians": {
+    "pronunciation": "kuh-LAH-shihnz",
+    "link": "https://biblespeak.org/Colossians-pronunciation/"
   },
   "Centurion": {
     "pronunciation": "sehn-TSHOOR-ee-uhn",
     "link": "https://biblespeak.org/Centurion-pronunciation/"
   },
-  "Dromedary": {
-    "pronunciation": "DRAH-muh-dher-ee",
-    "link": "https://biblespeak.org/Dromedary-pronunciation/"
+  "Cenacle": {
+    "pronunciation": "SEHN-uh-kl",
+    "link": "https://biblespeak.org/Cenacle-pronunciation/"
   },
-  "Demas": {
-    "pronunciation": "DEE-mas",
-    "link": "https://biblespeak.org/Demas-pronunciation/"
+  "Chronicles": {
+    "pronunciation": "KRAH-nih-kulz",
+    "link": "https://biblespeak.org/Chronicles-pronunciation/"
   },
-  "Dothan": {
-    "pronunciation": "DO-thuhn",
-    "link": "https://biblespeak.org/Dothan-pronunciation/"
+  "Cyrenean": {
+    "pronunciation": "sai-REE-nih-uhn",
+    "link": "https://biblespeak.org/Cyrenean-pronunciation/"
   },
-  "Darius": {
-    "pronunciation": "duh-RAI-uhs",
-    "link": "https://biblespeak.org/Darius-pronunciation/"
+  "Caleb": {
+    "pronunciation": "KAY-lehb",
+    "link": "https://biblespeak.org/Caleb-pronunciation/"
   },
-  "Derbe": {
-    "pronunciation": "DER-bee",
-    "link": "https://biblespeak.org/Derbe-pronunciation/"
+  "Carnelian": {
+    "pronunciation": "kahr-NEEL-yuhn",
+    "link": "https://biblespeak.org/Carnelian-pronunciation/"
+  },
+  "Cyrenian": {
+    "pronunciation": "sai-REE-nih-uhn",
+    "link": "https://biblespeak.org/Cyrenian-pronunciation/"
+  },
+  "Canisius": {
+    "pronunciation": "kuh-NEE-shuhs",
+    "link": "https://biblespeak.org/Canisius-pronunciation/"
+  },
+  "Candace": {
+    "pronunciation": "kan-DAY-see",
+    "link": "https://biblespeak.org/Candace-pronunciation/"
   },
   "Damascene": {
     "pronunciation": "DAM-uh-seen",
     "link": "https://biblespeak.org/Damascene-pronunciation/"
   },
-  "de-Chantal": {
-    "pronunciation": "deh-shahn-TAHL",
-    "link": "https://biblespeak.org/de-Chantal-pronunciation/"
-  },
-  "Damaris": {
-    "pronunciation": "DAM-uh-rihs",
-    "link": "https://biblespeak.org/Damaris-pronunciation/"
+  "Derbe": {
+    "pronunciation": "DER-bee",
+    "link": "https://biblespeak.org/Derbe-pronunciation/"
   },
   "Deuteronomy": {
     "pronunciation": "dyoo-ter-AH-num-mee",
     "link": "https://biblespeak.org/Deuteronomy-pronunciation/"
   },
-  "Dalmatia": {
-    "pronunciation": "dal-MAY-shih-uh",
-    "link": "https://biblespeak.org/Dalmatia-pronunciation/"
+  "Dorcas": {
+    "pronunciation": "DAWR-kuhs",
+    "link": "https://biblespeak.org/Dorcas-pronunciation/"
   },
   "Dionysius": {
     "pronunciation": "dai-o-NIHSH-ih-uhs",
     "link": "https://biblespeak.org/Dionysius-pronunciation/"
   },
-  "Dorcas": {
-    "pronunciation": "DAWR-kuhs",
-    "link": "https://biblespeak.org/Dorcas-pronunciation/"
+  "Dothan": {
+    "pronunciation": "DO-thuhn",
+    "link": "https://biblespeak.org/Dothan-pronunciation/"
   },
   "Danites": {
     "pronunciation": "DAN-aits",
     "link": "https://biblespeak.org/Danites-pronunciation/"
   },
-  "Diadem": {
-    "pronunciation": "DAI-uh-dehm",
-    "link": "https://biblespeak.org/Diadem-pronunciation/"
+  "Darius": {
+    "pronunciation": "duh-RAI-uhs",
+    "link": "https://biblespeak.org/Darius-pronunciation/"
   },
   "Damascus": {
     "pronunciation": "duh-MAS-kuhs",
     "link": "https://biblespeak.org/Damascus-pronunciation/"
+  },
+  "Demas": {
+    "pronunciation": "DEE-mas",
+    "link": "https://biblespeak.org/Demas-pronunciation/"
+  },
+  "Damaris": {
+    "pronunciation": "DAM-uh-rihs",
+    "link": "https://biblespeak.org/Damaris-pronunciation/"
+  },
+  "de-Chantal": {
+    "pronunciation": "deh-shahn-TAHL",
+    "link": "https://biblespeak.org/de-Chantal-pronunciation/"
+  },
+  "Dromedary": {
+    "pronunciation": "DRAH-muh-dher-ee",
+    "link": "https://biblespeak.org/Dromedary-pronunciation/"
+  },
+  "Diadem": {
+    "pronunciation": "DAI-uh-dehm",
+    "link": "https://biblespeak.org/Diadem-pronunciation/"
   },
   "Diotrephes": {
     "pronunciation": "dee-AHT-rehf-ehz",
@@ -971,373 +967,389 @@
     "pronunciation": "dih-SAI-pulz",
     "link": "https://biblespeak.org/Disciples-pronunciation/"
   },
-  "Ephesus": {
-    "pronunciation": "EH-fuh-suhs",
-    "link": "https://biblespeak.org/Ephesus-pronunciation/"
-  },
-  "Emiliani": {
-    "pronunciation": "ay-mee-lee-AH-ne",
-    "link": "https://biblespeak.org/Emiliani-pronunciation/"
-  },
-  "Electrum": {
-    "pronunciation": "ee-LEHK-truhm",
-    "link": "https://biblespeak.org/Electrum-pronunciation/"
-  },
-  "Ebed-Melech": {
-    "pronunciation": "EE-behd-MEE-lehk",
-    "link": "https://biblespeak.org/Ebed-Melech-pronunciation/"
-  },
-  "Eunuch": {
-    "pronunciation": "YOO-nuhk",
-    "link": "https://biblespeak.org/Eunuch-pronunciation/"
-  },
-  "Elymais": {
-    "pronunciation": "ehl-ih-MAY-ihs",
-    "link": "https://biblespeak.org/Elymais-pronunciation/"
-  },
-  "Exodus": {
-    "pronunciation": "EHK-so-duhs",
-    "link": "https://biblespeak.org/Exodus-pronunciation/"
-  },
-  "Ephrem": {
-    "pronunciation": "EHF-rehm",
-    "link": "https://biblespeak.org/Ephrem-pronunciation/"
-  },
-  "Elkanah": {
-    "pronunciation": "el-KAY-nuh",
-    "link": "https://biblespeak.org/Elkanah-pronunciation/"
-  },
-  "Ezra": {
-    "pronunciation": "EHZ-ruh",
-    "link": "https://biblespeak.org/Ezra-pronunciation/"
-  },
-  "Epaenetus": {
-    "pronunciation": "ee-PEE-nee-tuhs",
-    "link": "https://biblespeak.org/Epaenetus-pronunciation/"
-  },
-  "Elim": {
-    "pronunciation": "EE-lihm",
-    "link": "https://biblespeak.org/Elim-pronunciation/"
-  },
-  "Emmaus": {
-    "pronunciation": "eh-MAY-uhs",
-    "link": "https://biblespeak.org/Emmaus-pronunciation/"
-  },
-  "Eliud": {
-    "pronunciation": "ee-LAI-uhd",
-    "link": "https://biblespeak.org/Eliud-pronunciation/"
-  },
-  "Ethiopian": {
-    "pronunciation": "ee-thee-O-pee-uhn",
-    "link": "https://biblespeak.org/Ethiopian-pronunciation/"
-  },
-  "Elnathan": {
-    "pronunciation": "el-NAY-thn",
-    "link": "https://biblespeak.org/Elnathan-pronunciation/"
-  },
-  "Elimelech": {
-    "pronunciation": "ee-LIHM-eh-lehk",
-    "link": "https://biblespeak.org/Elimelech-pronunciation/"
-  },
-  "Ephah": {
-    "pronunciation": "EE-fuh",
-    "link": "https://biblespeak.org/Ephah-pronunciation/"
-  },
-  "Epah": {
-    "pronunciation": "EE-puh",
-    "link": "https://biblespeak.org/Epah-pronunciation/"
-  },
-  "Ephphathy": {
-    "pronunciation": "EHF-uh-thee",
-    "link": "https://biblespeak.org/Ephphathy-pronunciation/"
-  },
-  "Ephratha": {
-    "pronunciation": "EHF-ruh-thuh",
-    "link": "https://biblespeak.org/Ephratha-pronunciation/"
-  },
-  "Ephraimite": {
-    "pronunciation": "EE-fray-ihm-ait",
-    "link": "https://biblespeak.org/Ephraimite-pronunciation/"
-  },
-  "Ethiopia": {
-    "pronunciation": "ee-thee-O-pee-uh",
-    "link": "https://biblespeak.org/Ethiopia-pronunciation/"
-  },
-  "Esau": {
-    "pronunciation": "EE-saw",
-    "link": "https://biblespeak.org/Esau-pronunciation/"
-  },
-  "Ezechiel": {
-    "pronunciation": "eh-ZEE-kee-uhl",
-    "link": "https://biblespeak.org/Ezechiel-pronunciation/"
-  },
-  "Esther": {
-    "pronunciation": "EHS-ter",
-    "link": "https://biblespeak.org/Esther-pronunciation/"
-  },
-  "Ephphatha": {
-    "pronunciation": "EHF-uh-thuh",
-    "link": "https://biblespeak.org/Ephphatha-pronunciation/"
-  },
-  "Exorcised": {
-    "pronunciation": "EHK-sawr-saizd",
-    "link": "https://biblespeak.org/Exorcised-pronunciation/"
-  },
-  "Edom": {
-    "pronunciation": "EE-duhm",
-    "link": "https://biblespeak.org/Edom-pronunciation/"
+  "Dalmatia": {
+    "pronunciation": "dal-MAY-shih-uh",
+    "link": "https://biblespeak.org/Dalmatia-pronunciation/"
   },
   "Ephraim": {
     "pronunciation": "EE-fray-ihm",
     "link": "https://biblespeak.org/Ephraim-pronunciation/"
   },
-  "Elihu": {
-    "pronunciation": "ee-LAI-hyoo",
-    "link": "https://biblespeak.org/Elihu-pronunciation/"
+  "Eunuch": {
+    "pronunciation": "YOO-nuhk",
+    "link": "https://biblespeak.org/Eunuch-pronunciation/"
   },
-  "Elisha": {
-    "pronunciation": "ee-LAI-shuh",
-    "link": "https://biblespeak.org/Elisha-pronunciation/"
-  },
-  "Ephrathah": {
-    "pronunciation": "EHF-ruh-thuh",
-    "link": "https://biblespeak.org/Ephrathah-pronunciation/"
-  },
-  "Eldad": {
-    "pronunciation": "EHL-dad",
-    "link": "https://biblespeak.org/Eldad-pronunciation/"
-  },
-  "Elijah": {
-    "pronunciation": "ee-LAI-dzhuh",
-    "link": "https://biblespeak.org/Elijah-pronunciation/"
-  },
-  "Eden": {
-    "pronunciation": "EE-dn",
-    "link": "https://biblespeak.org/Eden-pronunciation/"
-  },
-  "Eli": {
-    "pronunciation": "EE-lai",
-    "link": "https://biblespeak.org/Eli-pronunciation/"
+  "Ephah": {
+    "pronunciation": "EE-fuh",
+    "link": "https://biblespeak.org/Ephah-pronunciation/"
   },
   "Eliakim": {
     "pronunciation": "ee-LAI-uh-kihm",
     "link": "https://biblespeak.org/Eliakim-pronunciation/"
   },
-  "Enoch": {
-    "pronunciation": "EE-nawk",
-    "link": "https://biblespeak.org/Enoch-pronunciation/"
+  "Ethiopia": {
+    "pronunciation": "ee-thee-O-pee-uh",
+    "link": "https://biblespeak.org/Ethiopia-pronunciation/"
   },
-  "Epaphras": {
-    "pronunciation": "EH-puh-fras",
-    "link": "https://biblespeak.org/Epaphras-pronunciation/"
+  "Eldad": {
+    "pronunciation": "EHL-dad",
+    "link": "https://biblespeak.org/Eldad-pronunciation/"
   },
-  "Ecclesiastes": {
-    "pronunciation": "eh-klee-sih-AS-teez",
-    "link": "https://biblespeak.org/Ecclesiastes-pronunciation/"
+  "Elymais": {
+    "pronunciation": "ehl-ih-MAY-ihs",
+    "link": "https://biblespeak.org/Elymais-pronunciation/"
   },
   "Ephesians": {
     "pronunciation": "eh-FEE-zhuhnz",
     "link": "https://biblespeak.org/Ephesians-pronunciation/"
   },
-  "Eleazar": {
-    "pronunciation": "ehl-ee-AY-zer",
-    "link": "https://biblespeak.org/Eleazar-pronunciation/"
+  "Ephratha": {
+    "pronunciation": "EHF-ruh-thuh",
+    "link": "https://biblespeak.org/Ephratha-pronunciation/"
   },
-  "Elizabeth": {
-    "pronunciation": "ee-LIHZ-uh-bth",
-    "link": "https://biblespeak.org/Elizabeth-pronunciation/"
-  },
-  "Epiphanes": {
-    "pronunciation": "eh-PIHF-uh-neez",
-    "link": "https://biblespeak.org/Epiphanes-pronunciation/"
-  },
-  "Euphrates": {
-    "pronunciation": "yoo-FRAY-teez",
-    "link": "https://biblespeak.org/Euphrates-pronunciation/"
-  },
-  "Eliphaz": {
-    "pronunciation": "EHL-ee-fahz",
-    "link": "https://biblespeak.org/Eliphaz-pronunciation/"
-  },
-  "Ephron": {
-    "pronunciation": "EE-frawn",
-    "link": "https://biblespeak.org/Ephron-pronunciation/"
-  },
-  "Ethanim": {
-    "pronunciation": "EHTH-uh-nihm",
-    "link": "https://biblespeak.org/Ethanim-pronunciation/"
+  "Eliud": {
+    "pronunciation": "ee-LAI-uhd",
+    "link": "https://biblespeak.org/Eliud-pronunciation/"
   },
   "Evangelist": {
     "pronunciation": "eeVAN-dzhuh-lihst",
     "link": "https://biblespeak.org/Evangelist-pronunciation/"
   },
-  "Eliab": {
-    "pronunciation": "ee-LAI-ab",
-    "link": "https://biblespeak.org/Eliab-pronunciation/"
+  "Exorcised": {
+    "pronunciation": "EHK-sawr-saizd",
+    "link": "https://biblespeak.org/Exorcised-pronunciation/"
   },
-  "Erastus": {
-    "pronunciation": "ee-RAS-tuhs",
-    "link": "https://biblespeak.org/Erastus-pronunciation/"
+  "Ezechiel": {
+    "pronunciation": "eh-ZEE-kee-uhl",
+    "link": "https://biblespeak.org/Ezechiel-pronunciation/"
   },
-  "Expiate": {
-    "pronunciation": "EHKS-pee-ayt",
-    "link": "https://biblespeak.org/Expiate-pronunciation/"
+  "Ephphathy": {
+    "pronunciation": "EHF-uh-thee",
+    "link": "https://biblespeak.org/Ephphathy-pronunciation/"
   },
-  "Ebenezer": {
-    "pronunciation": "eh-behn-EE-zer",
-    "link": "https://biblespeak.org/Ebenezer-pronunciation/"
+  "Eliphaz": {
+    "pronunciation": "EHL-ee-fahz",
+    "link": "https://biblespeak.org/Eliphaz-pronunciation/"
   },
-  "Eliezer": {
-    "pronunciation": "ehl-ih-EE-zer",
-    "link": "https://biblespeak.org/Eliezer-pronunciation/"
+  "Ephraimite": {
+    "pronunciation": "EE-fray-ihm-ait",
+    "link": "https://biblespeak.org/Ephraimite-pronunciation/"
   },
-  "Euodia": {
-    "pronunciation": "yoo-O-dee-uh",
-    "link": "https://biblespeak.org/Euodia-pronunciation/"
+  "Ephrem": {
+    "pronunciation": "EHF-rehm",
+    "link": "https://biblespeak.org/Ephrem-pronunciation/"
   },
-  "Emmanuel": {
-    "pronunciation": "eh-MAN-yoo-ehl",
-    "link": "https://biblespeak.org/Emmanuel-pronunciation/"
-  },
-  "Epaphroditus": {
-    "pronunciation": "ee-paf-ro-DAI-tuhs",
-    "link": "https://biblespeak.org/Epaphroditus-pronunciation/"
+  "Ethanim": {
+    "pronunciation": "EHTH-uh-nihm",
+    "link": "https://biblespeak.org/Ethanim-pronunciation/"
   },
   "Ecbatana": {
     "pronunciation": "ehk-BAT-uh-nuh",
     "link": "https://biblespeak.org/Ecbatana-pronunciation/"
   },
-  "Eusebius": {
-    "pronunciation": "yoo-SEE-bee-uhs",
-    "link": "https://biblespeak.org/Eusebius-pronunciation/"
+  "Epaphroditus": {
+    "pronunciation": "ee-paf-ro-DAI-tuhs",
+    "link": "https://biblespeak.org/Epaphroditus-pronunciation/"
   },
   "Elamite": {
     "pronunciation": "EE-luh-mait",
     "link": "https://biblespeak.org/Elamite-pronunciation/"
   },
-  "Felicity": {
-    "pronunciation": "feh-LIHS-ih-tee",
-    "link": "https://biblespeak.org/Felicity-pronunciation/"
+  "Ebed-Melech": {
+    "pronunciation": "EE-behd-MEE-lehk",
+    "link": "https://biblespeak.org/Ebed-Melech-pronunciation/"
+  },
+  "Epaenetus": {
+    "pronunciation": "ee-PEE-nee-tuhs",
+    "link": "https://biblespeak.org/Epaenetus-pronunciation/"
+  },
+  "Eusebius": {
+    "pronunciation": "yoo-SEE-bee-uhs",
+    "link": "https://biblespeak.org/Eusebius-pronunciation/"
+  },
+  "Expiate": {
+    "pronunciation": "EHKS-pee-ayt",
+    "link": "https://biblespeak.org/Expiate-pronunciation/"
+  },
+  "Ezra": {
+    "pronunciation": "EHZ-ruh",
+    "link": "https://biblespeak.org/Ezra-pronunciation/"
+  },
+  "Elihu": {
+    "pronunciation": "ee-LAI-hyoo",
+    "link": "https://biblespeak.org/Elihu-pronunciation/"
+  },
+  "Ephrathah": {
+    "pronunciation": "EHF-ruh-thuh",
+    "link": "https://biblespeak.org/Ephrathah-pronunciation/"
+  },
+  "Exodus": {
+    "pronunciation": "EHK-so-duhs",
+    "link": "https://biblespeak.org/Exodus-pronunciation/"
+  },
+  "Epiphanes": {
+    "pronunciation": "eh-PIHF-uh-neez",
+    "link": "https://biblespeak.org/Epiphanes-pronunciation/"
+  },
+  "Elijah": {
+    "pronunciation": "ee-LAI-dzhuh",
+    "link": "https://biblespeak.org/Elijah-pronunciation/"
+  },
+  "Eli": {
+    "pronunciation": "EE-lai",
+    "link": "https://biblespeak.org/Eli-pronunciation/"
+  },
+  "Ephesus": {
+    "pronunciation": "EH-fuh-suhs",
+    "link": "https://biblespeak.org/Ephesus-pronunciation/"
+  },
+  "Erastus": {
+    "pronunciation": "ee-RAS-tuhs",
+    "link": "https://biblespeak.org/Erastus-pronunciation/"
+  },
+  "Elisha": {
+    "pronunciation": "ee-LAI-shuh",
+    "link": "https://biblespeak.org/Elisha-pronunciation/"
+  },
+  "Elkanah": {
+    "pronunciation": "el-KAY-nuh",
+    "link": "https://biblespeak.org/Elkanah-pronunciation/"
+  },
+  "Emmaus": {
+    "pronunciation": "eh-MAY-uhs",
+    "link": "https://biblespeak.org/Emmaus-pronunciation/"
+  },
+  "Ephphatha": {
+    "pronunciation": "EHF-uh-thuh",
+    "link": "https://biblespeak.org/Ephphatha-pronunciation/"
+  },
+  "Euodia": {
+    "pronunciation": "yoo-O-dee-uh",
+    "link": "https://biblespeak.org/Euodia-pronunciation/"
+  },
+  "Ecclesiastes": {
+    "pronunciation": "eh-klee-sih-AS-teez",
+    "link": "https://biblespeak.org/Ecclesiastes-pronunciation/"
+  },
+  "Edom": {
+    "pronunciation": "EE-duhm",
+    "link": "https://biblespeak.org/Edom-pronunciation/"
+  },
+  "Ethiopian": {
+    "pronunciation": "ee-thee-O-pee-uhn",
+    "link": "https://biblespeak.org/Ethiopian-pronunciation/"
+  },
+  "Ephron": {
+    "pronunciation": "EE-frawn",
+    "link": "https://biblespeak.org/Ephron-pronunciation/"
+  },
+  "Elimelech": {
+    "pronunciation": "ee-LIHM-eh-lehk",
+    "link": "https://biblespeak.org/Elimelech-pronunciation/"
+  },
+  "Enoch": {
+    "pronunciation": "EE-nawk",
+    "link": "https://biblespeak.org/Enoch-pronunciation/"
+  },
+  "Eliezer": {
+    "pronunciation": "ehl-ih-EE-zer",
+    "link": "https://biblespeak.org/Eliezer-pronunciation/"
+  },
+  "Elnathan": {
+    "pronunciation": "el-NAY-thn",
+    "link": "https://biblespeak.org/Elnathan-pronunciation/"
+  },
+  "Emiliani": {
+    "pronunciation": "ay-mee-lee-AH-ne",
+    "link": "https://biblespeak.org/Emiliani-pronunciation/"
+  },
+  "Epah": {
+    "pronunciation": "EE-puh",
+    "link": "https://biblespeak.org/Epah-pronunciation/"
+  },
+  "Esau": {
+    "pronunciation": "EE-saw",
+    "link": "https://biblespeak.org/Esau-pronunciation/"
+  },
+  "Elizabeth": {
+    "pronunciation": "ee-LIHZ-uh-bth",
+    "link": "https://biblespeak.org/Elizabeth-pronunciation/"
+  },
+  "Emmanuel": {
+    "pronunciation": "eh-MAN-yoo-ehl",
+    "link": "https://biblespeak.org/Emmanuel-pronunciation/"
+  },
+  "Eleazar": {
+    "pronunciation": "ehl-ee-AY-zer",
+    "link": "https://biblespeak.org/Eleazar-pronunciation/"
+  },
+  "Epaphras": {
+    "pronunciation": "EH-puh-fras",
+    "link": "https://biblespeak.org/Epaphras-pronunciation/"
+  },
+  "Ebenezer": {
+    "pronunciation": "eh-behn-EE-zer",
+    "link": "https://biblespeak.org/Ebenezer-pronunciation/"
+  },
+  "Eliab": {
+    "pronunciation": "ee-LAI-ab",
+    "link": "https://biblespeak.org/Eliab-pronunciation/"
+  },
+  "Electrum": {
+    "pronunciation": "ee-LEHK-truhm",
+    "link": "https://biblespeak.org/Electrum-pronunciation/"
+  },
+  "Eden": {
+    "pronunciation": "EE-dn",
+    "link": "https://biblespeak.org/Eden-pronunciation/"
+  },
+  "Elim": {
+    "pronunciation": "EE-lihm",
+    "link": "https://biblespeak.org/Elim-pronunciation/"
+  },
+  "Esther": {
+    "pronunciation": "EHS-ter",
+    "link": "https://biblespeak.org/Esther-pronunciation/"
+  },
+  "Euphrates": {
+    "pronunciation": "yoo-FRAY-teez",
+    "link": "https://biblespeak.org/Euphrates-pronunciation/"
   },
   "Frankincense": {
     "pronunciation": "FRANGK-ihn-sehns",
     "link": "https://biblespeak.org/Frankincense-pronunciation/"
   },
-  "Fabian": {
-    "pronunciation": "FAY-bih-uhn",
-    "link": "https://biblespeak.org/Fabian-pronunciation/"
-  },
   "Festus": {
     "pronunciation": "FEHS-tus",
     "link": "https://biblespeak.org/Festus-pronunciation/"
+  },
+  "Fabian": {
+    "pronunciation": "FAY-bih-uhn",
+    "link": "https://biblespeak.org/Fabian-pronunciation/"
   },
   "Felix": {
     "pronunciation": "FEE-lihks",
     "link": "https://biblespeak.org/Felix-pronunciation/"
   },
-  "Genesis": {
-    "pronunciation": "DZHEHN-uh-sihs",
-    "link": "https://biblespeak.org/Genesis-pronunciation/"
-  },
-  "Gabbatha": {
-    "pronunciation": "GAB-uh-thuh",
-    "link": "https://biblespeak.org/Gabbatha-pronunciation/"
-  },
-  "Galatia": {
-    "pronunciation": "guh-LAY-shih-uh",
-    "link": "https://biblespeak.org/Galatia-pronunciation/"
-  },
-  "Gallio": {
-    "pronunciation": "GAL-ih-o",
-    "link": "https://biblespeak.org/Gallio-pronunciation/"
-  },
-  "Galilee": {
-    "pronunciation": "GAL-ih-lee",
-    "link": "https://biblespeak.org/Galilee-pronunciation/"
-  },
-  "Gehazi": {
-    "pronunciation": "gee-HAY-zai",
-    "link": "https://biblespeak.org/Gehazi-pronunciation/"
-  },
-  "Galileans": {
-    "pronunciation": "gal-ih-LEE-uhnz",
-    "link": "https://biblespeak.org/Galileans-pronunciation/"
-  },
-  "Gabriel": {
-    "pronunciation": "GAY-bree-ul",
-    "link": "https://biblespeak.org/Gabriel-pronunciation/"
-  },
-  "Gath": {
-    "pronunciation": "GATH",
-    "link": "https://biblespeak.org/Gath-pronunciation/"
-  },
-  "Gentiles": {
-    "pronunciation": "DZHEHN-tailz",
-    "link": "https://biblespeak.org/Gentiles-pronunciation/"
-  },
-  "Galatan": {
-    "pronunciation": "GAL-uh-tuhn",
-    "link": "https://biblespeak.org/Galatan-pronunciation/"
-  },
-  "Gadarene": {
-    "pronunciation": "GAD-uh-reen",
-    "link": "https://biblespeak.org/Gadarene-pronunciation/"
-  },
-  "Gaza": {
-    "pronunciation": "GAH-zuh",
-    "link": "https://biblespeak.org/Gaza-pronunciation/"
-  },
-  "Gennesaret": {
-    "pronunciation": "gehn-NEHS-uh-reht",
-    "link": "https://biblespeak.org/Gennesaret-pronunciation/"
-  },
-  "Gamaliel": {
-    "pronunciation": "guh-MAY-lih-ehl",
-    "link": "https://biblespeak.org/Gamaliel-pronunciation/"
+  "Felicity": {
+    "pronunciation": "feh-LIHS-ih-tee",
+    "link": "https://biblespeak.org/Felicity-pronunciation/"
   },
   "Gehenna": {
     "pronunciation": "geh-HEHN-uh",
     "link": "https://biblespeak.org/Gehenna-pronunciation/"
   },
+  "Genesis": {
+    "pronunciation": "DZHEHN-uh-sihs",
+    "link": "https://biblespeak.org/Genesis-pronunciation/"
+  },
+  "Gennesaret": {
+    "pronunciation": "gehn-NEHS-uh-reht",
+    "link": "https://biblespeak.org/Gennesaret-pronunciation/"
+  },
+  "Galatan": {
+    "pronunciation": "GAL-uh-tuhn",
+    "link": "https://biblespeak.org/Galatan-pronunciation/"
+  },
+  "Galatia": {
+    "pronunciation": "guh-LAY-shih-uh",
+    "link": "https://biblespeak.org/Galatia-pronunciation/"
+  },
+  "Gath": {
+    "pronunciation": "GATH",
+    "link": "https://biblespeak.org/Gath-pronunciation/"
+  },
+  "Gamaliel": {
+    "pronunciation": "guh-MAY-lih-ehl",
+    "link": "https://biblespeak.org/Gamaliel-pronunciation/"
+  },
+  "Gentiles": {
+    "pronunciation": "DZHEHN-tailz",
+    "link": "https://biblespeak.org/Gentiles-pronunciation/"
+  },
+  "Galileans": {
+    "pronunciation": "gal-ih-LEE-uhnz",
+    "link": "https://biblespeak.org/Galileans-pronunciation/"
+  },
+  "Gabbatha": {
+    "pronunciation": "GAB-uh-thuh",
+    "link": "https://biblespeak.org/Gabbatha-pronunciation/"
+  },
+  "Galilee": {
+    "pronunciation": "GAL-ih-lee",
+    "link": "https://biblespeak.org/Galilee-pronunciation/"
+  },
+  "Gallio": {
+    "pronunciation": "GAL-ih-o",
+    "link": "https://biblespeak.org/Gallio-pronunciation/"
+  },
   "Gaius": {
     "pronunciation": "GAY-yuhs",
     "link": "https://biblespeak.org/Gaius-pronunciation/"
   },
-  "Hyssop": {
-    "pronunciation": "HIH-suhp",
-    "link": "https://biblespeak.org/Hyssop-pronunciation/"
+  "Gaza": {
+    "pronunciation": "GAH-zuh",
+    "link": "https://biblespeak.org/Gaza-pronunciation/"
   },
-  "Hippolytus": {
-    "pronunciation": "hih-PAHL-ih-tus",
-    "link": "https://biblespeak.org/Hippolytus-pronunciation/"
+  "Gabriel": {
+    "pronunciation": "GAY-bree-ul",
+    "link": "https://biblespeak.org/Gabriel-pronunciation/"
   },
-  "Hagur": {
-    "pronunciation": "HAH-goor",
-    "link": "https://biblespeak.org/Hagur-pronunciation/"
+  "Gehazi": {
+    "pronunciation": "gee-HAY-zai",
+    "link": "https://biblespeak.org/Gehazi-pronunciation/"
   },
-  "Hivite": {
-    "pronunciation": "HAI-vait",
-    "link": "https://biblespeak.org/Hivite-pronunciation/"
+  "Gadarene": {
+    "pronunciation": "GAD-uh-reen",
+    "link": "https://biblespeak.org/Gadarene-pronunciation/"
+  },
+  "Hamath": {
+    "pronunciation": "HAY-mehth",
+    "link": "https://biblespeak.org/Hamath-pronunciation/"
+  },
+  "Hosea": {
+    "pronunciation": "ho-ZEE-uh",
+    "link": "https://biblespeak.org/Hosea-pronunciation/"
   },
   "Hebron": {
     "pronunciation": "HEE-bruhn",
     "link": "https://biblespeak.org/Hebron-pronunciation/"
   },
-  "Herodian": {
-    "pronunciation": "hehr-O-dee-uhn",
-    "link": "https://biblespeak.org/Herodian-pronunciation/"
+  "Hosannah": {
+    "pronunciation": "ho-ZAH-nuh",
+    "link": "https://biblespeak.org/Hosannah-pronunciation/"
+  },
+  "Hilary": {
+    "pronunciation": "HIHL-uh-ree",
+    "link": "https://biblespeak.org/Hilary-pronunciation/"
+  },
+  "Horeb": {
+    "pronunciation": "HAWR-ehb",
+    "link": "https://biblespeak.org/Horeb-pronunciation/"
+  },
+  "Hippolytus": {
+    "pronunciation": "hih-PAHL-ih-tus",
+    "link": "https://biblespeak.org/Hippolytus-pronunciation/"
+  },
+  "Hezron": {
+    "pronunciation": "HEHZ-ruhn",
+    "link": "https://biblespeak.org/Hezron-pronunciation/"
+  },
+  "Hivite": {
+    "pronunciation": "HAI-vait",
+    "link": "https://biblespeak.org/Hivite-pronunciation/"
+  },
+  "Hezekiah": {
+    "pronunciation": "heh-zeh-KAI-uh",
+    "link": "https://biblespeak.org/Hezekiah-pronunciation/"
   },
   "Hophni": {
     "pronunciation": "HAHF-nai",
     "link": "https://biblespeak.org/Hophni-pronunciation/"
   },
-  "Hermes": {
-    "pronunciation": "HER-meez",
-    "link": "https://biblespeak.org/Hermes-pronunciation/"
-  },
-  "Hilkiah": {
-    "pronunciation": "hihl-KAI-uh",
-    "link": "https://biblespeak.org/Hilkiah-pronunciation/"
+  "Haman": {
+    "pronunciation": "HAY-muhn",
+    "link": "https://biblespeak.org/Haman-pronunciation/"
   },
   "Habor": {
     "pronunciation": "HAY-bawr",
@@ -1347,45 +1359,21 @@
     "pronunciation": "HAG-ay-ai",
     "link": "https://biblespeak.org/Haggai-pronunciation/"
   },
-  "Hezron": {
-    "pronunciation": "HEHZ-ruhn",
-    "link": "https://biblespeak.org/Hezron-pronunciation/"
-  },
-  "Hosea": {
-    "pronunciation": "ho-ZEE-uh",
-    "link": "https://biblespeak.org/Hosea-pronunciation/"
-  },
-  "Heifer": {
-    "pronunciation": "HEH-fer",
-    "link": "https://biblespeak.org/Heifer-pronunciation/"
-  },
   "Hazael": {
     "pronunciation": "HAZ-ay-ehl",
     "link": "https://biblespeak.org/Hazael-pronunciation/"
   },
-  "Hosannah": {
-    "pronunciation": "ho-ZAH-nuh",
-    "link": "https://biblespeak.org/Hosannah-pronunciation/"
+  "Hagur": {
+    "pronunciation": "HAH-goor",
+    "link": "https://biblespeak.org/Hagur-pronunciation/"
   },
-  "Hittite": {
-    "pronunciation": "HIH-tait",
-    "link": "https://biblespeak.org/Hittite-pronunciation/"
+  "Herodias": {
+    "pronunciation": "hehr-O-dee-uhs",
+    "link": "https://biblespeak.org/Herodias-pronunciation/"
   },
   "Halah": {
     "pronunciation": "HAY-luh",
     "link": "https://biblespeak.org/Halah-pronunciation/"
-  },
-  "Herod": {
-    "pronunciation": "HEHR-uhd",
-    "link": "https://biblespeak.org/Herod-pronunciation/"
-  },
-  "Hireling": {
-    "pronunciation": "HAI-er-lihng",
-    "link": "https://biblespeak.org/Hireling-pronunciation/"
-  },
-  "Homage": {
-    "pronunciation": "HAH-mudzh",
-    "link": "https://biblespeak.org/Homage-pronunciation/"
   },
   "Haran": {
     "pronunciation": "HAY-ruhn",
@@ -1395,65 +1383,89 @@
     "pronunciation": "HAN-uh",
     "link": "https://biblespeak.org/Hannah-pronunciation/"
   },
-  "Hezikiah": {
-    "pronunciation": "heh-zih-KAI-uh",
-    "link": "https://biblespeak.org/Hezikiah-pronunciation/"
-  },
-  "Hades": {
-    "pronunciation": "HAY-deez",
-    "link": "https://biblespeak.org/Hades-pronunciation/"
-  },
-  "Hadadrimmon": {
-    "pronunciation": "hay-dad-RIHM-uhn",
-    "link": "https://biblespeak.org/Hadadrimmon-pronunciation/"
-  },
-  "Hezekiah": {
-    "pronunciation": "heh-zeh-KAI-uh",
-    "link": "https://biblespeak.org/Hezekiah-pronunciation/"
-  },
-  "Hoshea": {
-    "pronunciation": "ho-SHEE-uh",
-    "link": "https://biblespeak.org/Hoshea-pronunciation/"
-  },
-  "Haman": {
-    "pronunciation": "HAY-muhn",
-    "link": "https://biblespeak.org/Haman-pronunciation/"
-  },
-  "Hebrews": {
-    "pronunciation": "HEE-brooz",
-    "link": "https://biblespeak.org/Hebrews-pronunciation/"
-  },
-  "Herodias": {
-    "pronunciation": "hehr-O-dee-uhs",
-    "link": "https://biblespeak.org/Herodias-pronunciation/"
-  },
-  "Hilary": {
-    "pronunciation": "HIHL-uh-ree",
-    "link": "https://biblespeak.org/Hilary-pronunciation/"
+  "Hermes": {
+    "pronunciation": "HER-meez",
+    "link": "https://biblespeak.org/Hermes-pronunciation/"
   },
   "Habakkuk": {
     "pronunciation": "huh-BAK-uhk",
     "link": "https://biblespeak.org/Habakkuk-pronunciation/"
   },
-  "Hamath": {
-    "pronunciation": "HAY-mehth",
-    "link": "https://biblespeak.org/Hamath-pronunciation/"
-  },
-  "Horeb": {
-    "pronunciation": "HAWR-ehb",
-    "link": "https://biblespeak.org/Horeb-pronunciation/"
+  "Hittite": {
+    "pronunciation": "HIH-tait",
+    "link": "https://biblespeak.org/Hittite-pronunciation/"
   },
   "Hoglah": {
     "pronunciation": "KHAHG-lah",
     "link": "https://biblespeak.org/Hoglah-pronunciation/"
   },
+  "Hoshea": {
+    "pronunciation": "ho-SHEE-uh",
+    "link": "https://biblespeak.org/Hoshea-pronunciation/"
+  },
+  "Hyssop": {
+    "pronunciation": "HIH-suhp",
+    "link": "https://biblespeak.org/Hyssop-pronunciation/"
+  },
+  "Heifer": {
+    "pronunciation": "HEH-fer",
+    "link": "https://biblespeak.org/Heifer-pronunciation/"
+  },
+  "Hadadrimmon": {
+    "pronunciation": "hay-dad-RIHM-uhn",
+    "link": "https://biblespeak.org/Hadadrimmon-pronunciation/"
+  },
+  "Herod": {
+    "pronunciation": "HEHR-uhd",
+    "link": "https://biblespeak.org/Herod-pronunciation/"
+  },
+  "Homage": {
+    "pronunciation": "HAH-mudzh",
+    "link": "https://biblespeak.org/Homage-pronunciation/"
+  },
+  "Hezikiah": {
+    "pronunciation": "heh-zih-KAI-uh",
+    "link": "https://biblespeak.org/Hezikiah-pronunciation/"
+  },
+  "Hebrews": {
+    "pronunciation": "HEE-brooz",
+    "link": "https://biblespeak.org/Hebrews-pronunciation/"
+  },
   "Holocaust": {
     "pronunciation": "HAHL-o-kawst",
     "link": "https://biblespeak.org/Holocaust-pronunciation/"
   },
+  "Herodian": {
+    "pronunciation": "hehr-O-dee-uhn",
+    "link": "https://biblespeak.org/Herodian-pronunciation/"
+  },
+  "Hades": {
+    "pronunciation": "HAY-deez",
+    "link": "https://biblespeak.org/Hades-pronunciation/"
+  },
   "Hananiah": {
     "pronunciation": "han-uh-NAI-uh",
     "link": "https://biblespeak.org/Hananiah-pronunciation/"
+  },
+  "Hireling": {
+    "pronunciation": "HAI-er-lihng",
+    "link": "https://biblespeak.org/Hireling-pronunciation/"
+  },
+  "Hilkiah": {
+    "pronunciation": "hihl-KAI-uh",
+    "link": "https://biblespeak.org/Hilkiah-pronunciation/"
+  },
+  "Isaac": {
+    "pronunciation": "AI-zuhk",
+    "link": "https://biblespeak.org/Isaac-pronunciation/"
+  },
+  "Iddo": {
+    "pronunciation": "IHD-o",
+    "link": "https://biblespeak.org/Iddo-pronunciation/"
+  },
+  "Ituraea": {
+    "pronunciation": "ih-TSHOOR-ree-uh",
+    "link": "https://biblespeak.org/Ituraea-pronunciation/"
   },
   "Ishbosheth": {
     "pronunciation": "ish-BAWSH-ehth",
@@ -1463,293 +1475,273 @@
     "pronunciation": "ISH-mayehl-aits",
     "link": "https://biblespeak.org/Ishmaelites-pronunciation/"
   },
-  "Isles": {
-    "pronunciation": "ailz",
-    "link": "https://biblespeak.org/Isles-pronunciation/"
-  },
-  "Iconium": {
-    "pronunciation": "ai-KO-nih-uhm",
-    "link": "https://biblespeak.org/Iconium-pronunciation/"
-  },
   "Irenaeus": {
     "pronunciation": "ai-rehn-EE-uhs",
     "link": "https://biblespeak.org/Irenaeus-pronunciation/"
   },
-  "Ishmael": {
-    "pronunciation": "ISH-may-ehl",
-    "link": "https://biblespeak.org/Ishmael-pronunciation/"
-  },
-  "Iddo": {
-    "pronunciation": "IHD-o",
-    "link": "https://biblespeak.org/Iddo-pronunciation/"
-  },
-  "Idumea": {
-    "pronunciation": "id-dzhoo-MEE uh",
-    "link": "https://biblespeak.org/Idumea-pronunciation/"
-  },
-  "Israel": {
-    "pronunciation": "IHZ-ray-ehl",
-    "link": "https://biblespeak.org/Israel-pronunciation/"
+  "Isles": {
+    "pronunciation": "ailz",
+    "link": "https://biblespeak.org/Isles-pronunciation/"
   },
   "Italica": {
     "pronunciation": "ih-TAL-ih-kuh",
     "link": "https://biblespeak.org/Italica-pronunciation/"
   },
-  "Isaiah": {
-    "pronunciation": "ai-ZAY-uh",
-    "link": "https://biblespeak.org/Isaiah-pronunciation/"
-  },
-  "Ituraea": {
-    "pronunciation": "ih-TSHOOR-ree-uh",
-    "link": "https://biblespeak.org/Ituraea-pronunciation/"
+  "Israel": {
+    "pronunciation": "IHZ-ray-ehl",
+    "link": "https://biblespeak.org/Israel-pronunciation/"
   },
   "Ignatius": {
     "pronunciation": "ihg-NAY-shuhs",
     "link": "https://biblespeak.org/Ignatius-pronunciation/"
   },
-  "Isaac": {
-    "pronunciation": "AI-zuhk",
-    "link": "https://biblespeak.org/Isaac-pronunciation/"
+  "Isaiah": {
+    "pronunciation": "ai-ZAY-uh",
+    "link": "https://biblespeak.org/Isaiah-pronunciation/"
+  },
+  "Iconium": {
+    "pronunciation": "ai-KO-nih-uhm",
+    "link": "https://biblespeak.org/Iconium-pronunciation/"
   },
   "Israelite": {
     "pronunciation": "IHZ-ray-ehl-ait",
     "link": "https://biblespeak.org/Israelite-pronunciation/"
   },
-  "Judah": {
-    "pronunciation": "DZHOU-duh",
-    "link": "https://biblespeak.org/Judah-pronunciation/"
+  "Idumea": {
+    "pronunciation": "id-dzhoo-MEE uh",
+    "link": "https://biblespeak.org/Idumea-pronunciation/"
   },
-  "Jemimah": {
-    "pronunciation": "dzhee-MAI-muh",
-    "link": "https://biblespeak.org/Jemimah-pronunciation/"
-  },
-  "Joanna": {
-    "pronunciation": "dzho-AN-uh",
-    "link": "https://biblespeak.org/Joanna-pronunciation/"
-  },
-  "Jogues": {
-    "pronunciation": "dzhogz",
-    "link": "https://biblespeak.org/Jogues-pronunciation/"
-  },
-  "Jehozadak": {
-    "pronunciation": "dzhee-HOZ-uh-dak",
-    "link": "https://biblespeak.org/Jehozadak-pronunciation/"
-  },
-  "Joab": {
-    "pronunciation": "DZHO-ab",
-    "link": "https://biblespeak.org/Joab-pronunciation/"
-  },
-  "John": {
-    "pronunciation": "dzhahn",
-    "link": "https://biblespeak.org/John-pronunciation/"
-  },
-  "Jezreelite": {
-    "pronunciation": "DZHEHZ-ree-ehl-zit",
-    "link": "https://biblespeak.org/Jezreelite-pronunciation/"
-  },
-  "Jerusalem": {
-    "pronunciation": "dzheh-ROU-suh-lehm",
-    "link": "https://biblespeak.org/Jerusalem-pronunciation/"
-  },
-  "Jericho": {
-    "pronunciation": "DZHEHR-ih-ko",
-    "link": "https://biblespeak.org/Jericho-pronunciation/"
-  },
-  "Joppa": {
-    "pronunciation": "DZHAH-puh",
-    "link": "https://biblespeak.org/Joppa-pronunciation/"
-  },
-  "Joseph": {
-    "pronunciation": "DZHO-zf",
-    "link": "https://biblespeak.org/Joseph-pronunciation/"
-  },
-  "Jethro": {
-    "pronunciation": "DZHEHTH-ro",
-    "link": "https://biblespeak.org/Jethro-pronunciation/"
-  },
-  "Jeremiah": {
-    "pronunciation": "dzhehr-eh-MAI-uh",
-    "link": "https://biblespeak.org/Jeremiah-pronunciation/"
-  },
-  "Jotham": {
-    "pronunciation": "DZHO-thuhm",
-    "link": "https://biblespeak.org/Jotham-pronunciation/"
-  },
-  "Januarius": {
-    "pronunciation": "dzhan-yoo-EHR-ee-uhs",
-    "link": "https://biblespeak.org/Januarius-pronunciation/"
-  },
-  "Jehoiada": {
-    "pronunciation": "dzhee-HOI-uh-duh",
-    "link": "https://biblespeak.org/Jehoiada-pronunciation/"
-  },
-  "Joash": {
-    "pronunciation": "DZHO-ash",
-    "link": "https://biblespeak.org/Joash-pronunciation/"
-  },
-  "Joel": {
-    "pronunciation": "DZHO-ehl",
-    "link": "https://biblespeak.org/Joel-pronunciation/"
-  },
-  "Job": {
-    "pronunciation": "dzhob",
-    "link": "https://biblespeak.org/Job-pronunciation/"
-  },
-  "Josaphat": {
-    "pronunciation": "DZHAH-suh-fat",
-    "link": "https://biblespeak.org/Josaphat-pronunciation/"
-  },
-  "Joshua": {
-    "pronunciation": "DZHAH-shou-ah",
-    "link": "https://biblespeak.org/Joshua-pronunciation/"
-  },
-  "Jesus": {
-    "pronunciation": "DZHEE-suhs",
-    "link": "https://biblespeak.org/Jesus-pronunciation/"
-  },
-  "Jordan": {
-    "pronunciation": "DZHAWR-dn",
-    "link": "https://biblespeak.org/Jordan-pronunciation/"
-  },
-  "Joses": {
-    "pronunciation": "DZHO-seez",
-    "link": "https://biblespeak.org/Joses-pronunciation/"
-  },
-  "Jeroboam": {
-    "pronunciation": "dzhehr-o-BO-uhm",
-    "link": "https://biblespeak.org/Jeroboam-pronunciation/"
-  },
-  "Jehoiachin": {
-    "pronunciation": "dzhee-HO-ash",
-    "link": "https://biblespeak.org/Jehoiachin-pronunciation/"
-  },
-  "Justin": {
-    "pronunciation": "DZHUHS-tihn",
-    "link": "https://biblespeak.org/Justin-pronunciation/"
+  "Ishmael": {
+    "pronunciation": "ISH-may-ehl",
+    "link": "https://biblespeak.org/Ishmael-pronunciation/"
   },
   "Jaar": {
     "pronunciation": "DZHAY-ahr",
     "link": "https://biblespeak.org/Jaar-pronunciation/"
   },
-  "Justus": {
-    "pronunciation": "DZHUHS-tuhs",
-    "link": "https://biblespeak.org/Justus-pronunciation/"
+  "Jabbok": {
+    "pronunciation": "DZHAB-uhk",
+    "link": "https://biblespeak.org/Jabbok-pronunciation/"
   },
-  "Jeshurun": {
-    "pronunciation": "dzhe-SHOO-ruhn",
-    "link": "https://biblespeak.org/Jeshurun-pronunciation/"
+  "Jehoiachin": {
+    "pronunciation": "dzhee-HO-ash",
+    "link": "https://biblespeak.org/Jehoiachin-pronunciation/"
   },
-  "Jehoshaphat": {
-    "pronunciation": "dzhee-HAHSH-uh-fat",
-    "link": "https://biblespeak.org/Jehoshaphat-pronunciation/"
-  },
-  "Jonathan": {
-    "pronunciation": "DZHAHN-uh-thn",
-    "link": "https://biblespeak.org/Jonathan-pronunciation/"
-  },
-  "Judea": {
-    "pronunciation": "dzhou-DEE-uh",
-    "link": "https://biblespeak.org/Judea-pronunciation/"
-  },
-  "Japheth": {
-    "pronunciation": "DZHAY-fuhth",
-    "link": "https://biblespeak.org/Japheth-pronunciation/"
+  "Jogues": {
+    "pronunciation": "dzhogz",
+    "link": "https://biblespeak.org/Jogues-pronunciation/"
   },
   "Jebusites": {
     "pronunciation": "DZHEHB-oo-zaits",
     "link": "https://biblespeak.org/Jebusites-pronunciation/"
   },
-  "Jabbok": {
-    "pronunciation": "DZHAB-uhk",
-    "link": "https://biblespeak.org/Jabbok-pronunciation/"
+  "Job": {
+    "pronunciation": "dzhob",
+    "link": "https://biblespeak.org/Job-pronunciation/"
   },
-  "Jephthah": {
-    "pronunciation": "DZHEHF-thuh",
-    "link": "https://biblespeak.org/Jephthah-pronunciation/"
+  "Joel": {
+    "pronunciation": "DZHO-ehl",
+    "link": "https://biblespeak.org/Joel-pronunciation/"
   },
-  "Jehoiachim": {
-    "pronunciation": "dzhee-HOI-uh-kihm",
-    "link": "https://biblespeak.org/Jehoiachim-pronunciation/"
-  },
-  "Joachim": {
-    "pronunciation": "DZHO-uh-kihm",
-    "link": "https://biblespeak.org/Joachim-pronunciation/"
-  },
-  "Jehoram": {
-    "pronunciation": "dzhee-HOR-am",
-    "link": "https://biblespeak.org/Jehoram-pronunciation/"
-  },
-  "Jeconiah": {
-    "pronunciation": "dzhehk-o-NAI-uh",
-    "link": "https://biblespeak.org/Jeconiah-pronunciation/"
-  },
-  "Javan": {
-    "pronunciation": "DZHAY-van",
-    "link": "https://biblespeak.org/Javan-pronunciation/"
-  },
-  "Jeroham": {
-    "pronunciation": "dzhehr-RO-ham",
-    "link": "https://biblespeak.org/Jeroham-pronunciation/"
-  },
-  "Jehu": {
-    "pronunciation": "DZHEE-hyoo",
-    "link": "https://biblespeak.org/Jehu-pronunciation/"
-  },
-  "Josiah": {
-    "pronunciation": "dzho-SAI-uh",
-    "link": "https://biblespeak.org/Josiah-pronunciation/"
-  },
-  "Jonah": {
-    "pronunciation": "DZHO-nuh",
-    "link": "https://biblespeak.org/Jonah-pronunciation/"
-  },
-  "Jesreel": {
-    "pronunciation": "DZHEHZ-reel",
-    "link": "https://biblespeak.org/Jesreel-pronunciation/"
-  },
-  "Jechoniah": {
-    "pronunciation": "dzhehk-o-NAI-uh",
-    "link": "https://biblespeak.org/Jechoniah-pronunciation/"
-  },
-  "Joram": {
-    "pronunciation": "DZHO-ram",
-    "link": "https://biblespeak.org/Joram-pronunciation/"
-  },
-  "John-Eudes": {
-    "pronunciation": "dzhahn YOU-dehz",
-    "link": "https://biblespeak.org/John-Eudes-pronunciation/"
-  },
-  "Jehosheba": {
-    "pronunciation": "dzhee-HAHSH-ee-bah",
-    "link": "https://biblespeak.org/Jehosheba-pronunciation/"
-  },
-  "Jesse": {
-    "pronunciation": "DZHEH-see",
-    "link": "https://biblespeak.org/Jesse-pronunciation/"
+  "Joshua": {
+    "pronunciation": "DZHAH-shou-ah",
+    "link": "https://biblespeak.org/Joshua-pronunciation/"
   },
   "Junias": {
     "pronunciation": "dzhou-nih-uhs",
     "link": "https://biblespeak.org/Junias-pronunciation/"
   },
+  "Joachim": {
+    "pronunciation": "DZHO-uh-kihm",
+    "link": "https://biblespeak.org/Joachim-pronunciation/"
+  },
+  "Justin": {
+    "pronunciation": "DZHUHS-tihn",
+    "link": "https://biblespeak.org/Justin-pronunciation/"
+  },
+  "Jeconiah": {
+    "pronunciation": "dzhehk-o-NAI-uh",
+    "link": "https://biblespeak.org/Jeconiah-pronunciation/"
+  },
+  "Jeroboam": {
+    "pronunciation": "dzhehr-o-BO-uhm",
+    "link": "https://biblespeak.org/Jeroboam-pronunciation/"
+  },
+  "Jemimah": {
+    "pronunciation": "dzhee-MAI-muh",
+    "link": "https://biblespeak.org/Jemimah-pronunciation/"
+  },
+  "Javan": {
+    "pronunciation": "DZHAY-van",
+    "link": "https://biblespeak.org/Javan-pronunciation/"
+  },
+  "Jonathan": {
+    "pronunciation": "DZHAHN-uh-thn",
+    "link": "https://biblespeak.org/Jonathan-pronunciation/"
+  },
+  "Japheth": {
+    "pronunciation": "DZHAY-fuhth",
+    "link": "https://biblespeak.org/Japheth-pronunciation/"
+  },
+  "Josaphat": {
+    "pronunciation": "DZHAH-suh-fat",
+    "link": "https://biblespeak.org/Josaphat-pronunciation/"
+  },
+  "Jericho": {
+    "pronunciation": "DZHEHR-ih-ko",
+    "link": "https://biblespeak.org/Jericho-pronunciation/"
+  },
+  "Joanna": {
+    "pronunciation": "dzho-AN-uh",
+    "link": "https://biblespeak.org/Joanna-pronunciation/"
+  },
+  "Jonah": {
+    "pronunciation": "DZHO-nuh",
+    "link": "https://biblespeak.org/Jonah-pronunciation/"
+  },
+  "Joash": {
+    "pronunciation": "DZHO-ash",
+    "link": "https://biblespeak.org/Joash-pronunciation/"
+  },
+  "Jephthah": {
+    "pronunciation": "DZHEHF-thuh",
+    "link": "https://biblespeak.org/Jephthah-pronunciation/"
+  },
+  "Joses": {
+    "pronunciation": "DZHO-seez",
+    "link": "https://biblespeak.org/Joses-pronunciation/"
+  },
+  "Jethro": {
+    "pronunciation": "DZHEHTH-ro",
+    "link": "https://biblespeak.org/Jethro-pronunciation/"
+  },
+  "Januarius": {
+    "pronunciation": "dzhan-yoo-EHR-ee-uhs",
+    "link": "https://biblespeak.org/Januarius-pronunciation/"
+  },
+  "Jehozadak": {
+    "pronunciation": "dzhee-HOZ-uh-dak",
+    "link": "https://biblespeak.org/Jehozadak-pronunciation/"
+  },
+  "Josiah": {
+    "pronunciation": "dzho-SAI-uh",
+    "link": "https://biblespeak.org/Josiah-pronunciation/"
+  },
+  "Jehoiada": {
+    "pronunciation": "dzhee-HOI-uh-duh",
+    "link": "https://biblespeak.org/Jehoiada-pronunciation/"
+  },
+  "Judah": {
+    "pronunciation": "DZHOU-duh",
+    "link": "https://biblespeak.org/Judah-pronunciation/"
+  },
+  "John": {
+    "pronunciation": "dzhahn",
+    "link": "https://biblespeak.org/John-pronunciation/"
+  },
+  "Jeremiah": {
+    "pronunciation": "dzhehr-eh-MAI-uh",
+    "link": "https://biblespeak.org/Jeremiah-pronunciation/"
+  },
+  "Jehoiachim": {
+    "pronunciation": "dzhee-HOI-uh-kihm",
+    "link": "https://biblespeak.org/Jehoiachim-pronunciation/"
+  },
+  "Jeshurun": {
+    "pronunciation": "dzhe-SHOO-ruhn",
+    "link": "https://biblespeak.org/Jeshurun-pronunciation/"
+  },
+  "Jotham": {
+    "pronunciation": "DZHO-thuhm",
+    "link": "https://biblespeak.org/Jotham-pronunciation/"
+  },
+  "Jesreel": {
+    "pronunciation": "DZHEHZ-reel",
+    "link": "https://biblespeak.org/Jesreel-pronunciation/"
+  },
+  "Joab": {
+    "pronunciation": "DZHO-ab",
+    "link": "https://biblespeak.org/Joab-pronunciation/"
+  },
+  "Joram": {
+    "pronunciation": "DZHO-ram",
+    "link": "https://biblespeak.org/Joram-pronunciation/"
+  },
   "Jacob": {
     "pronunciation": "DZHAY-kuhb",
     "link": "https://biblespeak.org/Jacob-pronunciation/"
+  },
+  "Jehu": {
+    "pronunciation": "DZHEE-hyoo",
+    "link": "https://biblespeak.org/Jehu-pronunciation/"
+  },
+  "Jesse": {
+    "pronunciation": "DZHEH-see",
+    "link": "https://biblespeak.org/Jesse-pronunciation/"
+  },
+  "Jesus": {
+    "pronunciation": "DZHEE-suhs",
+    "link": "https://biblespeak.org/Jesus-pronunciation/"
+  },
+  "John-Eudes": {
+    "pronunciation": "dzhahn YOU-dehz",
+    "link": "https://biblespeak.org/John-Eudes-pronunciation/"
+  },
+  "Jezreelite": {
+    "pronunciation": "DZHEHZ-ree-ehl-zit",
+    "link": "https://biblespeak.org/Jezreelite-pronunciation/"
+  },
+  "Jechoniah": {
+    "pronunciation": "dzhehk-o-NAI-uh",
+    "link": "https://biblespeak.org/Jechoniah-pronunciation/"
+  },
+  "Jeroham": {
+    "pronunciation": "dzhehr-RO-ham",
+    "link": "https://biblespeak.org/Jeroham-pronunciation/"
+  },
+  "Jehoram": {
+    "pronunciation": "dzhee-HOR-am",
+    "link": "https://biblespeak.org/Jehoram-pronunciation/"
+  },
+  "Jordan": {
+    "pronunciation": "DZHAWR-dn",
+    "link": "https://biblespeak.org/Jordan-pronunciation/"
+  },
+  "Jerusalem": {
+    "pronunciation": "dzheh-ROU-suh-lehm",
+    "link": "https://biblespeak.org/Jerusalem-pronunciation/"
+  },
+  "Joseph": {
+    "pronunciation": "DZHO-zf",
+    "link": "https://biblespeak.org/Joseph-pronunciation/"
+  },
+  "Joppa": {
+    "pronunciation": "DZHAH-puh",
+    "link": "https://biblespeak.org/Joppa-pronunciation/"
+  },
+  "Judea": {
+    "pronunciation": "dzhou-DEE-uh",
+    "link": "https://biblespeak.org/Judea-pronunciation/"
+  },
+  "Jehosheba": {
+    "pronunciation": "dzhee-HAHSH-ee-bah",
+    "link": "https://biblespeak.org/Jehosheba-pronunciation/"
+  },
+  "Justus": {
+    "pronunciation": "DZHUHS-tuhs",
+    "link": "https://biblespeak.org/Justus-pronunciation/"
+  },
+  "Jehoshaphat": {
+    "pronunciation": "dzhee-HAHSH-uh-fat",
+    "link": "https://biblespeak.org/Jehoshaphat-pronunciation/"
   },
   "Kanty": {
     "pronunciation": "KAN-tee",
     "link": "https://biblespeak.org/Kanty-pronunciation/"
   },
-  "Kish": {
-    "pronunciation": "kihsh",
-    "link": "https://biblespeak.org/Kish-pronunciation/"
-  },
-  "Korban": {
-    "pronunciation": "KAWR-bahn",
-    "link": "https://biblespeak.org/Korban-pronunciation/"
-  },
-  "Kidron": {
-    "pronunciation": "KIHD-ruhn",
-    "link": "https://biblespeak.org/Kidron-pronunciation/"
+  "Keziah": {
+    "pronunciation": "keh-ZAI-uh",
+    "link": "https://biblespeak.org/Keziah-pronunciation/"
   },
   "Kedesh": {
     "pronunciation": "KEE-dehsh",
@@ -1763,121 +1755,37 @@
     "pronunciation": "KEHR-ehn-HAP-ouk",
     "link": "https://biblespeak.org/Keren-Happuch-pronunciation/"
   },
+  "Kish": {
+    "pronunciation": "kihsh",
+    "link": "https://biblespeak.org/Kish-pronunciation/"
+  },
+  "Kidron": {
+    "pronunciation": "KIHD-ruhn",
+    "link": "https://biblespeak.org/Kidron-pronunciation/"
+  },
+  "Korban": {
+    "pronunciation": "KAWR-bahn",
+    "link": "https://biblespeak.org/Korban-pronunciation/"
+  },
   "Kiriatharba": {
     "pronunciation": "kihr-ee-ath-AHR-buh",
     "link": "https://biblespeak.org/Kiriatharba-pronunciation/"
-  },
-  "Keziah": {
-    "pronunciation": "keh-ZAI-uh",
-    "link": "https://biblespeak.org/Keziah-pronunciation/"
-  },
-  "Levites": {
-    "pronunciation": "LEE-vaits",
-    "link": "https://biblespeak.org/Levites-pronunciation/"
-  },
-  "Lycaonian": {
-    "pronunciation": "lihk-ay-O-nih-uhn",
-    "link": "https://biblespeak.org/Lycaonian-pronunciation/"
-  },
-  "Lebanon": {
-    "pronunciation": "LEH-buh-nuhn",
-    "link": "https://biblespeak.org/Lebanon-pronunciation/"
   },
   "Lateran": {
     "pronunciation": "LAT-er-uhn",
     "link": "https://biblespeak.org/Lateran-pronunciation/"
   },
-  "Laban": {
-    "pronunciation": "LAY-b'n",
-    "link": "https://biblespeak.org/Laban-pronunciation/"
-  },
-  "Lysanias": {
-    "pronunciation": "lai-SAY-nih-uhs",
-    "link": "https://biblespeak.org/Lysanias-pronunciation/"
-  },
-  "Lydda": {
-    "pronunciation": "LIH-duh",
-    "link": "https://biblespeak.org/Lydda-pronunciation/"
-  },
-  "Luz": {
-    "pronunciation": "luhz",
-    "link": "https://biblespeak.org/Luz-pronunciation/"
-  },
-  "Lourdes": {
-    "pronunciation": "lourd",
-    "link": "https://biblespeak.org/Lourdes-pronunciation/"
-  },
-  "Lineage": {
-    "pronunciation": "LIHN-ee-ihdzh",
-    "link": "https://biblespeak.org/Lineage-pronunciation/"
-  },
-  "Lysias": {
-    "pronunciation": "LIH-sih-uhs",
-    "link": "https://biblespeak.org/Lysias-pronunciation/"
-  },
-  "Laodiceans": {
-    "pronunciation": "lay-o-dih-SEE-uhnz",
-    "link": "https://biblespeak.org/Laodiceans-pronunciation/"
-  },
-  "Luke": {
-    "pronunciation": "look",
-    "link": "https://biblespeak.org/Luke-pronunciation/"
-  },
-  "Liguori": {
-    "pronunciation": "lih-GOU-ree",
-    "link": "https://biblespeak.org/Liguori-pronunciation/"
-  },
-  "Lazarus": {
-    "pronunciation": "LAZ-er-uhs",
-    "link": "https://biblespeak.org/Lazarus-pronunciation/"
-  },
-  "Lud": {
-    "pronunciation": "luhd",
-    "link": "https://biblespeak.org/Lud-pronunciation/"
+  "Levi": {
+    "pronunciation": "LEE-vai",
+    "link": "https://biblespeak.org/Levi-pronunciation/"
   },
   "Laodicea": {
     "pronunciation": "lay-o-dih-SEE-uh or lay-oh-DISS-ee-uh",
     "link": "https://biblespeak.org/Laodicea-pronunciation/"
   },
-  "Lairs": {
-    "pronunciation": "lehrz",
-    "link": "https://biblespeak.org/Lairs-pronunciation/"
-  },
-  "Lucius": {
-    "pronunciation": "LOO-shih-uhs",
-    "link": "https://biblespeak.org/Lucius-pronunciation/"
-  },
-  "Levi": {
-    "pronunciation": "LEE-vai",
-    "link": "https://biblespeak.org/Levi-pronunciation/"
-  },
-  "Lystra": {
-    "pronunciation": "LIHS-truh",
-    "link": "https://biblespeak.org/Lystra-pronunciation/"
-  },
-  "Lwanga": {
-    "pronunciation": "luh-WAHNG-guh",
-    "link": "https://biblespeak.org/Lwanga-pronunciation/"
-  },
-  "Leah": {
-    "pronunciation": "LEE-uh",
-    "link": "https://biblespeak.org/Leah-pronunciation/"
-  },
-  "Libya": {
-    "pronunciation": "LIH-bih-uh",
-    "link": "https://biblespeak.org/Libya-pronunciation/"
-  },
-  "Leviticus": {
-    "pronunciation": "leh-VIH-tih-kous",
-    "link": "https://biblespeak.org/Leviticus-pronunciation/"
-  },
-  "Laud": {
-    "pronunciation": "lawd",
-    "link": "https://biblespeak.org/Laud-pronunciation/"
-  },
-  "Leonardi": {
-    "pronunciation": "lee-aw-NAR-dee",
-    "link": "https://biblespeak.org/Leonardi-pronunciation/"
+  "Lydia": {
+    "pronunciation": "LIH-dih-uh",
+    "link": "https://biblespeak.org/Lydia-pronunciation/"
   },
   "Lintel": {
     "pronunciation": "LIHN-tuhl",
@@ -1887,93 +1795,109 @@
     "pronunciation": "lam-ehn-TAY-shuhnz",
     "link": "https://biblespeak.org/Lamentations-pronunciation/"
   },
-  "Lydia": {
-    "pronunciation": "LIH-dih-uh",
-    "link": "https://biblespeak.org/Lydia-pronunciation/"
+  "Libya": {
+    "pronunciation": "LIH-bih-uh",
+    "link": "https://biblespeak.org/Libya-pronunciation/"
   },
-  "Mahlah": {
-    "pronunciation": "MAH-lah",
-    "link": "https://biblespeak.org/Mahlah-pronunciation/"
+  "Lineage": {
+    "pronunciation": "LIHN-ee-ihdzh",
+    "link": "https://biblespeak.org/Lineage-pronunciation/"
   },
-  "Meshach": {
-    "pronunciation": "MEE-shak",
-    "link": "https://biblespeak.org/Meshach-pronunciation/"
+  "Lysias": {
+    "pronunciation": "LIH-sih-uhs",
+    "link": "https://biblespeak.org/Lysias-pronunciation/"
   },
-  "Mankind": {
-    "pronunciation": "man-KAIND",
-    "link": "https://biblespeak.org/Mankind-pronunciation/"
+  "Luz": {
+    "pronunciation": "luhz",
+    "link": "https://biblespeak.org/Luz-pronunciation/"
   },
-  "Methodius": {
-    "pronunciation": "meh-THO-dee-us",
-    "link": "https://biblespeak.org/Methodius-pronunciation/"
+  "Lysanias": {
+    "pronunciation": "lai-SAY-nih-uhs",
+    "link": "https://biblespeak.org/Lysanias-pronunciation/"
   },
-  "Mordecai": {
-    "pronunciation": "MAWR-deh-kai",
-    "link": "https://biblespeak.org/Mordecai-pronunciation/"
+  "Laud": {
+    "pronunciation": "lawd",
+    "link": "https://biblespeak.org/Laud-pronunciation/"
   },
-  "Malachi": {
-    "pronunciation": "MAL-uh-kai",
-    "link": "https://biblespeak.org/Malachi-pronunciation/"
+  "Lycaonian": {
+    "pronunciation": "lihk-ay-O-nih-uhn",
+    "link": "https://biblespeak.org/Lycaonian-pronunciation/"
   },
-  "Moriah": {
-    "pronunciation": "maw-RAI-uh",
-    "link": "https://biblespeak.org/Moriah-pronunciation/"
+  "Leonardi": {
+    "pronunciation": "lee-aw-NAR-dee",
+    "link": "https://biblespeak.org/Leonardi-pronunciation/"
   },
-  "Manoah": {
-    "pronunciation": "muh-NO-uh",
-    "link": "https://biblespeak.org/Manoah-pronunciation/"
+  "Lairs": {
+    "pronunciation": "lehrz",
+    "link": "https://biblespeak.org/Lairs-pronunciation/"
   },
-  "Manaen": {
-    "pronunciation": "MAN-uh-ehn",
-    "link": "https://biblespeak.org/Manaen-pronunciation/"
+  "Lwanga": {
+    "pronunciation": "luh-WAHNG-guh",
+    "link": "https://biblespeak.org/Lwanga-pronunciation/"
   },
-  "Mitre": {
-    "pronunciation": "MAI-ter",
-    "link": "https://biblespeak.org/Mitre-pronunciation/"
+  "Luke": {
+    "pronunciation": "look",
+    "link": "https://biblespeak.org/Luke-pronunciation/"
   },
-  "Mark": {
-    "pronunciation": "mahrk",
-    "link": "https://biblespeak.org/Mark-pronunciation/"
+  "Lud": {
+    "pronunciation": "luhd",
+    "link": "https://biblespeak.org/Lud-pronunciation/"
   },
-  "Marcellinus": {
-    "pronunciation": "mahr-suh-LAI-nuhs",
-    "link": "https://biblespeak.org/Marcellinus-pronunciation/"
+  "Lystra": {
+    "pronunciation": "LIHS-truh",
+    "link": "https://biblespeak.org/Lystra-pronunciation/"
   },
-  "Mishale": {
-    "pronunciation": "MIHSH-ay-ehl",
-    "link": "https://biblespeak.org/Mishale-pronunciation/"
+  "Lydda": {
+    "pronunciation": "LIH-duh",
+    "link": "https://biblespeak.org/Lydda-pronunciation/"
   },
-  "Micaiah": {
-    "pronunciation": "mai-KAY-yuh",
-    "link": "https://biblespeak.org/Micaiah-pronunciation/"
+  "Lebanon": {
+    "pronunciation": "LEH-buh-nuhn",
+    "link": "https://biblespeak.org/Lebanon-pronunciation/"
   },
-  "Massah": {
-    "pronunciation": "MAH-suh",
-    "link": "https://biblespeak.org/Massah-pronunciation/"
+  "Laban": {
+    "pronunciation": "LAY-b'n",
+    "link": "https://biblespeak.org/Laban-pronunciation/"
   },
-  "Mesopotamia": {
-    "pronunciation": "mehs-o-po-TAY-mih-uh",
-    "link": "https://biblespeak.org/Mesopotamia-pronunciation/"
+  "Leah": {
+    "pronunciation": "LEE-uh",
+    "link": "https://biblespeak.org/Leah-pronunciation/"
   },
-  "Midianite": {
-    "pronunciation": "MIH-dih-uhn-ait",
-    "link": "https://biblespeak.org/Midianite-pronunciation/"
+  "Lucius": {
+    "pronunciation": "LOO-shih-uhs",
+    "link": "https://biblespeak.org/Lucius-pronunciation/"
   },
-  "Macedonia": {
-    "pronunciation": "mas-eh-DO-nih-uh",
-    "link": "https://biblespeak.org/Macedonia-pronunciation/"
+  "Lazarus": {
+    "pronunciation": "LAZ-er-uhs",
+    "link": "https://biblespeak.org/Lazarus-pronunciation/"
+  },
+  "Lourdes": {
+    "pronunciation": "lourd",
+    "link": "https://biblespeak.org/Lourdes-pronunciation/"
+  },
+  "Levites": {
+    "pronunciation": "LEE-vaits",
+    "link": "https://biblespeak.org/Levites-pronunciation/"
+  },
+  "Liguori": {
+    "pronunciation": "lih-GOU-ree",
+    "link": "https://biblespeak.org/Liguori-pronunciation/"
+  },
+  "Leviticus": {
+    "pronunciation": "leh-VIH-tih-kous",
+    "link": "https://biblespeak.org/Leviticus-pronunciation/"
+  },
+  "Laodiceans": {
+    "pronunciation": "lay-o-dih-SEE-uhnz",
+    "link": "https://biblespeak.org/Laodiceans-pronunciation/"
+  },
+  "Micah": {
+    "pronunciation": "MAI-kuh",
+    "link": "https://biblespeak.org/Micah-pronunciation/"
   },
   "Midian": {
     "pronunciation": "MIH-dih-uhn",
     "link": "https://biblespeak.org/Midian-pronunciation/"
-  },
-  "Miriam": {
-    "pronunciation": "MIHR-ih-uhm",
-    "link": "https://biblespeak.org/Miriam-pronunciation/"
-  },
-  "Melchizedek": {
-    "pronunciation": "mehl-KIHZ-eh-dehk",
-    "link": "https://biblespeak.org/Melchizedek-pronunciation/"
   },
   "Minnith": {
     "pronunciation": "MIHN-ihth",
@@ -1983,97 +1907,65 @@
     "pronunciation": "MO-reh",
     "link": "https://biblespeak.org/Moreh-pronunciation/"
   },
+  "Media": {
+    "pronunciation": "MEE-dih-uh",
+    "link": "https://biblespeak.org/Media-pronunciation/"
+  },
   "Mysia": {
     "pronunciation": "MIH-shih-uh",
     "link": "https://biblespeak.org/Mysia-pronunciation/"
+  },
+  "Mary": {
+    "pronunciation": "MEHR-ee",
+    "link": "https://biblespeak.org/Mary-pronunciation/"
+  },
+  "Macedonia": {
+    "pronunciation": "mas-eh-DO-nih-uh",
+    "link": "https://biblespeak.org/Macedonia-pronunciation/"
   },
   "Megiddo": {
     "pronunciation": "mee-GIH-do",
     "link": "https://biblespeak.org/Megiddo-pronunciation/"
   },
-  "Magdala": {
-    "pronunciation": "MAG-duh-luh",
-    "link": "https://biblespeak.org/Magdala-pronunciation/"
-  },
-  "Machir": {
-    "pronunciation": "MAY-kihr",
-    "link": "https://biblespeak.org/Machir-pronunciation/"
-  },
-  "Molech": {
-    "pronunciation": "MO-lehk",
-    "link": "https://biblespeak.org/Molech-pronunciation/"
-  },
-  "Mosaic": {
-    "pronunciation": "mo-ZAY-ihk",
-    "link": "https://biblespeak.org/Mosaic-pronunciation/"
-  },
-  "Minions": {
-    "pronunciation": "MIHN-yuhnz",
-    "link": "https://biblespeak.org/Minions-pronunciation/"
-  },
-  "Milcah": {
-    "pronunciation": "MIHL-kah",
-    "link": "https://biblespeak.org/Milcah-pronunciation/"
-  },
-  "Mosoch": {
-    "pronunciation": "MAH-sahk",
-    "link": "https://biblespeak.org/Mosoch-pronunciation/"
-  },
-  "Media": {
-    "pronunciation": "MEE-dih-uh",
-    "link": "https://biblespeak.org/Media-pronunciation/"
-  },
-  "Mene": {
-    "pronunciation": "MEE-nee",
-    "link": "https://biblespeak.org/Mene-pronunciation/"
-  },
-  "Mede": {
-    "pronunciation": "meed",
-    "link": "https://biblespeak.org/Mede-pronunciation/"
-  },
-  "Milcom": {
-    "pronunciation": "MIHL-kahm",
-    "link": "https://biblespeak.org/Milcom-pronunciation/"
-  },
-  "Moabite": {
-    "pronunciation": "MO-ab-ait",
-    "link": "https://biblespeak.org/Moabite-pronunciation/"
-  },
-  "Mattaniah": {
-    "pronunciation": "mat-uh-NAI-uh",
-    "link": "https://biblespeak.org/Mattaniah-pronunciation/"
-  },
-  "Mephibosheth": {
-    "pronunciation": "meh-FIHB-o-shehth",
-    "link": "https://biblespeak.org/Mephibosheth-pronunciation/"
-  },
-  "Matthew": {
-    "pronunciation": "MATH-yoo",
-    "link": "https://biblespeak.org/Matthew-pronunciation/"
-  },
-  "Mizpah": {
-    "pronunciation": "MIHZ-puh",
-    "link": "https://biblespeak.org/Mizpah-pronunciation/"
-  },
-  "Meribah": {
-    "pronunciation": "MEHR-ih-bah",
-    "link": "https://biblespeak.org/Meribah-pronunciation/"
-  },
-  "Machpelah": {
-    "pronunciation": "mak-PEE-luh",
-    "link": "https://biblespeak.org/Machpelah-pronunciation/"
-  },
-  "Mattathias": {
-    "pronunciation": "mat-uh-THAI-uhs",
-    "link": "https://biblespeak.org/Mattathias-pronunciation/"
+  "Marcellinus": {
+    "pronunciation": "mahr-suh-LAI-nuhs",
+    "link": "https://biblespeak.org/Marcellinus-pronunciation/"
   },
   "Medad": {
     "pronunciation": "MEE-dad",
     "link": "https://biblespeak.org/Medad-pronunciation/"
   },
+  "Mattaniah": {
+    "pronunciation": "mat-uh-NAI-uh",
+    "link": "https://biblespeak.org/Mattaniah-pronunciation/"
+  },
   "Maccabees": {
     "pronunciation": "MAK-uh-beez",
     "link": "https://biblespeak.org/Maccabees-pronunciation/"
+  },
+  "Midianite": {
+    "pronunciation": "MIH-dih-uhn-ait",
+    "link": "https://biblespeak.org/Midianite-pronunciation/"
+  },
+  "Moabite": {
+    "pronunciation": "MO-ab-ait",
+    "link": "https://biblespeak.org/Moabite-pronunciation/"
+  },
+  "Moabitess": {
+    "pronunciation": "MO-uh-bai-tihs",
+    "link": "https://biblespeak.org/Moabitess-pronunciation/"
+  },
+  "Myriad": {
+    "pronunciation": "MIHR-ih-uhd",
+    "link": "https://biblespeak.org/Myriad-pronunciation/"
+  },
+  "Mosoch": {
+    "pronunciation": "MAH-sahk",
+    "link": "https://biblespeak.org/Mosoch-pronunciation/"
+  },
+  "Manoah": {
+    "pronunciation": "muh-NO-uh",
+    "link": "https://biblespeak.org/Manoah-pronunciation/"
   },
   "Magi": {
     "pronunciation": "MAY-dzhai",
@@ -2083,85 +1975,301 @@
     "pronunciation": "mal-KAI-uh",
     "link": "https://biblespeak.org/Malchiah-pronunciation/"
   },
+  "Machpelah": {
+    "pronunciation": "mak-PEE-luh",
+    "link": "https://biblespeak.org/Machpelah-pronunciation/"
+  },
+  "Mitre": {
+    "pronunciation": "MAI-ter",
+    "link": "https://biblespeak.org/Mitre-pronunciation/"
+  },
+  "Mosaic": {
+    "pronunciation": "mo-ZAY-ihk",
+    "link": "https://biblespeak.org/Mosaic-pronunciation/"
+  },
   "Manasseh": {
     "pronunciation": "man-AS-eh",
     "link": "https://biblespeak.org/Manasseh-pronunciation/"
   },
-  "Modein": {
-    "pronunciation": "MO-deen",
-    "link": "https://biblespeak.org/Modein-pronunciation/"
+  "Mordecai": {
+    "pronunciation": "MAWR-deh-kai",
+    "link": "https://biblespeak.org/Mordecai-pronunciation/"
+  },
+  "Mesopotamia": {
+    "pronunciation": "mehs-o-po-TAY-mih-uh",
+    "link": "https://biblespeak.org/Mesopotamia-pronunciation/"
+  },
+  "Malachi": {
+    "pronunciation": "MAL-uh-kai",
+    "link": "https://biblespeak.org/Malachi-pronunciation/"
   },
   "Mamre": {
     "pronunciation": "MAM-ree",
     "link": "https://biblespeak.org/Mamre-pronunciation/"
   },
-  "Matthan": {
-    "pronunciation": "MAT-than",
-    "link": "https://biblespeak.org/Matthan-pronunciation/"
+  "Mankind": {
+    "pronunciation": "man-KAIND",
+    "link": "https://biblespeak.org/Mankind-pronunciation/"
   },
-  "Moab": {
-    "pronunciation": "MO-ab",
-    "link": "https://biblespeak.org/Moab-pronunciation/"
-  },
-  "Miletus": {
-    "pronunciation": "mai-LEE-tuhs",
-    "link": "https://biblespeak.org/Miletus-pronunciation/"
-  },
-  "Moabitess": {
-    "pronunciation": "MO-uh-bai-tihs",
-    "link": "https://biblespeak.org/Moabitess-pronunciation/"
-  },
-  "Macedon": {
-    "pronunciation": "MAS-uh-duhn",
-    "link": "https://biblespeak.org/Macedon-pronunciation/"
-  },
-  "Magdalene": {
-    "pronunciation": "MAG-duh-lehn",
-    "link": "https://biblespeak.org/Magdalene-pronunciation/"
-  },
-  "Mahanaim": {
-    "pronunciation": "mah-hah-NAH-eem",
-    "link": "https://biblespeak.org/Mahanaim-pronunciation/"
-  },
-  "Mattan": {
-    "pronunciation": "MAT-uhn",
-    "link": "https://biblespeak.org/Mattan-pronunciation/"
-  },
-  "Mahlon": {
-    "pronunciation": "MAH-luhn",
-    "link": "https://biblespeak.org/Mahlon-pronunciation/"
-  },
-  "Meholah": {
-    "pronunciation": "mee-HO-luh",
-    "link": "https://biblespeak.org/Meholah-pronunciation/"
+  "Matthew": {
+    "pronunciation": "MATH-yoo",
+    "link": "https://biblespeak.org/Matthew-pronunciation/"
   },
   "Messiah": {
     "pronunciation": "MEH-SAI-uh",
     "link": "https://biblespeak.org/Messiah-pronunciation/"
   },
-  "Micah": {
-    "pronunciation": "MAI-kuh",
-    "link": "https://biblespeak.org/Micah-pronunciation/"
+  "Mizpah": {
+    "pronunciation": "MIHZ-puh",
+    "link": "https://biblespeak.org/Mizpah-pronunciation/"
   },
-  "Myriad": {
-    "pronunciation": "MIHR-ih-uhd",
-    "link": "https://biblespeak.org/Myriad-pronunciation/"
+  "Mahlon": {
+    "pronunciation": "MAH-luhn",
+    "link": "https://biblespeak.org/Mahlon-pronunciation/"
   },
-  "Myrrh": {
-    "pronunciation": "mer",
-    "link": "https://biblespeak.org/Myrrh-pronunciation/"
+  "Mene": {
+    "pronunciation": "MEE-nee",
+    "link": "https://biblespeak.org/Mene-pronunciation/"
   },
-  "Mary": {
-    "pronunciation": "MEHR-ee",
-    "link": "https://biblespeak.org/Mary-pronunciation/"
+  "Melchizedek": {
+    "pronunciation": "mehl-KIHZ-eh-dehk",
+    "link": "https://biblespeak.org/Melchizedek-pronunciation/"
+  },
+  "Meribah": {
+    "pronunciation": "MEHR-ih-bah",
+    "link": "https://biblespeak.org/Meribah-pronunciation/"
+  },
+  "Machir": {
+    "pronunciation": "MAY-kihr",
+    "link": "https://biblespeak.org/Machir-pronunciation/"
+  },
+  "Miletus": {
+    "pronunciation": "mai-LEE-tuhs",
+    "link": "https://biblespeak.org/Miletus-pronunciation/"
+  },
+  "Mephibosheth": {
+    "pronunciation": "meh-FIHB-o-shehth",
+    "link": "https://biblespeak.org/Mephibosheth-pronunciation/"
+  },
+  "Miriam": {
+    "pronunciation": "MIHR-ih-uhm",
+    "link": "https://biblespeak.org/Miriam-pronunciation/"
+  },
+  "Mattan": {
+    "pronunciation": "MAT-uhn",
+    "link": "https://biblespeak.org/Mattan-pronunciation/"
+  },
+  "Moab": {
+    "pronunciation": "MO-ab",
+    "link": "https://biblespeak.org/Moab-pronunciation/"
   },
   "Miki": {
     "pronunciation": "MEE-kee",
     "link": "https://biblespeak.org/Miki-pronunciation/"
   },
+  "Mede": {
+    "pronunciation": "meed",
+    "link": "https://biblespeak.org/Mede-pronunciation/"
+  },
+  "Mattathias": {
+    "pronunciation": "mat-uh-THAI-uhs",
+    "link": "https://biblespeak.org/Mattathias-pronunciation/"
+  },
+  "Matthan": {
+    "pronunciation": "MAT-than",
+    "link": "https://biblespeak.org/Matthan-pronunciation/"
+  },
+  "Myrrh": {
+    "pronunciation": "mer",
+    "link": "https://biblespeak.org/Myrrh-pronunciation/"
+  },
+  "Minions": {
+    "pronunciation": "MIHN-yuhnz",
+    "link": "https://biblespeak.org/Minions-pronunciation/"
+  },
+  "Mahlah": {
+    "pronunciation": "MAH-lah",
+    "link": "https://biblespeak.org/Mahlah-pronunciation/"
+  },
+  "Massah": {
+    "pronunciation": "MAH-suh",
+    "link": "https://biblespeak.org/Massah-pronunciation/"
+  },
+  "Meholah": {
+    "pronunciation": "mee-HO-luh",
+    "link": "https://biblespeak.org/Meholah-pronunciation/"
+  },
+  "Micaiah": {
+    "pronunciation": "mai-KAY-yuh",
+    "link": "https://biblespeak.org/Micaiah-pronunciation/"
+  },
+  "Milcom": {
+    "pronunciation": "MIHL-kahm",
+    "link": "https://biblespeak.org/Milcom-pronunciation/"
+  },
+  "Mishale": {
+    "pronunciation": "MIHSH-ay-ehl",
+    "link": "https://biblespeak.org/Mishale-pronunciation/"
+  },
+  "Macedon": {
+    "pronunciation": "MAS-uh-duhn",
+    "link": "https://biblespeak.org/Macedon-pronunciation/"
+  },
+  "Manaen": {
+    "pronunciation": "MAN-uh-ehn",
+    "link": "https://biblespeak.org/Manaen-pronunciation/"
+  },
+  "Mahanaim": {
+    "pronunciation": "mah-hah-NAH-eem",
+    "link": "https://biblespeak.org/Mahanaim-pronunciation/"
+  },
+  "Magdala": {
+    "pronunciation": "MAG-duh-luh",
+    "link": "https://biblespeak.org/Magdala-pronunciation/"
+  },
+  "Meshach": {
+    "pronunciation": "MEE-shak",
+    "link": "https://biblespeak.org/Meshach-pronunciation/"
+  },
+  "Modein": {
+    "pronunciation": "MO-deen",
+    "link": "https://biblespeak.org/Modein-pronunciation/"
+  },
+  "Moriah": {
+    "pronunciation": "maw-RAI-uh",
+    "link": "https://biblespeak.org/Moriah-pronunciation/"
+  },
+  "Molech": {
+    "pronunciation": "MO-lehk",
+    "link": "https://biblespeak.org/Molech-pronunciation/"
+  },
+  "Methodius": {
+    "pronunciation": "meh-THO-dee-us",
+    "link": "https://biblespeak.org/Methodius-pronunciation/"
+  },
+  "Mark": {
+    "pronunciation": "mahrk",
+    "link": "https://biblespeak.org/Mark-pronunciation/"
+  },
+  "Milcah": {
+    "pronunciation": "MIHL-kah",
+    "link": "https://biblespeak.org/Milcah-pronunciation/"
+  },
+  "Magdalene": {
+    "pronunciation": "MAG-duh-lehn",
+    "link": "https://biblespeak.org/Magdalene-pronunciation/"
+  },
+  "Nahor": {
+    "pronunciation": "NAY-kawr",
+    "link": "https://biblespeak.org/Nahor-pronunciation/"
+  },
+  "Naphtali": {
+    "pronunciation": "NAF-tuh-lai",
+    "link": "https://biblespeak.org/Naphtali-pronunciation/"
+  },
+  "Nineveh": {
+    "pronunciation": "NIHN-eh-veh",
+    "link": "https://biblespeak.org/Nineveh-pronunciation/"
+  },
+  "Nicolaus": {
+    "pronunciation": "nih-ko-LAY-us",
+    "link": "https://biblespeak.org/Nicolaus-pronunciation/"
+  },
+  "Neri": {
+    "pronunciation": "NEE-rai",
+    "link": "https://biblespeak.org/Neri-pronunciation/"
+  },
+  "Nazareth": {
+    "pronunciation": "NAZ-uh-rehth",
+    "link": "https://biblespeak.org/Nazareth-pronunciation/"
+  },
+  "Neapolis": {
+    "pronunciation": "nee-AP-o-lihs",
+    "link": "https://biblespeak.org/Neapolis-pronunciation/"
+  },
+  "Nazorean": {
+    "pronunciation": "naz-aw-REE-uhn",
+    "link": "https://biblespeak.org/Nazorean-pronunciation/"
+  },
+  "Ninevites": {
+    "pronunciation": "NIHN-eh-vaits",
+    "link": "https://biblespeak.org/Ninevites-pronunciation/"
+  },
+  "Nebo": {
+    "pronunciation": "NEE-bo",
+    "link": "https://biblespeak.org/Nebo-pronunciation/"
+  },
+  "Nicanor": {
+    "pronunciation": "nai-KAY-nawr",
+    "link": "https://biblespeak.org/Nicanor-pronunciation/"
+  },
+  "Nahum": {
+    "pronunciation": "NAY-huhm",
+    "link": "https://biblespeak.org/Nahum-pronunciation/"
+  },
+  "Nisan": {
+    "pronunciation": "NAI-san",
+    "link": "https://biblespeak.org/Nisan-pronunciation/"
+  },
+  "Nimshi": {
+    "pronunciation": "NIHM-shai",
+    "link": "https://biblespeak.org/Nimshi-pronunciation/"
+  },
+  "Nehushta": {
+    "pronunciation": "nee-HUHSH-tuh",
+    "link": "https://biblespeak.org/Nehushta-pronunciation/"
+  },
+  "Nebat": {
+    "pronunciation": "NEE-bat",
+    "link": "https://biblespeak.org/Nebat-pronunciation/"
+  },
+  "Nether": {
+    "pronunciation": "NETH-er",
+    "link": "https://biblespeak.org/Nether-pronunciation/"
+  },
   "Nebuchadnezzar": {
     "pronunciation": "neh-byoo-kuhd-NEHZ-er",
     "link": "https://biblespeak.org/Nebuchadnezzar-pronunciation/"
+  },
+  "Nehemiah": {
+    "pronunciation": "nee-hee-MAI-uh",
+    "link": "https://biblespeak.org/Nehemiah-pronunciation/"
+  },
+  "Nahshon": {
+    "pronunciation": "NAY-shuhn",
+    "link": "https://biblespeak.org/Nahshon-pronunciation/"
+  },
+  "Nereus": {
+    "pronunciation": "NEE-roos",
+    "link": "https://biblespeak.org/Nereus-pronunciation/"
+  },
+  "Naaman": {
+    "pronunciation": "NAY-uh-muhn",
+    "link": "https://biblespeak.org/Naaman-pronunciation/"
+  },
+  "Nathanael": {
+    "pronunciation": "nuh-THAN-ay-ehl",
+    "link": "https://biblespeak.org/Nathanael-pronunciation/"
+  },
+  "Ner": {
+    "pronunciation": "ner",
+    "link": "https://biblespeak.org/Ner-pronunciation/"
+  },
+  "Naim": {
+    "pronunciation": "NAY-ihm",
+    "link": "https://biblespeak.org/Naim-pronunciation/"
+  },
+  "Noah": {
+    "pronunciation": "NO-uh",
+    "link": "https://biblespeak.org/Noah-pronunciation/"
+  },
+  "Naomi": {
+    "pronunciation": "NAY-o-mai",
+    "link": "https://biblespeak.org/Naomi-pronunciation/"
+  },
+  "Naboth": {
+    "pronunciation": "NAY-buhth",
+    "link": "https://biblespeak.org/Naboth-pronunciation/"
   },
   "Negeb": {
     "pronunciation": "NEH-gehb",
@@ -2171,93 +2279,9 @@
     "pronunciation": "nih-ko-DEE-muhs",
     "link": "https://biblespeak.org/Nicodemus-pronunciation/"
   },
-  "Nicanor": {
-    "pronunciation": "nai-KAY-nawr",
-    "link": "https://biblespeak.org/Nicanor-pronunciation/"
-  },
-  "Nebo": {
-    "pronunciation": "NEE-bo",
-    "link": "https://biblespeak.org/Nebo-pronunciation/"
-  },
-  "Nebuzaradan": {
-    "pronunciation": "neh-byoo-zahr-AY-dan",
-    "link": "https://biblespeak.org/Nebuzaradan-pronunciation/"
-  },
-  "Nehemiah": {
-    "pronunciation": "nee-hee-MAI-uh",
-    "link": "https://biblespeak.org/Nehemiah-pronunciation/"
-  },
-  "Nisan": {
-    "pronunciation": "NAI-san",
-    "link": "https://biblespeak.org/Nisan-pronunciation/"
-  },
-  "Nahor": {
-    "pronunciation": "NAY-kawr",
-    "link": "https://biblespeak.org/Nahor-pronunciation/"
-  },
-  "Nazareth": {
-    "pronunciation": "NAZ-uh-rehth",
-    "link": "https://biblespeak.org/Nazareth-pronunciation/"
-  },
-  "Nebat": {
-    "pronunciation": "NEE-bat",
-    "link": "https://biblespeak.org/Nebat-pronunciation/"
-  },
-  "Neri": {
-    "pronunciation": "NEE-rai",
-    "link": "https://biblespeak.org/Neri-pronunciation/"
-  },
-  "Noah": {
-    "pronunciation": "NO-uh",
-    "link": "https://biblespeak.org/Noah-pronunciation/"
-  },
-  "Ner": {
-    "pronunciation": "ner",
-    "link": "https://biblespeak.org/Ner-pronunciation/"
-  },
-  "Naomi": {
-    "pronunciation": "NAY-o-mai",
-    "link": "https://biblespeak.org/Naomi-pronunciation/"
-  },
   "Nathan": {
     "pronunciation": "NAY-thuhn",
     "link": "https://biblespeak.org/Nathan-pronunciation/"
-  },
-  "Nahshon": {
-    "pronunciation": "NAY-shuhn",
-    "link": "https://biblespeak.org/Nahshon-pronunciation/"
-  },
-  "Naaman": {
-    "pronunciation": "NAY-uh-muhn",
-    "link": "https://biblespeak.org/Naaman-pronunciation/"
-  },
-  "Nereus": {
-    "pronunciation": "NEE-roos",
-    "link": "https://biblespeak.org/Nereus-pronunciation/"
-  },
-  "Nehushta": {
-    "pronunciation": "nee-HUHSH-tuh",
-    "link": "https://biblespeak.org/Nehushta-pronunciation/"
-  },
-  "Nicolaus": {
-    "pronunciation": "nih-ko-LAY-us",
-    "link": "https://biblespeak.org/Nicolaus-pronunciation/"
-  },
-  "Nineveh": {
-    "pronunciation": "NIHN-eh-veh",
-    "link": "https://biblespeak.org/Nineveh-pronunciation/"
-  },
-  "Nimshi": {
-    "pronunciation": "NIHM-shai",
-    "link": "https://biblespeak.org/Nimshi-pronunciation/"
-  },
-  "Nathanael": {
-    "pronunciation": "nuh-THAN-ay-ehl",
-    "link": "https://biblespeak.org/Nathanael-pronunciation/"
-  },
-  "Nazorean": {
-    "pronunciation": "naz-aw-REE-uhn",
-    "link": "https://biblespeak.org/Nazorean-pronunciation/"
   },
   "Nun": {
     "pronunciation": "nuhn",
@@ -2267,49 +2291,33 @@
     "pronunciation": "NAI-dzher",
     "link": "https://biblespeak.org/Niger-pronunciation/"
   },
-  "Neapolis": {
-    "pronunciation": "nee-AP-o-lihs",
-    "link": "https://biblespeak.org/Neapolis-pronunciation/"
+  "Nebuzaradan": {
+    "pronunciation": "neh-byoo-zahr-AY-dan",
+    "link": "https://biblespeak.org/Nebuzaradan-pronunciation/"
   },
-  "Nahum": {
-    "pronunciation": "NAY-huhm",
-    "link": "https://biblespeak.org/Nahum-pronunciation/"
+  "Obed-Edom": {
+    "pronunciation": "O-behd-EE-duhm",
+    "link": "https://biblespeak.org/Obed-Edom-pronunciation/"
   },
-  "Nether": {
-    "pronunciation": "NETH-er",
-    "link": "https://biblespeak.org/Nether-pronunciation/"
-  },
-  "Naim": {
-    "pronunciation": "NAY-ihm",
-    "link": "https://biblespeak.org/Naim-pronunciation/"
-  },
-  "Naphtali": {
-    "pronunciation": "NAF-tuh-lai",
-    "link": "https://biblespeak.org/Naphtali-pronunciation/"
-  },
-  "Naboth": {
-    "pronunciation": "NAY-buhth",
-    "link": "https://biblespeak.org/Naboth-pronunciation/"
-  },
-  "Ninevites": {
-    "pronunciation": "NIHN-eh-vaits",
-    "link": "https://biblespeak.org/Ninevites-pronunciation/"
-  },
-  "Omega": {
-    "pronunciation": "o-MEE-guh",
-    "link": "https://biblespeak.org/Omega-pronunciation/"
-  },
-  "Og": {
-    "pronunciation": "ahg",
-    "link": "https://biblespeak.org/Og-pronunciation/"
+  "Olivet": {
+    "pronunciation": "AH-lih-veht",
+    "link": "https://biblespeak.org/Olivet-pronunciation/"
   },
   "Orpah": {
     "pronunciation": "AWR-puh",
     "link": "https://biblespeak.org/Orpah-pronunciation/"
   },
+  "Omega": {
+    "pronunciation": "o-MEE-guh",
+    "link": "https://biblespeak.org/Omega-pronunciation/"
+  },
   "Ophrah": {
     "pronunciation": "OF-ruh",
     "link": "https://biblespeak.org/Ophrah-pronunciation/"
+  },
+  "Omri": {
+    "pronunciation": "AHM-ree",
+    "link": "https://biblespeak.org/Omri-pronunciation/"
   },
   "Orion": {
     "pronunciation": "aw-RAI-uhn",
@@ -2319,201 +2327,17 @@
     "pronunciation": "O-fer",
     "link": "https://biblespeak.org/Ophir-pronunciation/"
   },
-  "Obed-Edom": {
-    "pronunciation": "O-behd-EE-duhm",
-    "link": "https://biblespeak.org/Obed-Edom-pronunciation/"
-  },
-  "Omri": {
-    "pronunciation": "AHM-ree",
-    "link": "https://biblespeak.org/Omri-pronunciation/"
-  },
-  "Olivet": {
-    "pronunciation": "AH-lih-veht",
-    "link": "https://biblespeak.org/Olivet-pronunciation/"
+  "Og": {
+    "pronunciation": "ahg",
+    "link": "https://biblespeak.org/Og-pronunciation/"
   },
   "Onesimus": {
     "pronunciation": "o-NEH-sih-muhs or own-ESS-ee-mus",
     "link": "https://biblespeak.org/Onesimus-pronunciation/"
   },
-  "Pharisees": {
-    "pronunciation": "FEHR-ih-seez",
-    "link": "https://biblespeak.org/Pharisees-pronunciation/"
-  },
-  "Praetorium": {
-    "pronunciation": "pray-TAWR-ih-uhm",
-    "link": "https://biblespeak.org/Praetorium-pronunciation/"
-  },
-  "Pamphylia": {
-    "pronunciation": "pam-FIHL-ih-uh",
-    "link": "https://biblespeak.org/Pamphylia-pronunciation/"
-  },
-  "Portico": {
-    "pronunciation": "PAWR-tih-ko",
-    "link": "https://biblespeak.org/Portico-pronunciation/"
-  },
-  "Philemon": {
-    "pronunciation": "fih-LEE-muhn or FILL-uh-muhn",
-    "link": "https://biblespeak.org/Philemon-pronunciation/"
-  },
-  "Prophetess": {
-    "pronunciation": "PRAH-feh-tehs",
-    "link": "https://biblespeak.org/Prophetess-pronunciation/"
-  },
-  "Parmenas": {
-    "pronunciation": "PAHR-mee-nas",
-    "link": "https://biblespeak.org/Parmenas-pronunciation/"
-  },
-  "Polycarp": {
-    "pronunciation": "PAH-lee-kahrp",
-    "link": "https://biblespeak.org/Polycarp-pronunciation/"
-  },
-  "Perizzites": {
-    "pronunciation": "PEHR-ih-zaits",
-    "link": "https://biblespeak.org/Perizzites-pronunciation/"
-  },
-  "Philistia": {
-    "pronunciation": "fih-LIHS-tih-uh",
-    "link": "https://biblespeak.org/Philistia-pronunciation/"
-  },
-  "Prochorus": {
-    "pronunciation": "PRAH-kaw-ruhs",
-    "link": "https://biblespeak.org/Prochorus-pronunciation/"
-  },
-  "Prisca": {
-    "pronunciation": "PRIHS-kuh",
-    "link": "https://biblespeak.org/Prisca-pronunciation/"
-  },
-  "Perpetua": {
-    "pronunciation": "per-PEH-tshoo-uh",
-    "link": "https://biblespeak.org/Perpetua-pronunciation/"
-  },
-  "Phanuel": {
-    "pronunciation": "FAN-yoo-ehl",
-    "link": "https://biblespeak.org/Phanuel-pronunciation/"
-  },
-  "Patmos": {
-    "pronunciation": "PAT-mos",
-    "link": "https://biblespeak.org/Patmos-pronunciation/"
-  },
   "Peres": {
     "pronunciation": "PEE-rehs",
     "link": "https://biblespeak.org/Peres-pronunciation/"
-  },
-  "Pekah": {
-    "pronunciation": "PEE-kah",
-    "link": "https://biblespeak.org/Pekah-pronunciation/"
-  },
-  "Pleiades": {
-    "pronunciation": "PLEE-uh-deez",
-    "link": "https://biblespeak.org/Pleiades-pronunciation/"
-  },
-  "Put": {
-    "pronunciation": "puht",
-    "link": "https://biblespeak.org/Put-pronunciation/"
-  },
-  "Perazim": {
-    "pronunciation": "PER-uh-zihm",
-    "link": "https://biblespeak.org/Perazim-pronunciation/"
-  },
-  "Publius": {
-    "pronunciation": "PUHB-lih-uhs",
-    "link": "https://biblespeak.org/Publius-pronunciation/"
-  },
-  "Phylacteries": {
-    "pronunciation": "fih-LAK-ter-eez",
-    "link": "https://biblespeak.org/Phylacteries-pronunciation/"
-  },
-  "Padua": {
-    "pronunciation": "PAD-dzhou-uh",
-    "link": "https://biblespeak.org/Padua-pronunciation/"
-  },
-  "Persia": {
-    "pronunciation": "PER-zhuh",
-    "link": "https://biblespeak.org/Persia-pronunciation/"
-  },
-  "Phrygia": {
-    "pronunciation": "FRIH-dzhih-uh",
-    "link": "https://biblespeak.org/Phrygia-pronunciation/"
-  },
-  "Pi-Hahiroth": {
-    "pronunciation": "pai-huh-HAI-rahth",
-    "link": "https://biblespeak.org/Pi-Hahiroth-pronunciation/"
-  },
-  "Psalm": {
-    "pronunciation": "sahm",
-    "link": "https://biblespeak.org/Psalm-pronunciation/"
-  },
-  "Presbyter": {
-    "pronunciation": "PREHZ-bih-ter",
-    "link": "https://biblespeak.org/Presbyter-pronunciation/"
-  },
-  "Perez": {
-    "pronunciation": "PEE-rehz",
-    "link": "https://biblespeak.org/Perez-pronunciation/"
-  },
-  "Perga": {
-    "pronunciation": "PER-guh",
-    "link": "https://biblespeak.org/Perga-pronunciation/"
-  },
-  "Pisidia": {
-    "pronunciation": "pih-SIH-dih-uh",
-    "link": "https://biblespeak.org/Pisidia-pronunciation/"
-  },
-  "Portugal": {
-    "pronunciation": "PAWR-tshuh-guhl",
-    "link": "https://biblespeak.org/Portugal-pronunciation/"
-  },
-  "Puteoli": {
-    "pronunciation": "pyoo-TEE-o-lai",
-    "link": "https://biblespeak.org/Puteoli-pronunciation/"
-  },
-  "Parthians": {
-    "pronunciation": "PAHR-thee-uhnz",
-    "link": "https://biblespeak.org/Parthians-pronunciation/"
-  },
-  "Passover": {
-    "pronunciation": "PAS-o-ver",
-    "link": "https://biblespeak.org/Passover-pronunciation/"
-  },
-  "Paschal": {
-    "pronunciation": "PAS-k'l",
-    "link": "https://biblespeak.org/Paschal-pronunciation/"
-  },
-  "Penuel": {
-    "pronunciation": "pee-NYOO-ehl",
-    "link": "https://biblespeak.org/Penuel-pronunciation/"
-  },
-  "Phinehas": {
-    "pronunciation": "FEHN-ee-uhs",
-    "link": "https://biblespeak.org/Phinehas-pronunciation/"
-  },
-  "Procurator": {
-    "pronunciation": "PRAH-kyour-ay-ter",
-    "link": "https://biblespeak.org/Procurator-pronunciation/"
-  },
-  "Philistines": {
-    "pronunciation": "fih-LIHS-tihnz",
-    "link": "https://biblespeak.org/Philistines-pronunciation/"
-  },
-  "Pisgah": {
-    "pronunciation": "PIHZ-guh",
-    "link": "https://biblespeak.org/Pisgah-pronunciation/"
-  },
-  "Paola": {
-    "pronunciation": "pah-O-luh",
-    "link": "https://biblespeak.org/Paola-pronunciation/"
-  },
-  "Paran": {
-    "pronunciation": "PAY-ran",
-    "link": "https://biblespeak.org/Paran-pronunciation/"
-  },
-  "Pentecost": {
-    "pronunciation": "PEHN-tee-kawst",
-    "link": "https://biblespeak.org/Pentecost-pronunciation/"
-  },
-  "Pharaoh": {
-    "pronunciation": "FEHR-o",
-    "link": "https://biblespeak.org/Pharaoh-pronunciation/"
   },
   "Paphos": {
     "pronunciation": "PAY-fuhs",
@@ -2523,173 +2347,301 @@
     "pronunciation": "paw-SAI-nuhs",
     "link": "https://biblespeak.org/Paucinus-pronunciation/"
   },
-  "Phogor": {
-    "pronunciation": "FO-gawr",
-    "link": "https://biblespeak.org/Phogor-pronunciation/"
-  },
-  "Patriarch": {
-    "pronunciation": "PAY-trih-ahrk",
-    "link": "https://biblespeak.org/Patriarch-pronunciation/"
-  },
-  "Parath": {
-    "pronunciation": "PAH-rath",
-    "link": "https://biblespeak.org/Parath-pronunciation/"
-  },
-  "Pomegranates": {
-    "pronunciation": "PAHM-gran-ihts",
-    "link": "https://biblespeak.org/Pomegranates-pronunciation/"
-  },
-  "Paraclete": {
-    "pronunciation": "PEHR-uh-kleet",
-    "link": "https://biblespeak.org/Paraclete-pronunciation/"
-  },
-  "Philippi": {
-    "pronunciation": "fih-LIHP-ai",
-    "link": "https://biblespeak.org/Philippi-pronunciation/"
-  },
-  "Peniel": {
-    "pronunciation": "PEHN-ih-ehl",
-    "link": "https://biblespeak.org/Peniel-pronunciation/"
-  },
   "Penninah": {
     "pronunciation": "pee-NIHN-uh",
     "link": "https://biblespeak.org/Penninah-pronunciation/"
-  },
-  "Phoenicia": {
-    "pronunciation": "fee-NIHSH-ih-uh",
-    "link": "https://biblespeak.org/Phoenicia-pronunciation/"
-  },
-  "Pancras": {
-    "pronunciation": "PAN-kras",
-    "link": "https://biblespeak.org/Pancras-pronunciation/"
-  },
-  "Pharpar": {
-    "pronunciation": "FAHR-pahr",
-    "link": "https://biblespeak.org/Pharpar-pronunciation/"
-  },
-  "Pithom": {
-    "pronunciation": "PAI-thahm",
-    "link": "https://biblespeak.org/Pithom-pronunciation/"
-  },
-  "Pasch": {
-    "pronunciation": "pask",
-    "link": "https://biblespeak.org/Pasch-pronunciation/"
   },
   "Pontus": {
     "pronunciation": "PAHN-tus",
     "link": "https://biblespeak.org/Pontus-pronunciation/"
   },
-  "Pontian": {
-    "pronunciation": "PAHN-shuhn",
-    "link": "https://biblespeak.org/Pontian-pronunciation/"
+  "Prochorus": {
+    "pronunciation": "PRAH-kaw-ruhs",
+    "link": "https://biblespeak.org/Prochorus-pronunciation/"
   },
-  "Pharan": {
-    "pronunciation": "FAHR-ahn",
-    "link": "https://biblespeak.org/Pharan-pronunciation/"
+  "Pisgah": {
+    "pronunciation": "PIHZ-guh",
+    "link": "https://biblespeak.org/Pisgah-pronunciation/"
+  },
+  "Padua": {
+    "pronunciation": "PAD-dzhou-uh",
+    "link": "https://biblespeak.org/Padua-pronunciation/"
+  },
+  "Portico": {
+    "pronunciation": "PAWR-tih-ko",
+    "link": "https://biblespeak.org/Portico-pronunciation/"
+  },
+  "Put": {
+    "pronunciation": "puht",
+    "link": "https://biblespeak.org/Put-pronunciation/"
+  },
+  "Philistia": {
+    "pronunciation": "fih-LIHS-tih-uh",
+    "link": "https://biblespeak.org/Philistia-pronunciation/"
+  },
+  "Perga": {
+    "pronunciation": "PER-guh",
+    "link": "https://biblespeak.org/Perga-pronunciation/"
+  },
+  "Phinehas": {
+    "pronunciation": "FEHN-ee-uhs",
+    "link": "https://biblespeak.org/Phinehas-pronunciation/"
   },
   "Philippians": {
     "pronunciation": "fih-LIHP-ih-uhnz",
     "link": "https://biblespeak.org/Philippians-pronunciation/"
   },
+  "Pharpar": {
+    "pronunciation": "FAHR-pahr",
+    "link": "https://biblespeak.org/Pharpar-pronunciation/"
+  },
+  "Phogor": {
+    "pronunciation": "FO-gawr",
+    "link": "https://biblespeak.org/Phogor-pronunciation/"
+  },
+  "Parthians": {
+    "pronunciation": "PAHR-thee-uhnz",
+    "link": "https://biblespeak.org/Parthians-pronunciation/"
+  },
+  "Perez": {
+    "pronunciation": "PEE-rehz",
+    "link": "https://biblespeak.org/Perez-pronunciation/"
+  },
+  "Pamphylia": {
+    "pronunciation": "pam-FIHL-ih-uh",
+    "link": "https://biblespeak.org/Pamphylia-pronunciation/"
+  },
+  "Philistines": {
+    "pronunciation": "fih-LIHS-tihnz",
+    "link": "https://biblespeak.org/Philistines-pronunciation/"
+  },
+  "Pharaoh": {
+    "pronunciation": "FEHR-o",
+    "link": "https://biblespeak.org/Pharaoh-pronunciation/"
+  },
+  "Prophetess": {
+    "pronunciation": "PRAH-feh-tehs",
+    "link": "https://biblespeak.org/Prophetess-pronunciation/"
+  },
+  "Parath": {
+    "pronunciation": "PAH-rath",
+    "link": "https://biblespeak.org/Parath-pronunciation/"
+  },
+  "Philippi": {
+    "pronunciation": "fih-LIHP-ai",
+    "link": "https://biblespeak.org/Philippi-pronunciation/"
+  },
+  "Perizzites": {
+    "pronunciation": "PEHR-ih-zaits",
+    "link": "https://biblespeak.org/Perizzites-pronunciation/"
+  },
+  "Paran": {
+    "pronunciation": "PAY-ran",
+    "link": "https://biblespeak.org/Paran-pronunciation/"
+  },
+  "Pi-Hahiroth": {
+    "pronunciation": "pai-huh-HAI-rahth",
+    "link": "https://biblespeak.org/Pi-Hahiroth-pronunciation/"
+  },
+  "Publius": {
+    "pronunciation": "PUHB-lih-uhs",
+    "link": "https://biblespeak.org/Publius-pronunciation/"
+  },
+  "Parmenas": {
+    "pronunciation": "PAHR-mee-nas",
+    "link": "https://biblespeak.org/Parmenas-pronunciation/"
+  },
+  "Pentecost": {
+    "pronunciation": "PEHN-tee-kawst",
+    "link": "https://biblespeak.org/Pentecost-pronunciation/"
+  },
+  "Pisidia": {
+    "pronunciation": "pih-SIH-dih-uh",
+    "link": "https://biblespeak.org/Pisidia-pronunciation/"
+  },
+  "Perpetua": {
+    "pronunciation": "per-PEH-tshoo-uh",
+    "link": "https://biblespeak.org/Perpetua-pronunciation/"
+  },
+  "Phrygia": {
+    "pronunciation": "FRIH-dzhih-uh",
+    "link": "https://biblespeak.org/Phrygia-pronunciation/"
+  },
+  "Pharisees": {
+    "pronunciation": "FEHR-ih-seez",
+    "link": "https://biblespeak.org/Pharisees-pronunciation/"
+  },
+  "Pancras": {
+    "pronunciation": "PAN-kras",
+    "link": "https://biblespeak.org/Pancras-pronunciation/"
+  },
+  "Phylacteries": {
+    "pronunciation": "fih-LAK-ter-eez",
+    "link": "https://biblespeak.org/Phylacteries-pronunciation/"
+  },
+  "Passover": {
+    "pronunciation": "PAS-o-ver",
+    "link": "https://biblespeak.org/Passover-pronunciation/"
+  },
+  "Paraclete": {
+    "pronunciation": "PEHR-uh-kleet",
+    "link": "https://biblespeak.org/Paraclete-pronunciation/"
+  },
+  "Patmos": {
+    "pronunciation": "PAT-mos",
+    "link": "https://biblespeak.org/Patmos-pronunciation/"
+  },
+  "Peniel": {
+    "pronunciation": "PEHN-ih-ehl",
+    "link": "https://biblespeak.org/Peniel-pronunciation/"
+  },
+  "Prisca": {
+    "pronunciation": "PRIHS-kuh",
+    "link": "https://biblespeak.org/Prisca-pronunciation/"
+  },
+  "Pekah": {
+    "pronunciation": "PEE-kah",
+    "link": "https://biblespeak.org/Pekah-pronunciation/"
+  },
+  "Penuel": {
+    "pronunciation": "pee-NYOO-ehl",
+    "link": "https://biblespeak.org/Penuel-pronunciation/"
+  },
+  "Polycarp": {
+    "pronunciation": "PAH-lee-kahrp",
+    "link": "https://biblespeak.org/Polycarp-pronunciation/"
+  },
+  "Pithom": {
+    "pronunciation": "PAI-thahm",
+    "link": "https://biblespeak.org/Pithom-pronunciation/"
+  },
+  "Pomegranates": {
+    "pronunciation": "PAHM-gran-ihts",
+    "link": "https://biblespeak.org/Pomegranates-pronunciation/"
+  },
+  "Puteoli": {
+    "pronunciation": "pyoo-TEE-o-lai",
+    "link": "https://biblespeak.org/Puteoli-pronunciation/"
+  },
+  "Pontian": {
+    "pronunciation": "PAHN-shuhn",
+    "link": "https://biblespeak.org/Pontian-pronunciation/"
+  },
+  "Pasch": {
+    "pronunciation": "pask",
+    "link": "https://biblespeak.org/Pasch-pronunciation/"
+  },
+  "Portugal": {
+    "pronunciation": "PAWR-tshuh-guhl",
+    "link": "https://biblespeak.org/Portugal-pronunciation/"
+  },
+  "Phoenicia": {
+    "pronunciation": "fee-NIHSH-ih-uh",
+    "link": "https://biblespeak.org/Phoenicia-pronunciation/"
+  },
+  "Perazim": {
+    "pronunciation": "PER-uh-zihm",
+    "link": "https://biblespeak.org/Perazim-pronunciation/"
+  },
+  "Persia": {
+    "pronunciation": "PER-zhuh",
+    "link": "https://biblespeak.org/Persia-pronunciation/"
+  },
+  "Procurator": {
+    "pronunciation": "PRAH-kyour-ay-ter",
+    "link": "https://biblespeak.org/Procurator-pronunciation/"
+  },
+  "Praetorium": {
+    "pronunciation": "pray-TAWR-ih-uhm",
+    "link": "https://biblespeak.org/Praetorium-pronunciation/"
+  },
+  "Patriarch": {
+    "pronunciation": "PAY-trih-ahrk",
+    "link": "https://biblespeak.org/Patriarch-pronunciation/"
+  },
+  "Phanuel": {
+    "pronunciation": "FAN-yoo-ehl",
+    "link": "https://biblespeak.org/Phanuel-pronunciation/"
+  },
+  "Paschal": {
+    "pronunciation": "PAS-k'l",
+    "link": "https://biblespeak.org/Paschal-pronunciation/"
+  },
+  "Pharan": {
+    "pronunciation": "FAHR-ahn",
+    "link": "https://biblespeak.org/Pharan-pronunciation/"
+  },
+  "Philemon": {
+    "pronunciation": "fih-LEE-muhn or FILL-uh-muhn",
+    "link": "https://biblespeak.org/Philemon-pronunciation/"
+  },
+  "Presbyter": {
+    "pronunciation": "PREHZ-bih-ter",
+    "link": "https://biblespeak.org/Presbyter-pronunciation/"
+  },
+  "Pleiades": {
+    "pronunciation": "PLEE-uh-deez",
+    "link": "https://biblespeak.org/Pleiades-pronunciation/"
+  },
+  "Paola": {
+    "pronunciation": "pah-O-luh",
+    "link": "https://biblespeak.org/Paola-pronunciation/"
+  },
+  "Psalm": {
+    "pronunciation": "sahm",
+    "link": "https://biblespeak.org/Psalm-pronunciation/"
+  },
   "Qoheleth": {
     "pronunciation": "ko-HEHL-ehth",
     "link": "https://biblespeak.org/Qoheleth-pronunciation/"
-  },
-  "Quirinius": {
-    "pronunciation": "kwai-RIHN-ih-uhs",
-    "link": "https://biblespeak.org/Quirinius-pronunciation/"
   },
   "Quartus": {
     "pronunciation": "KWAR-tuhs",
     "link": "https://biblespeak.org/Quartus-pronunciation/"
   },
-  "Ritual": {
-    "pronunciation": "RIH-tshou-oul",
-    "link": "https://biblespeak.org/Ritual-pronunciation/"
-  },
-  "Rezin": {
-    "pronunciation": "REE-zihn",
-    "link": "https://biblespeak.org/Rezin-pronunciation/"
-  },
-  "Ramah": {
-    "pronunciation": "RAY-muh",
-    "link": "https://biblespeak.org/Ramah-pronunciation/"
-  },
-  "Responsorial": {
-    "pronunciation": "ree-spahn-SAWR-eee-uhl",
-    "link": "https://biblespeak.org/Responsorial-pronunciation/"
-  },
-  "Revelation": {
-    "pronunciation": "reh-veh-LAY-shuhn",
-    "link": "https://biblespeak.org/Revelation-pronunciation/"
-  },
-  "Rebekah": {
-    "pronunciation": "ree-BEHK-uh",
-    "link": "https://biblespeak.org/Rebekah-pronunciation/"
+  "Quirinius": {
+    "pronunciation": "kwai-RIHN-ih-uhs",
+    "link": "https://biblespeak.org/Quirinius-pronunciation/"
   },
   "Riblah": {
     "pronunciation": "RIHB-luh",
     "link": "https://biblespeak.org/Riblah-pronunciation/"
   },
-  "Rahab": {
-    "pronunciation": "RAY-hab",
-    "link": "https://biblespeak.org/Rahab-pronunciation/"
-  },
-  "Ramathaim": {
-    "pronunciation": "ray-muh-THAY-ihm",
-    "link": "https://biblespeak.org/Ramathaim-pronunciation/"
-  },
-  "Rabbah": {
-    "pronunciation": "RAB-uh",
-    "link": "https://biblespeak.org/Rabbah-pronunciation/"
-  },
-  "Rabboni": {
-    "pronunciation": "ra-BO-nai",
-    "link": "https://biblespeak.org/Rabboni-pronunciation/"
-  },
-  "Rephidim": {
-    "pronunciation": "REHF-ih-dihm",
-    "link": "https://biblespeak.org/Rephidim-pronunciation/"
-  },
-  "Raphael": {
-    "pronunciation": "RAY-fay-ehl",
-    "link": "https://biblespeak.org/Raphael-pronunciation/"
-  },
-  "Ram": {
-    "pronunciation": "ram",
-    "link": "https://biblespeak.org/Ram-pronunciation/"
-  },
-  "Rabbi": {
-    "pronunciation": "RAB-ai",
-    "link": "https://biblespeak.org/Rabbi-pronunciation/"
-  },
   "Romauld": {
     "pronunciation": "RO-moo-ahld",
     "link": "https://biblespeak.org/Romauld-pronunciation/"
-  },
-  "Raamses": {
-    "pronunciation": "ray-AM-seez",
-    "link": "https://biblespeak.org/Raamses-pronunciation/"
-  },
-  "Rufus": {
-    "pronunciation": "ROO-fuhs",
-    "link": "https://biblespeak.org/Rufus-pronunciation/"
   },
   "Rehoboam": {
     "pronunciation": "ree-ho-BO-am",
     "link": "https://biblespeak.org/Rehoboam-pronunciation/"
   },
-  "Remaliah": {
-    "pronunciation": "rehm-uh-LAI-uh",
-    "link": "https://biblespeak.org/Remaliah-pronunciation/"
+  "Ram": {
+    "pronunciation": "ram",
+    "link": "https://biblespeak.org/Ram-pronunciation/"
+  },
+  "Rufus": {
+    "pronunciation": "ROO-fuhs",
+    "link": "https://biblespeak.org/Rufus-pronunciation/"
+  },
+  "Ramathaim": {
+    "pronunciation": "ray-muh-THAY-ihm",
+    "link": "https://biblespeak.org/Ramathaim-pronunciation/"
+  },
+  "Revelation": {
+    "pronunciation": "reh-veh-LAY-shuhn",
+    "link": "https://biblespeak.org/Revelation-pronunciation/"
   },
   "Rhegium": {
     "pronunciation": "REE-dzhee-uhm",
     "link": "https://biblespeak.org/Rhegium-pronunciation/"
   },
-  "Rapael": {
-    "pronunciation": "RAY-pay-ehl",
-    "link": "https://biblespeak.org/Rapael-pronunciation/"
+  "Rabbi": {
+    "pronunciation": "RAB-ai",
+    "link": "https://biblespeak.org/Rabbi-pronunciation/"
+  },
+  "Raphael": {
+    "pronunciation": "RAY-fay-ehl",
+    "link": "https://biblespeak.org/Raphael-pronunciation/"
   },
   "Raguel": {
     "pronunciation": "rah-GYOO-ehl",
@@ -2699,65 +2651,125 @@
     "pronunciation": "ROO-b'n",
     "link": "https://biblespeak.org/Reuben-pronunciation/"
   },
+  "Ramah": {
+    "pronunciation": "RAY-muh",
+    "link": "https://biblespeak.org/Ramah-pronunciation/"
+  },
+  "Rezin": {
+    "pronunciation": "REE-zihn",
+    "link": "https://biblespeak.org/Rezin-pronunciation/"
+  },
+  "Rabbah": {
+    "pronunciation": "RAB-uh",
+    "link": "https://biblespeak.org/Rabbah-pronunciation/"
+  },
+  "Remaliah": {
+    "pronunciation": "rehm-uh-LAI-uh",
+    "link": "https://biblespeak.org/Remaliah-pronunciation/"
+  },
+  "Rahab": {
+    "pronunciation": "RAY-hab",
+    "link": "https://biblespeak.org/Rahab-pronunciation/"
+  },
+  "Ritual": {
+    "pronunciation": "RIH-tshou-oul",
+    "link": "https://biblespeak.org/Ritual-pronunciation/"
+  },
+  "Raamses": {
+    "pronunciation": "ray-AM-seez",
+    "link": "https://biblespeak.org/Raamses-pronunciation/"
+  },
+  "Rapael": {
+    "pronunciation": "RAY-pay-ehl",
+    "link": "https://biblespeak.org/Rapael-pronunciation/"
+  },
+  "Responsorial": {
+    "pronunciation": "ree-spahn-SAWR-eee-uhl",
+    "link": "https://biblespeak.org/Responsorial-pronunciation/"
+  },
+  "Rephidim": {
+    "pronunciation": "REHF-ih-dihm",
+    "link": "https://biblespeak.org/Rephidim-pronunciation/"
+  },
+  "Rebekah": {
+    "pronunciation": "ree-BEHK-uh",
+    "link": "https://biblespeak.org/Rebekah-pronunciation/"
+  },
+  "Rabboni": {
+    "pronunciation": "ra-BO-nai",
+    "link": "https://biblespeak.org/Rabboni-pronunciation/"
+  },
+  "Salmon": {
+    "pronunciation": "SAL-muhn",
+    "link": "https://biblespeak.org/Salmon-pronunciation/"
+  },
+  "Shimei": {
+    "pronunciation": "SHIHM-ee-ai",
+    "link": "https://biblespeak.org/Shimei-pronunciation/"
+  },
+  "Salishah": {
+    "pronunciation": "suh-LEE-shuh",
+    "link": "https://biblespeak.org/Salishah-pronunciation/"
+  },
+  "Shittim": {
+    "pronunciation": "sheh-TEEM",
+    "link": "https://biblespeak.org/Shittim-pronunciation/"
+  },
+  "Shalom": {
+    "pronunciation": "shuh-LOM",
+    "link": "https://biblespeak.org/Shalom-pronunciation/"
+  },
+  "Samson": {
+    "pronunciation": "SAM-s'n",
+    "link": "https://biblespeak.org/Samson-pronunciation/"
+  },
+  "Shaphat": {
+    "pronunciation": "SHAY-fat",
+    "link": "https://biblespeak.org/Shaphat-pronunciation/"
+  },
+  "Samaria": {
+    "pronunciation": "suh-MEHR-ih-uh",
+    "link": "https://biblespeak.org/Samaria-pronunciation/"
+  },
+  "Salome": {
+    "pronunciation": "suh-LO-mee",
+    "link": "https://biblespeak.org/Salome-pronunciation/"
+  },
   "Salu": {
     "pronunciation": "SAYL-yoo",
     "link": "https://biblespeak.org/Salu-pronunciation/"
   },
-  "Sodom": {
-    "pronunciation": "SAH-duhm",
-    "link": "https://biblespeak.org/Sodom-pronunciation/"
+  "Sheba": {
+    "pronunciation": "SHEE-buh",
+    "link": "https://biblespeak.org/Sheba-pronunciation/"
   },
-  "Sardis": {
-    "pronunciation": "SAHR-dihs",
-    "link": "https://biblespeak.org/Sardis-pronunciation/"
+  "Shealtiel": {
+    "pronunciation": "shee-AL-tih-ehl",
+    "link": "https://biblespeak.org/Shealtiel-pronunciation/"
   },
-  "Shadrach": {
-    "pronunciation": "SHAY-drak",
-    "link": "https://biblespeak.org/Shadrach-pronunciation/"
+  "Syene": {
+    "pronunciation": "sai-EE-nee",
+    "link": "https://biblespeak.org/Syene-pronunciation/"
   },
-  "Syria": {
-    "pronunciation": "SIHR-ih-uh",
-    "link": "https://biblespeak.org/Syria-pronunciation/"
+  "Seth": {
+    "pronunciation": "sehth",
+    "link": "https://biblespeak.org/Seth-pronunciation/"
   },
-  "Solomon": {
-    "pronunciation": "SAH-lo-muhn",
-    "link": "https://biblespeak.org/Solomon-pronunciation/"
-  },
-  "Scepter": {
-    "pronunciation": "SEHP-ter",
-    "link": "https://biblespeak.org/Scepter-pronunciation/"
-  },
-  "Silas": {
-    "pronunciation": "SAI-luhs",
-    "link": "https://biblespeak.org/Silas-pronunciation/"
-  },
-  "Shinar": {
-    "pronunciation": "SHAI-nahr",
-    "link": "https://biblespeak.org/Shinar-pronunciation/"
-  },
-  "Samuel": {
-    "pronunciation": "SAM-yoo-uhl",
-    "link": "https://biblespeak.org/Samuel-pronunciation/"
+  "Shaalim": {
+    "pronunciation": "SHAY-uh-lihm",
+    "link": "https://biblespeak.org/Shaalim-pronunciation/"
   },
   "Scimitar": {
     "pronunciation": "SIHM-ih-ter",
     "link": "https://biblespeak.org/Scimitar-pronunciation/"
   },
-  "Saraph": {
-    "pronunciation": "SAY-raf",
-    "link": "https://biblespeak.org/Saraph-pronunciation/"
+  "Shechem": {
+    "pronunciation": "SHEE-kehm",
+    "link": "https://biblespeak.org/Shechem-pronunciation/"
   },
-  "Sinai": {
-    "pronunciation": "SAI-nai",
-    "link": "https://biblespeak.org/Sinai-pronunciation/"
-  },
-  "Sidon": {
-    "pronunciation": "SAI-duhn",
-    "link": "https://biblespeak.org/Sidon-pronunciation/"
-  },
-  "Scythian": {
-    "pronunciation": "SIH-thee-uihn",
-    "link": "https://biblespeak.org/Scythian-pronunciation/"
+  "Shear-Jashub": {
+    "pronunciation": "SHEE-ahr DSHAH-shuhb",
+    "link": "https://biblespeak.org/Shear-Jashub-pronunciation/"
   },
   "Sistrum": {
     "pronunciation": "SIHS-truhm",
@@ -2767,113 +2779,25 @@
     "pronunciation": "sihl-VAY-nuhs",
     "link": "https://biblespeak.org/Silvanus-pronunciation/"
   },
-  "Sabbath": {
-    "pronunciation": "SAB-uhth",
-    "link": "https://biblespeak.org/Sabbath-pronunciation/"
-  },
-  "Sanhedrin": {
-    "pronunciation": "san-HEE-drihn",
-    "link": "https://biblespeak.org/Sanhedrin-pronunciation/"
-  },
-  "Samaritan": {
-    "pronunciation": "suh-MEHR-ih-tuhn",
-    "link": "https://biblespeak.org/Samaritan-pronunciation/"
-  },
-  "Succoth": {
-    "pronunciation": "SUHK-ahth",
-    "link": "https://biblespeak.org/Succoth-pronunciation/"
-  },
-  "Scholastica": {
-    "pronunciation": "skuh-LAS-tih-kuh",
-    "link": "https://biblespeak.org/Scholastica-pronunciation/"
-  },
   "Stanislaus": {
     "pronunciation": "STAN-ihs-laws",
     "link": "https://biblespeak.org/Stanislaus-pronunciation/"
-  },
-  "Shekel": {
-    "pronunciation": "SHEHK-uhl",
-    "link": "https://biblespeak.org/Shekel-pronunciation/"
-  },
-  "Seir": {
-    "pronunciation": "SEE-er",
-    "link": "https://biblespeak.org/Seir-pronunciation/"
-  },
-  "Salem": {
-    "pronunciation": "SAY-lehm",
-    "link": "https://biblespeak.org/Salem-pronunciation/"
-  },
-  "Sanctuary": {
-    "pronunciation": "SANG-tshoo-ehr-ee",
-    "link": "https://biblespeak.org/Sanctuary-pronunciation/"
-  },
-  "Samothrace": {
-    "pronunciation": "SAM-o-thrays",
-    "link": "https://biblespeak.org/Samothrace-pronunciation/"
-  },
-  "Shimei": {
-    "pronunciation": "SHIHM-ee-ai",
-    "link": "https://biblespeak.org/Shimei-pronunciation/"
-  },
-  "Samaria": {
-    "pronunciation": "suh-MEHR-ih-uh",
-    "link": "https://biblespeak.org/Samaria-pronunciation/"
-  },
-  "Shammah": {
-    "pronunciation": "SHAM-uh",
-    "link": "https://biblespeak.org/Shammah-pronunciation/"
-  },
-  "Seth": {
-    "pronunciation": "sehth",
-    "link": "https://biblespeak.org/Seth-pronunciation/"
-  },
-  "Samson": {
-    "pronunciation": "SAM-s'n",
-    "link": "https://biblespeak.org/Samson-pronunciation/"
-  },
-  "Savior": {
-    "pronunciation": "SAYV-yer",
-    "link": "https://biblespeak.org/Savior-pronunciation/"
-  },
-  "Shechem": {
-    "pronunciation": "SHEE-kehm",
-    "link": "https://biblespeak.org/Shechem-pronunciation/"
-  },
-  "Smyrna": {
-    "pronunciation": "SMER-nuh",
-    "link": "https://biblespeak.org/Smyrna-pronunciation/"
-  },
-  "Shiloh": {
-    "pronunciation": "SHAI-lo",
-    "link": "https://biblespeak.org/Shiloh-pronunciation/"
-  },
-  "Stephen": {
-    "pronunciation": "STEE-v'n",
-    "link": "https://biblespeak.org/Stephen-pronunciation/"
-  },
-  "Synagogues": {
-    "pronunciation": "SIHN-uh-gahgz",
-    "link": "https://biblespeak.org/Synagogues-pronunciation/"
   },
   "Siloam": {
     "pronunciation": "sih-LO-uhm",
     "link": "https://biblespeak.org/Siloam-pronunciation/"
   },
-  "Salamis": {
-    "pronunciation": "SAL-uh-mihs",
-    "link": "https://biblespeak.org/Salamis-pronunciation/"
+  "Savior": {
+    "pronunciation": "SAYV-yer",
+    "link": "https://biblespeak.org/Savior-pronunciation/"
   },
-  "Symeon": {
-    "pronunciation": "SIHM-ee-uhn",
-    "link": "https://biblespeak.org/Symeon-pronunciation/"
+  "Sadducees": {
+    "pronunciation": "SAD-dzhoo-seez",
+    "link": "https://biblespeak.org/Sadducees-pronunciation/"
   },
-  "Syene": {
-    "pronunciation": "sai-EE-nee",
-    "link": "https://biblespeak.org/Syene-pronunciation/"
-  },
-  "Shaphat": {
-    "pronunciation": "SHAY-fat",
-    "link": "https://biblespeak.org/Shaphat-pronunciation/"
+  "Scholastica": {
+    "pronunciation": "skuh-LAS-tih-kuh",
+    "link": "https://biblespeak.org/Scholastica-pronunciation/"
   },
   "Shunammite": {
     "pronunciation": "SHOO-nam-ait",
@@ -2883,277 +2807,309 @@
     "pronunciation": "SHAY-fuhn",
     "link": "https://biblespeak.org/Shaphan-pronunciation/"
   },
-  "Salmon": {
-    "pronunciation": "SAL-muhn",
-    "link": "https://biblespeak.org/Salmon-pronunciation/"
+  "Sidon": {
+    "pronunciation": "SAI-duhn",
+    "link": "https://biblespeak.org/Sidon-pronunciation/"
   },
-  "Sheba": {
-    "pronunciation": "SHEE-buh",
-    "link": "https://biblespeak.org/Sheba-pronunciation/"
-  },
-  "Siesta": {
-    "pronunciation": "see-EHS-tuh",
-    "link": "https://biblespeak.org/Siesta-pronunciation/"
-  },
-  "Sidonians": {
-    "pronunciation": "sai-DO-nee-uhnz",
-    "link": "https://biblespeak.org/Sidonians-pronunciation/"
-  },
-  "Shaalim": {
-    "pronunciation": "SHAY-uh-lihm",
-    "link": "https://biblespeak.org/Shaalim-pronunciation/"
-  },
-  "Sihon": {
-    "pronunciation": "SAI-hon",
-    "link": "https://biblespeak.org/Sihon-pronunciation/"
-  },
-  "Seraphim": {
-    "pronunciation": "SEHR-uh-fihm",
-    "link": "https://biblespeak.org/Seraphim-pronunciation/"
-  },
-  "Shalom": {
-    "pronunciation": "shuh-LOM",
-    "link": "https://biblespeak.org/Shalom-pronunciation/"
-  },
-  "Salome": {
-    "pronunciation": "suh-LO-mee",
-    "link": "https://biblespeak.org/Salome-pronunciation/"
-  },
-  "Syntyche": {
-    "pronunciation": "SIHN-tih-tshee",
-    "link": "https://biblespeak.org/Syntyche-pronunciation/"
-  },
-  "Shear-Jashub": {
-    "pronunciation": "SHEE-ahr DSHAH-shuhb",
-    "link": "https://biblespeak.org/Shear-Jashub-pronunciation/"
-  },
-  "Shittim": {
-    "pronunciation": "sheh-TEEM",
-    "link": "https://biblespeak.org/Shittim-pronunciation/"
-  },
-  "Sadducees": {
-    "pronunciation": "SAD-dzhoo-seez",
-    "link": "https://biblespeak.org/Sadducees-pronunciation/"
-  },
-  "Shalmaneser": {
-    "pronunciation": "shal-muh-NEE-zer",
-    "link": "https://biblespeak.org/Shalmaneser-pronunciation/"
-  },
-  "Sixtus": {
-    "pronunciation": "SIKS-tuhs",
-    "link": "https://biblespeak.org/Sixtus-pronunciation/"
-  },
-  "Sennacherib": {
-    "pronunciation": "seh-NAK-er-ihb",
-    "link": "https://biblespeak.org/Sennacherib-pronunciation/"
-  },
-  "Shealtiel": {
-    "pronunciation": "shee-AL-tih-ehl",
-    "link": "https://biblespeak.org/Shealtiel-pronunciation/"
-  },
-  "Sirach": {
-    "pronunciation": "SAI-rak",
-    "link": "https://biblespeak.org/Sirach-pronunciation/"
-  },
-  "Stachys": {
-    "pronunciation": "STAY-kihs",
-    "link": "https://biblespeak.org/Stachys-pronunciation/"
-  },
-  "Saul": {
-    "pronunciation": "sawl",
-    "link": "https://biblespeak.org/Saul-pronunciation/"
-  },
-  "Shilonite": {
-    "pronunciation": "SHAI-lo-nait",
-    "link": "https://biblespeak.org/Shilonite-pronunciation/"
-  },
-  "Shunem": {
-    "pronunciation": "SHOO-nehm",
-    "link": "https://biblespeak.org/Shunem-pronunciation/"
-  },
-  "Shur": {
-    "pronunciation": "shoor",
-    "link": "https://biblespeak.org/Shur-pronunciation/"
-  },
-  "Salishah": {
-    "pronunciation": "suh-LEE-shuh",
-    "link": "https://biblespeak.org/Salishah-pronunciation/"
-  },
-  "Sheol": {
-    "pronunciation": "SHEE-ol",
-    "link": "https://biblespeak.org/Sheol-pronunciation/"
-  },
-  "Seleucia": {
-    "pronunciation": "seh-LOO-shih-uh",
-    "link": "https://biblespeak.org/Seleucia-pronunciation/"
-  },
-  "Sosthenes": {
-    "pronunciation": "SAHS-thee-neez",
-    "link": "https://biblespeak.org/Sosthenes-pronunciation/"
-  },
-  "Siena": {
-    "pronunciation": "see-EHN-uh",
-    "link": "https://biblespeak.org/Siena-pronunciation/"
-  },
-  "Syro-Phoenician": {
-    "pronunciation": "SIHR-o fee-NIHSH-ih-uhn",
-    "link": "https://biblespeak.org/Syro-Phoenician-pronunciation/"
-  },
-  "Seah": {
-    "pronunciation": "SEE-uh",
-    "link": "https://biblespeak.org/Seah-pronunciation/"
+  "Shiloh": {
+    "pronunciation": "SHAI-lo",
+    "link": "https://biblespeak.org/Shiloh-pronunciation/"
   },
   "Sarah": {
     "pronunciation": "SEHR-uh",
     "link": "https://biblespeak.org/Sarah-pronunciation/"
   },
+  "Sidonians": {
+    "pronunciation": "sai-DO-nee-uhnz",
+    "link": "https://biblespeak.org/Sidonians-pronunciation/"
+  },
   "Sharon": {
     "pronunciation": "SHEHR-uhn",
     "link": "https://biblespeak.org/Sharon-pronunciation/"
+  },
+  "Stachys": {
+    "pronunciation": "STAY-kihs",
+    "link": "https://biblespeak.org/Stachys-pronunciation/"
+  },
+  "Sosthenes": {
+    "pronunciation": "SAHS-thee-neez",
+    "link": "https://biblespeak.org/Sosthenes-pronunciation/"
+  },
+  "Sardis": {
+    "pronunciation": "SAHR-dihs",
+    "link": "https://biblespeak.org/Sardis-pronunciation/"
+  },
+  "Sinai": {
+    "pronunciation": "SAI-nai",
+    "link": "https://biblespeak.org/Sinai-pronunciation/"
+  },
+  "Synagogues": {
+    "pronunciation": "SIHN-uh-gahgz",
+    "link": "https://biblespeak.org/Synagogues-pronunciation/"
+  },
+  "Symeon": {
+    "pronunciation": "SIHM-ee-uhn",
+    "link": "https://biblespeak.org/Symeon-pronunciation/"
+  },
+  "Samaritan": {
+    "pronunciation": "suh-MEHR-ih-tuhn",
+    "link": "https://biblespeak.org/Samaritan-pronunciation/"
+  },
+  "Scepter": {
+    "pronunciation": "SEHP-ter",
+    "link": "https://biblespeak.org/Scepter-pronunciation/"
+  },
+  "Sixtus": {
+    "pronunciation": "SIKS-tuhs",
+    "link": "https://biblespeak.org/Sixtus-pronunciation/"
+  },
+  "Siena": {
+    "pronunciation": "see-EHN-uh",
+    "link": "https://biblespeak.org/Siena-pronunciation/"
+  },
+  "Shinar": {
+    "pronunciation": "SHAI-nahr",
+    "link": "https://biblespeak.org/Shinar-pronunciation/"
+  },
+  "Seleucia": {
+    "pronunciation": "seh-LOO-shih-uh",
+    "link": "https://biblespeak.org/Seleucia-pronunciation/"
+  },
+  "Seraphim": {
+    "pronunciation": "SEHR-uh-fihm",
+    "link": "https://biblespeak.org/Seraphim-pronunciation/"
+  },
+  "Siesta": {
+    "pronunciation": "see-EHS-tuh",
+    "link": "https://biblespeak.org/Siesta-pronunciation/"
   },
   "Sabeans": {
     "pronunciation": "suh-BEE-uhnz",
     "link": "https://biblespeak.org/Sabeans-pronunciation/"
   },
-  "Seba": {
-    "pronunciation": "SEE-buh",
-    "link": "https://biblespeak.org/Seba-pronunciation/"
-  },
   "Sarai": {
     "pronunciation": "SAY-rai",
     "link": "https://biblespeak.org/Sarai-pronunciation/"
   },
-  "Thisbe": {
-    "pronunciation": "THIHZ-bee",
-    "link": "https://biblespeak.org/Thisbe-pronunciation/"
+  "Syro-Phoenician": {
+    "pronunciation": "SIHR-o fee-NIHSH-ih-uhn",
+    "link": "https://biblespeak.org/Syro-Phoenician-pronunciation/"
   },
-  "Tithe": {
-    "pronunciation": "taith",
-    "link": "https://biblespeak.org/Tithe-pronunciation/"
+  "Sabbath": {
+    "pronunciation": "SAB-uhth",
+    "link": "https://biblespeak.org/Sabbath-pronunciation/"
   },
-  "Timbrel": {
-    "pronunciation": "TIHM-br'l",
-    "link": "https://biblespeak.org/Timbrel-pronunciation/"
+  "Sihon": {
+    "pronunciation": "SAI-hon",
+    "link": "https://biblespeak.org/Sihon-pronunciation/"
   },
-  "Tertius": {
-    "pronunciation": "TER-shih-uhs",
-    "link": "https://biblespeak.org/Tertius-pronunciation/"
+  "Seba": {
+    "pronunciation": "SEE-buh",
+    "link": "https://biblespeak.org/Seba-pronunciation/"
   },
-  "Timaeus": {
-    "pronunciation": "tai-MEE-uhs",
-    "link": "https://biblespeak.org/Timaeus-pronunciation/"
+  "Salamis": {
+    "pronunciation": "SAL-uh-mihs",
+    "link": "https://biblespeak.org/Salamis-pronunciation/"
   },
-  "Tours": {
-    "pronunciation": "tour",
-    "link": "https://biblespeak.org/Tours-pronunciation/"
+  "Shilonite": {
+    "pronunciation": "SHAI-lo-nait",
+    "link": "https://biblespeak.org/Shilonite-pronunciation/"
   },
-  "Tethered": {
-    "pronunciation": "TEHTH-erd",
-    "link": "https://biblespeak.org/Tethered-pronunciation/"
+  "Stephen": {
+    "pronunciation": "STEE-v'n",
+    "link": "https://biblespeak.org/Stephen-pronunciation/"
   },
-  "Thaddaeus": {
-    "pronunciation": "THAD-dee-uhs",
-    "link": "https://biblespeak.org/Thaddaeus-pronunciation/"
+  "Samothrace": {
+    "pronunciation": "SAM-o-thrays",
+    "link": "https://biblespeak.org/Samothrace-pronunciation/"
   },
-  "Tishbe": {
-    "pronunciation": "TIHSH-bee",
-    "link": "https://biblespeak.org/Tishbe-pronunciation/"
+  "Sanctuary": {
+    "pronunciation": "SANG-tshoo-ehr-ee",
+    "link": "https://biblespeak.org/Sanctuary-pronunciation/"
   },
-  "Tekel": {
-    "pronunciation": "TEH-keel",
-    "link": "https://biblespeak.org/Tekel-pronunciation/"
+  "Sennacherib": {
+    "pronunciation": "seh-NAK-er-ihb",
+    "link": "https://biblespeak.org/Sennacherib-pronunciation/"
   },
-  "Tetrarch": {
-    "pronunciation": "TEHT-rahrk",
-    "link": "https://biblespeak.org/Tetrarch-pronunciation/"
+  "Syria": {
+    "pronunciation": "SIHR-ih-uh",
+    "link": "https://biblespeak.org/Syria-pronunciation/"
   },
-  "Tiberias": {
-    "pronunciation": "tai-BIHR-ih-uhs",
-    "link": "https://biblespeak.org/Tiberias-pronunciation/"
+  "Shekel": {
+    "pronunciation": "SHEHK-uhl",
+    "link": "https://biblespeak.org/Shekel-pronunciation/"
   },
-  "Thessalonians": {
-    "pronunciation": "theh-suh-LO-nih-uhnz",
-    "link": "https://biblespeak.org/Thessalonians-pronunciation/"
+  "Solomon": {
+    "pronunciation": "SAH-lo-muhn",
+    "link": "https://biblespeak.org/Solomon-pronunciation/"
   },
-  "Troas": {
-    "pronunciation": "TRO-ahs",
-    "link": "https://biblespeak.org/Troas-pronunciation/"
+  "Smyrna": {
+    "pronunciation": "SMER-nuh",
+    "link": "https://biblespeak.org/Smyrna-pronunciation/"
   },
-  "Trachonitus": {
-    "pronunciation": "trak-o-NAI-tihs",
-    "link": "https://biblespeak.org/Trachonitus-pronunciation/"
+  "Seir": {
+    "pronunciation": "SEE-er",
+    "link": "https://biblespeak.org/Seir-pronunciation/"
   },
-  "Tychicus": {
-    "pronunciation": "TIH-kih-kuhs",
-    "link": "https://biblespeak.org/Tychicus-pronunciation/"
+  "Succoth": {
+    "pronunciation": "SUHK-ahth",
+    "link": "https://biblespeak.org/Succoth-pronunciation/"
   },
-  "Tamar": {
-    "pronunciation": "TAY-mer",
-    "link": "https://biblespeak.org/Tamar-pronunciation/"
+  "Shalmaneser": {
+    "pronunciation": "shal-muh-NEE-zer",
+    "link": "https://biblespeak.org/Shalmaneser-pronunciation/"
   },
-  "Terebinth": {
-    "pronunciation": "TEHR-ee-bihnth",
-    "link": "https://biblespeak.org/Terebinth-pronunciation/"
+  "Shunem": {
+    "pronunciation": "SHOO-nehm",
+    "link": "https://biblespeak.org/Shunem-pronunciation/"
   },
-  "Tyre": {
-    "pronunciation": "TAI-er",
-    "link": "https://biblespeak.org/Tyre-pronunciation/"
+  "Scythian": {
+    "pronunciation": "SIH-thee-uihn",
+    "link": "https://biblespeak.org/Scythian-pronunciation/"
   },
-  "Tishbite": {
-    "pronunciation": "TIHSH-bait",
-    "link": "https://biblespeak.org/Tishbite-pronunciation/"
+  "Sanhedrin": {
+    "pronunciation": "san-HEE-drihn",
+    "link": "https://biblespeak.org/Sanhedrin-pronunciation/"
   },
-  "Terah": {
-    "pronunciation": "TEE-ruh",
-    "link": "https://biblespeak.org/Terah-pronunciation/"
+  "Saraph": {
+    "pronunciation": "SAY-raf",
+    "link": "https://biblespeak.org/Saraph-pronunciation/"
   },
-  "Timothy": {
-    "pronunciation": "TIH-muh-thee",
-    "link": "https://biblespeak.org/Timothy-pronunciation/"
+  "Sodom": {
+    "pronunciation": "SAH-duhm",
+    "link": "https://biblespeak.org/Sodom-pronunciation/"
   },
-  "Turibius": {
-    "pronunciation": "tuh-RIHB-ee-uhs gro-VAY-ho",
-    "link": "https://biblespeak.org/Turibius-pronunciation/"
+  "Syntyche": {
+    "pronunciation": "SIHN-tih-tshee",
+    "link": "https://biblespeak.org/Syntyche-pronunciation/"
   },
-  "Titus": {
-    "pronunciation": "TAI-tuhs",
-    "link": "https://biblespeak.org/Titus-pronunciation/"
+  "Silas": {
+    "pronunciation": "SAI-luhs",
+    "link": "https://biblespeak.org/Silas-pronunciation/"
   },
-  "Tarshish": {
-    "pronunciation": "TAHR-shihsh",
-    "link": "https://biblespeak.org/Tarshish-pronunciation/"
+  "Seah": {
+    "pronunciation": "SEE-uh",
+    "link": "https://biblespeak.org/Seah-pronunciation/"
   },
-  "Tohu": {
-    "pronunciation": "TO-hyoo",
-    "link": "https://biblespeak.org/Tohu-pronunciation/"
+  "Sheol": {
+    "pronunciation": "SHEE-ol",
+    "link": "https://biblespeak.org/Sheol-pronunciation/"
   },
-  "Tabitha": {
-    "pronunciation": "TAB-ih-thuh",
-    "link": "https://biblespeak.org/Tabitha-pronunciation/"
+  "Saul": {
+    "pronunciation": "sawl",
+    "link": "https://biblespeak.org/Saul-pronunciation/"
   },
-  "Tubal": {
-    "pronunciation": "TYOO-b'l",
-    "link": "https://biblespeak.org/Tubal-pronunciation/"
+  "Shammah": {
+    "pronunciation": "SHAM-uh",
+    "link": "https://biblespeak.org/Shammah-pronunciation/"
   },
-  "Theresa": {
-    "pronunciation": "ter-EE-suh",
-    "link": "https://biblespeak.org/Theresa-pronunciation/"
+  "Salem": {
+    "pronunciation": "SAY-lehm",
+    "link": "https://biblespeak.org/Salem-pronunciation/"
+  },
+  "Shur": {
+    "pronunciation": "shoor",
+    "link": "https://biblespeak.org/Shur-pronunciation/"
+  },
+  "Shadrach": {
+    "pronunciation": "SHAY-drak",
+    "link": "https://biblespeak.org/Shadrach-pronunciation/"
+  },
+  "Samuel": {
+    "pronunciation": "SAM-yoo-uhl",
+    "link": "https://biblespeak.org/Samuel-pronunciation/"
+  },
+  "Sirach": {
+    "pronunciation": "SAI-rak",
+    "link": "https://biblespeak.org/Sirach-pronunciation/"
   },
   "Tobit": {
     "pronunciation": "TO-biht",
     "link": "https://biblespeak.org/Tobit-pronunciation/"
   },
-  "Thessalonica": {
-    "pronunciation": "theh-suh-lo-NAI-kuh",
-    "link": "https://biblespeak.org/Thessalonica-pronunciation/"
+  "Tohu": {
+    "pronunciation": "TO-hyoo",
+    "link": "https://biblespeak.org/Tohu-pronunciation/"
   },
   "Tribunal": {
     "pronunciation": "trai-BYOO-nuhl",
     "link": "https://biblespeak.org/Tribunal-pronunciation/"
   },
-  "Thyatira": {
-    "pronunciation": "thai-uh-TAI-ruh",
-    "link": "https://biblespeak.org/Thyatira-pronunciation/"
+  "Terebinth": {
+    "pronunciation": "TEHR-ee-bihnth",
+    "link": "https://biblespeak.org/Terebinth-pronunciation/"
+  },
+  "Turibius": {
+    "pronunciation": "tuh-RIHB-ee-uhs gro-VAY-ho",
+    "link": "https://biblespeak.org/Turibius-pronunciation/"
+  },
+  "Troas": {
+    "pronunciation": "TRO-ahs",
+    "link": "https://biblespeak.org/Troas-pronunciation/"
+  },
+  "Tabitha": {
+    "pronunciation": "TAB-ih-thuh",
+    "link": "https://biblespeak.org/Tabitha-pronunciation/"
+  },
+  "Tithe": {
+    "pronunciation": "taith",
+    "link": "https://biblespeak.org/Tithe-pronunciation/"
+  },
+  "Terah": {
+    "pronunciation": "TEE-ruh",
+    "link": "https://biblespeak.org/Terah-pronunciation/"
+  },
+  "Tetrarch": {
+    "pronunciation": "TEHT-rahrk",
+    "link": "https://biblespeak.org/Tetrarch-pronunciation/"
+  },
+  "Tyrian": {
+    "pronunciation": "TIHR-ih-uhn",
+    "link": "https://biblespeak.org/Tyrian-pronunciation/"
+  },
+  "Talitha": {
+    "pronunciation": "TAL-ih-thuh-KOOM",
+    "link": "https://biblespeak.org/Talitha-pronunciation/"
+  },
+  "Tychicus": {
+    "pronunciation": "TIH-kih-kuhs",
+    "link": "https://biblespeak.org/Tychicus-pronunciation/"
+  },
+  "Titus": {
+    "pronunciation": "TAI-tuhs",
+    "link": "https://biblespeak.org/Titus-pronunciation/"
+  },
+  "Theophilus": {
+    "pronunciation": "thee-AH-fih-luhs",
+    "link": "https://biblespeak.org/Theophilus-pronunciation/"
+  },
+  "Tubal": {
+    "pronunciation": "TYOO-b'l",
+    "link": "https://biblespeak.org/Tubal-pronunciation/"
+  },
+  "Tishbite": {
+    "pronunciation": "TIHSH-bait",
+    "link": "https://biblespeak.org/Tishbite-pronunciation/"
+  },
+  "Timaeus": {
+    "pronunciation": "tai-MEE-uhs",
+    "link": "https://biblespeak.org/Timaeus-pronunciation/"
+  },
+  "Tishbe": {
+    "pronunciation": "TIHSH-bee",
+    "link": "https://biblespeak.org/Tishbe-pronunciation/"
+  },
+  "Tours": {
+    "pronunciation": "tour",
+    "link": "https://biblespeak.org/Tours-pronunciation/"
+  },
+  "Timbrel": {
+    "pronunciation": "TIHM-br'l",
+    "link": "https://biblespeak.org/Timbrel-pronunciation/"
+  },
+  "Tiberias": {
+    "pronunciation": "tai-BIHR-ih-uhs",
+    "link": "https://biblespeak.org/Tiberias-pronunciation/"
   },
   "Timon": {
     "pronunciation": "TAI-muhn",
@@ -3163,37 +3119,81 @@
     "pronunciation": "TAHR-suhs",
     "link": "https://biblespeak.org/Tarsus-pronunciation/"
   },
-  "Theophilus": {
-    "pronunciation": "thee-AH-fih-luhs",
-    "link": "https://biblespeak.org/Theophilus-pronunciation/"
+  "Thyatira": {
+    "pronunciation": "thai-uh-TAI-ruh",
+    "link": "https://biblespeak.org/Thyatira-pronunciation/"
   },
-  "Tyrian": {
-    "pronunciation": "TIHR-ih-uhn",
-    "link": "https://biblespeak.org/Tyrian-pronunciation/"
+  "Thessalonians": {
+    "pronunciation": "theh-suh-LO-nih-uhnz",
+    "link": "https://biblespeak.org/Thessalonians-pronunciation/"
   },
-  "Tobiah": {
-    "pronunciation": "to-BAI-uh",
-    "link": "https://biblespeak.org/Tobiah-pronunciation/"
+  "Timothy": {
+    "pronunciation": "TIH-muh-thee",
+    "link": "https://biblespeak.org/Timothy-pronunciation/"
+  },
+  "Thaddaeus": {
+    "pronunciation": "THAD-dee-uhs",
+    "link": "https://biblespeak.org/Thaddaeus-pronunciation/"
+  },
+  "Tethered": {
+    "pronunciation": "TEHTH-erd",
+    "link": "https://biblespeak.org/Tethered-pronunciation/"
+  },
+  "Tamar": {
+    "pronunciation": "TAY-mer",
+    "link": "https://biblespeak.org/Tamar-pronunciation/"
+  },
+  "Thisbe": {
+    "pronunciation": "THIHZ-bee",
+    "link": "https://biblespeak.org/Thisbe-pronunciation/"
+  },
+  "Trachonitus": {
+    "pronunciation": "trak-o-NAI-tihs",
+    "link": "https://biblespeak.org/Trachonitus-pronunciation/"
   },
   "Tabeel": {
     "pronunciation": "TAY-bee-ehl",
     "link": "https://biblespeak.org/Tabeel-pronunciation/"
   },
-  "Talitha": {
-    "pronunciation": "TAL-ih-thuh-KOOM",
-    "link": "https://biblespeak.org/Talitha-pronunciation/"
+  "Tekel": {
+    "pronunciation": "TEH-keel",
+    "link": "https://biblespeak.org/Tekel-pronunciation/"
+  },
+  "Thessalonica": {
+    "pronunciation": "theh-suh-lo-NAI-kuh",
+    "link": "https://biblespeak.org/Thessalonica-pronunciation/"
+  },
+  "Tobiah": {
+    "pronunciation": "to-BAI-uh",
+    "link": "https://biblespeak.org/Tobiah-pronunciation/"
+  },
+  "Tyre": {
+    "pronunciation": "TAI-er",
+    "link": "https://biblespeak.org/Tyre-pronunciation/"
+  },
+  "Theresa": {
+    "pronunciation": "ter-EE-suh",
+    "link": "https://biblespeak.org/Theresa-pronunciation/"
+  },
+  "Tarshish": {
+    "pronunciation": "TAHR-shihsh",
+    "link": "https://biblespeak.org/Tarshish-pronunciation/"
+  },
+  "Tertius": {
+    "pronunciation": "TER-shih-uhs",
+    "link": "https://biblespeak.org/Tertius-pronunciation/"
   },
   "Urbanus": {
     "pronunciation": "er-BAY-nuhs",
     "link": "https://biblespeak.org/Urbanus-pronunciation/"
   },
-  "Ur": {
-    "pronunciation": "er",
-    "link": "https://biblespeak.org/Ur-pronunciation/"
-  },
   "Uzziah": {
     "pronunciation": "yoo-ZAI-uh",
     "link": "https://biblespeak.org/Uzziah-pronunciation/"
+  },
+  "Ur": {
+    "pronunciation": "er",
+    "link": "https://biblespeak.org/Ur-pronunciation/"
   },
   "Uriah": {
     "pronunciation": "you-RAI-uh",
@@ -3203,13 +3203,13 @@
     "pronunciation": "VIHN-tih-dzher",
     "link": "https://biblespeak.org/Vintager-pronunciation/"
   },
-  "Vercelli": {
-    "pronunciation": "ver-TSHEHL-ee",
-    "link": "https://biblespeak.org/Vercelli-pronunciation/"
-  },
   "Vianney": {
     "pronunciation": "vee-uh-NAY",
     "link": "https://biblespeak.org/Vianney-pronunciation/"
+  },
+  "Vercelli": {
+    "pronunciation": "ver-TSHEHL-ee",
+    "link": "https://biblespeak.org/Vercelli-pronunciation/"
   },
   "Wenceslaus": {
     "pronunciation": "WEHN-sehs-laws",
@@ -3219,33 +3219,69 @@
     "pronunciation": "ZAY-vee-er",
     "link": "https://biblespeak.org/Xavier-pronunciation/"
   },
-  "Yahweh-Shalom": {
-    "pronunciation": "YAH-weh-shuh-LOM",
-    "link": "https://biblespeak.org/Yahweh-Shalom-pronunciation/"
-  },
   "Yahweh-Yireh": {
     "pronunciation": "YAH-weh-yer-AY",
     "link": "https://biblespeak.org/Yahweh-Yireh-pronunciation/"
   },
-  "Zaccaeus": {
-    "pronunciation": "zak-KEE-uhs",
-    "link": "https://biblespeak.org/Zaccaeus-pronunciation/"
+  "Yahweh-Shalom": {
+    "pronunciation": "YAH-weh-shuh-LOM",
+    "link": "https://biblespeak.org/Yahweh-Shalom-pronunciation/"
   },
-  "Zuphite": {
-    "pronunciation": "ZUHF-ait",
-    "link": "https://biblespeak.org/Zuphite-pronunciation/"
+  "Zuhf": {
+    "pronunciation": "zuhf",
+    "link": "https://biblespeak.org/Zuhf-pronunciation/"
   },
-  "Zarephath": {
-    "pronunciation": "ZEHR-ee-fath",
-    "link": "https://biblespeak.org/Zarephath-pronunciation/"
+  "Zion": {
+    "pronunciation": "ZAI-uhn",
+    "link": "https://biblespeak.org/Zion-pronunciation/"
   },
   "Zedekiah": {
     "pronunciation": "zeh-duh-KAI-uh",
     "link": "https://biblespeak.org/Zedekiah-pronunciation/"
   },
+  "Zebedee": {
+    "pronunciation": "ZEH-beh-dee",
+    "link": "https://biblespeak.org/Zebedee-pronunciation/"
+  },
+  "Zin": {
+    "pronunciation": "zihn",
+    "link": "https://biblespeak.org/Zin-pronunciation/"
+  },
+  "Zerah": {
+    "pronunciation": "ZEE-ruh",
+    "link": "https://biblespeak.org/Zerah-pronunciation/"
+  },
+  "Zephaniah": {
+    "pronunciation": "zeh-fuh-NAI-uh",
+    "link": "https://biblespeak.org/Zephaniah-pronunciation/"
+  },
+  "Zealot": {
+    "pronunciation": "ZEE-laht",
+    "link": "https://biblespeak.org/Zealot-pronunciation/"
+  },
+  "Zaccaeus": {
+    "pronunciation": "zak-KEE-uhs",
+    "link": "https://biblespeak.org/Zaccaeus-pronunciation/"
+  },
+  "Zadok": {
+    "pronunciation": "ZAY-dahk",
+    "link": "https://biblespeak.org/Zadok-pronunciation/"
+  },
+  "Zuphite": {
+    "pronunciation": "ZUHF-ait",
+    "link": "https://biblespeak.org/Zuphite-pronunciation/"
+  },
   "Zelophehad": {
     "pronunciation": "zehl-AHF-eh-hehd",
     "link": "https://biblespeak.org/Zelophehad-pronunciation/"
+  },
+  "Zaccaria": {
+    "pronunciation": "zak-uh-RAI-uh",
+    "link": "https://biblespeak.org/Zaccaria-pronunciation/"
+  },
+  "Zarephath": {
+    "pronunciation": "ZEHR-ee-fath",
+    "link": "https://biblespeak.org/Zarephath-pronunciation/"
   },
   "Zippor": {
     "pronunciation": "ZIH-pawr",
@@ -3255,92 +3291,56 @@
     "pronunciation": "ZIHM-rai",
     "link": "https://biblespeak.org/Zimri-pronunciation/"
   },
-  "Zoar": {
-    "pronunciation": "ZO-er",
-    "link": "https://biblespeak.org/Zoar-pronunciation/"
-  },
-  "Zeror": {
-    "pronunciation": "ZEE-rawr",
-    "link": "https://biblespeak.org/Zeror-pronunciation/"
-  },
-  "Zeruiah": {
-    "pronunciation": "zeh-rou-AI-uh",
-    "link": "https://biblespeak.org/Zeruiah-pronunciation/"
-  },
-  "Zechariah": {
-    "pronunciation": "zeh-kuh-RAI-uh",
-    "link": "https://biblespeak.org/Zechariah-pronunciation/"
+  "Ziph": {
+    "pronunciation": "zihf",
+    "link": "https://biblespeak.org/Ziph-pronunciation/"
   },
   "Zeus": {
     "pronunciation": "zyoos",
     "link": "https://biblespeak.org/Zeus-pronunciation/"
   },
-  "Zealot": {
-    "pronunciation": "ZEE-laht",
-    "link": "https://biblespeak.org/Zealot-pronunciation/"
-  },
-  "Zorah": {
-    "pronunciation": "ZAWR-uh",
-    "link": "https://biblespeak.org/Zorah-pronunciation/"
-  },
-  "Zecharias": {
-    "pronunciation": "zeh-kuh-RAI-uhs",
-    "link": "https://biblespeak.org/Zecharias-pronunciation/"
-  },
-  "Zaccaria": {
-    "pronunciation": "zak-uh-RAI-uh",
-    "link": "https://biblespeak.org/Zaccaria-pronunciation/"
-  },
   "Zebulun": {
     "pronunciation": "ZEH-byoo-luhn",
     "link": "https://biblespeak.org/Zebulun-pronunciation/"
   },
-  "Ziph": {
-    "pronunciation": "zihf",
-    "link": "https://biblespeak.org/Ziph-pronunciation/"
+  "Zeror": {
+    "pronunciation": "ZEE-rawr",
+    "link": "https://biblespeak.org/Zeror-pronunciation/"
   },
-  "Zion": {
-    "pronunciation": "ZAI-uhn",
-    "link": "https://biblespeak.org/Zion-pronunciation/"
+  "Zarethan": {
+    "pronunciation": "ZEHR-ee-than",
+    "link": "https://biblespeak.org/Zarethan-pronunciation/"
   },
-  "Zin": {
-    "pronunciation": "zihn",
-    "link": "https://biblespeak.org/Zin-pronunciation/"
-  },
-  "Zephaniah": {
-    "pronunciation": "zeh-fuh-NAI-uh",
-    "link": "https://biblespeak.org/Zephaniah-pronunciation/"
-  },
-  "Zebedee": {
-    "pronunciation": "ZEH-beh-dee",
-    "link": "https://biblespeak.org/Zebedee-pronunciation/"
-  },
-  "Zadok": {
-    "pronunciation": "ZAY-dahk",
-    "link": "https://biblespeak.org/Zadok-pronunciation/"
-  },
-  "Zerubbabel": {
-    "pronunciation": "zeh-RUH-buh-behl",
-    "link": "https://biblespeak.org/Zerubbabel-pronunciation/"
-  },
-  "Ziklag": {
-    "pronunciation": "ZIHK-lag",
-    "link": "https://biblespeak.org/Ziklag-pronunciation/"
-  },
-  "Zerah": {
-    "pronunciation": "ZEE-ruh",
-    "link": "https://biblespeak.org/Zerah-pronunciation/"
-  },
-  "Zuhf": {
-    "pronunciation": "zuhf",
-    "link": "https://biblespeak.org/Zuhf-pronunciation/"
+  "Zoar": {
+    "pronunciation": "ZO-er",
+    "link": "https://biblespeak.org/Zoar-pronunciation/"
   },
   "Zophar": {
     "pronunciation": "ZO-fahr",
     "link": "https://biblespeak.org/Zophar-pronunciation/"
   },
-  "Zarethan": {
-    "pronunciation": "ZEHR-ee-than",
-    "link": "https://biblespeak.org/Zarethan-pronunciation/"
+  "Ziklag": {
+    "pronunciation": "ZIHK-lag",
+    "link": "https://biblespeak.org/Ziklag-pronunciation/"
+  },
+  "Zerubbabel": {
+    "pronunciation": "zeh-RUH-buh-behl",
+    "link": "https://biblespeak.org/Zerubbabel-pronunciation/"
+  },
+  "Zorah": {
+    "pronunciation": "ZAWR-uh",
+    "link": "https://biblespeak.org/Zorah-pronunciation/"
+  },
+  "Zechariah": {
+    "pronunciation": "zeh-kuh-RAI-uh",
+    "link": "https://biblespeak.org/Zechariah-pronunciation/"
+  },
+  "Zecharias": {
+    "pronunciation": "zeh-kuh-RAI-uhs",
+    "link": "https://biblespeak.org/Zecharias-pronunciation/"
+  },
+  "Zeruiah": {
+    "pronunciation": "zeh-rou-AI-uh",
+    "link": "https://biblespeak.org/Zeruiah-pronunciation/"
   }
 }
