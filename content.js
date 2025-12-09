@@ -225,11 +225,11 @@ function showBubble() {
     position: fixed !important;
     bottom: 20px !important;
     right: 20px !important;
-    width: 50px !important;
-    height: 50px !important;
+    width: 53px !important;
+    height: 53px !important;
     border-radius: 50% !important;
     background: white !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.15) !important;
     cursor: pointer !important;
     z-index: 2147483646 !important;
     display: flex !important;
@@ -248,12 +248,12 @@ function showBubble() {
   // Add hover effect
   bubble.addEventListener('mouseenter', () => {
     bubble.style.transform = 'scale(0.95)';
-    bubble.style.boxShadow = '0 6px 16px rgba(0, 0, 0, 0.2)';
+    bubble.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.3), 0 3px 10px rgba(0, 0, 0, 0.2)';
   });
   
   bubble.addEventListener('mouseleave', () => {
     bubble.style.transform = 'scale(1)';
-    bubble.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+    bubble.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.15)';
   });
   
   // Click to open selection menu
