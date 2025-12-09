@@ -124,6 +124,16 @@ https://github.com/michaeljthacker/chrome-bible-speak
 **Pricing:**
 - Free
 
+**Single Purpose Description:**
+```
+This extension adds phonetic pronunciation guides for Biblical names on webpages to help users read scripture correctly and confidently.
+```
+
+**Host Permission Justification:**
+```
+<all_urls>: Required to automatically detect and add pronunciation guides for Biblical names on any webpage the user visits, including Bible study websites, church sites, and general web content containing scripture references.
+```
+
 **Justification for Permissions:**
 ```
 activeTab: Required to read webpage content and add pronunciation guides
