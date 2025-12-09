@@ -11,18 +11,19 @@ body {
 
 /* Toast Notification */
 .cbs-toast {
-  position: fixed;
-  top: 20px;
-  right: 20px;
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   padding: 20px;
-  z-index: 999999;
+  z-index: 2147483647 !important;
   max-width: 380px;
   opacity: 0;
   transform: translateY(-20px);
   transition: all 0.3s ease;
+  pointer-events: auto !important;
 }
 
 .cbs-toast-visible {
@@ -247,8 +248,8 @@ body {
   border-top: 1px solid #e5e5e5;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  font-size: 12px;
+  gap: 8px;
+  font-size: 11px;
 }
 
 .cbs-branding-text {
@@ -269,12 +270,12 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 16px;
+  padding: 6px 12px;
   background: #FFDD00;
   color: #000;
   text-decoration: none;
   border-radius: 6px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   transition: all 0.2s;
   align-self: center;
@@ -293,8 +294,8 @@ body {
 
 /* Popup Styles */
 .cbs-popup {
-  width: 400px;
-  min-height: 300px;
+  width: 360px;
+  min-height: 250px;
   margin: 0;
   padding: 0;
 }
@@ -306,7 +307,7 @@ body {
 }
 
 .cbs-popup-header {
-  padding: 20px 24px;
+  padding: 16px 20px;
   border-bottom: 1px solid #e5e5e5;
   background: #f8f9fa;
 }
@@ -338,18 +339,25 @@ body {
 }
 
 .cbs-popup-actions {
-  padding: 20px 24px;
+  padding: 16px 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .cbs-popup-divider {
   text-align: center;
-  padding: 12px 24px;
+  padding: 10px 20px;
   color: #999;
-  font-size: 13px;
+  font-size: 12px;
   position: relative;
+}
+
+.cbs-popup-divider span {
+  background: white;
+  padding: 0 12px;
+  position: relative;
+  z-index: 1;
 }
 
 .cbs-popup-divider::before,
@@ -357,31 +365,32 @@ body {
   content: '';
   position: absolute;
   top: 50%;
-  width: 30%;
+  width: 25%;
   height: 1px;
   background: #e5e5e5;
+  z-index: 0;
 }
 
 .cbs-popup-divider::before {
-  left: 24px;
+  left: 20px;
 }
 
 .cbs-popup-divider::after {
-  right: 24px;
+  right: 20px;
 }
 
 .cbs-popup-names {
-  padding: 8px 24px 16px;
-  max-height: 300px;
+  padding: 8px 20px 12px;
+  max-height: 250px;
   overflow-y: auto;
 }
 
 .cbs-popup-footer-actions {
-  padding: 16px 24px;
+  padding: 12px 20px;
   border-top: 1px solid #e5e5e5;
 }
 
 .cbs-popup-branding {
-  padding: 16px 24px;
+  padding: 12px 20px;
   margin-top: 0;
 }
