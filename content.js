@@ -64,10 +64,13 @@ fetch(chrome.runtime.getURL('names_pronunciations.json'))
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === 'getFoundNames') {
     sendResponse({ names: foundNames, enabledNames: enabledNames, data: jsonData, isExtensionEnabled: isExtensionEnabled });
+    return false; // Synchronous response
   } else if (request.action === 'enableAll') {
     enableTool(jsonData, foundNames);
+    return false; // No response needed
   } else if (request.action === 'enableSelected') {
     enableTool(jsonData, request.selectedNames);
+    return false; // No response needed
   } else if (request.action === 'updateSelected') {
     // Disable names that were unchecked
     const namesToDisable = enabledNames.filter(name => !request.selectedNames.includes(name));
@@ -79,21 +82,26 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (namesToEnable.length > 0) {
       enableTool(jsonData, namesToEnable);
     }
+    return false; // No response needed
   } else if (request.action === 'disableAll') {
     disableTool();
+    return false; // No response needed
   } else if (request.action === 'toggleExtension') {
     isExtensionEnabled = request.enabled;
     if (chrome && chrome.storage && chrome.storage.local) {
       chrome.storage.local.set({ extensionEnabled: request.enabled });
     }
     sendResponse({ success: true });
+    return false; // Synchronous response
   } else if (request.action === 'getExtensionState') {
     sendResponse({ isExtensionEnabled: isExtensionEnabled });
+    return false; // Synchronous response
   } else if (request.action === 'dismiss') {
     hideToast();
     hideSelectionMenu();
+    return false; // No response needed
   }
-  return true; // Keep message channel open for async responses
+  return false; // Default: no async response
 });
 
 function showToast() {
