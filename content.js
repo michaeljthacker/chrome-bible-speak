@@ -202,7 +202,89 @@ function hideToast() {
   }
 }
 
+function showBubble() {
+  // Only show if names are enabled and selection menu is not visible
+  if (enabledNames.length === 0) return;
+  
+  const existingMenu = document.getElementById('chrome-bible-speak-selection');
+  if (existingMenu) return;
+  
+  // Remove existing bubble if any
+  const existingBubble = document.getElementById('chrome-bible-speak-bubble');
+  if (existingBubble) {
+    existingBubble.remove();
+  }
+
+  const bubble = document.createElement('div');
+  bubble.id = 'chrome-bible-speak-bubble';
+  
+  // Get the icon URL
+  const iconUrl = chrome.runtime.getURL('icons/BibleSpeakIcon_32.png');
+  
+  bubble.style.cssText = `
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    background: white !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    cursor: pointer !important;
+    z-index: 2147483646 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.2s ease !important;
+    opacity: 0 !important;
+    transform: scale(0.8) !important;
+    pointer-events: auto !important;
+  `;
+  
+  bubble.innerHTML = `
+    <img src="${iconUrl}" alt="Bible Name Aid" style="width: 32px !important; height: 32px !important; display: block !important; margin: 0 !important; padding: 0 !important;" />
+  `;
+  
+  // Add hover effect
+  bubble.addEventListener('mouseenter', () => {
+    bubble.style.transform = 'scale(0.95)';
+    bubble.style.boxShadow = '0 6px 16px rgba(0, 0, 0, 0.2)';
+  });
+  
+  bubble.addEventListener('mouseleave', () => {
+    bubble.style.transform = 'scale(1)';
+    bubble.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+  });
+  
+  // Click to open selection menu
+  bubble.addEventListener('click', () => {
+    showSelectionMenu();
+  });
+  
+  document.body.appendChild(bubble);
+  
+  // Trigger animation
+  setTimeout(() => {
+    bubble.style.opacity = '1';
+    bubble.style.transform = 'scale(1)';
+  }, 100);
+}
+
+function hideBubble() {
+  const bubble = document.getElementById('chrome-bible-speak-bubble');
+  if (bubble) {
+    bubble.style.opacity = '0';
+    bubble.style.transform = 'scale(0.8)';
+    setTimeout(() => {
+      bubble.remove();
+    }, 200);
+  }
+}
+
 function showSelectionMenu() {
+  // Hide bubble when menu opens
+  hideBubble();
+  
   // Remove existing menu if any
   const existingMenu = document.getElementById('chrome-bible-speak-selection');
   if (existingMenu) {
@@ -387,6 +469,10 @@ function hideSelectionMenu() {
     menu.style.transform = 'translate(-50%, -50%) scale(0.9)';
     setTimeout(() => {
       menu.remove();
+      // Show bubble after menu is fully hidden if names are still enabled
+      if (enabledNames.length > 0) {
+        showBubble();
+      }
     }, 300);
   }
 }
@@ -414,7 +500,8 @@ function disableTool(namesToDisable = null) {
         acceptNode: function(node) {
           // Skip our extension elements
           if (node.closest('#chrome-bible-speak-toast') ||
-              node.closest('#chrome-bible-speak-selection')) {
+              node.closest('#chrome-bible-speak-selection') ||
+              node.closest('#chrome-bible-speak-bubble')) {
             return NodeFilter.FILTER_REJECT;
           }
           // Look for our pronunciation links
@@ -460,6 +547,11 @@ function disableTool(namesToDisable = null) {
     enabledNames = enabledNames.filter(n => !namesToDisable.includes(n));
   } else {
     enabledNames = [];
+  }
+  
+  // Hide bubble if all pronunciations are disabled
+  if (enabledNames.length === 0) {
+    hideBubble();
   }
 }
 
@@ -518,7 +610,8 @@ function enableTool(data, namesToEnable) {
   function traverseDOM(node) {
     // Skip our own extension elements
     if (node.id === 'chrome-bible-speak-toast' || 
-        node.id === 'chrome-bible-speak-selection') {
+        node.id === 'chrome-bible-speak-selection' ||
+        node.id === 'chrome-bible-speak-bubble') {
       return;
     }
     
@@ -550,7 +643,8 @@ function enableTool(data, namesToEnable) {
           // Skip our extension elements
           if (node.parentElement && 
               (node.parentElement.closest('#chrome-bible-speak-toast') ||
-               node.parentElement.closest('#chrome-bible-speak-selection'))) {
+               node.parentElement.closest('#chrome-bible-speak-selection') ||
+               node.parentElement.closest('#chrome-bible-speak-bubble'))) {
             return NodeFilter.FILTER_REJECT;
           }
           return regex.test(node.textContent) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
@@ -600,6 +694,12 @@ function enableTool(data, namesToEnable) {
   // Update global tracker with newly enabled names
   enabledNames = [...enabledNames, ...newNames];
   console.log('Updated enabledNames:', enabledNames);
+  
+  // Show bubble if not showing selection menu
+  const existingMenu = document.getElementById('chrome-bible-speak-selection');
+  if (!existingMenu && enabledNames.length > 0) {
+    showBubble();
+  }
 }
 
 function getBrandingFooter() {
