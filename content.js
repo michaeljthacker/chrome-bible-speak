@@ -590,8 +590,12 @@ function getBrandingFooter() {
     <div style="display: flex !important; flex-direction: column !important; gap: 8px !important; font-size: 11px !important; font-family: inherit !important;">
       <span style="color: #666 !important; text-align: center !important; line-height: 1.4 !important; margin: 0 !important; font-family: inherit !important;">An <a href="https://mjt.pub" target="_blank" style="color: #4285f4 !important; text-decoration: none !important; font-family: inherit !important;">mjt.pub</a> project. Questions? Email <a href="mailto:hi@mjt.pub" style="color: #4285f4 !important; text-decoration: none !important; font-family: inherit !important;">hi@mjt.pub</a></span>
       <a href="https://buymeacoffee.com/michaeljthacker" target="_blank" style="display: inline-flex !important; align-items: center !important; gap: 6px !important; padding: 6px 12px !important; background: #FFDD00 !important; color: #000 !important; text-decoration: none !important; border-radius: 6px !important; font-size: 12px !important; font-weight: 500 !important; transition: all 0.2s !important; align-self: center !important; font-family: inherit !important; margin: 0 !important; line-height: 1.4 !important;">
-        <svg style="width: 16px !important; height: 16px !important; flex-shrink: 0 !important;" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M2 21h19v-3H2v3zm16-8c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-1V4c0-1.1-.9-2-2-2H7c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v3c0 1.1.9 2 2 2h1v3c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2v-3h1zM7 4h8v2H7V4zm-3 4h13v3H4V8z"/>
+        <svg style="width: 16px !important; height: 16px !important; flex-shrink: 0 !important;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 8C5.45 8 5 8.45 5 9V19C5 20.66 6.34 22 8 22H16C17.66 22 19 20.66 19 19V9C19 8.45 18.55 8 18 8H6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M19 12H21C21.55 12 22 12.45 22 13V15C22 16.1 21.1 17 20 17H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M8 2C8 2 9 3 9 4.5C9 6 8 7 8 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M12 2C12 2 13 3 13 4.5C13 6 12 7 12 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M16 2C16 2 17 3 17 4.5C17 6 16 7 16 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
         Buy me a coffee
       </a>
