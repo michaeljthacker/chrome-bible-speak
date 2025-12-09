@@ -42,6 +42,7 @@ fetch(chrome.runtime.getURL('names_pronunciations.json'))
     const bodyText = document.body.innerText;
 
     // Find all names present on the page (using word boundaries to avoid false matches)
+    // Note: Word boundaries mean plurals won't match (e.g., "Pharisees" won't match "Pharisee")
     names.forEach(name => {
       const regex = new RegExp(`\\b${name}\\b`, 'i');
       if (regex.test(bodyText)) {
