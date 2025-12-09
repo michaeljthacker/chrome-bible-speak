@@ -31,6 +31,13 @@ fetch(chrome.runtime.getURL('names_pronunciations.json'))
   .then(data => {
     console.log('JSON data loaded:', data);
     jsonData = data;
+    
+    // Skip if no body element (e.g., viewing SVG/XML files directly)
+    if (!document.body) {
+      console.log('No document.body found, skipping extension functionality');
+      return;
+    }
+    
     const names = Object.keys(data);
     const bodyText = document.body.innerText;
 
