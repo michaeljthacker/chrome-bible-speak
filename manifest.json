@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "description": "Chrome extension that scans webpages with pronunciations on BibleSpeak.org and adds the phonetic pronunciation guide to the webpage.",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
   "background": {
     "service_worker": "background.js"

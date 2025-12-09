@@ -5,7 +5,27 @@ let jsonData = null;
 let foundNames = [];
 let enabledNames = []; // Track which names currently have pronunciations shown
 let autoDismissTimer = null;
+let isExtensionEnabled = true; // Global on/off state
 
+// Check if extension is globally enabled
+if (chrome && chrome.storage && chrome.storage.local) {
+  chrome.storage.local.get(['extensionEnabled'], (result) => {
+    isExtensionEnabled = result.extensionEnabled !== false; // Default to true
+    if (!isExtensionEnabled) {
+      console.log('Extension is globally disabled');
+      return;
+    }
+    
+    // Load JSON and check for names only if enabled
+    loadAndCheckNames();
+  });
+} else {
+  // Fallback if storage not available - just load normally
+  console.log('Chrome storage not available, proceeding with default enabled state');
+  loadAndCheckNames();
+}
+
+function loadAndCheckNames() {
 fetch(chrome.runtime.getURL('names_pronunciations.json'))
   .then(response => response.json())
   .then(data => {
@@ -33,10 +53,10 @@ fetch(chrome.runtime.getURL('names_pronunciations.json'))
     }
   })
   .catch(error => console.error('Error loading JSON:', error));
-
+}
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === 'getFoundNames') {
-    sendResponse({ names: foundNames, enabledNames: enabledNames, data: jsonData });
+    sendResponse({ names: foundNames, enabledNames: enabledNames, data: jsonData, isExtensionEnabled: isExtensionEnabled });
   } else if (request.action === 'enableAll') {
     enableTool(jsonData, foundNames);
   } else if (request.action === 'enableSelected') {
@@ -54,6 +74,14 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     }
   } else if (request.action === 'disableAll') {
     disableTool();
+  } else if (request.action === 'toggleExtension') {
+    isExtensionEnabled = request.enabled;
+    if (chrome && chrome.storage && chrome.storage.local) {
+      chrome.storage.local.set({ extensionEnabled: request.enabled });
+    }
+    sendResponse({ success: true });
+  } else if (request.action === 'getExtensionState') {
+    sendResponse({ isExtensionEnabled: isExtensionEnabled });
   } else if (request.action === 'dismiss') {
     hideToast();
     hideSelectionMenu();
@@ -91,7 +119,7 @@ function showToast() {
   `;
   
   toast.innerHTML = `
-    <div class="cbs-toast-content" style="display: flex; flex-direction: column; gap: 12px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+    <div style="display: flex !important; flex-direction: column !important; gap: 12px !important; font-family: inherit !important;">
       <div class="cbs-toast-title" style="font-size: 16px; font-weight: 600; color: #1a1a1a; margin: 0; line-height: 1.4;">BibleSpeak Pronunciations Available</div>
       <div class="cbs-toast-message" style="font-size: 14px; color: #666; margin: 0; line-height: 1.4;">${foundNames.length} name${foundNames.length > 1 ? 's' : ''} found on this page</div>
       <div class="cbs-toast-buttons" style="display: flex; gap: 8px; margin-top: 8px;">
@@ -210,7 +238,15 @@ function showSelectionMenu() {
   menu.innerHTML = `
     <div style="display: flex !important; flex-direction: column !important; height: 100% !important; overflow: hidden !important;">
       <div style="padding: 16px 20px !important; border-bottom: 1px solid #e5e5e5 !important; background: #f8f9fa !important; flex-shrink: 0 !important;">
-        <h1 style="margin: 0 !important; font-size: 18px !important; font-weight: 600 !important; color: #1a1a1a !important; font-family: inherit !important; line-height: 1.4 !important;">BibleSpeak Pronunciations</h1>
+        <h1 style="margin: 0 0 12px 0 !important; font-size: 18px !important; font-weight: 600 !important; color: #1a1a1a !important; font-family: inherit !important; line-height: 1.4 !important;">BibleSpeak Pronunciations</h1>
+        <div style="display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 12px !important; font-family: inherit !important;">
+          <span style="font-size: 13px !important; color: #5f6368 !important; font-weight: 500 !important; font-family: inherit !important;">Extension Enabled</span>
+          <label style="position: relative !important; display: inline-block !important; width: 44px !important; height: 24px !important; margin: 0 !important; cursor: pointer !important;">
+            <input type="checkbox" id="cbs-menu-global-toggle" checked style="opacity: 0 !important; width: 0 !important; height: 0 !important;">
+            <span class="cbs-menu-toggle-slider" style="position: absolute !important; cursor: pointer !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background-color: #4285f4 !important; transition: 0.3s !important; border-radius: 24px !important;"></span>
+            <span class="cbs-menu-toggle-knob" style="position: absolute !important; content: '' !important; height: 18px !important; width: 18px !important; left: 3px !important; bottom: 3px !important; background-color: white !important; transition: 0.3s !important; border-radius: 50% !important; transform: translateX(20px) !important;"></span>
+          </label>
+        </div>
       </div>
       <div style="padding: 16px 20px !important; display: flex !important; flex-direction: column !important; gap: 8px !important; flex-shrink: 0 !important;">
         <button id="cbs-enable-all-btn" style="padding: 14px 24px !important; border: none !important; border-radius: 8px !important; font-size: 15px !important; font-weight: 500 !important; cursor: pointer !important; transition: all 0.2s !important; font-family: inherit !important; white-space: nowrap !important; background: #4285f4 !important; color: white !important; width: 100% !important; margin: 0 !important; line-height: 1.4 !important;">Enable All Pronunciations</button>
@@ -275,6 +311,30 @@ function showSelectionMenu() {
   document.getElementById('cbs-disable-all-btn').addEventListener('click', () => {
     disableTool();
     hideSelectionMenu();
+  });
+
+  // Global toggle handler for selection menu
+  const menuGlobalToggle = document.getElementById('cbs-menu-global-toggle');
+  const menuToggleSlider = menuGlobalToggle.nextElementSibling;
+  const menuToggleKnob = menuToggleSlider.nextElementSibling;
+  
+  menuGlobalToggle.addEventListener('change', () => {
+    isExtensionEnabled = menuGlobalToggle.checked;
+    if (chrome && chrome.storage && chrome.storage.local) {
+      chrome.storage.local.set({ extensionEnabled: isExtensionEnabled });
+    }
+    
+    // Update toggle appearance
+    if (isExtensionEnabled) {
+      menuToggleSlider.style.backgroundColor = '#4285f4';
+      menuToggleKnob.style.transform = 'translateX(20px)';
+    } else {
+      menuToggleSlider.style.backgroundColor = '#ccc';
+      menuToggleKnob.style.transform = 'translateX(0)';
+      // Disable all pronunciations and close menu when turning off
+      disableTool();
+      hideSelectionMenu();
+    }
   });
 
   document.getElementById('cbs-enable-selected').addEventListener('click', () => {

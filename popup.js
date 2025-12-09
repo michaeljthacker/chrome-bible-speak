@@ -1,25 +1,45 @@
 let foundNames = [];
 let jsonData = null;
 let enabledNames = [];
+let isExtensionEnabled = true;
 
-// Query the active tab for found names
-chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-  chrome.tabs.sendMessage(tabs[0].id, { action: 'getFoundNames' }, (response) => {
-    if (chrome.runtime.lastError) {
-      // Content script not ready or page doesn't support it
-      showNoNames();
-      return;
-    }
-    
-    if (response && response.names && response.names.length > 0) {
-      foundNames = response.names;
-      jsonData = response.data;
-      enabledNames = response.enabledNames || [];
-      showContent();
-      renderNamesList();
-    } else {
-      showNoNames();
-    }
+// First, check the extension enabled state from storage
+chrome.storage.local.get(['extensionEnabled'], (result) => {
+  isExtensionEnabled = result.extensionEnabled !== false; // Default to true
+  
+  // Update toggle to match stored state
+  const toggle = document.getElementById('cbs-popup-global-toggle');
+  toggle.checked = isExtensionEnabled;
+  
+  // If extension is disabled, show a message and stop
+  if (!isExtensionEnabled) {
+    document.getElementById('cbs-popup-loading').style.display = 'none';
+    document.getElementById('cbs-popup-no-names').style.display = 'block';
+    const noNamesDiv = document.getElementById('cbs-popup-no-names');
+    noNamesDiv.innerHTML = '<p>Extension is currently disabled.</p><p class="cbs-popup-help">Toggle "Extension Enabled" above to activate.</p>';
+    return;
+  }
+  
+  // Extension is enabled, query the active tab for found names
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    chrome.tabs.sendMessage(tabs[0].id, { action: 'getFoundNames' }, (response) => {
+      if (chrome.runtime.lastError) {
+        // Content script not ready or page doesn't support it
+        showNoNames();
+        return;
+      }
+      
+      if (response && response.names && response.names.length > 0) {
+        foundNames = response.names;
+        jsonData = response.data;
+        enabledNames = response.enabledNames || [];
+        
+        showContent();
+        renderNamesList();
+      } else {
+        showNoNames();
+      }
+    });
   });
 });
 
@@ -92,6 +112,23 @@ document.getElementById('cbs-popup-enable-all').addEventListener('click', () => 
 document.getElementById('cbs-popup-dismiss').addEventListener('click', () => {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     chrome.tabs.sendMessage(tabs[0].id, { action: 'disableAll' });
+    window.close();
+  });
+});
+
+// Global toggle handler
+document.getElementById('cbs-popup-global-toggle').addEventListener('change', (e) => {
+  isExtensionEnabled = e.target.checked;
+  chrome.storage.local.set({ extensionEnabled: isExtensionEnabled });
+  
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    if (!isExtensionEnabled) {
+      // Disable all pronunciations when turning off
+      chrome.tabs.sendMessage(tabs[0].id, { action: 'disableAll' });
+    } else {
+      // When re-enabling, reload the page so content script runs
+      chrome.tabs.reload(tabs[0].id);
+    }
     window.close();
   });
 });
