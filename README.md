@@ -14,6 +14,7 @@ When enabled, the tool adds pronunciation guides directly in the text; each bibl
 - **Automatic Scanning**: Detects biblical names on any webpage you visit
 - **Toast Notification**: Shows a clean, auto-dismissing notification when names are found
 - **Selection Menu**: Choose exactly which names to enable pronunciation for
+- **Quick Access Bubble**: A floating button appears when pronunciations are active for easy access to settings
 - **Global Toggle**: Enable or disable the entire extension with one click
 - **Persistent State**: Your preferences are saved across tabs, pages, and browser sessions
 
@@ -54,8 +55,9 @@ When enabled, the tool adds pronunciation guides directly in the text; each bibl
    - **Pronounce All**: Enable pronunciation aids for all detected names
    - **Choose**: Select specific names from a menu
    - **Disable All**: Remove all pronunciation aids
-4. **Toggle extension on/off** - Use the global toggle in the popup or selection menu
-5. **Click pronunciations** - Each phonetic guide links to the full BibleSpeak.org page
+4. **Use the floating bubble** - When pronunciations are active, click the bubble to adjust your selections
+5. **Toggle extension on/off** - Use the global toggle in the popup or selection menu
+6. **Click pronunciations** - Each phonetic guide links to the full BibleSpeak.org page
 
 ## Updating the Pronunciation Database
 
