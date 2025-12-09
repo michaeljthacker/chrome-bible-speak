@@ -4,10 +4,43 @@
   <title>Chrome Bible Speak</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
-  <h1>Chrome Bible Speak</h1>
-  <button id="enable">Enable</button>
-  <button id="hide">Hide</button>
+<body class="cbs-popup">
+  <div class="cbs-popup-container">
+    <div class="cbs-popup-header">
+      <h1 class="cbs-popup-title">BibleSpeak Pronunciations</h1>
+    </div>
+    <div id="cbs-popup-loading" class="cbs-popup-loading">
+      <p>Checking current page...</p>
+    </div>
+    <div id="cbs-popup-no-names" class="cbs-popup-no-names" style="display: none;">
+      <p>No biblical names found on this page.</p>
+      <p class="cbs-popup-help">Visit a page with biblical names to use pronunciations.</p>
+    </div>
+    <div id="cbs-popup-content" class="cbs-popup-content" style="display: none;">
+      <div class="cbs-popup-actions">
+        <button id="cbs-popup-enable-all" class="cbs-btn cbs-btn-primary cbs-btn-large">Enable All Pronunciations</button>
+        <button id="cbs-popup-dismiss" class="cbs-btn cbs-btn-secondary cbs-btn-large">Dismiss</button>
+      </div>
+      <div class="cbs-popup-divider">
+        <span>or choose specific names</span>
+      </div>
+      <div id="cbs-popup-names" class="cbs-popup-names">
+        <!-- Checkboxes will be inserted here -->
+      </div>
+      <div class="cbs-popup-footer-actions">
+        <button id="cbs-popup-enable-selected" class="cbs-btn cbs-btn-primary">Enable Selected</button>
+      </div>
+    </div>
+    <div class="cbs-branding cbs-popup-branding">
+      <span class="cbs-branding-text">An <a href="https://mjt.pub" target="_blank" class="cbs-branding-link">mjt.pub</a> project. Questions? Email <a href="mailto:hi@mjt.pub" class="cbs-branding-link">hi@mjt.pub</a></span>
+      <a href="https://buymeacoffee.com/michaeljthacker" target="_blank" class="cbs-coffee-btn">
+        <svg class="cbs-coffee-icon" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M2 21h19v-3H2v3zm16-8c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-1V4c0-1.1-.9-2-2-2H7c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v3c0 1.1.9 2 2 2h1v3c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2v-3h1zM7 4h8v2H7V4zm-3 4h13v3H4V8z"/>
+        </svg>
+        Buy me a coffee
+      </a>
+    </div>
+  </div>
   <script src="popup.js"></script>
 </body>
 </html>

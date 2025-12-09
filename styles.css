@@ -1,8 +1,387 @@
-body {
-  font-family: Arial, sans-serif;
+/* Global Styles */
+* {
+  box-sizing: border-box;
 }
 
-button {
-  display: block;
-  margin: 10px 0;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Toast Notification */
+.cbs-toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  z-index: 999999;
+  max-width: 380px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+}
+
+.cbs-toast-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cbs-toast-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cbs-toast-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.cbs-toast-message {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.cbs-toast-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* Selection Menu */
+.cbs-selection-menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  z-index: 999999;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.cbs-selection-visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.cbs-selection-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cbs-selection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.cbs-selection-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.cbs-close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.cbs-close-btn:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.cbs-selection-body {
+  padding: 16px 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.cbs-checkbox-label {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  gap: 12px;
+}
+
+.cbs-checkbox-label:hover {
+  background: #f8f8f8;
+}
+
+.cbs-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.cbs-name {
+  font-weight: 500;
+  color: #1a1a1a;
+  min-width: 100px;
+}
+
+.cbs-pronunciation {
+  color: #666;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.cbs-selection-footer {
+  padding: 20px 24px;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cbs-selection-links {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+}
+
+.cbs-separator {
+  color: #ccc;
+}
+
+/* Buttons */
+.cbs-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.cbs-btn-primary {
+  background: #4285f4;
+  color: white;
+}
+
+.cbs-btn-primary:hover {
+  background: #3367d6;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(66, 133, 244, 0.3);
+}
+
+.cbs-btn-secondary {
+  background: #f1f3f4;
+  color: #5f6368;
+}
+
+.cbs-btn-secondary:hover {
+  background: #e8eaed;
+}
+
+.cbs-btn-text {
+  background: none;
+  color: #5f6368;
+  padding: 10px 12px;
+}
+
+.cbs-btn-text:hover {
+  background: #f8f8f8;
+  color: #202124;
+}
+
+.cbs-btn-large {
+  padding: 14px 24px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.cbs-link {
+  color: #4285f4;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.cbs-link:hover {
+  background: #f1f3f4;
+  text-decoration: underline;
+}
+
+/* Branding Footer */
+.cbs-branding {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.cbs-branding-text {
+  color: #666;
+  text-align: center;
+}
+
+.cbs-branding-link {
+  color: #4285f4;
+  text-decoration: none;
+}
+
+.cbs-branding-link:hover {
+  text-decoration: underline;
+}
+
+.cbs-coffee-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: #FFDD00;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+  align-self: center;
+}
+
+.cbs-coffee-btn:hover {
+  background: #FFED4E;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(255, 221, 0, 0.3);
+}
+
+.cbs-coffee-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Popup Styles */
+.cbs-popup {
+  width: 400px;
+  min-height: 300px;
+  margin: 0;
+  padding: 0;
+}
+
+.cbs-popup-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cbs-popup-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #f8f9fa;
+}
+
+.cbs-popup-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.cbs-popup-loading,
+.cbs-popup-no-names {
+  padding: 40px 24px;
+  text-align: center;
+  color: #666;
+}
+
+.cbs-popup-help {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.cbs-popup-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.cbs-popup-actions {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cbs-popup-divider {
+  text-align: center;
+  padding: 12px 24px;
+  color: #999;
+  font-size: 13px;
+  position: relative;
+}
+
+.cbs-popup-divider::before,
+.cbs-popup-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background: #e5e5e5;
+}
+
+.cbs-popup-divider::before {
+  left: 24px;
+}
+
+.cbs-popup-divider::after {
+  right: 24px;
+}
+
+.cbs-popup-names {
+  padding: 8px 24px 16px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.cbs-popup-footer-actions {
+  padding: 16px 24px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.cbs-popup-branding {
+  padding: 16px 24px;
+  margin-top: 0;
 }
