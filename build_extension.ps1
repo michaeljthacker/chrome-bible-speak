@@ -25,7 +25,7 @@ Copy-Item "names_pronunciations.json" "dist/"
 # Copy icons directory
 Copy-Item -Recurse "icons" "dist/icons"
 
-Write-Host "✓ Files copied to dist/" -ForegroundColor Green
+Write-Host "[OK] Files copied to dist/" -ForegroundColor Green
 
 # Create ZIP for Chrome Web Store upload
 Write-Host "Creating ZIP archive..." -ForegroundColor Cyan
@@ -38,10 +38,10 @@ if (Test-Path $zipPath) {
 # PowerShell 5.1+ has Compress-Archive
 Compress-Archive -Path "dist\*" -DestinationPath $zipPath
 
-Write-Host "✓ Created $zipPath" -ForegroundColor Green
+Write-Host "[OK] Created $zipPath" -ForegroundColor Green
 Write-Host ""
 Write-Host "Build complete! Package ready for Chrome Web Store:" -ForegroundColor Cyan
-Write-Host "  → $zipPath" -ForegroundColor White
+Write-Host "  >> $zipPath" -ForegroundColor White
 Write-Host ""
 Write-Host "Next steps:" -ForegroundColor Yellow
 Write-Host "  1. Test the extension by loading dist/ folder as unpacked in Chrome" -ForegroundColor Gray
