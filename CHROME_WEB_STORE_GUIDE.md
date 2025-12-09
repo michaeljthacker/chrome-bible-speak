@@ -17,7 +17,7 @@
 
 ### Legal & Privacy
 - ✅ `PRIVACY_POLICY.md` - Comprehensive privacy policy
-- ✅ Public GitHub URL for privacy policy: https://github.com/michaeljthacker/chrome-bible-speak/blob/feat/ux-improvements/PRIVACY_POLICY.md
+- ✅ Public GitHub URL for privacy policy: https://github.com/michaeljthacker/chrome-bible-speak/blob/main/PRIVACY_POLICY.md
 - ✅ README.md updated with BibleSpeak.org attribution
 - ✅ Clear disclaimer that BibleSpeak.org is not affiliated
 
@@ -108,7 +108,7 @@ Perfect for:
 
 **Privacy Policy URL:**
 ```
-https://github.com/michaeljthacker/chrome-bible-speak/blob/feat/ux-improvements/PRIVACY_POLICY.md
+https://github.com/michaeljthacker/chrome-bible-speak/blob/main/PRIVACY_POLICY.md
 ```
 
 **Support/Homepage URL:**
