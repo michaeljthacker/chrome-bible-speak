@@ -41,9 +41,10 @@ fetch(chrome.runtime.getURL('names_pronunciations.json'))
     const names = Object.keys(data);
     const bodyText = document.body.innerText;
 
-    // Find all names present on the page
+    // Find all names present on the page (using word boundaries to avoid false matches)
     names.forEach(name => {
-      if (bodyText.includes(name)) {
+      const regex = new RegExp(`\\b${name}\\b`, 'i');
+      if (regex.test(bodyText)) {
         console.log(`Found name: ${name}`);
         foundNames.push(name);
       }
