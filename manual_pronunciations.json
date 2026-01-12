@@ -207,19 +207,34 @@
     "pronunciation": "GIR-ga-shites"
   },
   "Arkite": {
-    "pronunciation": "AR-kee"
+    "pronunciation": "AR-kite"
   },
   "Sinite": {
-    "pronunciation": "see-NEE"
+    "pronunciation": "SIN-ite"
   },
   "Arvadite": {
-    "pronunciation": "ar-vaw-DEE"
+    "pronunciation": "AR-vad-ite"
   },
   "Zemarite": {
-    "pronunciation": "tse-ma-REE"
+    "pronunciation": "ZEM-uh-rite"
   },
   "Hamathite": {
-    "pronunciation": "KHAM-a-thee"
+    "pronunciation": "KHAM-a-thite"
+  },
+  "Arkites": {
+    "pronunciation": "AR-kites"
+  },
+  "Sinites": {
+    "pronunciation": "see-NITES"
+  },
+  "Arvadites": {
+    "pronunciation": "ar-vaw-DITES"
+  },
+  "Zemarites": {
+    "pronunciation": "tse-ma-RITES"
+  },
+  "Hamathites": {
+    "pronunciation": "KHAM-a-thites"
   },
   "Gerar": {
     "pronunciation": "geh-RAHR"
