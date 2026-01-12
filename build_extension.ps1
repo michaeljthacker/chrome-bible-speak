@@ -4,7 +4,18 @@
 
 Write-Host "Building Bible Name Aid extension..." -ForegroundColor Cyan
 
-# Clean and create dist directory
+# Step 1: Validate manual pronunciations
+Write-Host "`n[Step 1/3] Validating manual_pronunciations.json..." -ForegroundColor Cyan
+$validationResult = & python validate_manual_pronunciations.py
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "`n✗ Build failed: manual_pronunciations.json validation errors" -ForegroundColor Red
+    Write-Host "  Fix validation errors before building" -ForegroundColor Yellow
+    exit 1
+}
+Write-Host ""
+
+# Step 2: Clean and create dist directory
+Write-Host "[Step 2/3] Preparing dist/ folder..." -ForegroundColor Cyan
 if (Test-Path "dist") {
     Write-Host "Cleaning existing dist/ folder..." -ForegroundColor Yellow
     Remove-Item -Recurse -Force "dist"
@@ -21,14 +32,15 @@ Copy-Item "popup.html" "dist/"
 Copy-Item "popup.js" "dist/"
 Copy-Item "styles.css" "dist/"
 Copy-Item "names_pronunciations.json" "dist/"
+Copy-Item "manual_pronunciations.json" "dist/"
 
 # Copy icons directory
 Copy-Item -Recurse "icons" "dist/icons"
 
 Write-Host "[OK] Files copied to dist/" -ForegroundColor Green
 
-# Create ZIP for Chrome Web Store upload
-Write-Host "Creating ZIP archive..." -ForegroundColor Cyan
+# Step 3: Create ZIP for Chrome Web Store upload
+Write-Host "`n[Step 3/3] Creating ZIP archive..." -ForegroundColor Cyan
 
 $zipPath = "bible-name-aid-dist.zip"
 if (Test-Path $zipPath) {
