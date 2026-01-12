@@ -36,7 +36,7 @@
     "pronunciation": "BEH-rah"
   },
   "Beersheba": {
-    "pronunciation": "beer-SHAH"
+    "pronunciation": "beer-SHEE-buh"
   },
   "Shinab": {
     "pronunciation": "shin-AWB"
@@ -99,7 +99,7 @@
     "pronunciation": "KEN-ites"
   },
   "Kenizzites": {
-    "pronunciation": "ken-iz-zites"
+    "pronunciation": "KEN-iz-ites"
   },
   "Kadmonites": {
     "pronunciation": "KAD-mon-ites"
@@ -171,7 +171,10 @@
     "pronunciation": "ah-KAD"
   },
   "Rehobothir": {
-    "pronunciation": "Reh-ho-both-EER"
+    "pronunciation": "reh-ho-both-EER"
+  },
+  "Rehoboth-Ir": {
+    "pronunciation": "reh-ho-both-EER"
   },
   "Calah": {
     "pronunciation": "KEH-lakh"
@@ -180,7 +183,7 @@
     "pronunciation": "REH-sen"
   },
   "Ludim": {
-    "pronunciation": "LOO-dee"
+    "pronunciation": "LOO-dim"
   },
   "Anamim": {
     "pronunciation": "an-aw-MEEM"
@@ -201,7 +204,7 @@
     "pronunciation": "kaf-toh-REEM"
   },
   "Heth": {
-    "pronunciation": "KHeth"
+    "pronunciation": "KHETH"
   },
   "Girgashites": {
     "pronunciation": "GIR-ga-shites"
@@ -225,13 +228,13 @@
     "pronunciation": "AR-kites"
   },
   "Sinites": {
-    "pronunciation": "see-NITES"
+    "pronunciation": "SIN-ites"
   },
   "Arvadites": {
-    "pronunciation": "ar-vaw-DITES"
+    "pronunciation": "AR-vad-ites"
   },
   "Zemarites": {
-    "pronunciation": "tse-ma-RITES"
+    "pronunciation": "ZEM-uh-rites"
   },
   "Hamathites": {
     "pronunciation": "KHAM-a-thites"
@@ -242,14 +245,17 @@
   "Lasha": {
     "pronunciation": "LEH-shah"
   },
+  "Arpachshad": {
+    "pronunciation": "ar-PAK-shad"
+  },
   "Arphaxad": {
     "pronunciation": "ar-PAK-shad"
   },
   "Uz": {
-    "pronunciation": "UHzh"
+    "pronunciation": "UHZ"
   },
   "Hul": {
-    "pronunciation": "khool"
+    "pronunciation": "KHOOL"
   },
   "Gether": {
     "pronunciation": "GEH-ther"
@@ -309,7 +315,7 @@
     "pronunciation": "yis-KAH"
   },
   "Gittites": {
-    "pronunciation": "git-TEETH"
+    "pronunciation": "GIT-ites"
   },
   "Ararat": {
     "pronunciation": "ar-AW-rat"
@@ -379,5 +385,29 @@
   },
   "Shem": {
     "pronunciation": "SHEM"
+  },
+  "Hivites": {
+    "pronunciation": "HIE-vites"
+  },
+  "Hivite": {
+    "pronunciation": "HIE-vite"
+  },
+  "Canaanite": {
+    "pronunciation": "KAY-nuh-nite"
+  },
+  "Gomorrah": {
+    "pronunciation": "guh-MOR-uh"
+  },
+  "Asshur": {
+    "pronunciation": "ASH-er"
+  },
+  "Mash": {
+    "pronunciation": "MASH"
+  },
+  "Amorites": {
+    "pronunciation": "AM-uh-rites"
+  },
+  "Amorite": {
+    "pronunciation": "AM-uh-rite"
   }
 }
