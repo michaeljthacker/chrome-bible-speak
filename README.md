@@ -97,6 +97,12 @@ For biblical names **not available on BibleSpeak.org**, you can add custom pronu
 
 **Validation**: The build script automatically validates `manual_pronunciations.json` before packaging to prevent broken entries.
 
+## Future Features
+
+### AI-Assisted Pronunciation Generation
+
+We're planning to add AI-powered pronunciation generation for biblical names not available on BibleSpeak.org. This tool will use OpenAI or similar APIs with example-based prompting—feeding the AI 10-20 existing BibleSpeak pronunciations and asking it to generate similar phonetic spellings for new names. This will maintain consistency with our current pronunciation style while expanding coverage to rare Old Testament names and other biblical terms. **Status**: Planned, not yet implemented.
+
 ## Technology Stack
 
 - **Manifest V3** Chrome Extension

@@ -11,3 +11,7 @@ bible-name-aid-dist.zip
 
 # Ignore test HTML files (for local manual testing only)
 test-html/
+
+# Environment files (API keys, secrets)
+.env
+.env.local
