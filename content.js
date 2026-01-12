@@ -26,11 +26,21 @@ if (chrome && chrome.storage && chrome.storage.local) {
 }
 
 function loadAndCheckNames() {
-fetch(chrome.runtime.getURL('names_pronunciations.json'))
-  .then(response => response.json())
-  .then(data => {
-    console.log('JSON data loaded:', data);
-    jsonData = data;
+  // Load both auto-scraped and manual pronunciation files in parallel
+  Promise.all([
+    fetch(chrome.runtime.getURL('names_pronunciations.json')).then(r => r.json()),
+    fetch(chrome.runtime.getURL('manual_pronunciations.json'))
+      .then(r => r.json())
+      .catch(() => {
+        console.log('No manual pronunciations file found, using auto-scraped data only');
+        return {}; // Graceful fallback
+      })
+  ])
+  .then(([autoData, manualData]) => {
+    // BibleSpeak data takes precedence over manual entries
+    jsonData = { ...manualData, ...autoData };
+    
+    console.log(`Loaded ${Object.keys(autoData).length} auto-scraped + ${Object.keys(manualData).length} manual pronunciations`);
     
     // Skip if no body element (e.g., viewing SVG/XML files directly)
     if (!document.body) {
@@ -38,7 +48,7 @@ fetch(chrome.runtime.getURL('names_pronunciations.json'))
       return;
     }
     
-    const names = Object.keys(data);
+    const names = Object.keys(jsonData);
     const bodyText = document.body.innerText;
 
     // Find all names present on the page (using word boundaries to avoid false matches)
@@ -687,15 +697,26 @@ function enableTool(data, namesToEnable) {
             const match = matches[index];
             const matchedName = match.substring(0, match.indexOf(' ('));
             
-            const link = document.createElement('a');
-            link.href = info.link;
-            link.target = '_blank';
-            link.style.cssText = 'color: #4285f4 !important; text-decoration: none !important; font-style: italic !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important;';
-            link.textContent = info.pronunciation;
-            
             const wrapper = document.createDocumentFragment();
             wrapper.appendChild(document.createTextNode(`${matchedName} (`));
-            wrapper.appendChild(link);
+            
+            // Conditional link rendering based on data source
+            if (info.link) {
+              // Auto-scraped from BibleSpeak: create hyperlink
+              const link = document.createElement('a');
+              link.href = info.link;
+              link.target = '_blank';
+              link.style.cssText = 'color: #4285f4 !important; text-decoration: none !important; font-style: italic !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important;';
+              link.textContent = info.pronunciation;
+              wrapper.appendChild(link);
+            } else {
+              // Manual entry: plain italic text (no link)
+              const span = document.createElement('span');
+              span.style.cssText = 'color: #666 !important; font-style: italic !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important;';
+              span.textContent = info.pronunciation;
+              wrapper.appendChild(span);
+            }
+            
             wrapper.appendChild(document.createTextNode(')'));
             
             fragment.appendChild(wrapper);
