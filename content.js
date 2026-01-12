@@ -43,6 +43,7 @@ fetch(chrome.runtime.getURL('names_pronunciations.json'))
 
     // Find all names present on the page (using word boundaries to avoid false matches)
     // Note: Word boundaries mean plurals won't match (e.g., "Pharisees" won't match "Pharisee")
+    // Case-insensitive matching ('i' flag) - must stay synchronized with replacement logic
     names.forEach(name => {
       const regex = new RegExp(`\\b${name}\\b`, 'i');
       if (regex.test(bodyText)) {
@@ -583,10 +584,13 @@ function enableTool(data, namesToEnable) {
     let modified = false;
     
     newNames.forEach(name => {
-      const regex = new RegExp(`\\b${name}\\b`, 'g');
+      // Use 'gi' flags to match case-insensitively (consistent with detection phase at line 47)
+      // Capture possessive 's as part of the match for natural rendering
+      const regex = new RegExp(`\\b${name}('s)?\\b`, 'gi');
       if (regex.test(text)) {
         const info = nameMap[name];
-        const replacement = `${name} (${info.pronunciation})`;
+        // Use $0 to preserve the matched form (with or without 's, and original case)
+        const replacement = `$0 (${info.pronunciation})`;
         text = text.replace(regex, replacement);
         modified = true;
       }
@@ -632,7 +636,10 @@ function enableTool(data, namesToEnable) {
   // Now add the links in a second pass
   newNames.forEach(name => {
     const info = nameMap[name];
-    const regex = new RegExp(`\\b${name} \\(${info.pronunciation.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\)`, 'g');
+    // Match name with optional possessive followed by pronunciation
+    // Use 'gi' flags for case-insensitive matching
+    const escapedPronun = info.pronunciation.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`\\b${name}('s)? \\(${escapedPronun}\\)`, 'gi');
     
     // Find all text nodes containing the pattern
     const walker = document.createTreeWalker(

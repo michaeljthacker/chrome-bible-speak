@@ -8,3 +8,6 @@ venv/
 # Ignore build output
 dist/
 bible-name-aid-dist.zip
+
+# Ignore test files (for local manual testing only)
+test-phase1.html
