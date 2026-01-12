@@ -39,6 +39,7 @@
     {
       "resources": [
         "names_pronunciations.json",
+        "manual_pronunciations.json",
         "icons/BibleSpeakIcon_32.png"
       ],
       "matches": ["<all_urls>"]

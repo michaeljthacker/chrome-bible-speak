@@ -26,11 +26,21 @@ if (chrome && chrome.storage && chrome.storage.local) {
 }
 
 function loadAndCheckNames() {
-fetch(chrome.runtime.getURL('names_pronunciations.json'))
-  .then(response => response.json())
-  .then(data => {
-    console.log('JSON data loaded:', data);
-    jsonData = data;
+  // Load both auto-scraped and manual pronunciation files in parallel
+  Promise.all([
+    fetch(chrome.runtime.getURL('names_pronunciations.json')).then(r => r.json()),
+    fetch(chrome.runtime.getURL('manual_pronunciations.json'))
+      .then(r => r.json())
+      .catch(() => {
+        console.log('No manual pronunciations file found, using auto-scraped data only');
+        return {}; // Graceful fallback
+      })
+  ])
+  .then(([autoData, manualData]) => {
+    // BibleSpeak data takes precedence over manual entries
+    jsonData = { ...manualData, ...autoData };
+    
+    console.log(`Loaded ${Object.keys(autoData).length} auto-scraped + ${Object.keys(manualData).length} manual pronunciations`);
     
     // Skip if no body element (e.g., viewing SVG/XML files directly)
     if (!document.body) {
@@ -38,11 +48,12 @@ fetch(chrome.runtime.getURL('names_pronunciations.json'))
       return;
     }
     
-    const names = Object.keys(data);
+    const names = Object.keys(jsonData);
     const bodyText = document.body.innerText;
 
     // Find all names present on the page (using word boundaries to avoid false matches)
     // Note: Word boundaries mean plurals won't match (e.g., "Pharisees" won't match "Pharisee")
+    // Case-insensitive matching ('i' flag) - must stay synchronized with replacement logic
     names.forEach(name => {
       const regex = new RegExp(`\\b${name}\\b`, 'i');
       if (regex.test(bodyText)) {
@@ -583,11 +594,17 @@ function enableTool(data, namesToEnable) {
     let modified = false;
     
     newNames.forEach(name => {
-      const regex = new RegExp(`\\b${name}\\b`, 'g');
-      if (regex.test(text)) {
+      // Use 'gi' flags to match case-insensitively (consistent with detection phase at line 47)
+      // Capture possessive 's or ' as part of the match for natural rendering
+      // Use lookahead (?=\W|$) instead of \b after possessive since \b fails after apostrophe
+      const testRegex = new RegExp(`\\b${name}(?:'s|')?(?=\\W|$)`, 'i');
+      if (testRegex.test(text)) {
         const info = nameMap[name];
-        const replacement = `${name} (${info.pronunciation})`;
-        text = text.replace(regex, replacement);
+        // Create fresh regex for replacement (avoid lastIndex issues from test())
+        const replaceRegex = new RegExp(`\\b${name}(?:'s|')?(?=\\W|$)`, 'gi');
+        // Use $& to preserve the matched form (with or without possessive, and original case)
+        const replacement = `$& (${info.pronunciation})`;
+        text = text.replace(replaceRegex, replacement);
         modified = true;
       }
     });
@@ -632,7 +649,11 @@ function enableTool(data, namesToEnable) {
   // Now add the links in a second pass
   newNames.forEach(name => {
     const info = nameMap[name];
-    const regex = new RegExp(`\\b${name} \\(${info.pronunciation.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\)`, 'g');
+    // Match name with optional possessive ('s or ') followed by pronunciation
+    // Use 'gi' flags for case-insensitive matching
+    // Use lookahead for word boundary since \b fails after apostrophe
+    const escapedPronun = info.pronunciation.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`\\b${name}(?:'s|')?(?=\\W|$) \\(${escapedPronun}\\)`, 'gi');
     
     // Find all text nodes containing the pattern
     const walker = document.createTreeWalker(
@@ -671,15 +692,31 @@ function enableTool(data, namesToEnable) {
             fragment.appendChild(document.createTextNode(part));
           }
           if (index < matches.length) {
-            const link = document.createElement('a');
-            link.href = info.link;
-            link.target = '_blank';
-            link.style.cssText = 'color: #4285f4 !important; text-decoration: none !important; font-style: italic !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important;';
-            link.textContent = info.pronunciation;
+            // Extract the matched name (preserving case and possessive) from the match
+            // matches[index] is like "Matthew's (MATH-yoo)" or "bitumen (BIH-too-men)"
+            const match = matches[index];
+            const matchedName = match.substring(0, match.indexOf(' ('));
             
             const wrapper = document.createDocumentFragment();
-            wrapper.appendChild(document.createTextNode(`${name} (`));
-            wrapper.appendChild(link);
+            wrapper.appendChild(document.createTextNode(`${matchedName} (`));
+            
+            // Conditional link rendering based on data source
+            if (info.link) {
+              // Auto-scraped from BibleSpeak: create hyperlink
+              const link = document.createElement('a');
+              link.href = info.link;
+              link.target = '_blank';
+              link.style.cssText = 'color: #4285f4 !important; text-decoration: none !important; font-style: italic !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important;';
+              link.textContent = info.pronunciation;
+              wrapper.appendChild(link);
+            } else {
+              // Manual entry: plain italic text (no link)
+              const span = document.createElement('span');
+              span.style.cssText = 'color: #666 !important; font-style: italic !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important;';
+              span.textContent = info.pronunciation;
+              wrapper.appendChild(span);
+            }
+            
             wrapper.appendChild(document.createTextNode(')'));
             
             fragment.appendChild(wrapper);

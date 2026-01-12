@@ -61,7 +61,11 @@ When enabled, the tool adds pronunciation guides directly in the text; each bibl
 
 ## Updating the Pronunciation Database
 
-The extension includes a Python script to refresh the pronunciation data from BibleSpeak.org:
+The extension uses two pronunciation data sources:
+
+### Auto-Scraped Data (BibleSpeak.org)
+
+The primary pronunciation database is automatically maintained via a Python script that scrapes BibleSpeak.org:
 
 ```sh
 python updateWordListJSON.py
@@ -71,6 +75,33 @@ This script:
 1. Scrapes biblical names from `https://biblespeak.org/{letter}-words/` for each letter
 2. Retrieves phonetic pronunciations from `https://biblespeak.org/{name}-pronunciation/`
 3. Updates `names_pronunciations.json` with names, pronunciations, and source links
+
+### Manual Pronunciations
+
+For biblical names **not available on BibleSpeak.org**, you can add custom pronunciations to `manual_pronunciations.json`.
+
+**Quick start**:
+```json
+{
+  "Mahershalalhashbaz": {
+    "pronunciation": "MAY-hur-SHAL-al-HASH-baz"
+  }
+}
+```
+
+**Key points**:
+- Manual entries serve as a **gap-filler** for missing names
+- BibleSpeak.org data always takes precedence (includes audio pronunciation links)
+- Manual entries display without hyperlinks (plain italic text)
+- See [MANUAL_PRONUNCIATIONS.md](MANUAL_PRONUNCIATIONS.md) for complete curation guide
+
+**Validation**: The build script automatically validates `manual_pronunciations.json` before packaging to prevent broken entries.
+
+## Future Features
+
+### AI-Assisted Pronunciation Generation
+
+We're planning to add AI-powered pronunciation generation for biblical names not available on BibleSpeak.org. This tool will use OpenAI or similar APIs with example-based prompting—feeding the AI 10-20 existing BibleSpeak pronunciations and asking it to generate similar phonetic spellings for new names. This will maintain consistency with our current pronunciation style while expanding coverage to rare Old Testament names and other biblical terms. **Status**: Planned, not yet implemented.
 
 ## Technology Stack
 
