@@ -585,13 +585,16 @@ function enableTool(data, namesToEnable) {
     
     newNames.forEach(name => {
       // Use 'gi' flags to match case-insensitively (consistent with detection phase at line 47)
-      // Capture possessive 's as part of the match for natural rendering
-      const regex = new RegExp(`\\b${name}('s)?\\b`, 'gi');
-      if (regex.test(text)) {
+      // Capture possessive 's or ' as part of the match for natural rendering
+      // Use lookahead (?=\W|$) instead of \b after possessive since \b fails after apostrophe
+      const testRegex = new RegExp(`\\b${name}(?:'s|')?(?=\\W|$)`, 'i');
+      if (testRegex.test(text)) {
         const info = nameMap[name];
-        // Use $0 to preserve the matched form (with or without 's, and original case)
-        const replacement = `$0 (${info.pronunciation})`;
-        text = text.replace(regex, replacement);
+        // Create fresh regex for replacement (avoid lastIndex issues from test())
+        const replaceRegex = new RegExp(`\\b${name}(?:'s|')?(?=\\W|$)`, 'gi');
+        // Use $& to preserve the matched form (with or without possessive, and original case)
+        const replacement = `$& (${info.pronunciation})`;
+        text = text.replace(replaceRegex, replacement);
         modified = true;
       }
     });
@@ -636,10 +639,11 @@ function enableTool(data, namesToEnable) {
   // Now add the links in a second pass
   newNames.forEach(name => {
     const info = nameMap[name];
-    // Match name with optional possessive followed by pronunciation
+    // Match name with optional possessive ('s or ') followed by pronunciation
     // Use 'gi' flags for case-insensitive matching
+    // Use lookahead for word boundary since \b fails after apostrophe
     const escapedPronun = info.pronunciation.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const regex = new RegExp(`\\b${name}('s)? \\(${escapedPronun}\\)`, 'gi');
+    const regex = new RegExp(`\\b${name}(?:'s|')?(?=\\W|$) \\(${escapedPronun}\\)`, 'gi');
     
     // Find all text nodes containing the pattern
     const walker = document.createTreeWalker(
@@ -678,6 +682,11 @@ function enableTool(data, namesToEnable) {
             fragment.appendChild(document.createTextNode(part));
           }
           if (index < matches.length) {
+            // Extract the matched name (preserving case and possessive) from the match
+            // matches[index] is like "Matthew's (MATH-yoo)" or "bitumen (BIH-too-men)"
+            const match = matches[index];
+            const matchedName = match.substring(0, match.indexOf(' ('));
+            
             const link = document.createElement('a');
             link.href = info.link;
             link.target = '_blank';
@@ -685,7 +694,7 @@ function enableTool(data, namesToEnable) {
             link.textContent = info.pronunciation;
             
             const wrapper = document.createDocumentFragment();
-            wrapper.appendChild(document.createTextNode(`${name} (`));
+            wrapper.appendChild(document.createTextNode(`${matchedName} (`));
             wrapper.appendChild(link);
             wrapper.appendChild(document.createTextNode(')'));
             
