@@ -9,5 +9,5 @@ venv/
 dist/
 bible-name-aid-dist.zip
 
-# Ignore test files (for local manual testing only)
-test-phase1.html
+# Ignore test HTML files (for local manual testing only)
+test-html/
