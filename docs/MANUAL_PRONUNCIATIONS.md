@@ -112,7 +112,7 @@ Consult [BibleSpeak.org](https://biblespeak.org) for similar names to match the 
 Before packaging the extension, the build script automatically validates `manual_pronunciations.json`:
 
 ```sh
-python validate_manual_pronunciations.py
+python scripts/validate_manual_pronunciations.py
 ```
 
 The validator checks:

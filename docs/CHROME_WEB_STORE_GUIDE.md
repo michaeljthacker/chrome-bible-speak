@@ -3,7 +3,7 @@
 ## ✅ Completed (Ready for Submission)
 
 ### Build System
-- ✅ `build_extension.ps1` - PowerShell build script that creates `dist/` folder and ZIP
+- ✅ `scripts/build_extension.ps1` - PowerShell build script that creates `dist/` folder and ZIP
 - ✅ `.gitignore` updated to exclude `dist/` and `*.zip`
 - ✅ Only essential files copied to dist (no Python scripts, no dev files)
 
@@ -31,7 +31,7 @@
 ### 1. Build the Extension
 ```powershell
 # Run from project root
-.\build_extension.ps1
+.\scripts\build_extension.ps1
 ```
 
 This creates:
@@ -160,7 +160,7 @@ storage: Required to save user preferences (on/off state, selected names)
 
 ```powershell
 # Build for submission
-.\build_extension.ps1
+.\scripts\build_extension.ps1
 
 # Test that ZIP extracts correctly
 Expand-Archive -Path bible-name-aid-dist.zip -DestinationPath test-extract -Force

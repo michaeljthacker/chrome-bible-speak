@@ -68,7 +68,7 @@ The extension uses two pronunciation data sources:
 The primary pronunciation database is automatically maintained via a Python script that scrapes BibleSpeak.org:
 
 ```sh
-python updateWordListJSON.py
+python scripts/updateWordListJSON.py
 ```
 
 This script:
@@ -93,7 +93,7 @@ For biblical names **not available on BibleSpeak.org**, you can add custom pronu
 - Manual entries serve as a **gap-filler** for missing names
 - BibleSpeak.org data always takes precedence (includes audio pronunciation links)
 - Manual entries display without hyperlinks (plain italic text)
-- See [MANUAL_PRONUNCIATIONS.md](MANUAL_PRONUNCIATIONS.md) for complete curation guide
+- See [MANUAL_PRONUNCIATIONS.md](docs/MANUAL_PRONUNCIATIONS.md) for complete curation guide
 
 **Validation**: The build script automatically validates `manual_pronunciations.json` before packaging to prevent broken entries.
 

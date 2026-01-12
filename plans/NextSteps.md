@@ -18,7 +18,7 @@
 - **Simplified tooling**: No need to add metadata flags or complex merge logic within a single file
 
 **File Structure**:
-- `names_pronunciations.json` — Existing, auto-scraped from BibleSpeak.org (managed by `updateWordListJSON.py`)
+- `names_pronunciations.json` — Existing, auto-scraped from BibleSpeak.org (managed by `scripts/updateWordListJSON.py`)
 - `manual_pronunciations.json` — New, hand-curated Old Testament names and other missing entries
 
 **Trade-offs**:
@@ -189,7 +189,7 @@ const mergedData = { ...manualData, ...autoScrapedData };
 
 **Tasks**:
 
-**3.1** Create `MANUAL_PRONUNCIATIONS.md` documentation file  
+**3.1** Create `docs/MANUAL_PRONUNCIATIONS.md` documentation file  
 - Explain purpose of manual pronunciations (gap-filler for missing BibleSpeak entries)
 - Provide step-by-step instructions for adding new entries
 - Include example entry with proper JSON formatting
@@ -200,7 +200,7 @@ const mergedData = { ...manualData, ...autoScrapedData };
 **3.2** Update [README.md](../README.md)  
 - Add section: "Manual Pronunciations"
 - Describe dual-source architecture with BibleSpeak precedence
-- Link to `MANUAL_PRONUNCIATIONS.md` for curation guide
+- Link to `docs/MANUAL_PRONUNCIATIONS.md` for curation guide
 - Update "Updating the Pronunciation Database" section to mention both files
 
 **3.3** Add schema validation script (optional but recommended)  
@@ -220,8 +220,8 @@ const mergedData = { ...manualData, ...autoScrapedData };
 
 **Tasks**:
 
-**4.1** Create `generateManualPronunciations.py` stub script  
-- File location: Project root
+**4.1** Create `scripts/generateManualPronunciations.py` stub script  
+- File location: scripts/ folder
 - Stub content:
   - Script header with description
   - Environment variable placeholders for API keys (`OPENAI_API_KEY`, etc.)
@@ -460,7 +460,7 @@ nodesToReplace.forEach(node => {
 
 ### **C.5 AI Generation Script Stub**
 
-**`generateManualPronunciations.py`** (Phase 4, Task 4.1):
+**`scripts/generateManualPronunciations.py`** (Phase 4, Task 4.1):
 
 ```python
 #!/usr/bin/env python3
@@ -480,8 +480,8 @@ Approach:
 5. Append to manual_pronunciations.json
 
 Usage (future):
-  python generateManualPronunciations.py --name "Mahershalalhashbaz"
-  python generateManualPronunciations.py --batch names_to_add.txt
+  python scripts/generateManualPronunciations.py --name "Mahershalalhashbaz"
+  python scripts/generateManualPronunciations.py --batch names_to_add.txt
   
 Environment Variables Required:
   OPENAI_API_KEY - API key for OpenAI service (or similar provider)
@@ -616,7 +616,7 @@ if __name__ == "__main__":
 
 ### **Phase 3 Success Criteria (Documentation)**
 
-✅ **AC-3.1**: `MANUAL_PRONUNCIATIONS.md` file created with complete curation instructions  
+✅ **AC-3.1**: `docs/MANUAL_PRONUNCIATIONS.md` file created with complete curation instructions  
 ✅ **AC-3.2**: Documentation explains BibleSpeak precedence policy  
 ✅ **AC-3.3**: [README.md](../README.md) updated to reference dual-source architecture  
 ✅ **AC-3.4**: JSON validation script created (if implemented) and runs without errors  
@@ -630,7 +630,7 @@ if __name__ == "__main__":
 
 ### **Phase 4 Success Criteria (AI Stub)**
 
-✅ **AC-4.1**: `generateManualPronunciations.py` stub file created in project root  
+✅ **AC-4.1**: `scripts/generateManualPronunciations.py` stub file created in scripts/ folder  
 ✅ **AC-4.2**: Stub includes complete function signatures and docstrings  
 ✅ **AC-4.3**: Stub documents example-based prompting approach  
 ✅ **AC-4.4**: `.gitignore` updated to exclude `.env` files  
@@ -662,7 +662,7 @@ if __name__ == "__main__":
 - **Status**: CLARIFIED  
 - **Decision**: BibleSpeak data overrides manual entries (PM preference)
 - **Rationale**: BibleSpeak has audio links and is authoritative source
-- **Mitigation**: Document merge behavior clearly in `MANUAL_PRONUNCIATIONS.md`
+- **Mitigation**: Document merge behavior clearly in `docs/MANUAL_PRONUNCIATIONS.md`
 
 **R4**: Second-pass regex may need case-insensitivity and possessive handling  
 - **Status**: TO BE VERIFIED in Phase 1, Task 1.3  
@@ -732,13 +732,13 @@ Phase 1 can be deployed independently before Phases 2-4 are complete, providing 
 - [ ] Task 2.4: Test multi-source with name collision scenarios
 
 ### Phase 3: Documentation
-- [ ] Task 3.1: Write `MANUAL_PRONUNCIATIONS.md`
+- [ ] Task 3.1: Write `docs/MANUAL_PRONUNCIATIONS.md`
 - [ ] Task 3.2: Update README.md
 - [ ] Task 3.3: Create JSON validation script (optional)
 - [ ] User acceptance test: Non-engineer adds manual entry
 
 ### Phase 4: AI Stub
-- [ ] Task 4.1: Create `generateManualPronunciations.py` stub
+- [ ] Task 4.1: Create `scripts/generateManualPronunciations.py` stub
 - [ ] Task 4.2: Update `.gitignore` for `.env`
 - [ ] Task 4.3: Add Future Features section to README
 
