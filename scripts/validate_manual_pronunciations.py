@@ -62,7 +62,7 @@ def validate_manual_pronunciations() -> bool:
     
     # Check file exists
     if not file_path.exists():
-        print(f"✓ {MANUAL_FILE} not found (optional file)")
+        print(f"[OK] {MANUAL_FILE} not found (optional file)")
         return True
     
     print(f"Validating {MANUAL_FILE}...")
@@ -72,15 +72,15 @@ def validate_manual_pronunciations() -> bool:
         with open(file_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
     except json.JSONDecodeError as e:
-        print(f"✗ Invalid JSON syntax: {e}")
+        print(f"[ERROR] Invalid JSON syntax: {e}")
         return False
     except Exception as e:
-        print(f"✗ Error reading file: {e}")
+        print(f"[ERROR] Error reading file: {e}")
         return False
     
     # Check it's a dictionary
     if not isinstance(data, dict):
-        print(f"✗ Root element must be a JSON object/dictionary")
+        print(f"[ERROR] Root element must be a JSON object/dictionary")
         return False
     
     # Validate each entry
@@ -118,18 +118,18 @@ def validate_manual_pronunciations() -> bool:
     
     # Report results
     if errors:
-        print(f"\n✗ Validation failed with {len(errors)} error(s):\n")
+        print(f"\n[ERROR] Validation failed with {len(errors)} error(s):\n")
         for error in errors:
             print(error)
         return False
     
     if warnings:
-        print(f"\n⚠ Validation passed with {len(warnings)} warning(s):\n")
+        print(f"\n[WARNING] Validation passed with {len(warnings)} warning(s):\n")
         for warning in warnings:
             print(warning)
         print("\nWarnings do not prevent packaging, but check pronunciation formatting.")
     else:
-        print(f"\n✓ Validation passed: {len(data)} entries validated successfully")
+        print(f"\n[OK] Validation passed: {len(data)} entries validated successfully")
     
     return True
 
