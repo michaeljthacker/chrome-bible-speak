@@ -62,6 +62,9 @@ function loadAndCheckNames() {
       }
     });
 
+    // Sort names alphabetically for better UI display
+    foundNames.sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));
+
     // Only show toast if names were found
     if (foundNames.length > 0) {
       // Ensure DOM is fully loaded before showing toast
@@ -503,7 +506,7 @@ function disableTool(namesToDisable = null) {
     const pronunciation = info.pronunciation;
     const escapedPronunciation = pronunciation.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     
-    // Find all links with this pronunciation and replace the whole pattern
+    // Find all pronunciation elements (both links and spans) with this pronunciation
     const walker = document.createTreeWalker(
       document.body,
       NodeFilter.SHOW_ELEMENT,
@@ -515,10 +518,13 @@ function disableTool(namesToDisable = null) {
               node.closest('#chrome-bible-speak-bubble')) {
             return NodeFilter.FILTER_REJECT;
           }
-          // Look for our pronunciation links
-          if (node.tagName === 'A' && 
-              node.textContent === pronunciation &&
-              node.href === info.link) {
+          // Look for pronunciation links (auto-scraped) or spans (manual)
+          if ((node.tagName === 'A' || node.tagName === 'SPAN') && 
+              node.textContent === pronunciation) {
+            // For links, verify the href matches (if it has a link property)
+            if (node.tagName === 'A' && info.link && node.href !== info.link) {
+              return NodeFilter.FILTER_SKIP;
+            }
             return NodeFilter.FILTER_ACCEPT;
           }
           return NodeFilter.FILTER_SKIP;
@@ -526,28 +532,34 @@ function disableTool(namesToDisable = null) {
       }
     );
     
-    const linksToRemove = [];
+    const elementsToRemove = [];
     let currentNode;
     while (currentNode = walker.nextNode()) {
-      linksToRemove.push(currentNode);
+      elementsToRemove.push(currentNode);
     }
     
-    linksToRemove.forEach(link => {
-      const parent = link.parentNode;
+    elementsToRemove.forEach(element => {
+      const parent = element.parentNode;
       // Check if preceded by "Name (" and followed by ")"
-      const prevSibling = link.previousSibling;
-      const nextSibling = link.nextSibling;
+      const prevSibling = element.previousSibling;
+      const nextSibling = element.nextSibling;
       
       if (prevSibling && prevSibling.nodeType === Node.TEXT_NODE &&
           nextSibling && nextSibling.nodeType === Node.TEXT_NODE) {
         const prevText = prevSibling.textContent;
         const nextText = nextSibling.textContent;
         
-        if (prevText.endsWith(`${name} (`) && nextText.startsWith(')')) {
-          // Remove the pattern
-          prevSibling.textContent = prevText.slice(0, -2); // Remove " ("
-          nextSibling.textContent = nextText.slice(1); // Remove ")"
-          link.remove();
+        // Match any form of the name (case-insensitive, with or without possessive)
+        const namePattern = new RegExp(`${name}(?:'s|')?\\s*\\($`, 'i');
+        if (namePattern.test(prevText) && nextText.startsWith(')')) {
+          // Remove only " (pronunciation)" but keep the name
+          // Find where " (" starts (just remove the space and opening paren)
+          const lastSpaceParenIndex = prevText.lastIndexOf(' (');
+          if (lastSpaceParenIndex !== -1) {
+            prevSibling.textContent = prevText.slice(0, lastSpaceParenIndex); // Keep text up to " ("
+            nextSibling.textContent = nextText.slice(1); // Remove ")"
+            element.remove();
+          }
         }
       }
     });
