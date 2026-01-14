@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [v1.1.1] - January 13, 2026
+
+### Fixed
+- **Double/Nested Pronunciation Injection**: Fixed critical bug where pronunciations were injected multiple times or nested within other pronunciations (e.g., "Sheba" within "Beer-sheba", "Ham" within "Abraham")
+- **Pronunciation Cleanup**: Improved reliability when disabling pronunciations
+
+### Technical Changes
+- Sort names by length before processing to prioritize compound names
+- Process all names in single pass per text node with overlap filtering
+- Wrap pronunciations in `.bna-pronunciation-marker` spans to prevent re-processing
+
+---
+
 ## [v1.1.0] - January 12, 2026
 
 ### Added
