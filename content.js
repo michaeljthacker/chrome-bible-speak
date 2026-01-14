@@ -506,61 +506,29 @@ function disableTool(namesToDisable = null) {
     const pronunciation = info.pronunciation;
     const escapedPronunciation = pronunciation.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     
-    // Find all pronunciation elements (both links and spans) with this pronunciation
-    const walker = document.createTreeWalker(
-      document.body,
-      NodeFilter.SHOW_ELEMENT,
-      {
-        acceptNode: function(node) {
-          // Skip our extension elements
-          if (node.closest('#chrome-bible-speak-toast') ||
-              node.closest('#chrome-bible-speak-selection') ||
-              node.closest('#chrome-bible-speak-bubble')) {
-            return NodeFilter.FILTER_REJECT;
-          }
-          // Look for pronunciation links (auto-scraped) or spans (manual)
-          if ((node.tagName === 'A' || node.tagName === 'SPAN') && 
-              node.textContent === pronunciation) {
-            // For links, verify the href matches (if it has a link property)
-            if (node.tagName === 'A' && info.link && node.href !== info.link) {
-              return NodeFilter.FILTER_SKIP;
-            }
-            return NodeFilter.FILTER_ACCEPT;
-          }
-          return NodeFilter.FILTER_SKIP;
-        }
-      }
-    );
+    // Find all marker spans containing pronunciations for this name
+    const markerSpans = document.querySelectorAll('.bna-pronunciation-marker');
     
-    const elementsToRemove = [];
-    let currentNode;
-    while (currentNode = walker.nextNode()) {
-      elementsToRemove.push(currentNode);
+    // Find marker spans that contain this specific name's pronunciation
+    const matchingMarkers = [];
+    for (const marker of markerSpans) {
+      const fullText = marker.textContent;
+      // Check if this marker is for the current name by matching the pattern
+      // Format is "Name (pronunciation)" or "Name's (pronunciation)"
+      const namePattern = new RegExp(`^${name}(?:'s)?\\s*\\(${escapedPronunciation}\\)$`, 'i');
+      if (namePattern.test(fullText)) {
+        matchingMarkers.push(marker);
+      }
     }
     
-    elementsToRemove.forEach(element => {
-      const parent = element.parentNode;
-      // Check if preceded by "Name (" and followed by ")"
-      const prevSibling = element.previousSibling;
-      const nextSibling = element.nextSibling;
-      
-      if (prevSibling && prevSibling.nodeType === Node.TEXT_NODE &&
-          nextSibling && nextSibling.nodeType === Node.TEXT_NODE) {
-        const prevText = prevSibling.textContent;
-        const nextText = nextSibling.textContent;
-        
-        // Match any form of the name (case-insensitive, with or without possessive)
-        const namePattern = new RegExp(`${name}(?:'s|')?\\s*\\($`, 'i');
-        if (namePattern.test(prevText) && nextText.startsWith(')')) {
-          // Remove only " (pronunciation)" but keep the name
-          // Find where " (" starts (just remove the space and opening paren)
-          const lastSpaceParenIndex = prevText.lastIndexOf(' (');
-          if (lastSpaceParenIndex !== -1) {
-            prevSibling.textContent = prevText.slice(0, lastSpaceParenIndex); // Keep text up to " ("
-            nextSibling.textContent = nextText.slice(1); // Remove ")"
-            element.remove();
-          }
-        }
+    // Remove the matching marker spans and replace with just the name
+    matchingMarkers.forEach(markerSpan => {
+      const fullText = markerSpan.textContent;
+      const openParenIndex = fullText.indexOf(' (');
+      if (openParenIndex !== -1) {
+        const nameOnly = fullText.substring(0, openParenIndex);
+        const textNode = document.createTextNode(nameOnly);
+        markerSpan.parentNode.replaceChild(textNode, markerSpan);
       }
     });
   });
@@ -589,7 +557,11 @@ function enableTool(data, namesToEnable) {
     return;
   }
   
-  console.log('New names to enable:', newNames);
+  // Sort names by length (longest first) to prevent substring matches
+  // e.g., "Beer-Sheba" should be processed before "Sheba"
+  newNames.sort((a, b) => b.length - a.length);
+  
+  console.log('New names to enable (sorted by length):', newNames);
 
   // Create a map for quick lookup
   const nameMap = {};
@@ -605,34 +577,68 @@ function enableTool(data, namesToEnable) {
     let text = node.textContent;
     let modified = false;
     
+    // Process all names in order (longest first) but do all replacements before updating DOM
+    // Build a list of matches with their positions
+    const matches = [];
+    
     newNames.forEach(name => {
-      // Use 'gi' flags to match case-insensitively (consistent with detection phase at line 47)
-      // Capture possessive 's or ' as part of the match for natural rendering
-      // Use lookahead (?=\W|$) instead of \b after possessive since \b fails after apostrophe
-      const testRegex = new RegExp(`\\b${name}(?:'s|')?(?=\\W|$)`, 'i');
-      if (testRegex.test(text)) {
-        const info = nameMap[name];
-        // Create fresh regex for replacement (avoid lastIndex issues from test())
-        const replaceRegex = new RegExp(`\\b${name}(?:'s|')?(?=\\W|$)`, 'gi');
-        // Use $& to preserve the matched form (with or without possessive, and original case)
-        const replacement = `$& (${info.pronunciation})`;
-        text = text.replace(replaceRegex, replacement);
-        modified = true;
+      const regex = new RegExp(`\\b${name}(?:'s|')?(?=\\W|$)`, 'gi');
+      let match;
+      while ((match = regex.exec(text)) !== null) {
+        matches.push({
+          index: match.index,
+          length: match[0].length,
+          matchedText: match[0],
+          name: name,
+          pronunciation: nameMap[name].pronunciation
+        });
       }
     });
     
-    if (modified) {
-      // Create a temporary container to parse the new content
-      const span = document.createElement('span');
-      span.innerHTML = text;
-      
-      // Replace text node with new content
-      const parent = node.parentNode;
-      while (span.firstChild) {
-        parent.insertBefore(span.firstChild, node);
+    if (matches.length === 0) return;
+    
+    // Sort matches by position (to process left to right)
+    matches.sort((a, b) => a.index - b.index);
+    
+    // Remove overlapping matches, keeping the longest/first one at each position
+    const filteredMatches = [];
+    let lastEndIndex = -1;
+    
+    for (const match of matches) {
+      // Skip if this match overlaps with the previous accepted match
+      if (match.index < lastEndIndex) {
+        continue;
       }
-      parent.removeChild(node);
+      filteredMatches.push(match);
+      lastEndIndex = match.index + match.length;
     }
+    
+    if (filteredMatches.length === 0) return;
+    
+    // Build the new text with pronunciations inserted
+    let newText = '';
+    let currentIndex = 0;
+    
+    filteredMatches.forEach(match => {
+      // Add text before this match
+      newText += text.substring(currentIndex, match.index);
+      // Add the matched name with pronunciation
+      newText += `${match.matchedText} (${match.pronunciation})`;
+      currentIndex = match.index + match.length;
+    });
+    
+    // Add remaining text after last match
+    newText += text.substring(currentIndex);
+    
+    // Replace text node with new content
+    const span = document.createElement('span');
+    span.innerHTML = newText;
+    
+    const parent = node.parentNode;
+    while (span.firstChild) {
+      parent.insertBefore(span.firstChild, node);
+    }
+    parent.removeChild(node);
   }
 
   // Function to traverse DOM and process text nodes
@@ -644,7 +650,19 @@ function enableTool(data, namesToEnable) {
       return;
     }
     
+    // Skip nodes inside already-processed pronunciations
+    if (node.nodeType === Node.ELEMENT_NODE && 
+        (node.classList?.contains('bna-pronunciation-marker') || 
+         node.closest?.('.bna-pronunciation-marker'))) {
+      return;
+    }
+    
     if (node.nodeType === Node.TEXT_NODE) {
+      // Skip if parent is a pronunciation marker
+      if (node.parentElement?.classList?.contains('bna-pronunciation-marker') ||
+          node.parentElement?.closest?.('.bna-pronunciation-marker')) {
+        return;
+      }
       processTextNode(node);
     } else if (node.nodeType === Node.ELEMENT_NODE) {
       // Don't traverse script or style tags
@@ -709,8 +727,12 @@ function enableTool(data, namesToEnable) {
             const match = matches[index];
             const matchedName = match.substring(0, match.indexOf(' ('));
             
-            const wrapper = document.createDocumentFragment();
-            wrapper.appendChild(document.createTextNode(`${matchedName} (`));
+            // Create a wrapper span to mark this as processed
+            const markerSpan = document.createElement('span');
+            markerSpan.className = 'bna-pronunciation-marker';
+            markerSpan.style.cssText = 'display: inline !important; font: inherit !important; color: inherit !important;';
+            
+            markerSpan.appendChild(document.createTextNode(`${matchedName} (`));
             
             // Conditional link rendering based on data source
             if (info.link) {
@@ -720,18 +742,18 @@ function enableTool(data, namesToEnable) {
               link.target = '_blank';
               link.style.cssText = 'color: #4285f4 !important; text-decoration: none !important; font-style: italic !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important;';
               link.textContent = info.pronunciation;
-              wrapper.appendChild(link);
+              markerSpan.appendChild(link);
             } else {
               // Manual entry: plain italic text (no link)
               const span = document.createElement('span');
               span.style.cssText = 'color: #666 !important; font-style: italic !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important;';
               span.textContent = info.pronunciation;
-              wrapper.appendChild(span);
+              markerSpan.appendChild(span);
             }
             
-            wrapper.appendChild(document.createTextNode(')'));
+            markerSpan.appendChild(document.createTextNode(')'));
             
-            fragment.appendChild(wrapper);
+            fragment.appendChild(markerSpan);
           }
         });
         
