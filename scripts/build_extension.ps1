@@ -4,6 +4,14 @@
 
 Write-Host "Building Bible Name Aid extension..." -ForegroundColor Cyan
 
+# Count entries in pronunciation files
+$namesJson = Get-Content "names_pronunciations.json" | ConvertFrom-Json
+$manualJson = Get-Content "manual_pronunciations.json" | ConvertFrom-Json
+$namesCount = @($namesJson.PSObject.Properties).Count
+$manualCount = @($manualJson.PSObject.Properties).Count
+$totalCount = $namesCount + $manualCount
+Write-Host "BibleSpeak.org: $namesCount; Manual: $manualCount; Total: $totalCount" -ForegroundColor White
+
 # Step 1: Validate manual pronunciations
 Write-Host "`n[Step 1/3] Validating manual_pronunciations.json..." -ForegroundColor Cyan
 & python scripts\validate_manual_pronunciations.py
