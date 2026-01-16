@@ -118,14 +118,31 @@ This creates:
 # 4. Select the `dist/` folder
 ```
 
-**Test Checklist:**
-- ✅ Extension loads without errors
-- ✅ Icon appears in toolbar
-- ✅ Popup opens and displays correctly
-- ✅ Pronunciations inject on test pages
-- ✅ Toggle on/off works
-- ✅ Selected names feature works
-- ✅ Links to BibleSpeak.org work
+**Run Smoke Test:**
+1. Open `docs/release-smoke-test.html` in Chrome
+2. Enable all pronunciations via extension popup
+3. Click "RUN AUTOMATED TESTS" button
+4. Verify all automated tests pass
+5. Work through manual test sections (Tests 5-8)
+6. Check browser console (F12) for any errors
+
+**The smoke test covers:**
+- Basic name detection (BibleSpeak.org & manual)
+- Compound names & nested detection prevention
+- Case-insensitive matching
+- Possessive handling
+- Toggle functionality (enable/disable all)
+- Selected names feature
+- Toast notifications
+- Floating bubble UI
+- New names in this release
+- Performance with large passages
+
+**Additional Testing:**
+Test on real Bible study sites:
+- Bible Gateway (biblegateway.com)
+- ESV.org
+- YouVersion (bible.com)
 
 ---
 

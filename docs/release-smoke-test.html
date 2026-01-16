@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Name Aid - Release Smoke Test</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1.8;
+            background: #fafafa;
+        }
+        h1 {
+            color: #1a73e8;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .version {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .instructions {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .instructions h2 {
+            margin-top: 0;
+            color: #856404;
+        }
+        .instructions ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 25px;
+            background: white;
+            border-left: 5px solid #4285f4;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .test-section h2 {
+            color: #333;
+            margin-top: 0;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+        .test-case {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border-left: 3px solid #666;
+        }
+        .test-case h3 {
+            margin-top: 0;
+            color: #555;
+            font-size: 1.1em;
+        }
+        .expected {
+            color: #0a0;
+            font-weight: bold;
+            margin-top: 8px;
+            padding: 8px;
+            background: #e8f5e9;
+            border-radius: 3px;
+        }
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .checklist li:before {
+            content: "☐ ";
+            font-size: 1.2em;
+            margin-right: 8px;
+            color: #666;
+        }
+        .passage {
+            font-size: 1.1em;
+            line-height: 2;
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .note {
+            color: #666;
+            font-size: 0.9em;
+            font-style: italic;
+            margin-top: 8px;
+        }
+        .feature-tag {
+            display: inline-block;
+            padding: 3px 8px;
+            background: #e1f5fe;
+            color: #01579b;
+            border-radius: 3px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+        .test-runner {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .test-runner button {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            background: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin: 10px;
+        }
+        .test-runner button:hover {
+            background: #3367d6;
+        }
+        .test-result {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: left;
+        }
+        .test-result.pass {
+            background: #e8f5e9;
+            color: #2e7d32;
+            border-left: 4px solid #4caf50;
+        }
+        .test-result.fail {
+            background: #ffebee;
+            color: #c62828;
+            border-left: 4px solid #f44336;
+        }
+        .test-result.info {
+            background: #e3f2fd;
+            color: #1565c0;
+            border-left: 4px solid #2196f3;
+        }
+        .test-details {
+            font-size: 0.9em;
+            margin-top: 5px;
+            font-weight: normal;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔬 Bible Name Aid - Release Smoke Test</h1>
+    <div class="version">Test all core features before Chrome Web Store submission</div>
+
+    <div class="test-runner">
+        <h2 style="margin-top: 0;">🤖 Automated Test Runner</h2>
+        <p>Enable pronunciations first, then click to run automated verification:</p>
+        <button onclick="runAutomatedTests()">▶ RUN AUTOMATED TESTS</button>
+        <div id="automated-results"></div>
+    </div>
+
+    <div class="instructions">
+        <h2>📋 Instructions</h2>
+        <ol>
+            <li>Load the extension in Chrome (Developer Mode → Load Unpacked → <code>dist/</code> folder)</li>
+            <li>Open this HTML file in Chrome</li>
+            <li><strong>Enable all pronunciations</strong> via the extension popup</li>
+            <li>Click the <strong>"RUN AUTOMATED TESTS"</strong> button above</li>
+            <li>Verify automated tests pass, then work through manual tests below</li>
+        </ol>
+        <p><strong>Note:</strong> This page tests ALL major features. If any test fails, do NOT submit to Chrome Web Store.</p>
+    </div>
+
+    <!-- Test 1: Basic Detection & Injection -->
+    <div class="test-section">
+        <h2>✅ Test 1: Basic Name Detection & Injection</h2>
+        <div class="test-case">
+            <h3>Common Biblical Names (BibleSpeak.org)</h3>
+            <div class="passage">
+                In the beginning, God created the heavens and the earth. Adam and Eve lived in the Garden of Eden. 
+                Their sons were Cain and Abel. Abraham was the father of Isaac, who was the father of Jacob. 
+                Moses led the Israelites out of Egypt. David was anointed king by Samuel. 
+                Jesus was born in Bethlehem and grew up in Nazareth.
+            </div>
+            <div class="expected">✓ Expected: All names should have pronunciation aids (clickable links to BibleSpeak.org)</div>
+        </div>
+
+        <div class="test-case">
+            <h3>Manual Pronunciations (No Links)</h3>
+            <div class="passage">
+                Paul wrote letters to the Corinthians. Peter, James, and John were disciples of Jesus. 
+                Thomas doubted at first. Simon was also called Peter.
+            </div>
+            <div class="expected">✓ Expected: Names should have pronunciations in styled spans (NOT links, since they're manual)</div>
+            <div class="note">Note: Paul, Peter, James, John, Thomas, Simon, Corinthians are from manual_pronunciations.json</div>
+        </div>
+    </div>
+
+    <!-- Test 2: Compound Names -->
+    <div class="test-section">
+        <h2>✅ Test 2: Compound Names & Nested Detection</h2>
+        <div class="test-case">
+            <h3>Compound Names Should Process First</h3>
+            <div class="passage">
+                Beer-sheba was an important well. Abraham settled in Beer-sheba after making a covenant.
+                The well of Beer-sheba became a landmark. Sheba itself was also a kingdom.
+            </div>
+            <div class="expected">✓ Expected: "Beer-sheba" should be detected as one compound name, not as "Beer" and "Sheba" separately</div>
+        </div>
+
+        <div class="test-case">
+            <h3>Preventing Nested Injection</h3>
+            <div class="passage">
+                Abraham had many descendants. Ham was one of Noah's sons. 
+                The Pharisees questioned Jesus about the law.
+            </div>
+            <div class="expected">✓ Expected: "Ham" in "Abraham" should NOT be detected separately. No nested/double pronunciations.</div>
+        </div>
+    </div>
+
+    <!-- Test 3: Case Sensitivity -->
+    <div class="test-section">
+        <h2>✅ Test 3: Case-Insensitive Detection <span class="feature-tag">v1.1.0</span></h2>
+        <div class="test-case">
+            <h3>Lower/Mixed Case Names</h3>
+            <div class="passage">
+                The path to bethlehem was long. jesus taught in the temple. 
+                mary and joseph traveled to Jerusalem. The disciples followed jesus throughout galilee.
+            </div>
+            <div class="expected">✓ Expected: All names detected even in lowercase (bethlehem, jesus, mary, joseph, galilee)</div>
+        </div>
+    </div>
+
+    <!-- Test 4: Possessives -->
+    <div class="test-section">
+        <h2>✅ Test 4: Possessive Handling <span class="feature-tag">v1.1.0</span></h2>
+        <div class="test-case">
+            <h3>Possessive Forms</h3>
+            <div class="passage">
+                Matthew's gospel records Jesus' teachings. Peter's confession was significant. 
+                Abraham's faith was counted as righteousness. Moses' leadership brought Israel to Canaan.
+                David's son Solomon built the temple.
+            </div>
+            <div class="expected">✓ Expected: Pronunciations appear correctly: "Matthew's (MATH-yoo)" not "Matthew (MATH-yoo)'s"</div>
+        </div>
+    </div>
+
+    <!-- Test 5: Toggle Functionality -->
+    <div class="test-section">
+        <h2>✅ Test 5: Enable/Disable Toggle</h2>
+        <div class="test-case">
+            <h3>Global Toggle Test</h3>
+            <div class="passage">
+                Abraham, Isaac, and Jacob are known as the patriarchs. Moses received the law on Mount Sinai.
+                Jesus performed miracles in Capernaum and Galilee.
+            </div>
+            <ul class="checklist">
+                <li>Open the extension popup (click toolbar icon)</li>
+                <li>Click "Disable All" button</li>
+                <li>Verify all pronunciations disappear from the page</li>
+                <li>Verify original names remain intact (no text removed)</li>
+                <li>Click "Enable All" button</li>
+                <li>Verify pronunciations reappear</li>
+                <li>Close and reopen the page - preferences should persist</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Test 6: Selected Names -->
+    <div class="test-section">
+        <h2>✅ Test 6: Selected Names Feature</h2>
+        <div class="test-case">
+            <h3>Selective Display Test</h3>
+            <div class="passage">
+                Abraham traveled from Ur to Canaan. Isaac was born when Abraham was old. 
+                Jacob wrestled with God and was renamed Israel. Moses led the Exodus from Egypt.
+                David defeated Goliath with a sling. Solomon built the temple in Jerusalem.
+            </div>
+            <ul class="checklist">
+                <li>Open extension popup</li>
+                <li>Click "Disable All"</li>
+                <li>Select only "Abraham", "Moses", and "David" from the list</li>
+                <li>Click "Enable Selected"</li>
+                <li>Verify ONLY Abraham, Moses, and David have pronunciations</li>
+                <li>Verify Isaac, Jacob, Solomon, etc. do NOT have pronunciations</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Test 7: Toast Notification -->
+    <div class="test-section">
+        <h2>✅ Test 7: Toast Notification</h2>
+        <div class="test-case">
+            <h3>First Load Detection</h3>
+            <ul class="checklist">
+                <li>Reload this page with extension enabled</li>
+                <li>Verify toast notification appears (bottom-right corner)</li>
+                <li>Toast should show number of names found</li>
+                <li>Toast should auto-dismiss after a few seconds</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Test 8: Floating Bubble -->
+    <div class="test-section">
+        <h2>✅ Test 8: Floating Bubble UI</h2>
+        <div class="test-case">
+            <h3>Bubble Interaction</h3>
+            <ul class="checklist">
+                <li>Verify floating bubble appears on page (usually bottom-right)</li>
+                <li>Bubble should show extension icon</li>
+                <li>Clicking bubble should open popup menu</li>
+                <li>Popup should show toggle and name list</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Test 9: v1.1.2 Specific Features -->
+    <div class="test-section">
+        <h2>✅ Test 9: v1.1.2 New Names <span class="feature-tag">NEW</span></h2>
+        <div class="test-case">
+            <h3>Disciples & Major Figures</h3>
+            <div class="passage">
+                The apostle Paul wrote to the Corinthians about love. Peter denied Jesus three times. 
+                James and John were brothers. Thomas doubted until he saw Jesus. Simon Peter was the rock.
+                Stephanas was among the first converts.
+            </div>
+            <div class="expected">✓ Expected: All disciple names should have pronunciations (Paul, Peter, James, John, Thomas, Simon, Stephanas)</div>
+        </div>
+
+        <div class="test-case">
+            <h3>Abraham's Family</h3>
+            <div class="passage">
+                Kemuel was one of Nahor's sons. Maacah was a concubine. Chesed was also among them.
+            </div>
+            <div class="expected">✓ Expected: These less common names should have pronunciations</div>
+        </div>
+
+        <div class="test-case">
+            <h3>Plural & Geographic Names</h3>
+            <div class="passage">
+                The Corinthians received Paul's letters. Aram Naharaim was a region in Mesopotamia.
+                Phicol was Abimelech's army commander.
+            </div>
+            <div class="expected">✓ Expected: Corinthians (plural), Naharaim, Phicol should have pronunciations</div>
+        </div>
+    </div>
+
+    <!-- Test 10: Performance -->
+    <div class="test-section">
+        <h2>✅ Test 10: Performance & Stability</h2>
+        <div class="test-case">
+            <h3>Large Passage Test</h3>
+            <div class="passage">
+                The genealogy: Abraham begot Isaac; Isaac begot Jacob; Jacob begot Judah and his brothers; 
+                Judah begot Perez and Zerah by Tamar; Perez begot Hezron; Hezron begot Ram; 
+                Ram begot Amminadab; Amminadab begot Nahshon; Nahshon begot Salmon; 
+                Salmon begot Boaz by Rahab; Boaz begot Obed by Ruth; Obed begot Jesse; 
+                Jesse begot David the king. David begot Solomon by her who had been the wife of Uriah; 
+                Solomon begot Rehoboam; Rehoboam begot Abijah; Abijah begot Asa; 
+                Asa begot Jehoshaphat; Jehoshaphat begot Joram; Joram begot Uzziah; 
+                Uzziah begot Jotham; Jotham begot Ahaz; Ahaz begot Hezekiah.
+            </div>
+            <ul class="checklist">
+                <li>Verify all names processed without errors</li>
+                <li>Check browser console (F12) for any JavaScript errors</li>
+                <li>Page should remain responsive</li>
+                <li>No duplicate/nested pronunciations</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Final Checklist -->
+    <div class="test-section" style="border-left-color: #34a853;">
+        <h2>🎯 Final Pre-Submission Checklist</h2>
+        <ul class="checklist">
+            <li>All 10 test sections passed</li>
+            <li>No JavaScript errors in console</li>
+            <li>Extension icon displays correctly in toolbar</li>
+            <li>Popup UI is clean and functional</li>
+            <li>Manifest version matches release version (check manifest.json)</li>
+            <li>CHANGELOG.md updated for this version</li>
+            <li>Git tag created and pushed</li>
+            <li>ZIP file built successfully</li>
+            <li>Tested on at least 2 different websites (e.g., Bible Gateway, ESV.org)</li>
+        </ul>
+        <div style="margin-top: 20px; padding: 15px; background: #e8f5e9; border-radius: 5px;">
+            <strong style="color: #2e7d32;">✓ If all items checked, proceed to Chrome Web Store submission!</strong>
+        </div>
+    </div>
+
+    <script>
+        function runAutomatedTests() {
+            const resultsDiv = document.getElementById('automated-results');
+            resultsDiv.innerHTML = '<div class="test-result info">Running automated tests...</div>';
+            
+            setTimeout(() => {
+                const results = [];
+                
+                // Helper: Check for double/nested pronunciations
+                function checkForIssues(element, expectedCount, testName) {
+                    const issues = [];
+                    const text = element.textContent;
+                    
+                    // Check for nested parentheses
+                    if (text.includes('((') || /\([^)]*\([^)]*\)/.test(text)) {
+                        issues.push('Nested pronunciations detected');
+                    }
+                    
+                    // Check for mismatched parentheses
+                    const openCount = (text.match(/\(/g) || []).length;
+                    const closeCount = (text.match(/\)/g) || []).length;
+                    if (openCount !== closeCount) {
+                        issues.push(`Mismatched parentheses (${openCount} open, ${closeCount} close)`);
+                    }
+                    
+                    // Check expected count if provided
+                    if (expectedCount !== null && openCount !== expectedCount) {
+                        issues.push(`Expected ${expectedCount} pronunciations, found ${openCount}`);
+                    }
+                    
+                    return issues;
+                }
+                
+                // Test 1: Basic Detection - BibleSpeak.org names
+                const test1Section = document.querySelectorAll('.test-section')[0];
+                const test1Para = test1Section.querySelectorAll('.passage')[0];
+                if (test1Para) {
+                    const issues = checkForIssues(test1Para, null, 'Test 1.1');
+                    const hasAdam = /Adam\s*\([^)]+\)/i.test(test1Para.textContent);
+                    const hasEve = /Eve\s*\([^)]+\)/i.test(test1Para.textContent);
+                    const hasMoses = /Moses\s*\([^)]+\)/i.test(test1Para.textContent);
+                    if (!hasAdam) issues.push('Adam pronunciation not found');
+                    if (!hasEve) issues.push('Eve pronunciation not found');
+                    if (!hasMoses) issues.push('Moses pronunciation not found');
+                    results.push({ 
+                        name: 'Test 1.1: Common Biblical Names Detection', 
+                        pass: issues.length === 0, 
+                        issues 
+                    });
+                }
+                
+                // Test 1: Manual pronunciations
+                const test1Para2 = test1Section.querySelectorAll('.passage')[1];
+                if (test1Para2) {
+                    const issues = checkForIssues(test1Para2, null, 'Test 1.2');
+                    const hasPaul = /Paul\s*\([^)]+\)/i.test(test1Para2.textContent);
+                    const hasPeter = /Peter\s*\([^)]+\)/i.test(test1Para2.textContent);
+                    const hasJames = /James\s*\([^)]+\)/i.test(test1Para2.textContent);
+                    if (!hasPaul) issues.push('Paul pronunciation not found');
+                    if (!hasPeter) issues.push('Peter pronunciation not found');
+                    if (!hasJames) issues.push('James pronunciation not found');
+                    results.push({ 
+                        name: 'Test 1.2: Manual Pronunciations', 
+                        pass: issues.length === 0, 
+                        issues 
+                    });
+                }
+                
+                // Test 2: Compound Names
+                const test2Section = document.querySelectorAll('.test-section')[1];
+                const test2Para = test2Section.querySelectorAll('.passage')[0];
+                if (test2Para) {
+                    const issues = checkForIssues(test2Para, null, 'Test 2.1');
+                    const beerShebaCount = (test2Para.textContent.match(/Beer-sheba\s*\([^)]+\)/gi) || []).length;
+                    const standaloneSheba = (test2Para.textContent.match(/(?<!Beer-)Sheba\s*\([^)]+\)/gi) || []).length;
+                    
+                    if (beerShebaCount < 3) {
+                        issues.push(`Expected at least 3 Beer-sheba pronunciations, found ${beerShebaCount}`);
+                    }
+                    if (standaloneSheba < 1) {
+                        issues.push(`Expected at least 1 standalone Sheba, found ${standaloneSheba}`);
+                    }
+                    
+                    results.push({ 
+                        name: 'Test 2.1: Compound Names (Beer-sheba)', 
+                        pass: issues.length === 0, 
+                        issues 
+                    });
+                }
+                
+                // Test 2: Nested Detection Prevention
+                const test2Para2 = test2Section.querySelectorAll('.passage')[1];
+                if (test2Para2) {
+                    const issues = checkForIssues(test2Para2, null, 'Test 2.2');
+                    const abrahamCount = (test2Para2.textContent.match(/Abraham\s*\([^)]+\)/gi) || []).length;
+                    const hamCount = (test2Para2.textContent.match(/(?<!Abra)Ham\s*\([^)]+\)/gi) || []).length;
+                    
+                    if (abrahamCount < 1) issues.push('Abraham pronunciation not found');
+                    if (hamCount < 1) issues.push('Ham pronunciation not found');
+                    
+                    results.push({ 
+                        name: 'Test 2.2: Nested Detection Prevention (Abraham/Ham)', 
+                        pass: issues.length === 0, 
+                        issues 
+                    });
+                }
+                
+                // Test 3: Case-Insensitive
+                const test3Section = document.querySelectorAll('.test-section')[2];
+                const test3Para = test3Section.querySelector('.passage');
+                if (test3Para) {
+                    const issues = checkForIssues(test3Para, null, 'Test 3');
+                    const hasBethlehem = /bethlehem\s*\([^)]+\)/i.test(test3Para.textContent);
+                    const hasJesus = /jesus\s*\([^)]+\)/i.test(test3Para.textContent);
+                    
+                    if (!hasBethlehem) issues.push('bethlehem (lowercase) not detected');
+                    if (!hasJesus) issues.push('jesus (lowercase) not detected');
+                    
+                    results.push({ 
+                        name: 'Test 3: Case-Insensitive Detection', 
+                        pass: issues.length === 0, 
+                        issues 
+                    });
+                }
+                
+                // Test 4: Possessives
+                const test4Section = document.querySelectorAll('.test-section')[3];
+                const test4Para = test4Section.querySelector('.passage');
+                if (test4Para) {
+                    const issues = checkForIssues(test4Para, null, 'Test 4');
+                    const text = test4Para.textContent;
+                    
+                    // Check for correct possessive format: "Name's (PRONUNCIATION)" not "Name (PRONUNCIATION)'s"
+                    const badFormat = /\([^)]+\)'s/i.test(text);
+                    if (badFormat) {
+                        issues.push("Possessive format incorrect: found '(PRONUNCIATION)'s' instead of ''s (PRONUNCIATION)'");
+                    }
+                    
+                    const hasMatthews = /Matthew['']s\s*\([^)]+\)/i.test(text);
+                    const hasPeters = /Peter['']s\s*\([^)]+\)/i.test(text);
+                    
+                    if (!hasMatthews) issues.push("Matthew's pronunciation not found");
+                    if (!hasPeters) issues.push("Peter's pronunciation not found");
+                    
+                    results.push({ 
+                        name: 'Test 4: Possessive Handling', 
+                        pass: issues.length === 0, 
+                        issues 
+                    });
+                }
+                
+                // Test 9: v1.1.2 New Names
+                const test9Section = document.querySelectorAll('.test-section')[8];
+                const test9Para1 = test9Section.querySelectorAll('.passage')[0];
+                if (test9Para1) {
+                    const issues = checkForIssues(test9Para1, null, 'Test 9.1');
+                    const hasPaul = /Paul\s*\([^)]+\)/i.test(test9Para1.textContent);
+                    const hasPeter = /Peter\s*\([^)]+\)/i.test(test9Para1.textContent);
+                    const hasJames = /James\s*\([^)]+\)/i.test(test9Para1.textContent);
+                    const hasThomas = /Thomas\s*\([^)]+\)/i.test(test9Para1.textContent);
+                    
+                    if (!hasPaul) issues.push('Paul not found (v1.1.2 addition)');
+                    if (!hasPeter) issues.push('Peter not found (v1.1.2 addition)');
+                    if (!hasJames) issues.push('James not found (v1.1.2 addition)');
+                    if (!hasThomas) issues.push('Thomas not found (v1.1.2 addition)');
+                    
+                    results.push({ 
+                        name: 'Test 9.1: v1.1.2 New Names (Disciples)', 
+                        pass: issues.length === 0, 
+                        issues 
+                    });
+                }
+                
+                const test9Para2 = test9Section.querySelectorAll('.passage')[1];
+                if (test9Para2) {
+                    const issues = checkForIssues(test9Para2, null, 'Test 9.2');
+                    const hasKemuel = /Kemuel\s*\([^)]+\)/i.test(test9Para2.textContent);
+                    const hasMaacah = /Maacah\s*\([^)]+\)/i.test(test9Para2.textContent);
+                    const hasChesed = /Chesed\s*\([^)]+\)/i.test(test9Para2.textContent);
+                    
+                    if (!hasKemuel) issues.push('Kemuel not found (v1.1.2 addition)');
+                    if (!hasMaacah) issues.push('Maacah not found (v1.1.2 addition)');
+                    if (!hasChesed) issues.push('Chesed not found (v1.1.2 addition)');
+                    
+                    results.push({ 
+                        name: "Test 9.2: v1.1.2 Abraham's Family", 
+                        pass: issues.length === 0, 
+                        issues 
+                    });
+                }
+                
+                // Test 10: Performance - Large Passage
+                const test10Section = document.querySelectorAll('.test-section')[9];
+                const test10Para = test10Section.querySelector('.passage');
+                if (test10Para) {
+                    const issues = checkForIssues(test10Para, null, 'Test 10');
+                    const pronounCount = (test10Para.textContent.match(/\(/g) || []).length;
+                    
+                    if (pronounCount < 15) {
+                        issues.push(`Expected many pronunciations in genealogy, found only ${pronounCount}`);
+                    }
+                    
+                    results.push({ 
+                        name: 'Test 10: Performance (Large Passage)', 
+                        pass: issues.length === 0, 
+                        issues 
+                    });
+                }
+                
+                // Display Results
+                const totalTests = results.length;
+                const passedTests = results.filter(r => r.pass).length;
+                const failedTests = totalTests - passedTests;
+                
+                let html = `<div class="test-result ${failedTests === 0 ? 'pass' : 'fail'}" style="margin-top: 20px; font-size: 1.2em;">
+                    <strong>${failedTests === 0 ? '✓✓✓ ALL AUTOMATED TESTS PASSED!' : '✗✗✗ AUTOMATED TESTS FAILED'}</strong>
+                    <div class="test-details" style="font-size: 0.9em;">${passedTests}/${totalTests} tests passed</div>
+                </div>`;
+                
+                results.forEach(result => {
+                    html += `<div class="test-result ${result.pass ? 'pass' : 'fail'}" style="margin-top: 10px;">
+                        ${result.pass ? '✓' : '✗'} ${result.name}
+                        ${result.issues.length > 0 ? `<div class="test-details">Issues: ${result.issues.join('; ')}</div>` : ''}
+                    </div>`;
+                });
+                
+                if (failedTests === 0) {
+                    html += `<div class="test-result pass" style="margin-top: 20px;">
+                        <strong>🎉 Automated Tests Complete!</strong>
+                        <div class="test-details">
+                            Now proceed with manual tests below (Tests 5-8) to verify toggle functionality, UI, and interactive features.
+                        </div>
+                    </div>`;
+                } else {
+                    html += `<div class="test-result fail" style="margin-top: 20px;">
+                        <strong>⚠️ DO NOT SUBMIT TO CHROME WEB STORE</strong>
+                        <div class="test-details">
+                            Fix the issues above before proceeding. Check browser console (F12) for JavaScript errors.
+                        </div>
+                    </div>`;
+                }
+                
+                resultsDiv.innerHTML = html;
+            }, 500);
+        }
+    </script>
+
+</body>
+</html>
