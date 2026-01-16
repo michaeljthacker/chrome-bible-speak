@@ -1,34 +1,104 @@
-# Chrome Web Store Submission Checklist
+# Chrome Web Store Release Process
 
-## ✅ Completed (Ready for Submission)
+This guide covers the complete process for releasing new versions of Bible Name Aid to the Chrome Web Store.
 
-### Build System
-- ✅ `scripts/build_extension.ps1` - PowerShell build script that creates `dist/` folder and ZIP
-- ✅ `.gitignore` updated to exclude `dist/` and `*.zip`
-- ✅ Only essential files copied to dist (no Python scripts, no dev files)
+---
 
-### Manifest
-- ✅ `manifest_version: 3` (required)
-- ✅ Name: "Bible Name Aid"
-- ✅ Version: "1.0.0"
-- ✅ Description: Clear, concise, under 132 characters
-- ✅ Permissions: Only `activeTab` and `storage` (minimal)
-- ✅ Icons: All sizes present (16/32/48/64/128/256)
+## 📋 Pre-Release Checklist
 
-### Legal & Privacy
-- ✅ `PRIVACY_POLICY.md` - Comprehensive privacy policy
-- ✅ Public GitHub URL for privacy policy: https://github.com/michaeljthacker/chrome-bible-speak/blob/main/PRIVACY_POLICY.md
-- ✅ README.md updated with BibleSpeak.org attribution
-- ✅ Clear disclaimer that BibleSpeak.org is not affiliated
+### 1. Determine Version Number
 
-### Assets
-- ✅ All icon sizes present in `/icons/` folder
-- ✅ Icons are square PNGs
-- ✅ Extension name updated to "Bible Name Aid" throughout
+Follow [Semantic Versioning](https://semver.org/) (MAJOR.MINOR.PATCH):
 
-## 📋 TODO (Manual Steps)
+**MAJOR (x.0.0)** - Breaking changes:
+- Incompatible API changes
+- Major architecture overhaul
+- Changes that break existing user workflows
+
+**MINOR (1.x.0)** - New features (backwards compatible):
+- New functionality added
+- Significant enhancements
+- New pronunciation sources or major name additions (50+)
+
+**PATCH (1.1.x)** - Bug fixes and minor updates:
+- Bug fixes
+- Performance improvements
+- Small name additions (<50)
+- Documentation updates
+- Build process improvements
+
+**Current Version:** Check `manifest.json` → `version` field
+
+### 2. Update Project Files
+
+#### a. Update `manifest.json`
+```json
+{
+  "version": "1.x.x"  // Bump to new version
+}
+```
+
+#### b. Update `plans/CHANGELOG.md`
+
+Add new version section at the top:
+```markdown
+## [vX.X.X] - Month Day, YEAR
+
+### Added
+- New features or capabilities
+
+### Changed
+- Changes to existing functionality
+
+### Fixed
+- Bug fixes
+
+### Technical Changes
+- Internal improvements, refactoring, etc.
+```
+
+#### c. Review `plans/backlog.md`
+- Move completed items out of backlog
+- Update status of in-progress items
+- Add any new issues discovered
+
+#### d. Review `README.md` (if needed)
+- Update version badges if present
+- Ensure installation instructions are current
+- Update feature list if new features added
+
+### 3. Commit All Changes
+
+```powershell
+# Stage all changes
+git add .
+
+# Commit with version number
+git commit -m "v1.x.x: [Brief description of release]"
+
+# Push to main
+git push origin main
+```
+
+### 4. Tag the Release
+
+```powershell
+# Create annotated tag
+git tag -a v1.x.x -m "Release v1.x.x - [Brief description]"
+
+# Push tag to remote
+git push origin v1.x.x
+
+# Verify tag was created
+git tag
+```
+
+---
+
+## 🔨 Build & Test
 
 ### 1. Build the Extension
+
 ```powershell
 # Run from project root
 .\scripts\build_extension.ps1
@@ -38,137 +108,105 @@ This creates:
 - `dist/` folder with clean extension files
 - `bible-name-aid-dist.zip` ready for upload
 
-### 2. Test the Build
-1. Open Chrome → Extensions → Enable "Developer mode"
-2. Click "Load unpacked"
-3. Select the `dist/` folder
-4. Test all features work correctly
+### 2. Test the Build Locally
 
-### 3. Take Screenshots
-Needed for Chrome Web Store listing:
+```powershell
+# Load extension in Chrome
+# 1. Open Chrome → Extensions (chrome://extensions/)
+# 2. Enable "Developer mode" (top-right toggle)
+# 3. Click "Load unpacked"
+# 4. Select the `dist/` folder
+```
 
-**Screenshot 1: In Action**
-- Show a Bible webpage (e.g., Bible Gateway, YouVersion, ESV.org)
-- With Bible Name Aid pronunciations visible
-- Example: "David (DAY-vid)" or "Moses (MO-zehs)" on page
+**Test Checklist:**
+- ✅ Extension loads without errors
+- ✅ Icon appears in toolbar
+- ✅ Popup opens and displays correctly
+- ✅ Pronunciations inject on test pages
+- ✅ Toggle on/off works
+- ✅ Selected names feature works
+- ✅ Links to BibleSpeak.org work
 
-**Screenshot 2: UI Close-up**
-- Show the popup menu with toggle and name selection
-- Or the toast notification when names are found
+---
 
-**Requirements:**
-- 1280x800 or 640x400 pixels recommended
-- PNG or JPEG format
-- At least 1 screenshot required, up to 5 allowed
+## 🚀 Chrome Web Store Submission
 
-### 4. Chrome Web Store Submission
+### Access Developer Dashboard
 
 Go to: https://chrome.google.com/webstore/devconsole
 
-**Store Listing Info:**
+### For Updates (v1.1.0+)
 
-**Product Name:** Bible Name Aid
+1. Click on "Bible Name Aid" in your developer dashboard
+2. Click "Package" tab on the left
+3. Click "Upload new package"
+4. Upload `bible-name-aid-dist.zip`
+5. Update "What's New" section (required):
+   - Write 2-3 sentences summarizing changes
+   - Pull from CHANGELOG.md for this version
+6. (Optional) Update store listing ONLY if major UI or feature changes
+7. Click "Submit for review"
 
-**Summary (132 chars max):**
+**"What's New" Examples:**
 ```
-Adds phonetic pronunciations for Biblical names on webpages, sourced from BibleSpeak.org.
-```
+v1.1.2: Added support for major biblical figures like Paul and the disciples, plus improved pronunciation database organization.
 
-**Description (16,000 chars max):**
-```
-Bible Name Aid helps you read the Bible confidently by adding phonetic pronunciation guides for Biblical names directly on webpages.
+v1.1.1: Fixed critical bug where pronunciations were injected multiple times or nested within compound names.
 
-✨ Features:
-• Automatically detects Biblical names on any webpage
-• Adds clickable pronunciation guides in parentheses
-• Toggle pronunciations on/off globally or per-name
-• Links to BibleSpeak.org for audio pronunciations
-• Works on Bible Gateway, YouVersion, ESV.org, and more
-• Clean, modern interface with zero data collection
-
-🔒 Privacy:
-• No tracking, no analytics, no data collection
-• All processing happens locally in your browser
-• No account required
-
-📚 Pronunciation Data:
-All pronunciation data is sourced from BibleSpeak.org, a comprehensive database of Biblical name pronunciations. This extension is not affiliated with or endorsed by BibleSpeak.org.
-
-Perfect for:
-• Bible study groups
-• Sunday school teachers
-• Anyone reading scripture aloud
-• New Christians learning Biblical names
-• Theologians and seminary students
+v1.2.0: New manual pronunciation database with 200+ curated entries, plus alphabetical name sorting in the UI.
 ```
 
-**Category:** Productivity
+### Screenshots (RARE - Major Releases Only)
 
-**Language:** English
+Only update screenshots if:
+- Major UI redesign
+- Significant new visual features
+- Initial v1.0.0 release
 
-**Privacy Policy URL:**
-```
-https://github.com/michaeljthacker/chrome-bible-speak/blob/main/PRIVACY_POLICY.md
-```
-
-**Support/Homepage URL:**
-```
-https://github.com/michaeljthacker/chrome-bible-speak
-```
-
-**Upload:**
-- Upload `bible-name-aid-dist.zip`
-- Upload 1-5 screenshots (1280x800 recommended)
-- Upload 128x128 icon (use `icons/BibleSpeakIcon_128.png`)
-
-**Pricing:**
-- Free
-
-**Single Purpose Description:**
-```
-This extension adds phonetic pronunciation guides for Biblical names on webpages to help users read scripture correctly and confidently.
-```
-
-**Host Permission Justification:**
-```
-<all_urls>: Required to automatically detect and add pronunciation guides for Biblical names on any webpage the user visits, including Bible study websites, church sites, and general web content containing scripture references.
-```
-
-**Justification for Permissions:**
-```
-activeTab: Required to read webpage content and add pronunciation guides
-storage: Required to save user preferences (on/off state, selected names)
-```
-
-### 5. After Submission
+Otherwise, skip this step.
 
 **Review Time:** Usually 1-3 business days
 
-**What Google Reviews:**
-- ✅ Privacy policy presence and clarity
-- ✅ Minimal permissions (we only use 2)
-- ✅ Clear description of functionality
-- ✅ No malicious code or obfuscation
-- ✅ Icons and screenshots quality
+---
 
-**Post-Approval:**
-- Extension will be live in Chrome Web Store
-- Get shareable link like: `chrome.google.com/webstore/detail/[extension-id]`
-- Can update by uploading new ZIPs (version number must increment)
+## ✅ Post-Release
 
-## 🚀 Quick Build & Test Commands
+### 1. Monitor Review Status
+Check developer dashboard for approval (usually 1-3 days)
 
-```powershell
-# Build for submission
-.\scripts\build_extension.ps1
+### 2. After Approval
+- [ ] Verify extension is live in Chrome Web Store
+- [ ] Test installation from store (not dev mode)
+- [ ] Update any external documentation if needed
 
-# Test that ZIP extracts correctly
-Expand-Archive -Path bible-name-aid-dist.zip -DestinationPath test-extract -Force
+### 3. Create GitHub Release (Optional)
 
-# Check file count (should be ~10 files)
-(Get-ChildItem -Recurse test-extract -File).Count
-```
+On GitHub:
+1. Go to Releases → "Draft a new release"
+2. Select the tag you created (v1.x.x)
+3. Set release title: "v1.x.x - [Brief description]"
+4. Copy CHANGELOG.md section into description
+5. Attach `bible-name-aid-dist.zip`
+6. Publish release
+
+---
+
+## 🚨 Troubleshooting
+
+**"Version must be higher than current version"**
+- Update version in manifest.json
+- Rebuild with updated manifest
+
+**Review rejection for permissions**
+- Ensure justification clearly explains `<all_urls>` need
+- Bible name detection requires content access on any page
+
+**Build script fails**
+- Run from project root directory
+- Check PowerShell execution policy
+
+---
 
 ## 📞 Support
 
-Questions during submission? Email hi@mjt.pub or open a GitHub issue.
+Questions? Email hi@mjt.pub or open a GitHub issue.

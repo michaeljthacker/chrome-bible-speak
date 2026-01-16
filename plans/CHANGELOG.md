@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [v1.1.2] - January 16, 2026
+
+### Added
+- **Major Biblical Figures**: Added pronunciations for Paul, Peter, James, Simon, Thomas, and other disciples
+- **Abraham's Family**: Added pronunciations for Kemuel, Maacah, Chesed, and other family members
+- **Additional Names**: Corinthians (plural), Stephanas, Phicol, Naharaim (as in Aram Naharaim)
+
+### Technical Changes
+- **Organization Script**: New `organize_pronunciations.py` script that automatically organizes and deduplicates manual pronunciations
+- **Build Statistics**: Enhanced `build_extension.ps1` to log pronunciation database statistics (BibleSpeak.org count, manual count, and total)
+- **Integrated Workflow**: Organization script now runs automatically during the build process
+
+---
+
 ## [v1.1.1] - January 13, 2026
 
 ### Fixed
