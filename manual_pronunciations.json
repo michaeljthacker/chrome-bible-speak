@@ -2,6 +2,9 @@
   "Abel": {
     "pronunciation": "AY-bul"
   },
+  "Abida": {
+    "pronunciation": "uh-BIH-duh"
+  },
   "Abimael": {
     "pronunciation": "ah-bee-maw-ALE"
   },
@@ -14,8 +17,14 @@
   "Adam": {
     "pronunciation": "AD-um"
   },
+  "Adbeel": {
+    "pronunciation": "AD-bee-el"
+  },
   "Admah": {
     "pronunciation": "AD-muh"
+  },
+  "Ahuzzath": {
+    "pronunciation": "uh-HUZ-ath"
   },
   "Almodad": {
     "pronunciation": "al-mo-DAWD"
@@ -86,8 +95,17 @@
   "Asshur": {
     "pronunciation": "ASH-er"
   },
+  "Asshurim": {
+    "pronunciation": "uh-SHOOR-im"
+  },
+  "Basemath": {
+    "pronunciation": "BAS-eh-math"
+  },
   "Beer-lahai-roi": {
     "pronunciation": "beer-la-HIGH-roy"
+  },
+  "Beeri": {
+    "pronunciation": "bee-AIR-eye"
   },
   "Beerlahairi": {
     "pronunciation": "beer-la-HIGH-roy"
@@ -155,17 +173,26 @@
   "Diphath": {
     "pronunciation": "DEE-fath"
   },
+  "Dumah": {
+    "pronunciation": "DOO-mah"
+  },
   "Eber": {
     "pronunciation": "EE-ber"
   },
   "Elam": {
     "pronunciation": "EE-lam"
   },
+  "Eldaah": {
+    "pronunciation": "el-DAY-uh"
+  },
   "Elishah": {
     "pronunciation": "ee-LY-shuh"
   },
   "Ellasar": {
     "pronunciation": "el-la-SAR"
+  },
+  "Elon": {
+    "pronunciation": "EE-lon"
   },
   "Elparan": {
     "pronunciation": "el-PAHR-an"
@@ -179,8 +206,14 @@
   "Enosh": {
     "pronunciation": "EE-nosh"
   },
+  "Epher": {
+    "pronunciation": "EE-fer"
+  },
   "Erech": {
     "pronunciation": "ee-REK"
+  },
+  "Esek": {
+    "pronunciation": "EE-sek"
   },
   "Eshcol": {
     "pronunciation": "ES-kol"
@@ -218,6 +251,9 @@
   "Gomorrah": {
     "pronunciation": "guh-MOR-uh"
   },
+  "Hadad": {
+    "pronunciation": "HAY-dad"
+  },
   "Hadoram": {
     "pronunciation": "had-o-RAWm"
   },
@@ -232,6 +268,9 @@
   },
   "Hamathites": {
     "pronunciation": "KHAM-a-thites"
+  },
+  "Hanoch": {
+    "pronunciation": "HAY-nok"
   },
   "Havilah": {
     "pronunciation": "Hah-VEE-luh"
@@ -275,6 +314,9 @@
   "Iscariot": {
     "pronunciation": "ih-SKAR-ee-uht"
   },
+  "Ishbak": {
+    "pronunciation": "ISH-bak"
+  },
   "Jabal": {
     "pronunciation": "JAY-buhl"
   },
@@ -290,11 +332,17 @@
   "Jerah": {
     "pronunciation": "Yer-akh"
   },
+  "Jetur": {
+    "pronunciation": "JEE-tur"
+  },
   "Jidlaph": {
     "pronunciation": "JID-laf"
   },
   "Jobab": {
     "pronunciation": "JOH-ab"
+  },
+  "Jokshan": {
+    "pronunciation": "JOK-shan"
   },
   "Joktan": {
     "pronunciation": "YOK-TAWN"
@@ -305,8 +353,20 @@
   "Judas": {
     "pronunciation": "JOO-duhs"
   },
+  "Judith": {
+    "pronunciation": "JOO-dith"
+  },
   "Kadmonites": {
     "pronunciation": "KAD-mon-ites"
+  },
+  "Kedar": {
+    "pronunciation": "KEE-dar"
+  },
+  "Kedem": {
+    "pronunciation": "KEE-dem"
+  },
+  "Kedemah": {
+    "pronunciation": "KED-eh-muh"
   },
   "Kemuel": {
     "pronunciation": "KEM-yoo-el"
@@ -319,6 +379,9 @@
   },
   "Kenizzites": {
     "pronunciation": "KEN-iz-ites"
+  },
+  "Keturah": {
+    "pronunciation": "keh-TOO-ruh"
   },
   "Kiriath-arba": {
     "pronunciation": "KEER-ee-ath-AHR-buh"
@@ -334,6 +397,12 @@
   },
   "Lehabim": {
     "pronunciation": "leh-haw-BEEM"
+  },
+  "Letushim": {
+    "pronunciation": "leh-TOO-shim"
+  },
+  "Leummim": {
+    "pronunciation": "leh-OOM-im"
   },
   "Lot": {
     "pronunciation": "LAHT"
@@ -359,6 +428,12 @@
   "Mash": {
     "pronunciation": "MASH"
   },
+  "Massa": {
+    "pronunciation": "MAS-uh"
+  },
+  "Medan": {
+    "pronunciation": "MEE-dan"
+  },
   "Mehujael": {
     "pronunciation": "meh-HOO-jah-el"
   },
@@ -377,6 +452,12 @@
   "Methushael": {
     "pronunciation": "meth-OO-shaw-ale"
   },
+  "Mibsam": {
+    "pronunciation": "MIB-sam"
+  },
+  "Mishma": {
+    "pronunciation": "MISH-muh"
+  },
   "Mizraim": {
     "pronunciation": "mits-RAH-yim"
   },
@@ -392,8 +473,14 @@
   "Naharaim": {
     "pronunciation": "nay-hah-RAY-im"
   },
+  "Naphish": {
+    "pronunciation": "NAY-fish"
+  },
   "Naphtuhim": {
     "pronunciation": "naf-too-KHEEM"
+  },
+  "Nebaioth": {
+    "pronunciation": "neh-BAY-oth"
   },
   "Nephilim": {
     "pronunciation": "NEF-uh-lim"
@@ -406,6 +493,9 @@
   },
   "Obal": {
     "pronunciation": "o-BAHL"
+  },
+  "Paddan-aram": {
+    "pronunciation": "PAD-an-AIR-am"
   },
   "Pathrusim": {
     "pronunciation": "path-roo-SIM"
@@ -433,6 +523,9 @@
   },
   "Raamah": {
     "pronunciation": "RAY-uh-mah"
+  },
+  "Rehoboth": {
+    "pronunciation": "reh-HO-both"
   },
   "Rehoboth-Ir": {
     "pronunciation": "reh-ho-both-EER"
@@ -491,8 +584,14 @@
   "Shemeber": {
     "pronunciation": "shem-AY-ber"
   },
+  "Shibah": {
+    "pronunciation": "SHIH-bah"
+  },
   "Shinab": {
     "pronunciation": "shin-AWB"
+  },
+  "Shuah": {
+    "pronunciation": "SHOO-uh"
   },
   "Siddim": {
     "pronunciation": "sid-DEEM"
@@ -506,6 +605,9 @@
   "Sinites": {
     "pronunciation": "SIN-ites"
   },
+  "Sitnah": {
+    "pronunciation": "SIT-nuh"
+  },
   "Stephanas": {
     "pronunciation": "STEF-uh-nuhs"
   },
@@ -514,6 +616,9 @@
   },
   "Tebah": {
     "pronunciation": "TEE-buh"
+  },
+  "Tema": {
+    "pronunciation": "TEE-muh"
   },
   "Thaddeus": {
     "pronunciation": "THAD-ee-uhs"
@@ -560,6 +665,9 @@
   "Zillah": {
     "pronunciation": "ZIL-uh"
   },
+  "Zimran": {
+    "pronunciation": "ZIM-ran"
+  },
   "Zohar": {
     "pronunciation": "ZOH-har"
   },
@@ -583,113 +691,5 @@
   },
   "miktam": {
     "pronunciation": "MIK-tam"
-  },
-  "Abida": {
-    "pronunciation": "uh-BIH-duh"
-  },
-  "Adbeel": {
-    "pronunciation": "AD-bee-el"
-  },
-  "Ahuzzath": {
-    "pronunciation": "uh-HUZ-ath"
-  },
-  "Asshurim": {
-    "pronunciation": "uh-SHOOR-im"
-  },
-  "Basemath": {
-    "pronunciation": "BAS-eh-math"
-  },
-  "Beeri": {
-    "pronunciation": "bee-AIR-eye"
-  },
-  "Dumah": {
-    "pronunciation": "DOO-mah"
-  },
-  "Eldaah": {
-    "pronunciation": "el-DAY-uh"
-  },
-  "Elon": {
-    "pronunciation": "EE-lon"
-  },
-  "Epher": {
-    "pronunciation": "EE-fer"
-  },
-  "Esek": {
-    "pronunciation": "EE-sek"
-  },
-  "Hadad": {
-    "pronunciation": "HAY-dad"
-  },
-  "Hanoch": {
-    "pronunciation": "HAY-nok"
-  },
-  "Ishbak": {
-    "pronunciation": "ISH-bak"
-  },
-  "Jetur": {
-    "pronunciation": "JEE-tur"
-  },
-  "Jokshan": {
-    "pronunciation": "JOK-shan"
-  },
-  "Judith": {
-    "pronunciation": "JOO-dith"
-  },
-  "Kedar": {
-    "pronunciation": "KEE-dar"
-  },
-  "Kedem": {
-    "pronunciation": "KEE-dem"
-  },
-  "Kedemah": {
-    "pronunciation": "KED-eh-muh"
-  },
-  "Keturah": {
-    "pronunciation": "keh-TOO-ruh"
-  },
-  "Letushim": {
-    "pronunciation": "leh-TOO-shim"
-  },
-  "Leummim": {
-    "pronunciation": "leh-OOM-im"
-  },
-  "Massa": {
-    "pronunciation": "MAS-uh"
-  },
-  "Medan": {
-    "pronunciation": "MEE-dan"
-  },
-  "Mibsam": {
-    "pronunciation": "MIB-sam"
-  },
-  "Mishma": {
-    "pronunciation": "MISH-muh"
-  },
-  "Naphish": {
-    "pronunciation": "NAY-fish"
-  },
-  "Nebaioth": {
-    "pronunciation": "neh-BAY-oth"
-  },
-  "Paddan-aram": {
-    "pronunciation": "PAD-an-AIR-am"
-  },
-  "Rehoboth": {
-    "pronunciation": "reh-HO-both"
-  },
-  "Shibah": {
-    "pronunciation": "SHIH-bah"
-  },
-  "Shuah": {
-    "pronunciation": "SHOO-uh"
-  },
-  "Sitnah": {
-    "pronunciation": "SIT-nuh"
-  },
-  "Tema": {
-    "pronunciation": "TEE-muh"
-  },
-  "Zimran": {
-    "pronunciation": "ZIM-ran"
   }
 }
