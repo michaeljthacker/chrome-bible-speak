@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Bible Name Aid",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Adds phonetic pronunciations and clickable links for Biblical names found on webpages, sourced from BibleSpeak.org.",
   "permissions": [
     "activeTab",
