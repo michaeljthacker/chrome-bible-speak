@@ -128,6 +128,9 @@
   "Birsha": {
     "pronunciation": "BUR-shuh"
   },
+  "Bilhah": {
+    "pronunciation": "BIL-huh"
+  },
   "Buz": {
     "pronunciation": "BUHZ"
   },
@@ -368,6 +371,12 @@
   "Kedemah": {
     "pronunciation": "KED-eh-muh"
   },
+  "Kedemite": {
+    "pronunciation": "KED-em-ite"
+  },
+  "Kedemites": {
+    "pronunciation": "KED-em-ites"
+  },
   "Kemuel": {
     "pronunciation": "KEM-yoo-el"
   },
@@ -421,6 +430,9 @@
   },
   "Mahalalel": {
     "pronunciation": "mah-ha-la-LEEL"
+  },
+  "Mahalath": {
+    "pronunciation": "muh-HAL-ath"
   },
   "Mahershalalhashbaz": {
     "pronunciation": "MAY-hur-SHAL-al-HASH-baz"
@@ -524,6 +536,9 @@
   "Raamah": {
     "pronunciation": "RAY-uh-mah"
   },
+  "Rachel": {
+    "pronunciation": "RAY-chul"
+  },
   "Rehoboth": {
     "pronunciation": "reh-HO-both"
   },
@@ -556,6 +571,9 @@
   },
   "Sabteca": {
     "pronunciation": "sab-te-KAH"
+  },
+  "Satan": {
+    "pronunciation": "SAY-tun"
   },
   "Sephar": {
     "pronunciation": "sef-AW-r"
@@ -592,6 +610,9 @@
   },
   "Shuah": {
     "pronunciation": "SHOO-uh"
+  },
+  "Simeon": {
+    "pronunciation": "SIM-ee-un"
   },
   "Siddim": {
     "pronunciation": "sid-DEEM"
@@ -664,6 +685,9 @@
   },
   "Zillah": {
     "pronunciation": "ZIL-uh"
+  },
+  "Zilpah": {
+    "pronunciation": "ZIL-puh"
   },
   "Zimran": {
     "pronunciation": "ZIM-ran"
