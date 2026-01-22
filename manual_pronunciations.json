@@ -170,6 +170,12 @@
   "Dedan": {
     "pronunciation": "ded-AWN"
   },
+  "demoniac": {
+    "pronunciation": "dih-MOH-nee-ak"
+  },
+  "demoniacs": {
+    "pronunciation": "dih-MOH-nee-aks"
+  },
   "Diklah": {
     "pronunciation": "dik-LAW"
   },
@@ -277,6 +283,9 @@
   },
   "Hagar": {
     "pronunciation": "HAY-gahr"
+  },
+  "hagiographical": {
+    "pronunciation": "hay-jee-oh-GRAF-i-kul"
   },
   "Ham": {
     "pronunciation": "KHAM"
@@ -425,8 +434,14 @@
   "Lamech": {
     "pronunciation": "LAY-mick"
   },
+  "lapis": {
+    "pronunciation": "LAP-is"
+  },
   "Lasha": {
     "pronunciation": "LEH-shah"
+  },
+  "lazuli": {
+    "pronunciation": "LAZ-oo-lee"
   },
   "Lehabim": {
     "pronunciation": "leh-haw-BEEM"
@@ -490,6 +505,9 @@
   },
   "Mibsam": {
     "pronunciation": "MIB-sam"
+  },
+  "miktam": {
+    "pronunciation": "MIK-tam"
   },
   "Mishma": {
     "pronunciation": "MISH-muh"
@@ -556,6 +574,9 @@
   },
   "Pishon": {
     "pronunciation": "PIE-shon"
+  },
+  "potsherd": {
+    "pronunciation": "POT-shurd"
   },
   "Raamah": {
     "pronunciation": "RAY-uh-mah"
@@ -721,26 +742,5 @@
   },
   "Zuzim": {
     "pronunciation": "zoo-ZEEM"
-  },
-  "demoniac": {
-    "pronunciation": "dih-MOH-nee-ak"
-  },
-  "demoniacs": {
-    "pronunciation": "dih-MOH-nee-aks"
-  },
-  "hagiographical": {
-    "pronunciation": "hay-jee-oh-GRAF-i-kul"
-  },
-  "lapis": {
-    "pronunciation": "LAP-is"
-  },
-  "lazuli": {
-    "pronunciation": "LAZ-oo-lee"
-  },
-  "miktam": {
-    "pronunciation": "MIK-tam"
-  },
-  "potsherd": {
-    "pronunciation": "POT-shurd"
   }
 }

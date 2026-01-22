@@ -16,8 +16,8 @@ def organize_json_file(filepath):
         with open(filepath, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
-        # Sort entries alphabetically by key
-        sorted_data = dict(sorted(data.items()))
+        # Sort entries alphabetically by key (case-insensitive)
+        sorted_data = dict(sorted(data.items(), key=lambda x: x[0].lower()))
         
         # Write back to file with proper formatting
         with open(filepath, 'w', encoding='utf-8') as f:
