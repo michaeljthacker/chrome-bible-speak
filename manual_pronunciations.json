@@ -26,6 +26,9 @@
   "Ahuzzath": {
     "pronunciation": "uh-HUZ-ath"
   },
+  "Allon-bacuth": {
+    "pronunciation": "AL-on-BAY-kuth"
+  },
   "Almodad": {
     "pronunciation": "al-mo-DAWD"
   },
@@ -116,6 +119,12 @@
   "Bela": {
     "pronunciation": "BEH-lah"
   },
+  "Ben-oni": {
+    "pronunciation": "ben-OH-nee"
+  },
+  "Benjamin": {
+    "pronunciation": "BEN-juh-min"
+  },
   "Bera": {
     "pronunciation": "BEH-rah"
   },
@@ -166,6 +175,9 @@
   },
   "David": {
     "pronunciation": "DAY-vid"
+  },
+  "Deborah": {
+    "pronunciation": "DEB-er-uh"
   },
   "Dedan": {
     "pronunciation": "ded-AWN"
@@ -223,6 +235,9 @@
   },
   "Epher": {
     "pronunciation": "EE-fer"
+  },
+  "Ephrath": {
+    "pronunciation": "EF-rath"
   },
   "Erech": {
     "pronunciation": "ee-REK"
@@ -506,6 +521,9 @@
   "Mibsam": {
     "pronunciation": "MIB-sam"
   },
+  "Migdal-eder": {
+    "pronunciation": "MIG-dal-EE-der"
+  },
   "miktam": {
     "pronunciation": "MIK-tam"
   },
@@ -676,6 +694,9 @@
   },
   "Stephanas": {
     "pronunciation": "STEF-uh-nuhs"
+  },
+  "synagogue": {
+    "pronunciation": "SIHN-uh-gahg"
   },
   "Tahash": {
     "pronunciation": "TAY-hash"
