@@ -26,6 +26,14 @@ chrome.storage.local.get(['extensionEnabled'], (result) => {
   const toggle = document.getElementById('cbs-popup-global-toggle');
   toggle.checked = isExtensionEnabled;
   
+  // Query the active tab to initialize domain toggle (regardless of extension state)
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    const tab = tabs[0];
+    
+    // Initialize domain toggle (will be disabled if extension is off)
+    initializeDomainToggle(tab);
+  });
+  
   // If extension is disabled, show a message and stop
   if (!isExtensionEnabled) {
     document.getElementById('cbs-popup-loading').style.display = 'none';
@@ -38,9 +46,6 @@ chrome.storage.local.get(['extensionEnabled'], (result) => {
   // Extension is enabled, query the active tab for found names
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     const tab = tabs[0];
-    
-    // Initialize domain toggle
-    initializeDomainToggle(tab);
     
     chrome.tabs.sendMessage(tab.id, { action: 'getFoundNames' }, (response) => {
       if (chrome.runtime.lastError) {
@@ -141,6 +146,33 @@ document.getElementById('cbs-popup-global-toggle').addEventListener('change', (e
   isExtensionEnabled = e.target.checked;
   chrome.storage.local.set({ extensionEnabled: isExtensionEnabled });
   
+  // Update domain toggle state based on extension state
+  const domainToggle = document.getElementById('cbs-popup-domain-toggle');
+  const domainToggleContainer = document.getElementById('cbs-domain-toggle-container');
+  
+  if (domainToggle && domainToggleContainer) {
+    if (!isExtensionEnabled) {
+      // Disable and turn off domain toggle when extension is disabled
+      domainToggle.disabled = true;
+      domainToggle.checked = false;
+      domainToggleContainer.style.opacity = '0.5';
+      domainToggleContainer.style.pointerEvents = 'none';
+    } else {
+      // Re-enable domain toggle and restore its state when extension is enabled
+      domainToggle.disabled = false;
+      domainToggleContainer.style.opacity = '1';
+      domainToggleContainer.style.pointerEvents = 'auto';
+      // Restore state from storage
+      if (currentDomain) {
+        chrome.storage.local.get(['toastDisabledDomains'], (result) => {
+          const disabledDomains = result.toastDisabledDomains || [];
+          const isEnabled = !disabledDomains.includes(currentDomain);
+          domainToggle.checked = isEnabled;
+        });
+      }
+    }
+  }
+  
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     if (!isExtensionEnabled) {
       // Disable all pronunciations when turning off
@@ -190,7 +222,7 @@ function initializeDomainToggle(tab) {
     currentDomain = getRootDomain(urlObj.hostname);
     
     // Update label with current domain
-    domainToggleLabel.textContent = `Pop-up at ${currentDomain}`;
+    domainToggleLabel.textContent = `at ${currentDomain}`;
     
     // Check if domain is in disabled list
     chrome.storage.local.get(['toastDisabledDomains'], (result) => {
@@ -198,6 +230,14 @@ function initializeDomainToggle(tab) {
       const isEnabled = !disabledDomains.includes(currentDomain);
       domainToggle.checked = isEnabled;
     });
+    
+    // Disable domain toggle if extension is globally disabled
+    if (!isExtensionEnabled) {
+      domainToggle.disabled = true;
+      domainToggle.checked = false;
+      domainToggleContainer.style.opacity = '0.5';
+      domainToggleContainer.style.pointerEvents = 'none';
+    }
     
     // Add change handler
     domainToggle.addEventListener('change', handleDomainToggleChange);

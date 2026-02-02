@@ -387,12 +387,12 @@ function showSelectionMenu() {
   const currentDomain = getRootDomain(window.location.hostname);
   const isHttpPage = window.location.protocol === 'http:' || window.location.protocol === 'https:';
   const domainToggleHtml = isHttpPage ? `
-        <div id="cbs-menu-domain-toggle-container" style="display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 12px !important; font-family: inherit !important; margin-top: 8px !important;">
-          <span id="cbs-menu-domain-toggle-label" style="font-size: 12px !important; color: #5f6368 !important; font-weight: 500 !important; font-family: inherit !important;">Pop-up at ${currentDomain}</span>
-          <label style="position: relative !important; display: inline-block !important; width: 36px !important; height: 20px !important; margin: 0 !important; cursor: pointer !important;">
+        <div id="cbs-menu-domain-toggle-container" style="display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 12px !important; font-family: inherit !important; margin-top: 2px !important;">
+          <span id="cbs-menu-domain-toggle-label" style="font-size: 13px !important; color: #5f6368 !important; font-weight: 500 !important; font-family: inherit !important;">at ${currentDomain}</span>
+          <label style="position: relative !important; display: inline-block !important; width: 32px !important; height: 18px !important; margin: 0 !important; cursor: pointer !important;">
             <input type="checkbox" id="cbs-menu-domain-toggle" checked style="opacity: 0 !important; width: 0 !important; height: 0 !important;">
             <span class="cbs-menu-domain-toggle-slider" style="position: absolute !important; cursor: pointer !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background-color: #4285f4 !important; transition: 0.3s !important; border-radius: 20px !important;"></span>
-            <span class="cbs-menu-domain-toggle-knob" style="position: absolute !important; content: '' !important; height: 14px !important; width: 14px !important; left: 3px !important; bottom: 3px !important; background-color: white !important; transition: 0.3s !important; border-radius: 50% !important; transform: translateX(16px) !important;"></span>
+            <span class="cbs-menu-domain-toggle-knob" style="position: absolute !important; content: '' !important; height: 12px !important; width: 12px !important; left: 3px !important; bottom: 3px !important; background-color: white !important; transition: 0.3s !important; border-radius: 50% !important; transform: translateX(14px) !important;"></span>
           </label>
         </div>
   ` : '';
@@ -400,13 +400,13 @@ function showSelectionMenu() {
   menu.innerHTML = `
     <div style="display: flex !important; flex-direction: column !important; height: 100% !important; overflow: hidden !important;">
       <div style="padding: 16px 20px !important; border-bottom: 1px solid #e5e5e5 !important; background: #f8f9fa !important; flex-shrink: 0 !important;">
-        <h1 style="margin: 0 0 10px 0 !important; font-size: 18px !important; font-weight: 600 !important; color: #1a1a1a !important; font-family: inherit !important; line-height: 1.4 !important;">Bible Name Aid</h1>
-        <div style="display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 12px !important; font-family: inherit !important;">
-          <span style="font-size: 12px !important; color: #5f6368 !important; font-weight: 500 !important; font-family: inherit !important;">Extension Enabled</span>
-          <label style="position: relative !important; display: inline-block !important; width: 36px !important; height: 20px !important; margin: 0 !important; cursor: pointer !important;">
+        <h1 style="margin: 0 0 6px 0 !important; font-size: 18px !important; font-weight: 600 !important; color: #1a1a1a !important; font-family: inherit !important; line-height: 1.4 !important;">Bible Name Aid</h1>
+        <div style="display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 12px !important; font-family: inherit !important; margin-top: 6px !important;">
+          <span style="font-size: 13px !important; color: #5f6368 !important; font-weight: 500 !important; font-family: inherit !important;">Extension Enabled</span>
+          <label style="position: relative !important; display: inline-block !important; width: 32px !important; height: 18px !important; margin: 0 !important; cursor: pointer !important;">
             <input type="checkbox" id="cbs-menu-global-toggle" checked style="opacity: 0 !important; width: 0 !important; height: 0 !important;">
             <span class="cbs-menu-toggle-slider" style="position: absolute !important; cursor: pointer !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background-color: #4285f4 !important; transition: 0.3s !important; border-radius: 20px !important;"></span>
-            <span class="cbs-menu-toggle-knob" style="position: absolute !important; content: '' !important; height: 14px !important; width: 14px !important; left: 3px !important; bottom: 3px !important; background-color: white !important; transition: 0.3s !important; border-radius: 50% !important; transform: translateX(16px) !important;"></span>
+            <span class="cbs-menu-toggle-knob" style="position: absolute !important; content: '' !important; height: 12px !important; width: 12px !important; left: 3px !important; bottom: 3px !important; background-color: white !important; transition: 0.3s !important; border-radius: 50% !important; transform: translateX(14px) !important;"></span>
           </label>
         </div>
         ${domainToggleHtml}
@@ -490,13 +490,51 @@ function showSelectionMenu() {
     // Update toggle appearance
     if (isExtensionEnabled) {
       menuToggleSlider.style.backgroundColor = '#4285f4';
-      menuToggleKnob.style.transform = 'translateX(20px)';
+      menuToggleKnob.style.transform = 'translateX(14px)';
     } else {
       menuToggleSlider.style.backgroundColor = '#ccc';
       menuToggleKnob.style.transform = 'translateX(0)';
       // Disable all pronunciations and close menu when turning off
       disableTool();
       hideSelectionMenu();
+    }
+    
+    // Update domain toggle state if it exists
+    if (isHttpPage) {
+      const menuDomainToggle = document.getElementById('cbs-menu-domain-toggle');
+      const menuDomainToggleContainer = document.getElementById('cbs-menu-domain-toggle-container');
+      const menuDomainToggleSlider = document.querySelector('.cbs-menu-domain-toggle-slider');
+      const menuDomainToggleKnob = document.querySelector('.cbs-menu-domain-toggle-knob');
+      
+      if (!isExtensionEnabled && menuDomainToggle) {
+        // Disable and turn off domain toggle
+        menuDomainToggle.disabled = true;
+        menuDomainToggle.checked = false;
+        menuDomainToggleSlider.style.backgroundColor = '#ccc';
+        menuDomainToggleKnob.style.transform = 'translateX(0)';
+        menuDomainToggleContainer.style.opacity = '0.5';
+        menuDomainToggleContainer.style.pointerEvents = 'none';
+      } else if (menuDomainToggle) {
+        // Re-enable and restore state
+        menuDomainToggle.disabled = false;
+        menuDomainToggleContainer.style.opacity = '1';
+        menuDomainToggleContainer.style.pointerEvents = 'auto';
+        // Restore state from storage
+        if (chrome && chrome.storage && chrome.storage.local) {
+          chrome.storage.local.get(['toastDisabledDomains'], (result) => {
+            const disabledDomains = result.toastDisabledDomains || [];
+            const isDomainEnabled = !disabledDomains.includes(currentDomain);
+            menuDomainToggle.checked = isDomainEnabled;
+            if (isDomainEnabled) {
+              menuDomainToggleSlider.style.backgroundColor = '#4285f4';
+              menuDomainToggleKnob.style.transform = 'translateX(14px)';
+            } else {
+              menuDomainToggleSlider.style.backgroundColor = '#ccc';
+              menuDomainToggleKnob.style.transform = 'translateX(0)';
+            }
+          });
+        }
+      }
     }
   });
 
@@ -535,12 +573,22 @@ function showSelectionMenu() {
         // Update toggle appearance
         if (isEnabled) {
           menuDomainToggleSlider.style.backgroundColor = '#4285f4';
-          menuDomainToggleKnob.style.transform = 'translateX(16px)';
+          menuDomainToggleKnob.style.transform = 'translateX(14px)';
         } else {
           menuDomainToggleSlider.style.backgroundColor = '#ccc';
           menuDomainToggleKnob.style.transform = 'translateX(0)';
         }
       });
+    }
+    
+    // Disable domain toggle if extension is globally disabled
+    if (!isExtensionEnabled) {
+      menuDomainToggle.disabled = true;
+      menuDomainToggle.checked = false;
+      menuDomainToggleSlider.style.backgroundColor = '#ccc';
+      menuDomainToggleKnob.style.transform = 'translateX(0)';
+      menuDomainToggleContainer.style.opacity = '0.5';
+      menuDomainToggleContainer.style.pointerEvents = 'none';
     }
     
     // Handle domain toggle changes
@@ -571,7 +619,7 @@ function showSelectionMenu() {
       // Update toggle appearance
       if (isEnabled) {
         menuDomainToggleSlider.style.backgroundColor = '#4285f4';
-        menuDomainToggleKnob.style.transform = 'translateX(16px)';
+        menuDomainToggleKnob.style.transform = 'translateX(14px)';
       } else {
         menuDomainToggleSlider.style.backgroundColor = '#ccc';
         menuDomainToggleKnob.style.transform = 'translateX(0)';
