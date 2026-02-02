@@ -4,6 +4,43 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [v1.2.0] - February 2, 2026
+
+### Added
+- **Dynamic Content Support**: Extension now automatically detects biblical names in dynamically loaded content (infinite scroll, lazy loading)
+  - MutationObserver with 2-second debounce watches for DOM changes
+  - Automatically rescans page when new content is added
+  - New instances of already-enabled names get pronunciations automatically
+  - New names appearing in dynamic content are detected and added to selection menu
+  - Works seamlessly with esv.org, biblegateway.com, and other infinite scroll sites
+- **Per-Domain Toast Control**: New toggle to disable toast notifications on specific domains while keeping full pronunciation functionality
+  - Domain-specific toggle in both popup and selection menu: "at {domain}"
+  - Opt-out model: toast enabled by default on all sites
+  - Remembers settings per domain across sessions
+  - Handles root domain extraction (e.g., `bible.usccb.org` → `usccb.org`)
+
+### Fixed
+- **Bubble Flashing**: Fixed issue where floating bubble would flash during automatic content rescans
+  - Added `preserveBubble` parameter to `disableTool()` for silent resets
+  - `showBubble()` no longer recreates bubble if already visible
+- **Extension Context Handling**: Added error handling for extension context invalidation during development (reload scenarios)
+
+### Technical Changes
+- **MutationObserver Lifecycle**: Observer starts/stops with extension enable/disable state
+- **rescanPage() Function**: Re-scans entire document and updates pronunciations for enabled names
+- **Domain Extraction**: New `getRootDomain()` utility function handles www prefix, multi-segment domains, localhost, IPs
+- **Storage Schema**: Added `toastDisabledDomains` array to `chrome.storage.local`
+- **UI Dependencies**: Domain toggle automatically disables when extension is globally disabled
+- **Performance**: 2-second debounce reduces lag on genealogy-heavy passages during fast scrolling
+
+### Files Modified
+- `content.js` - MutationObserver, rescanPage, domain extraction, preserveBubble logic
+- `popup.js` - Domain toggle initialization and event handling
+- `popup.html` - Domain toggle UI element
+- `styles.css` - Toggle sizing and spacing adjustments
+
+---
+
 ## [v1.1.2] - January 16, 2026
 
 ### Added

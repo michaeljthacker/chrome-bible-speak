@@ -12,6 +12,8 @@ When enabled, the tool adds pronunciation guides directly in the text; each bibl
 
 ### Smart Detection & Control
 - **Automatic Scanning**: Detects biblical names on any webpage you visit
+- **Dynamic Content Support** *(v1.2.0)*: Automatically detects names in dynamically loaded content (infinite scroll, lazy loading)
+- **Per-Domain Toast Control** *(v1.2.0)*: Disable toast notifications on specific websites while keeping pronunciation functionality
 - **Toast Notification**: Shows a clean, auto-dismissing notification when names are found
 - **Selection Menu**: Choose exactly which names to enable pronunciation for
 - **Quick Access Bubble**: A floating button appears when pronunciations are active for easy access to settings
@@ -57,7 +59,9 @@ When enabled, the tool adds pronunciation guides directly in the text; each bibl
    - **Disable All**: Remove all pronunciation aids
 4. **Use the floating bubble** - When pronunciations are active, click the bubble to adjust your selections
 5. **Toggle extension on/off** - Use the global toggle in the popup or selection menu
-6. **Click pronunciations** - Each phonetic guide links to the full BibleSpeak.org page
+6. **Control toast notifications** - Toggle the domain-specific setting to disable toasts on sites you visit frequently
+7. **Dynamic content** - Extension automatically detects names in newly loaded content as you scroll
+8. **Click pronunciations** - Each phonetic guide links to the full BibleSpeak.org page
 
 ## Updating the Pronunciation Database
 

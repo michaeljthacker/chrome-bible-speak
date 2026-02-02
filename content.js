@@ -1,11 +1,45 @@
 // content.js
 console.log('Chrome Bible Speak content script loaded.');
 
+// Configuration
+const MUTATION_DEBOUNCE_MS = 2000; // Delay after DOM mutations before rescanning
+
 let jsonData = null;
 let foundNames = [];
 let enabledNames = []; // Track which names currently have pronunciations shown
 let autoDismissTimer = null;
 let isExtensionEnabled = true; // Global on/off state
+
+// MutationObserver for dynamic content
+let mutationObserver = null;
+let mutationDebounceTimer = null;
+
+/**
+ * Extracts the root domain from a hostname.
+ * Examples:
+ *   "www.example.com" → "example.com"
+ *   "bible.usccb.org" → "usccb.org"
+ *   "biblegateway.com" → "biblegateway.com"
+ *   "localhost" → "localhost"
+ *   "127.0.0.1" → "127.0.0.1"
+ *   "intranet" → "intranet"
+ * 
+ * @param {string} hostname - The hostname (e.g., window.location.hostname)
+ * @returns {string} The root domain
+ */
+function getRootDomain(hostname) {
+  // Remove www. prefix if present
+  let domain = hostname.replace(/^www\./, '');
+  
+  // Split by dots and take last two segments for multi-segment domains
+  const parts = domain.split('.');
+  if (parts.length > 2) {
+    domain = parts.slice(-2).join('.');
+  }
+  // Otherwise return as-is (handles localhost, IPs, single-segment domains)
+  
+  return domain;
+}
 
 // Check if extension is globally enabled
 if (chrome && chrome.storage && chrome.storage.local) {
@@ -23,6 +57,82 @@ if (chrome && chrome.storage && chrome.storage.local) {
   // Fallback if storage not available - just load normally
   console.log('Chrome storage not available, proceeding with default enabled state');
   loadAndCheckNames();
+}
+
+/**
+ * Start the MutationObserver to detect dynamic content additions.
+ * Observer watches document.body for new content and triggers rescanPage() after debounce.
+ */
+function startObserver() {
+  if (mutationObserver) return; // Already running
+  
+  mutationObserver = new MutationObserver((mutations) => {
+    // Debounce: reset timer on each mutation batch
+    clearTimeout(mutationDebounceTimer);
+    mutationDebounceTimer = setTimeout(() => {
+      rescanPage();
+    }, MUTATION_DEBOUNCE_MS);
+  });
+  
+  mutationObserver.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+  
+  console.log('MutationObserver started');
+}
+
+/**
+ * Stop the MutationObserver.
+ */
+function stopObserver() {
+  if (mutationObserver) {
+    mutationObserver.disconnect();
+    mutationObserver = null;
+  }
+  clearTimeout(mutationDebounceTimer);
+  console.log('MutationObserver stopped');
+}
+
+/**
+ * Re-scan the page for biblical names and update pronunciations.
+ * Called by manual refresh button or MutationObserver.
+ * Does NOT show toast (toast is only for initial page load).
+ */
+function rescanPage() {
+  if (!jsonData) return;
+  if (enabledNames.length === 0) return; // Nothing to rescan
+  
+  console.log('Rescanning page for new names...');
+  
+  // Store currently enabled names before reset
+  const namesToReEnable = [...enabledNames];
+  
+  // Re-scan for any NEW names in the document
+  const names = Object.keys(jsonData);
+  const bodyText = document.body.innerText;
+  const previousCount = foundNames.length;
+  
+  names.forEach(name => {
+    const regex = new RegExp(`\\b${name}\\b`, 'i');
+    if (regex.test(bodyText) && !foundNames.includes(name)) {
+      console.log(`Found new name: ${name}`);
+      foundNames.push(name);
+    }
+  });
+  
+  // Sort alphabetically
+  foundNames.sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));
+  
+  if (foundNames.length > previousCount) {
+    console.log(`Rescan found ${foundNames.length - previousCount} new name(s)`);
+  }
+  
+  // Silent disable: remove markers and reset enabledNames, but preserve bubble
+  disableTool(null, true);
+  
+  // Re-enable the same names (will now process entire document including new content)
+  enableTool(jsonData, namesToReEnable);
 }
 
 function loadAndCheckNames() {
@@ -65,14 +175,22 @@ function loadAndCheckNames() {
     // Sort names alphabetically for better UI display
     foundNames.sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));
 
-    // Only show toast if names were found
+    // Only show toast if names were found and domain is not suppressed
     if (foundNames.length > 0) {
-      // Ensure DOM is fully loaded before showing toast
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', showToast);
-      } else {
-        showToast();
-      }
+      const rootDomain = getRootDomain(window.location.hostname);
+      chrome.storage.local.get(['toastDisabledDomains'], (result) => {
+        const disabledDomains = result.toastDisabledDomains || [];
+        if (!disabledDomains.includes(rootDomain)) {
+          // Domain is not suppressed, show toast
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', showToast);
+          } else {
+            showToast();
+          }
+        } else {
+          console.log(`Toast suppressed for domain: ${rootDomain}`);
+        }
+      });
     }
   })
   .catch(error => console.error('Error loading JSON:', error));
@@ -223,17 +341,24 @@ function showBubble() {
   const existingMenu = document.getElementById('chrome-bible-speak-selection');
   if (existingMenu) return;
   
-  // Remove existing bubble if any
+  // If bubble already exists and is visible, don't recreate it (avoids flash during rescan)
   const existingBubble = document.getElementById('chrome-bible-speak-bubble');
   if (existingBubble) {
-    existingBubble.remove();
+    return; // Bubble already showing, leave it alone
   }
 
   const bubble = document.createElement('div');
   bubble.id = 'chrome-bible-speak-bubble';
-  
-  // Get the icon URL
-  const iconUrl = chrome.runtime.getURL('icons/BibleSpeakIcon_32.png');
+
+  // Get the icon URL (handle extension context invalidation)
+  let iconUrl;
+  try {
+    iconUrl = chrome.runtime.getURL('icons/BibleSpeakIcon_32.png');
+  } catch (e) {
+    // Extension context invalidated (happens during development when reloading)
+    console.warn('Chrome Bible Speak: Extension context invalidated, cannot show bubble');
+    return;
+  }
   
   bubble.style.cssText = `
     position: fixed !important;
@@ -348,18 +473,33 @@ function showSelectionMenu() {
     </label>
   `}).join('');
 
+  // Get current domain for domain toggle
+  const currentDomain = getRootDomain(window.location.hostname);
+  const isHttpPage = window.location.protocol === 'http:' || window.location.protocol === 'https:';
+  const domainToggleHtml = isHttpPage ? `
+        <div id="cbs-menu-domain-toggle-container" style="display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 12px !important; font-family: inherit !important; margin-top: 2px !important;">
+          <span id="cbs-menu-domain-toggle-label" style="font-size: 13px !important; color: #5f6368 !important; font-weight: 500 !important; font-family: inherit !important;">at ${currentDomain}</span>
+          <label style="position: relative !important; display: inline-block !important; width: 32px !important; height: 18px !important; margin: 0 !important; cursor: pointer !important;">
+            <input type="checkbox" id="cbs-menu-domain-toggle" checked style="opacity: 0 !important; width: 0 !important; height: 0 !important;">
+            <span class="cbs-menu-domain-toggle-slider" style="position: absolute !important; cursor: pointer !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background-color: #4285f4 !important; transition: 0.3s !important; border-radius: 20px !important;"></span>
+            <span class="cbs-menu-domain-toggle-knob" style="position: absolute !important; content: '' !important; height: 12px !important; width: 12px !important; left: 3px !important; bottom: 3px !important; background-color: white !important; transition: 0.3s !important; border-radius: 50% !important; transform: translateX(14px) !important;"></span>
+          </label>
+        </div>
+  ` : '';
+
   menu.innerHTML = `
     <div style="display: flex !important; flex-direction: column !important; height: 100% !important; overflow: hidden !important;">
       <div style="padding: 16px 20px !important; border-bottom: 1px solid #e5e5e5 !important; background: #f8f9fa !important; flex-shrink: 0 !important;">
-        <h1 style="margin: 0 0 10px 0 !important; font-size: 18px !important; font-weight: 600 !important; color: #1a1a1a !important; font-family: inherit !important; line-height: 1.4 !important;">Bible Name Aid</h1>
-        <div style="display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 12px !important; font-family: inherit !important;">
-          <span style="font-size: 12px !important; color: #5f6368 !important; font-weight: 500 !important; font-family: inherit !important;">Extension Enabled</span>
-          <label style="position: relative !important; display: inline-block !important; width: 36px !important; height: 20px !important; margin: 0 !important; cursor: pointer !important;">
+        <h1 style="margin: 0 0 6px 0 !important; font-size: 18px !important; font-weight: 600 !important; color: #1a1a1a !important; font-family: inherit !important; line-height: 1.4 !important;">Bible Name Aid</h1>
+        <div style="display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 12px !important; font-family: inherit !important; margin-top: 6px !important;">
+          <span style="font-size: 13px !important; color: #5f6368 !important; font-weight: 500 !important; font-family: inherit !important;">Extension Enabled</span>
+          <label style="position: relative !important; display: inline-block !important; width: 32px !important; height: 18px !important; margin: 0 !important; cursor: pointer !important;">
             <input type="checkbox" id="cbs-menu-global-toggle" checked style="opacity: 0 !important; width: 0 !important; height: 0 !important;">
             <span class="cbs-menu-toggle-slider" style="position: absolute !important; cursor: pointer !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background-color: #4285f4 !important; transition: 0.3s !important; border-radius: 20px !important;"></span>
-            <span class="cbs-menu-toggle-knob" style="position: absolute !important; content: '' !important; height: 14px !important; width: 14px !important; left: 3px !important; bottom: 3px !important; background-color: white !important; transition: 0.3s !important; border-radius: 50% !important; transform: translateX(16px) !important;"></span>
+            <span class="cbs-menu-toggle-knob" style="position: absolute !important; content: '' !important; height: 12px !important; width: 12px !important; left: 3px !important; bottom: 3px !important; background-color: white !important; transition: 0.3s !important; border-radius: 50% !important; transform: translateX(14px) !important;"></span>
           </label>
         </div>
+        ${domainToggleHtml}
       </div>
       <div style="padding: 16px 20px !important; display: flex !important; flex-direction: column !important; gap: 8px !important; flex-shrink: 0 !important;">
         <button id="cbs-enable-all-btn" style="padding: 14px 24px !important; border: none !important; border-radius: 8px !important; font-size: 15px !important; font-weight: 500 !important; cursor: pointer !important; transition: all 0.2s !important; font-family: inherit !important; white-space: nowrap !important; background: #4285f4 !important; color: white !important; width: 100% !important; margin: 0 !important; line-height: 1.4 !important;">Enable All Pronunciations</button>
@@ -440,13 +580,51 @@ function showSelectionMenu() {
     // Update toggle appearance
     if (isExtensionEnabled) {
       menuToggleSlider.style.backgroundColor = '#4285f4';
-      menuToggleKnob.style.transform = 'translateX(20px)';
+      menuToggleKnob.style.transform = 'translateX(14px)';
     } else {
       menuToggleSlider.style.backgroundColor = '#ccc';
       menuToggleKnob.style.transform = 'translateX(0)';
       // Disable all pronunciations and close menu when turning off
       disableTool();
       hideSelectionMenu();
+    }
+    
+    // Update domain toggle state if it exists
+    if (isHttpPage) {
+      const menuDomainToggle = document.getElementById('cbs-menu-domain-toggle');
+      const menuDomainToggleContainer = document.getElementById('cbs-menu-domain-toggle-container');
+      const menuDomainToggleSlider = document.querySelector('.cbs-menu-domain-toggle-slider');
+      const menuDomainToggleKnob = document.querySelector('.cbs-menu-domain-toggle-knob');
+      
+      if (!isExtensionEnabled && menuDomainToggle) {
+        // Disable and turn off domain toggle
+        menuDomainToggle.disabled = true;
+        menuDomainToggle.checked = false;
+        menuDomainToggleSlider.style.backgroundColor = '#ccc';
+        menuDomainToggleKnob.style.transform = 'translateX(0)';
+        menuDomainToggleContainer.style.opacity = '0.5';
+        menuDomainToggleContainer.style.pointerEvents = 'none';
+      } else if (menuDomainToggle) {
+        // Re-enable and restore state
+        menuDomainToggle.disabled = false;
+        menuDomainToggleContainer.style.opacity = '1';
+        menuDomainToggleContainer.style.pointerEvents = 'auto';
+        // Restore state from storage
+        if (chrome && chrome.storage && chrome.storage.local) {
+          chrome.storage.local.get(['toastDisabledDomains'], (result) => {
+            const disabledDomains = result.toastDisabledDomains || [];
+            const isDomainEnabled = !disabledDomains.includes(currentDomain);
+            menuDomainToggle.checked = isDomainEnabled;
+            if (isDomainEnabled) {
+              menuDomainToggleSlider.style.backgroundColor = '#4285f4';
+              menuDomainToggleKnob.style.transform = 'translateX(14px)';
+            } else {
+              menuDomainToggleSlider.style.backgroundColor = '#ccc';
+              menuDomainToggleKnob.style.transform = 'translateX(0)';
+            }
+          });
+        }
+      }
     }
   });
 
@@ -468,6 +646,76 @@ function showSelectionMenu() {
     
     hideSelectionMenu();
   });
+
+  // Domain toggle handler for selection menu (only if on http(s) page)
+  if (isHttpPage) {
+    const menuDomainToggle = document.getElementById('cbs-menu-domain-toggle');
+    const menuDomainToggleSlider = document.querySelector('.cbs-menu-domain-toggle-slider');
+    const menuDomainToggleKnob = document.querySelector('.cbs-menu-domain-toggle-knob');
+    
+    // Initialize domain toggle state from storage
+    if (chrome && chrome.storage && chrome.storage.local) {
+      chrome.storage.local.get(['toastDisabledDomains'], (result) => {
+        const disabledDomains = result.toastDisabledDomains || [];
+        const isEnabled = !disabledDomains.includes(currentDomain);
+        menuDomainToggle.checked = isEnabled;
+        
+        // Update toggle appearance
+        if (isEnabled) {
+          menuDomainToggleSlider.style.backgroundColor = '#4285f4';
+          menuDomainToggleKnob.style.transform = 'translateX(14px)';
+        } else {
+          menuDomainToggleSlider.style.backgroundColor = '#ccc';
+          menuDomainToggleKnob.style.transform = 'translateX(0)';
+        }
+      });
+    }
+    
+    // Disable domain toggle if extension is globally disabled
+    if (!isExtensionEnabled) {
+      menuDomainToggle.disabled = true;
+      menuDomainToggle.checked = false;
+      menuDomainToggleSlider.style.backgroundColor = '#ccc';
+      menuDomainToggleKnob.style.transform = 'translateX(0)';
+      menuDomainToggleContainer.style.opacity = '0.5';
+      menuDomainToggleContainer.style.pointerEvents = 'none';
+    }
+    
+    // Handle domain toggle changes
+    menuDomainToggle.addEventListener('change', () => {
+      const isEnabled = menuDomainToggle.checked;
+      
+      if (chrome && chrome.storage && chrome.storage.local) {
+        chrome.storage.local.get(['toastDisabledDomains'], (result) => {
+          let disabledDomains = result.toastDisabledDomains || [];
+          
+          if (isEnabled) {
+            // Remove domain from disabled list
+            disabledDomains = disabledDomains.filter(d => d !== currentDomain);
+            console.log(`Enabled toast for domain: ${currentDomain}`);
+          } else {
+            // Add domain to disabled list
+            if (!disabledDomains.includes(currentDomain)) {
+              disabledDomains.push(currentDomain);
+            }
+            console.log(`Disabled toast for domain: ${currentDomain}`);
+          }
+          
+          // Save updated list
+          chrome.storage.local.set({ toastDisabledDomains: disabledDomains });
+        });
+      }
+      
+      // Update toggle appearance
+      if (isEnabled) {
+        menuDomainToggleSlider.style.backgroundColor = '#4285f4';
+        menuDomainToggleKnob.style.transform = 'translateX(14px)';
+      } else {
+        menuDomainToggleSlider.style.backgroundColor = '#ccc';
+        menuDomainToggleKnob.style.transform = 'translateX(0)';
+      }
+    });
+  }
 
   // Trigger animation
   setTimeout(() => {
@@ -491,7 +739,7 @@ function hideSelectionMenu() {
   }
 }
 
-function disableTool(namesToDisable = null) {
+function disableTool(namesToDisable = null, preserveBubble = false) {
   // If no specific names provided, disable all
   const targetNames = namesToDisable || enabledNames;
   
@@ -540,8 +788,9 @@ function disableTool(namesToDisable = null) {
     enabledNames = [];
   }
   
-  // Hide bubble if all pronunciations are disabled
-  if (enabledNames.length === 0) {
+  // Only hide bubble and stop observer if NOT preserving for rescan
+  if (enabledNames.length === 0 && !preserveBubble) {
+    stopObserver();
     hideBubble();
   }
 }
@@ -765,6 +1014,9 @@ function enableTool(data, namesToEnable) {
   // Update global tracker with newly enabled names
   enabledNames = [...enabledNames, ...newNames];
   console.log('Updated enabledNames:', enabledNames);
+  
+  // Start MutationObserver to watch for dynamic content
+  startObserver();
   
   // Show bubble if not showing selection menu
   const existingMenu = document.getElementById('chrome-bible-speak-selection');

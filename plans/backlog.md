@@ -1,6 +1,6 @@
 # Bible Name Aid - Feature Backlog
 
-**Last Updated**: January 12, 2026
+**Last Updated**: February 2, 2026
 
 This document tracks planned features, enhancements, and known limitations for future development.
 
@@ -8,80 +8,11 @@ This document tracks planned features, enhancements, and known limitations for f
 
 ## High Priority
 
-### Dynamic Content Loading Support (Infinite Scroll)
-**Status**: Not Started  
-**Priority**: High  
-**Discovered**: January 12, 2026
-
-**Problem**:
-Some websites (notably esv.org and other Bible sites) use infinite scroll or lazy loading, where content is dynamically added as the user scrolls. Currently, Bible Name Aid only scans and injects pronunciations once when the page first loads, so names in dynamically-loaded content don't get pronunciation aids.
-
-**Impact**:
-- Users lose pronunciation support as they scroll through long passages
-- Inconsistent experience - names at the top have pronunciations, names at the bottom don't
-- Particularly problematic for the extension's primary use case (Bible reading sites)
-
-**Proposed Solutions**:
-1. **Mutation Observer**: Watch for DOM changes and re-scan new content as it's added
-2. **Manual Refresh Button**: Add a small refresh icon next to the floating bubble that re-scans the current page
-3. **Hybrid Approach**: Automatic detection + manual refresh option for fine-grained control
-
-**Technical Considerations**:
-- Need to avoid re-processing already-injected names (duplicate pronunciations)
-- Performance: Mutation observers can be expensive on high-frequency DOM changes
-- UI placement: Refresh button shouldn't clutter the minimal bubble design
-
-**Related Files**:
-- `content.js` - Would need mutation observer or refresh function
-- CSS styling for refresh button (if applicable)
+*No items currently in high priority.*
 
 ---
 
 ## Medium Priority
-
-### Per-Domain Pop-up Toast Control
-**Status**: Planned  
-**Priority**: Medium  
-**Requested**: January 23, 2026
-
-**Problem**:
-As the pronunciation database grows, the pop-up toast that appears on every page load becomes more of a nuisance on sites where users don't need pronunciation support (e.g., Facebook, Google search results, non-Bible content).
-
-**Impact**:
-- Toast appears on all websites when extension is enabled, even where it's not useful
-- User annoyance increases as more words/names are added to pronunciation files
-- No granular control between "fully enabled" and "fully disabled"
-
-**Proposed Solution**:
-Add a domain-specific toggle in the popup UI:
-1. New toggle beneath the global "Extension Enabled" toggle
-2. Label: "Pop-up at {root domain}" (e.g., "Pop-up at facebook.com")
-3. Toggle allows disabling the toast on a per-domain basis
-4. Default: ON for all domains (opt-out model)
-5. Storage: Track only domains where toast is disabled (not all domains)
-
-**Use Case**:
-User wants pronunciation support when reading Bible content but wants to disable the toast notification on social media or search engines where it's not relevant.
-
-**Technical Implementation**:
-- Store disabled domains list in `chrome.storage.local`
-- Check current domain against disabled list before showing toast
-- Update popup UI to show domain-specific toggle when popup is opened
-- Extract root domain from current tab URL (e.g., `www.example.com` → `example.com`)
-
-**UI Changes**:
-- Minimal: One additional toggle in popup
-- Dynamic label based on current site's root domain
-- Should not clutter existing minimal popup design
-
-**Benefits**:
-- Reduces toast fatigue on frequently-visited non-Bible sites
-- Maintains full functionality on sites where it's wanted
-- Scales well as pronunciation database continues to grow
-
-**Estimated Effort**: Small to Medium (1-2 days for storage logic, UI update, and testing)
-
----
 
 ### Plural Forms Support
 **Status**: Deferred from Phase 1  

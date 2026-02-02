@@ -166,7 +166,7 @@
 </head>
 <body>
     <h1>🔬 Bible Name Aid - Release Smoke Test</h1>
-    <div class="version">Test all core features before Chrome Web Store submission</div>
+    <div class="version">v1.2.0 - Test all core features before Chrome Web Store submission</div>
 
     <div class="test-runner">
         <h2 style="margin-top: 0;">🤖 Automated Test Runner</h2>
@@ -362,9 +362,65 @@
         </div>
     </div>
 
-    <!-- Test 10: Performance -->
+    <!-- Test 10: Dynamic Content & Per-Domain Controls -->
     <div class="test-section">
-        <h2>✅ Test 10: Performance & Stability</h2>
+        <h2>✅ Test 10: Dynamic Content & Per-Domain Controls <span class="feature-tag">v1.2.0</span></h2>
+        <div class="test-case">
+            <h3>Per-Domain Toast Control</h3>
+            <p><strong>Note:</strong> This test requires a real website (http/https). Navigate to <strong>esv.org</strong> or <strong>biblegateway.com</strong> for this test.</p>
+            <ul class="checklist">
+                <li>Navigate to esv.org or biblegateway.com</li>
+                <li>Open extension popup</li>
+                <li>Note the domain toggle shows "at esv.org" or "at biblegateway.com"</li>
+                <li>Toggle OFF the domain-specific toast</li>
+                <li>Reload page - toast should NOT appear</li>
+                <li>Verify pronunciations still work (open popup, enable names)</li>
+                <li>Re-open popup, toggle domain back ON</li>
+                <li>Reload page - toast should appear again</li>
+                <li>Verify setting persists across browser restarts</li>
+            </ul>
+        </div>
+
+        <div class="test-case">
+            <h3>Infinite Scroll Simulation</h3>
+            <p>This scrollable box simulates dynamic content loading (like infinite scroll):</p>
+            <div id="scroll-container" style="height: 200px; overflow-y: scroll; border: 2px solid #ddd; padding: 15px; background: #fff; border-radius: 4px;">
+                <div id="scroll-content">
+                    <p>Initial content: Abraham, Isaac, and Jacob traveled through Canaan.</p>
+                    <p>Moses led the Israelites across the Red Sea.</p>
+                    <p style="height: 100px;"></p>
+                    <p><em>Scroll down to load more content...</em></p>
+                </div>
+            </div>
+            <button onclick="loadMoreContent()" style="margin-top: 10px; padding: 8px 16px; background: #4285f4; color: white; border: none; border-radius: 4px; cursor: pointer;">Manually Load More Content</button>
+            <ul class="checklist" style="margin-top: 15px;">
+                <li>Enable pronunciations for some names first (e.g., Abraham, Isaac, Jacob, Moses)</li>
+                <li>Scroll to bottom of box OR click "Load More Content" button</li>
+                <li>Wait 2-3 seconds (MutationObserver debounce)</li>
+                <li>Verify NEW INSTANCES of already-enabled names get pronunciations automatically</li>
+                <li>New names appearing in dynamically loaded content are detected and added to selection menu but remain unchecked</li>
+                <li>Enable one of the new names - verify all instances (including in dynamic content) get pronunciation immediately</li>
+                <li>No duplicate pronunciations on existing content</li>
+                <li>Bubble icon should NOT flash during auto-rescan</li>
+            </ul>
+        </div>
+
+        <div class="test-case">
+            <h3>Bubble Icon & Selection Menu</h3>
+            <ul class="checklist">
+                <li>Enable pronunciations - floating bubble icon appears bottom-right</li>
+                <li>Click bubble icon to open selection menu</li>
+                <li>Verify bubble disappears when menu opens</li>
+                <li>Verify menu shows both global toggle and domain toggle</li>
+                <li>Close menu - bubble reappears</li>
+                <li>During infinite scroll, bubble should NOT flash/flicker</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Test 11: Performance -->
+    <div class="test-section">
+        <h2>✅ Test 11: Performance & Stability</h2>
         <div class="test-case">
             <h3>Large Passage Test</h3>
             <div class="passage">
@@ -390,7 +446,7 @@
     <div class="test-section" style="border-left-color: #34a853;">
         <h2>🎯 Final Pre-Submission Checklist</h2>
         <ul class="checklist">
-            <li>All 10 test sections passed</li>
+            <li>All 11 test sections passed</li>
             <li>No JavaScript errors in console</li>
             <li>Extension icon displays correctly in toolbar</li>
             <li>Popup UI is clean and functional</li>
@@ -635,7 +691,7 @@
                     html += `<div class="test-result pass" style="margin-top: 20px;">
                         <strong>🎉 Automated Tests Complete!</strong>
                         <div class="test-details">
-                            Now proceed with manual tests below (Tests 5-8) to verify toggle functionality, UI, and interactive features.
+                            Now proceed with manual tests below (Tests 5-11) to verify toggle functionality, dynamic content, UI, and interactive features.
                         </div>
                     </div>`;
                 } else {
@@ -649,6 +705,45 @@
                 
                 resultsDiv.innerHTML = html;
             }, 500);
+        }
+        // Dynamic content loading simulation
+        let contentLoadCount = 0;
+        const scrollContainer = document.getElementById('scroll-container');
+        
+        function loadMoreContent() {
+            contentLoadCount++;
+            const scrollContent = document.getElementById('scroll-content');
+            const newContent = document.createElement('div');
+            newContent.style.marginTop = '20px';
+            newContent.style.padding = '10px';
+            newContent.style.background = '#f0f7ff';
+            newContent.style.borderRadius = '4px';
+            
+            const names = [
+                ['Joshua', 'Caleb', 'Eleazar'],
+                ['Gideon', 'Samson', 'Ruth'],
+                ['Solomon', 'Rehoboam', 'Jeroboam'],
+                ['Elijah', 'Elisha', 'Jeremiah'],
+                ['Nehemiah', 'Ezra', 'Esther']
+            ];
+            
+            const nameSet = names[contentLoadCount % names.length];
+            newContent.innerHTML = `<p><strong>Dynamically loaded content ${contentLoadCount}:</strong> ${nameSet[0]} served alongside ${nameSet[1]} and ${nameSet[2]}.</p>`;
+            scrollContent.appendChild(newContent);
+            
+            // Scroll to show new content
+            scrollContainer.scrollTop = scrollContainer.scrollHeight;
+        }
+        
+        // Auto-load when scrolling to bottom
+        if (scrollContainer) {
+            scrollContainer.addEventListener('scroll', function() {
+                if (scrollContainer.scrollTop + scrollContainer.clientHeight >= scrollContainer.scrollHeight - 10) {
+                    if (contentLoadCount < 5) { // Limit to 5 auto-loads
+                        loadMoreContent();
+                    }
+                }
+            });
         }
     </script>
 
