@@ -2,6 +2,21 @@ let foundNames = [];
 let jsonData = null;
 let enabledNames = [];
 let isExtensionEnabled = true;
+let currentDomain = ''; // Track the current page's root domain
+
+/**
+ * Extracts the root domain from a hostname (same logic as content.js).
+ * @param {string} hostname - The hostname
+ * @returns {string} The root domain
+ */
+function getRootDomain(hostname) {
+  let domain = hostname.replace(/^www\./, '');
+  const parts = domain.split('.');
+  if (parts.length > 2) {
+    domain = parts.slice(-2).join('.');
+  }
+  return domain;
+}
 
 // First, check the extension enabled state from storage
 chrome.storage.local.get(['extensionEnabled'], (result) => {
@@ -22,7 +37,12 @@ chrome.storage.local.get(['extensionEnabled'], (result) => {
   
   // Extension is enabled, query the active tab for found names
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.sendMessage(tabs[0].id, { action: 'getFoundNames' }, (response) => {
+    const tab = tabs[0];
+    
+    // Initialize domain toggle
+    initializeDomainToggle(tab);
+    
+    chrome.tabs.sendMessage(tab.id, { action: 'getFoundNames' }, (response) => {
       if (chrome.runtime.lastError) {
         // Content script not ready or page doesn't support it
         showNoNames();
@@ -146,3 +166,71 @@ document.getElementById('cbs-popup-enable-selected').addEventListener('click', (
     window.close();
   });
 });
+
+/**
+ * Initialize the domain toggle based on current tab's URL and stored settings.
+ * @param {chrome.tabs.Tab} tab - The active tab
+ */
+function initializeDomainToggle(tab) {
+  const domainToggleContainer = document.getElementById('cbs-domain-toggle-container');
+  const domainToggleLabel = document.getElementById('cbs-domain-toggle-label');
+  const domainToggle = document.getElementById('cbs-popup-domain-toggle');
+  
+  const url = tab.url || '';
+  
+  // Hide toggle on non-http(s) pages
+  if (!url.startsWith('http://') && !url.startsWith('https://')) {
+    domainToggleContainer.style.display = 'none';
+    return;
+  }
+  
+  // Extract domain from URL
+  try {
+    const urlObj = new URL(url);
+    currentDomain = getRootDomain(urlObj.hostname);
+    
+    // Update label with current domain
+    domainToggleLabel.textContent = `Pop-up at ${currentDomain}`;
+    
+    // Check if domain is in disabled list
+    chrome.storage.local.get(['toastDisabledDomains'], (result) => {
+      const disabledDomains = result.toastDisabledDomains || [];
+      const isEnabled = !disabledDomains.includes(currentDomain);
+      domainToggle.checked = isEnabled;
+    });
+    
+    // Add change handler
+    domainToggle.addEventListener('change', handleDomainToggleChange);
+    
+  } catch (error) {
+    console.error('Error parsing URL:', error);
+    domainToggleContainer.style.display = 'none';
+  }
+}
+
+/**
+ * Handle domain toggle changes.
+ * @param {Event} e - The change event
+ */
+function handleDomainToggleChange(e) {
+  const isEnabled = e.target.checked;
+  
+  chrome.storage.local.get(['toastDisabledDomains'], (result) => {
+    let disabledDomains = result.toastDisabledDomains || [];
+    
+    if (isEnabled) {
+      // Remove domain from disabled list
+      disabledDomains = disabledDomains.filter(d => d !== currentDomain);
+      console.log(`Enabled toast for domain: ${currentDomain}`);
+    } else {
+      // Add domain to disabled list
+      if (!disabledDomains.includes(currentDomain)) {
+        disabledDomains.push(currentDomain);
+      }
+      console.log(`Disabled toast for domain: ${currentDomain}`);
+    }
+    
+    // Save updated list
+    chrome.storage.local.set({ toastDisabledDomains: disabledDomains });
+  });
+}

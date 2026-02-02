@@ -7,6 +7,33 @@ let enabledNames = []; // Track which names currently have pronunciations shown
 let autoDismissTimer = null;
 let isExtensionEnabled = true; // Global on/off state
 
+/**
+ * Extracts the root domain from a hostname.
+ * Examples:
+ *   "www.example.com" → "example.com"
+ *   "bible.usccb.org" → "usccb.org"
+ *   "biblegateway.com" → "biblegateway.com"
+ *   "localhost" → "localhost"
+ *   "127.0.0.1" → "127.0.0.1"
+ *   "intranet" → "intranet"
+ * 
+ * @param {string} hostname - The hostname (e.g., window.location.hostname)
+ * @returns {string} The root domain
+ */
+function getRootDomain(hostname) {
+  // Remove www. prefix if present
+  let domain = hostname.replace(/^www\./, '');
+  
+  // Split by dots and take last two segments for multi-segment domains
+  const parts = domain.split('.');
+  if (parts.length > 2) {
+    domain = parts.slice(-2).join('.');
+  }
+  // Otherwise return as-is (handles localhost, IPs, single-segment domains)
+  
+  return domain;
+}
+
 // Check if extension is globally enabled
 if (chrome && chrome.storage && chrome.storage.local) {
   chrome.storage.local.get(['extensionEnabled'], (result) => {
@@ -65,14 +92,22 @@ function loadAndCheckNames() {
     // Sort names alphabetically for better UI display
     foundNames.sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));
 
-    // Only show toast if names were found
+    // Only show toast if names were found and domain is not suppressed
     if (foundNames.length > 0) {
-      // Ensure DOM is fully loaded before showing toast
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', showToast);
-      } else {
-        showToast();
-      }
+      const rootDomain = getRootDomain(window.location.hostname);
+      chrome.storage.local.get(['toastDisabledDomains'], (result) => {
+        const disabledDomains = result.toastDisabledDomains || [];
+        if (!disabledDomains.includes(rootDomain)) {
+          // Domain is not suppressed, show toast
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', showToast);
+          } else {
+            showToast();
+          }
+        } else {
+          console.log(`Toast suppressed for domain: ${rootDomain}`);
+        }
+      });
     }
   })
   .catch(error => console.error('Error loading JSON:', error));
