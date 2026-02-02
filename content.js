@@ -1,11 +1,18 @@
 // content.js
 console.log('Chrome Bible Speak content script loaded.');
 
+// Configuration
+const MUTATION_DEBOUNCE_MS = 2000; // Delay after DOM mutations before rescanning
+
 let jsonData = null;
 let foundNames = [];
 let enabledNames = []; // Track which names currently have pronunciations shown
 let autoDismissTimer = null;
 let isExtensionEnabled = true; // Global on/off state
+
+// MutationObserver for dynamic content
+let mutationObserver = null;
+let mutationDebounceTimer = null;
 
 /**
  * Extracts the root domain from a hostname.
@@ -50,6 +57,82 @@ if (chrome && chrome.storage && chrome.storage.local) {
   // Fallback if storage not available - just load normally
   console.log('Chrome storage not available, proceeding with default enabled state');
   loadAndCheckNames();
+}
+
+/**
+ * Start the MutationObserver to detect dynamic content additions.
+ * Observer watches document.body for new content and triggers rescanPage() after debounce.
+ */
+function startObserver() {
+  if (mutationObserver) return; // Already running
+  
+  mutationObserver = new MutationObserver((mutations) => {
+    // Debounce: reset timer on each mutation batch
+    clearTimeout(mutationDebounceTimer);
+    mutationDebounceTimer = setTimeout(() => {
+      rescanPage();
+    }, MUTATION_DEBOUNCE_MS);
+  });
+  
+  mutationObserver.observe(document.body, {
+    childList: true,
+    subtree: true
+  });
+  
+  console.log('MutationObserver started');
+}
+
+/**
+ * Stop the MutationObserver.
+ */
+function stopObserver() {
+  if (mutationObserver) {
+    mutationObserver.disconnect();
+    mutationObserver = null;
+  }
+  clearTimeout(mutationDebounceTimer);
+  console.log('MutationObserver stopped');
+}
+
+/**
+ * Re-scan the page for biblical names and update pronunciations.
+ * Called by manual refresh button or MutationObserver.
+ * Does NOT show toast (toast is only for initial page load).
+ */
+function rescanPage() {
+  if (!jsonData) return;
+  if (enabledNames.length === 0) return; // Nothing to rescan
+  
+  console.log('Rescanning page for new names...');
+  
+  // Store currently enabled names before reset
+  const namesToReEnable = [...enabledNames];
+  
+  // Re-scan for any NEW names in the document
+  const names = Object.keys(jsonData);
+  const bodyText = document.body.innerText;
+  const previousCount = foundNames.length;
+  
+  names.forEach(name => {
+    const regex = new RegExp(`\\b${name}\\b`, 'i');
+    if (regex.test(bodyText) && !foundNames.includes(name)) {
+      console.log(`Found new name: ${name}`);
+      foundNames.push(name);
+    }
+  });
+  
+  // Sort alphabetically
+  foundNames.sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));
+  
+  if (foundNames.length > previousCount) {
+    console.log(`Rescan found ${foundNames.length - previousCount} new name(s)`);
+  }
+  
+  // Silent disable: remove markers and reset enabledNames, but preserve bubble
+  disableTool(null, true);
+  
+  // Re-enable the same names (will now process entire document including new content)
+  enableTool(jsonData, namesToReEnable);
 }
 
 function loadAndCheckNames() {
@@ -258,17 +341,24 @@ function showBubble() {
   const existingMenu = document.getElementById('chrome-bible-speak-selection');
   if (existingMenu) return;
   
-  // Remove existing bubble if any
+  // If bubble already exists and is visible, don't recreate it (avoids flash during rescan)
   const existingBubble = document.getElementById('chrome-bible-speak-bubble');
   if (existingBubble) {
-    existingBubble.remove();
+    return; // Bubble already showing, leave it alone
   }
 
   const bubble = document.createElement('div');
   bubble.id = 'chrome-bible-speak-bubble';
-  
-  // Get the icon URL
-  const iconUrl = chrome.runtime.getURL('icons/BibleSpeakIcon_32.png');
+
+  // Get the icon URL (handle extension context invalidation)
+  let iconUrl;
+  try {
+    iconUrl = chrome.runtime.getURL('icons/BibleSpeakIcon_32.png');
+  } catch (e) {
+    // Extension context invalidated (happens during development when reloading)
+    console.warn('Chrome Bible Speak: Extension context invalidated, cannot show bubble');
+    return;
+  }
   
   bubble.style.cssText = `
     position: fixed !important;
@@ -649,7 +739,7 @@ function hideSelectionMenu() {
   }
 }
 
-function disableTool(namesToDisable = null) {
+function disableTool(namesToDisable = null, preserveBubble = false) {
   // If no specific names provided, disable all
   const targetNames = namesToDisable || enabledNames;
   
@@ -698,8 +788,9 @@ function disableTool(namesToDisable = null) {
     enabledNames = [];
   }
   
-  // Hide bubble if all pronunciations are disabled
-  if (enabledNames.length === 0) {
+  // Only hide bubble and stop observer if NOT preserving for rescan
+  if (enabledNames.length === 0 && !preserveBubble) {
+    stopObserver();
     hideBubble();
   }
 }
@@ -923,6 +1014,9 @@ function enableTool(data, namesToEnable) {
   // Update global tracker with newly enabled names
   enabledNames = [...enabledNames, ...newNames];
   console.log('Updated enabledNames:', enabledNames);
+  
+  // Start MutationObserver to watch for dynamic content
+  startObserver();
   
   // Show bubble if not showing selection menu
   const existingMenu = document.getElementById('chrome-bible-speak-selection');

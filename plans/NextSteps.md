@@ -369,6 +369,48 @@ function stopObserver() {
 
 ## Decisions Log
 
+### Phase 2 Implementation Notes (February 2, 2026)
+
+**Approved by Product Owner**: Michael (Human Product Owner)
+
+#### Decision 1: Remove Refresh Button from Bubble
+**Context**: Initial Phase 2 implementation included a refresh button overlay on the floating bubble icon.
+
+**Problem**: The button added visual clutter to an otherwise clean icon. Testing showed MutationObserver handles dynamic content effectively, making manual refresh largely redundant.
+
+**Decision**: Remove refresh button entirely. Users can still manually rescan if needed by opening the selection menu and clicking "Enable Selected" (which rescans the page with current selections).
+
+**Rationale**:
+- MutationObserver with 2-second debounce handles 99% of use cases automatically
+- Manual refresh via selection menu provides fallback for edge cases
+- Cleaner UI > redundant manual control
+- Product Owner approved: "it just looks way more clunky to me, personally"
+
+#### Decision 2: Increase MutationObserver Debounce to 2 Seconds
+**Context**: Initial implementation used 400ms debounce delay.
+
+**Problem**: On genealogy-heavy Bible passages (Genesis, Chronicles), rapid scrolling triggers hundreds of name injections, causing noticeable lag every 400ms.
+
+**Decision**: Increase `MUTATION_DEBOUNCE_MS` from 400ms to 2000ms (2 seconds).
+
+**Rationale**:
+- People read slower than AI - 2 second delay is imperceptible to readers
+- Batches multiple mutations during fast scrolling, reducing CPU load
+- Still feels responsive when new content loads
+- Product Owner approved: "Every 2 seconds, while 'laggy' in it's own way, I think is better"
+
+#### Decision 3: preserveBubble Parameter Pattern
+**Context**: `rescanPage()` called `disableTool()` + `enableTool()`, causing bubble to flash every 2 seconds during scrolling.
+
+**Problem**: `disableTool()` hides bubble when `enabledNames` becomes empty, then `enableTool()` recreates it - visible flash.
+
+**Decision**: Add optional `preserveBubble` parameter to `disableTool()`. When true, skip `hideBubble()` call. `rescanPage()` uses `disableTool(null, true)` for silent reset.
+
+**Rationale**:
+- Clean separation between user-initiated disable (hide UI) and programmatic reset (silent)
+- Prevents bubble flashing during automatic rescans
+- Minimal code change, no architectural impact
+
 ### Open Questions Resolved
 
 1. **Multi-part TLDs**: Accept limitation for v1; document as known issue. Users affected are rare.
@@ -384,4 +426,5 @@ function stopObserver() {
 **v1.1.2 Status**: COMPLETE - All tasks implemented.
 
 See CHANGELOG.md for details.
+
 
