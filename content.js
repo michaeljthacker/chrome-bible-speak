@@ -383,6 +383,20 @@ function showSelectionMenu() {
     </label>
   `}).join('');
 
+  // Get current domain for domain toggle
+  const currentDomain = getRootDomain(window.location.hostname);
+  const isHttpPage = window.location.protocol === 'http:' || window.location.protocol === 'https:';
+  const domainToggleHtml = isHttpPage ? `
+        <div id="cbs-menu-domain-toggle-container" style="display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 12px !important; font-family: inherit !important; margin-top: 8px !important;">
+          <span id="cbs-menu-domain-toggle-label" style="font-size: 12px !important; color: #5f6368 !important; font-weight: 500 !important; font-family: inherit !important;">Pop-up at ${currentDomain}</span>
+          <label style="position: relative !important; display: inline-block !important; width: 36px !important; height: 20px !important; margin: 0 !important; cursor: pointer !important;">
+            <input type="checkbox" id="cbs-menu-domain-toggle" checked style="opacity: 0 !important; width: 0 !important; height: 0 !important;">
+            <span class="cbs-menu-domain-toggle-slider" style="position: absolute !important; cursor: pointer !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; background-color: #4285f4 !important; transition: 0.3s !important; border-radius: 20px !important;"></span>
+            <span class="cbs-menu-domain-toggle-knob" style="position: absolute !important; content: '' !important; height: 14px !important; width: 14px !important; left: 3px !important; bottom: 3px !important; background-color: white !important; transition: 0.3s !important; border-radius: 50% !important; transform: translateX(16px) !important;"></span>
+          </label>
+        </div>
+  ` : '';
+
   menu.innerHTML = `
     <div style="display: flex !important; flex-direction: column !important; height: 100% !important; overflow: hidden !important;">
       <div style="padding: 16px 20px !important; border-bottom: 1px solid #e5e5e5 !important; background: #f8f9fa !important; flex-shrink: 0 !important;">
@@ -395,6 +409,7 @@ function showSelectionMenu() {
             <span class="cbs-menu-toggle-knob" style="position: absolute !important; content: '' !important; height: 14px !important; width: 14px !important; left: 3px !important; bottom: 3px !important; background-color: white !important; transition: 0.3s !important; border-radius: 50% !important; transform: translateX(16px) !important;"></span>
           </label>
         </div>
+        ${domainToggleHtml}
       </div>
       <div style="padding: 16px 20px !important; display: flex !important; flex-direction: column !important; gap: 8px !important; flex-shrink: 0 !important;">
         <button id="cbs-enable-all-btn" style="padding: 14px 24px !important; border: none !important; border-radius: 8px !important; font-size: 15px !important; font-weight: 500 !important; cursor: pointer !important; transition: all 0.2s !important; font-family: inherit !important; white-space: nowrap !important; background: #4285f4 !important; color: white !important; width: 100% !important; margin: 0 !important; line-height: 1.4 !important;">Enable All Pronunciations</button>
@@ -503,6 +518,66 @@ function showSelectionMenu() {
     
     hideSelectionMenu();
   });
+
+  // Domain toggle handler for selection menu (only if on http(s) page)
+  if (isHttpPage) {
+    const menuDomainToggle = document.getElementById('cbs-menu-domain-toggle');
+    const menuDomainToggleSlider = document.querySelector('.cbs-menu-domain-toggle-slider');
+    const menuDomainToggleKnob = document.querySelector('.cbs-menu-domain-toggle-knob');
+    
+    // Initialize domain toggle state from storage
+    if (chrome && chrome.storage && chrome.storage.local) {
+      chrome.storage.local.get(['toastDisabledDomains'], (result) => {
+        const disabledDomains = result.toastDisabledDomains || [];
+        const isEnabled = !disabledDomains.includes(currentDomain);
+        menuDomainToggle.checked = isEnabled;
+        
+        // Update toggle appearance
+        if (isEnabled) {
+          menuDomainToggleSlider.style.backgroundColor = '#4285f4';
+          menuDomainToggleKnob.style.transform = 'translateX(16px)';
+        } else {
+          menuDomainToggleSlider.style.backgroundColor = '#ccc';
+          menuDomainToggleKnob.style.transform = 'translateX(0)';
+        }
+      });
+    }
+    
+    // Handle domain toggle changes
+    menuDomainToggle.addEventListener('change', () => {
+      const isEnabled = menuDomainToggle.checked;
+      
+      if (chrome && chrome.storage && chrome.storage.local) {
+        chrome.storage.local.get(['toastDisabledDomains'], (result) => {
+          let disabledDomains = result.toastDisabledDomains || [];
+          
+          if (isEnabled) {
+            // Remove domain from disabled list
+            disabledDomains = disabledDomains.filter(d => d !== currentDomain);
+            console.log(`Enabled toast for domain: ${currentDomain}`);
+          } else {
+            // Add domain to disabled list
+            if (!disabledDomains.includes(currentDomain)) {
+              disabledDomains.push(currentDomain);
+            }
+            console.log(`Disabled toast for domain: ${currentDomain}`);
+          }
+          
+          // Save updated list
+          chrome.storage.local.set({ toastDisabledDomains: disabledDomains });
+        });
+      }
+      
+      // Update toggle appearance
+      if (isEnabled) {
+        menuDomainToggleSlider.style.backgroundColor = '#4285f4';
+        menuDomainToggleKnob.style.transform = 'translateX(16px)';
+      } else {
+        menuDomainToggleSlider.style.backgroundColor = '#ccc';
+        menuDomainToggleKnob.style.transform = 'translateX(0)';
+      }
+    });
+  }
 
   // Trigger animation
   setTimeout(() => {
