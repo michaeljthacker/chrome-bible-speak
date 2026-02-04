@@ -106,6 +106,30 @@ Every option adds complexity and maintenance burden. Current design prioritizes 
 
 ---
 
+## Bugs (Low Priority)
+
+### Text Selection Broken on Pronunciation-Injected Names
+**Status**: Known Issue  
+**Priority**: Low  
+**Severity**: Nuisance
+
+**Problem**:
+When attempting to highlight/select text that includes a pronunciation-injected name (e.g., `Moses (MOH-zez)`), the selection is immediately lost. The text becomes unselectable due to the dynamic content feature.
+
+**Impact**:
+- Users cannot copy/paste text that includes injected pronunciations
+- Minor annoyance when trying to highlight passages for note-taking or sharing
+
+**Cause**:
+The dynamic content injection or mutation observer likely interferes with the browser's native text selection behavior.
+
+**Mitigation**:
+Not a critical issue—users can disable the extension temporarily if they need to copy text.
+
+**Estimated Effort**: Unknown (requires investigation into root cause)
+
+---
+
 ## Known Limitations (Not Planned)
 
 ### Possessive Edge Cases
