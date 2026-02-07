@@ -763,7 +763,7 @@ function disableTool(namesToDisable = null, preserveBubble = false) {
       const fullText = marker.textContent;
       // Check if this marker is for the current name by matching the pattern
       // Format is "Name (pronunciation)" or "Name's (pronunciation)"
-      const namePattern = new RegExp(`^${name}(?:'s)?\\s*\\(${escapedPronunciation}\\)$`, 'i');
+      const namePattern = new RegExp(`^${name}(?:['’‘ʼ]s)?\\s*\\(${escapedPronunciation}\\)$`, 'i');
       if (namePattern.test(fullText)) {
         matchingMarkers.push(marker);
       }
@@ -831,7 +831,7 @@ function enableTool(data, namesToEnable) {
     const matches = [];
     
     newNames.forEach(name => {
-      const regex = new RegExp(`\\b${name}(?:'s|')?(?=\\W|$)`, 'gi');
+      const regex = new RegExp(`\\b${name}(?:['’‘ʼ]s|['’‘ʼ])?(?=\\W|$)`, 'gi');
       let match;
       while ((match = regex.exec(text)) !== null) {
         matches.push({
@@ -932,7 +932,7 @@ function enableTool(data, namesToEnable) {
     // Use 'gi' flags for case-insensitive matching
     // Use lookahead for word boundary since \b fails after apostrophe
     const escapedPronun = info.pronunciation.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const regex = new RegExp(`\\b${name}(?:'s|')?(?=\\W|$) \\(${escapedPronun}\\)`, 'gi');
+    const regex = new RegExp(`\\b${name}(?:['’‘ʼ]s|['’‘ʼ])?(?=\\W|$) \\(${escapedPronun}\\)`, 'gi');
     
     // Find all text nodes containing the pattern
     const walker = document.createTreeWalker(
