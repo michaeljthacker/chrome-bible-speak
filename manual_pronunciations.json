@@ -164,6 +164,9 @@
   "Baal-hanan": {
     "pronunciation": "BAY-ul-HAY-nun"
   },
+  "Barachiah": {
+    "pronunciation": "behr-uh-KAI-uh"
+  },
   "Basemath": {
     "pronunciation": "BAS-eh-math"
   },
@@ -557,6 +560,9 @@
   "Hupham": {
     "pronunciation": "HOO-fam"
   },
+  "Hur": {
+    "pronunciation": "HER"
+  },
   "Husham": {
     "pronunciation": "HOO-shum"
   },
@@ -803,6 +809,9 @@
   "Malchiel": {
     "pronunciation": "MAL-kee-el"
   },
+  "manna": {
+    "pronunciation": "MAN-uh"
+  },
   "Marah": {
     "pronunciation": "MAIR-uh"
   },
@@ -935,6 +944,12 @@
   "Omar": {
     "pronunciation": "OH-mar"
   },
+  "omer": {
+    "pronunciation": "OH-mer"
+  },
+  "omers": {
+    "pronunciation": "OH-merz"
+  },
   "Onam": {
     "pronunciation": "OH-num"
   },
@@ -973,6 +988,9 @@
   },
   "Peter": {
     "pronunciation": "PEE-ter"
+  },
+  "Pharisee": {
+    "pronunciation": "FEHR-ih-see"
   },
   "Phicol": {
     "pronunciation": "FI-kol"
@@ -1136,6 +1154,9 @@
   "Simon": {
     "pronunciation": "SI-muhn"
   },
+  "Sin": {
+    "pronunciation": "SIN"
+  },
   "Sinite": {
     "pronunciation": "SIN-ite"
   },
@@ -1216,6 +1237,9 @@
   },
   "Wadi": {
     "pronunciation": "WAH-dee"
+  },
+  "Yahweh-nissi": {
+    "pronunciation": "YAH-way-NIS-ee"
   },
   "Zaavan": {
     "pronunciation": "ZAY-uh-van"
