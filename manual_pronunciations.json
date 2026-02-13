@@ -269,6 +269,9 @@
   "Dan": {
     "pronunciation": "DAN"
   },
+  "Daniel": {
+    "pronunciation": "DAN-yul"
+  },
   "David": {
     "pronunciation": "DAY-vid"
   },
@@ -1108,6 +1111,12 @@
   },
   "Shavehkiriathaim": {
     "pronunciation": "sha-VAY keer-yah-tha-yim"
+  },
+  "shekel": {
+    "pronunciation": "SHEK-ul"
+  },
+  "shekels": {
+    "pronunciation": "SHEK-ulz"
   },
   "Shelah": {
     "pronunciation": "SHEH-lah"
