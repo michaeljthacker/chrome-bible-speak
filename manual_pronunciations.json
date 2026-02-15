@@ -50,6 +50,9 @@
   "Akan": {
     "pronunciation": "AY-kun"
   },
+  "alamoth": {
+    "pronunciation": "AL-uh-moth"
+  },
   "Allon-bacuth": {
     "pronunciation": "AL-on-BAY-kuth"
   },
@@ -257,6 +260,9 @@
   "Cheran": {
     "pronunciation": "KEHR-un"
   },
+  "cherub": {
+    "pronunciation": "CHER-ub"
+  },
   "Chesed": {
     "pronunciation": "KEE-sed"
   },
@@ -265,6 +271,12 @@
   },
   "Corinthians": {
     "pronunciation": "kawr-IHN-thee-uhnz"
+  },
+  "cubit": {
+    "pronunciation": "KYOO-bit"
+  },
+  "cubits": {
+    "pronunciation": "KYOO-bits"
   },
   "Cush": {
     "pronunciation": "KOOSH"
@@ -373,6 +385,9 @@
   },
   "Epher": {
     "pronunciation": "EE-fer"
+  },
+  "ephod": {
+    "pronunciation": "EH-fod"
   },
   "Ephrath": {
     "pronunciation": "EF-rath"
@@ -847,6 +862,9 @@
   },
   "Mehujael": {
     "pronunciation": "meh-HOO-jah-el"
+  },
+  "menorah": {
+    "pronunciation": "muh-NOR-uh"
   },
   "Merari": {
     "pronunciation": "meh-RAR-ee"
