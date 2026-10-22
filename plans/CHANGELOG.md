@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [v1.2.2] - October 22, 2026
+
+### Fixed
+- **BibleSpeak.org Links**: BibleSpeak.org moved its pronunciation pages to lowercase URLs (e.g. `/Ephesians-pronunciation/` → `/ephesians-pronunciation/`), and the old URLs now return 404. All 836 links in `names_pronunciations.json` are now lowercase.
+- **Scraper**: `scripts/updateWordListJSON.py` now generates lowercase URLs, so re-scraping won't bring the broken links back.
+
+---
+
 ## [v1.2.0] - February 2, 2026
 
 ### Added

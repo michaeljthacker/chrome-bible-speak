@@ -24,7 +24,7 @@ def get_names_by_letter(letter):
     return names
 
 def get_pronunciation(name):
-    url = f"{BASE_URL}/{name}-pronunciation/"
+    url = f"{BASE_URL}/{name.lower()}-pronunciation/"
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
     
@@ -47,7 +47,7 @@ def update_json():
             if (pronunciation):
                 data[name] = {
                     "pronunciation": pronunciation,
-                    "link": f"{BASE_URL}/{name}-pronunciation/"
+                    "link": f"{BASE_URL}/{name.lower()}-pronunciation/"
                 }
         # Calculate and print the percentage of completion
         percent_complete = ((i + 1) / total_letters) * 100
